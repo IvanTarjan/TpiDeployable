@@ -1,0 +1,91 @@
+import React, { useContext, useState } from "react";
+import { Button, Grid, IconButton, TextField } from "@mui/material";
+import SendIcon from '@mui/icons-material/Send';
+import { useFormik } from "formik";
+import * as Yup from 'yup';
+import styles from '../styles/Login.module.css';
+import { HeaderContext } from "../contexts/HeaderContext";
+import { Link } from "react-router-dom";
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
+
+const Login = () => {
+  const { user, setUser } = useContext(HeaderContext)
+  const [isSubmit, setIsSubmit] = useState(false)
+  const [showPassword, setShowPassword] = useState(false);
+
+  const handleClickShowPassword = () => setShowPassword((show) => !show);
+
+  const { handleSubmit, handleChange, values, errors } = useFormik({
+    initialValues: {
+      email: '',
+      password: '',
+      confirm: '',
+    },
+    validationSchema: Yup.object({
+      email: Yup.string().email("Ingresar una direccion de email valida").required('Campo obligatorio'),
+      password: Yup.string().min(7, 'La contrasena debe tener mas de 6 caracteres').required('Campo obligatorio'),
+    }),
+    onSubmit: (data) => {
+      setIsSubmit(prev => !prev)
+      setUser(data)
+      console.log(user)
+    }
+  })
+
+  return (
+    <div>
+      <form className={styles.formContainer} onSubmit={handleSubmit}>
+        <p className={styles.formTitle}>Iniciar sesion</p>
+        <Grid
+          container
+          alignItems={"center"}
+          justifyContent={"space-evenly"}
+          spacing={2}
+          sx={{ width: "100%" }} >
+
+          <Grid item xs={12} md={8}>
+            <TextField
+              value={values.email}
+              onChange={handleChange}
+              name='email'
+              type={"email"}
+              label="Correo electronico"
+              variant="outlined"
+              error={errors.email}
+              helperText={errors.email}
+              fullWidth
+            />
+
+          </Grid>
+          <Grid item xs={12} md={8}>
+            <TextField
+              InputProps={{
+                endAdornment: (
+                  <IconButton onClick={handleClickShowPassword}>
+                    {showPassword ? <Visibility /> : <VisibilityOff />}
+                  </IconButton>
+                ),
+              }}
+              value={values.password}
+              onChange={handleChange}
+              name='password'
+              type={showPassword ? "text" : "password"}
+              label="Contrasena"
+              variant="outlined"
+              error={errors.password}
+              helperText={errors.password}
+              fullWidth
+            />
+
+          </Grid>
+
+        </Grid>
+        <Button size='large' color="info" type='submit' variant='contained' endIcon={<SendIcon />}>Ingresar</Button>
+        <p className={styles.paragraph}>Aun no tenes cuenta? <Link to={'/register'}>Registrate</Link></p>
+      </form>
+    </div>
+  )
+}
+
+export default Login
