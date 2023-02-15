@@ -1,3 +1,36 @@
-.testing{
-  background-color: #c20e0e;
+.headerContainer{
+  width: 100vw;
+  height: 80px;
+  border: 1px red solid;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 30px;
+  position: fixed;
+  top: 0;
+}
+
+.logoContainer{
+  display: flex;
+  gap: 12px;
+}
+
+.btnContainer{
+  display: flex;
+  gap: 10px;
+}
+
+button{
+  width: 200px;
+  height: 40px;
+  background-color: #fff;
+  color: #1DBEB4;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+border-radius: 5px;
+border: #1DBEB4 1px solid;
 }
