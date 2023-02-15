@@ -8,11 +8,20 @@ import { useNavigate } from 'react-router-dom'
 const Header = () => {
 
   const { headerType, setHeaderType } = useContext(HeaderContext);
+
   const nagivate = useNavigate()
+
   const handleCreateAccount = () => {
     setHeaderType('createAccount')
     nagivate('/register')
   }
+
+  const handleLogin = () => {
+    setHeaderType('login')
+    nagivate('/login')
+  }
+
+
   return (
     <div className={styles.headerContainer}>
       <div className={styles.logoContainer}>
@@ -21,13 +30,18 @@ const Header = () => {
       </div>
 
       {
-        headerType === 'initial' ? <div className={styles.btnContainer}>
-          <button onClick={handleCreateAccount}>Crear cuenta</button>
-          <button className={styles.btnFilter}>Iniciar sesion</button>
-        </div> :
+        headerType === 'initial' ?
           <div className={styles.btnContainer}>
-            <button className={styles.btnFilter}>Iniciar sesion</button>
-          </div>
+            <button onClick={handleCreateAccount}>Crear cuenta</button>
+            <button onClick={handleLogin} className={styles.btnFilter}>Iniciar sesion</button>
+          </div> :
+          headerType === 'createAccount' ?
+            <div className={styles.btnContainer}>
+              <button className={styles.btnFilter}>Iniciar sesion</button>
+            </div> :
+            <div className={styles.btnContainer}>
+              <button onClick={handleCreateAccount}>Crear cuenta</button>
+            </div>
       }
     </div>
   )

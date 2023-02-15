@@ -1,9 +1,8 @@
 import React, { useContext, useState } from "react";
-import { Button, Grid, IconButton, InputAdornment, TextField, Typography } from "@mui/material";
+import { Button, Grid, IconButton, TextField } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
 import { useFormik } from "formik";
 import * as Yup from 'yup';
-import Header from "./Header";
 import styles from '../styles/CreateAccount.module.css';
 import { HeaderContext } from "../contexts/HeaderContext";
 import { Link } from "react-router-dom";
@@ -43,8 +42,6 @@ const CreateAccount = () => {
 
   return (
     <div>
-      <Header />
-
       <form className={styles.formContainer} onSubmit={handleSubmit}>
         <p className={styles.formTitle}>Crear cuenta</p>
         <Grid
@@ -137,7 +134,7 @@ const CreateAccount = () => {
 
         </Grid>
         <Button size='large' color="info" type='submit' variant='contained' endIcon={<SendIcon />}>Crear Cuenta</Button>
-        <p className={styles.paragraph}>Ya tienes una cuenta? <Link to={'/'}>Iniciar sesion</Link></p>
+        <p className={styles.paragraph}>Ya tienes una cuenta? <Link to={'/login'}>Iniciar sesion</Link></p>
       </form>
     </div>
   )
