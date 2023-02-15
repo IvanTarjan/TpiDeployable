@@ -8,13 +8,13 @@ const Header = () => {
     <div className={styles.headerContainer}>
       <div className={styles.logoContainer}>
         <img src={logo} />
-        <h2>Viaja como quieras</h2>
+        <p>Viaja como quieras</p>
 
       </div>
 
       <div className={styles.btnContainer}>
         <button>Crear cuenta</button>
-        <button>Iniciar sesion</button>
+        <button className={styles.btnFilter}>Iniciar sesion</button>
       </div>
     </div>
   )
