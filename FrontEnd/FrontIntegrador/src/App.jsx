@@ -21,8 +21,8 @@ function App() {
             <Routes>
               <Route path='/register' element={<CreateAccount />} ></Route>
               <Route path='/login' element={<Login />} />
+              <Route path='/' element={<Body />} />
             </Routes>
-
           </BrowserRouter>
         </HeaderContextProvider>
       </Palette>

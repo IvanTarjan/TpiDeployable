@@ -5,11 +5,14 @@ export const HeaderContext = createContext()
 const HeaderContextProvider = ({ children }) => {
 
   const [headerType, setHeaderType] = useState('initial');
-  const [user, setUser] = useState()
+  const [newUser, setNewUser] = useState(null)
+  const [user, setUser] = useState(null)
 
   const data = {
     headerType,
     setHeaderType,
+    newUser,
+    setNewUser,
     user,
     setUser
   }

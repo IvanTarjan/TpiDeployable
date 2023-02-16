@@ -29,7 +29,6 @@ const Login = () => {
     onSubmit: (data) => {
       setIsSubmit(prev => !prev)
       setUser(data)
-      console.log(user)
     }
   })
 

@@ -1,0 +1,7 @@
+.homeContainer{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+  gap: 14px;
+}

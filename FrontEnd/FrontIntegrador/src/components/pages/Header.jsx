@@ -37,7 +37,7 @@ const Header = () => {
           </div> :
           headerType === 'createAccount' ?
             <div className={styles.btnContainer}>
-              <button className={styles.btnFilter}>Iniciar sesion</button>
+              <button onClick={handleLogin} className={styles.btnFilter}>Iniciar sesion</button>
             </div> :
             <div className={styles.btnContainer}>
               <button onClick={handleCreateAccount}>Crear cuenta</button>

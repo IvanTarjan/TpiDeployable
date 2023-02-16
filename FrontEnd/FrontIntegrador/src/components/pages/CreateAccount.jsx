@@ -10,7 +10,7 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
 const CreateAccount = () => {
-  const { user, setUser, setHeaderType } = useContext(HeaderContext)
+  const { newUser, setNewUser, setHeaderType } = useContext(HeaderContext)
   const [isSubmit, setIsSubmit] = useState(false)
   const [showPassword, setShowPassword] = useState(false);
 
@@ -34,8 +34,7 @@ const CreateAccount = () => {
     }),
     onSubmit: (data) => {
       setIsSubmit(prev => !prev)
-      setUser(data)
-      console.log(user)
+      setNewUser(data)
     }
   })
 
