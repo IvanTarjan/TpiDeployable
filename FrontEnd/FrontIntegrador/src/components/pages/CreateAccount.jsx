@@ -10,8 +10,7 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
 const CreateAccount = () => {
-
-  const { user, setUser } = useContext(HeaderContext)
+  const { user, setUser, setHeaderType } = useContext(HeaderContext)
   const [isSubmit, setIsSubmit] = useState(false)
   const [showPassword, setShowPassword] = useState(false);
 
@@ -99,7 +98,7 @@ const CreateAccount = () => {
             <TextField
               InputProps={{
                 endAdornment: (
-                  <IconButton onClick={handleClickShowPassword}>
+                  <IconButton disableRipple='false' onClick={handleClickShowPassword}>
                     {showPassword ? <Visibility /> : <VisibilityOff />}
                   </IconButton>
                 ),
@@ -133,8 +132,8 @@ const CreateAccount = () => {
           </Grid>
 
         </Grid>
-        <Button size='large' color="info" type='submit' variant='contained' endIcon={<SendIcon />}>Crear Cuenta</Button>
-        <p className={styles.paragraph}>Ya tienes una cuenta? <Link to={'/login'}>Iniciar sesion</Link></p>
+        <Button size='large' color='primary' type='submit' variant='contained' endIcon={<SendIcon />}>Crear Cuenta</Button>
+        <p className={styles.paragraph}>Ya tienes una cuenta? <Link to={'/login'} onClick={() => setHeaderType("login")} >Iniciar sesion</Link></p>
       </form>
     </div>
   )

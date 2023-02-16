@@ -6,23 +6,26 @@ import HeaderContextProvider from './components/contexts/HeaderContext'
 import CreateAccount from './components/pages/CreateAccount'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Login from './components/pages/Login'
+import Palette from './components/contexts/ThemeContext'
 
 
 function App() {
   return (
     <div>
-      <HeaderContextProvider>
-        <BrowserRouter>
-          <Header />
-          <Footer />
-          <Routes>
-            <Route path='/register' element={<CreateAccount />} ></Route>
-            <Route path='/login' element={<Login />} />
-          </Routes>
+      <Palette>
 
-        </BrowserRouter>
-      </HeaderContextProvider>
+        <HeaderContextProvider>
+          <BrowserRouter>
+            <Header />
+            <Footer />
+            <Routes>
+              <Route path='/register' element={<CreateAccount />} ></Route>
+              <Route path='/login' element={<Login />} />
+            </Routes>
 
+          </BrowserRouter>
+        </HeaderContextProvider>
+      </Palette>
     </div>
   )
 }
