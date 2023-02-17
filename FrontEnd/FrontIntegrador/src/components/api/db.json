@@ -2,6 +2,11 @@
   "cars": [
     {
       "id": 1,
+      "status": {
+        "isRented": true,
+        "startDate": "20/02/2023",
+        "endDate": "25/02/2023"
+      },
       "category": "Economico",
       "name": "Chevrolet Classic",
       "image": "https://gower.ar/wp-content/uploads/2022/02/Chevrolet-Classic-2013.jpg",
@@ -18,6 +23,11 @@
     },
     {
       "id": 2,
+      "status": {
+        "isRented": true,
+        "startDate": "20/02/2023",
+        "endDate": "25/02/2023"
+      },
       "category": "Economico",
       "name": "Ford Ka SEL Full",
       "image": "https://gower.ar/wp-content/uploads/2022/05/1-1.jpg",
@@ -34,6 +44,11 @@
     },
     {
       "id": 3,
+      "status": {
+        "isRented": true,
+        "startDate": "20/02/2023",
+        "endDate": "25/02/2023"
+      },
       "category": "Economico",
       "name": "Volkswagen Fox",
       "image": "https://gower.ar/wp-content/uploads/2022/05/FOX-2.jpg",
@@ -50,6 +65,11 @@
     },
     {
       "id": 4,
+      "status": {
+        "isRented": true,
+        "startDate": "20/02/2023",
+        "endDate": "25/02/2023"
+      },
       "category": "Economico",
       "name": "Peugeot 207 Compact",
       "image": "https://gower.ar/wp-content/uploads/2021/12/Catalogo-Peugeot-207.jpg",
@@ -66,6 +86,11 @@
     },
     {
       "id": 5,
+      "status": {
+        "isRented": true,
+        "startDate": "20/02/2023",
+        "endDate": "25/02/2023"
+      },
       "category": "Economico",
       "name": "Nissan March",
       "image": "https://gower.ar/wp-content/uploads/2021/12/March-1.jpg",
@@ -82,6 +107,11 @@
     },
     {
       "id": 6,
+      "status": {
+        "isRented": true,
+        "startDate": "20/02/2023",
+        "endDate": "25/02/2023"
+      },
       "category": "Economico",
       "name": "Fiat Palio Attractive",
       "image": "https://gower.ar/wp-content/uploads/2022/05/Palio-final.jpg",
@@ -98,6 +128,11 @@
     },
     {
       "id": 7,
+      "status": {
+        "isRented": false,
+        "startDate": "",
+        "endDate": ""
+      },
       "category": "Gama media",
       "name": "Renault Logan Privilege",
       "image": "https://gower.ar/wp-content/uploads/2022/01/Logan-1.jpg",
@@ -114,6 +149,11 @@
     },
     {
       "id": 8,
+      "status": {
+        "isRented": false,
+        "startDate": "",
+        "endDate": ""
+      },
       "category": "Gama media",
       "name": "Fiat Cronos",
       "image": "https://gower.ar/wp-content/uploads/2021/12/Catalogo-Citroen-C3-1-1.jpg",
@@ -130,6 +170,11 @@
     },
     {
       "id": 9,
+      "status": {
+        "isRented": false,
+        "startDate": "",
+        "endDate": ""
+      },
       "category": "Gama media",
       "name": "Ecosport",
       "image": "https://gower.ar/wp-content/uploads/2022/02/Ecosport-2016.jpg",
@@ -146,6 +191,11 @@
     },
     {
       "id": 10,
+      "status": {
+        "isRented": false,
+        "startDate": "",
+        "endDate": ""
+      },
       "category": "Gama media",
       "name": "Renault Stepway",
       "image": "https://gower.ar/wp-content/uploads/2022/01/Catalogo-Onix-4.jpg",
@@ -162,6 +212,11 @@
     },
     {
       "id": 11,
+      "status": {
+        "isRented": false,
+        "startDate": "",
+        "endDate": ""
+      },
       "category": "Gama media",
       "name": "Volkswagen Suran",
       "image": "https://gower.ar/wp-content/uploads/2021/12/Catalogo-Renegade-1.jpg",
@@ -178,6 +233,11 @@
     },
     {
       "id": 12,
+      "status": {
+        "isRented": false,
+        "startDate": "",
+        "endDate": ""
+      },
       "category": "Gama media",
       "name": "Peugeot 208 Feline",
       "image": "https://gower.ar/wp-content/uploads/2022/08/208-Caro-768x768.jpg",
@@ -194,6 +254,11 @@
     },
     {
       "id": 13,
+      "status": {
+        "isRented": false,
+        "startDate": "",
+        "endDate": ""
+      },
       "category": "Premium",
       "name": "Toyota Corolla",
       "image": "https://www.mararentacar.com/images/autos/corolla/main.png",
@@ -210,6 +275,11 @@
     },
     {
       "id": 14,
+      "status": {
+        "isRented": false,
+        "startDate": "",
+        "endDate": ""
+      },
       "category": "Premium",
       "name": "Jeep Renegade",
       "image": "https://gower.ar/wp-content/uploads/2022/05/Renegade-1.jpg",
@@ -226,6 +296,11 @@
     },
     {
       "id": 15,
+      "status": {
+        "isRented": false,
+        "startDate": "",
+        "endDate": ""
+      },
       "category": "Premium",
       "name": "Chevrolet Spin",
       "image": "https://gower.ar/wp-content/uploads/2018/08/Spin.jpg",
@@ -240,8 +315,14 @@
       "ABSBrake": true,
       "fuel": "Nafta Premium"
     },
+    
     {
       "id": 16,
+      "status": {
+        "isRented": false,
+        "startDate": "",
+        "endDate": ""
+      },
       "category": "Premium",
       "name": "Chevrolet Cruze RS",
       "image": "https://gower.ar/wp-content/uploads/2022/08/Cruze-1-768x768.jpg",
@@ -258,7 +339,12 @@
     },
     {
       "id": 17,
-      "category": "Premium",
+      "status": {
+        "isRented": false,
+        "startDate": "",
+        "endDate": ""
+      },
+      "category": "Pickup truck",
       "name": "Toyota Hilux 4WD",
       "image": "https://www.mararentacar.com/images/autos/hilux_at/main.png",
       "price": 22000,
@@ -270,6 +356,69 @@
       "doors": 4,
       "airConditioning": true,
       "ABSBrake": false,
+      "fuel": "Diesel Premium"
+    },
+    {
+      "id": 18,
+      "status": {
+        "isRented": false,
+        "startDate": "",
+        "endDate": ""
+      },
+      "category": "Pickup truck",
+      "name": "Chevrolet S-10",
+      "image": "https://content.r9cdn.net/rimg/carimages/generic/12_truck_white.png?height=174",
+      "price": 23000,
+      "model": 2019,
+      "message": "Ideal para caminos rurales y con todo el confort que te ofrecen la pantalla tactil, control crucero, control de traccion, etc.",
+      "airbag": "2 airbags frontales",
+      "gearbox": "Manual",
+      "trunk": "grande",
+      "doors": 4,
+      "airConditioning": true,
+      "ABSBrake": true,
+      "fuel": "Diesel Premium"
+    },
+    {
+      "id": 18,
+      "status": {
+        "isRented": false,
+        "startDate": "",
+        "endDate": ""
+      },
+      "category": "Pickup truck",
+      "name": "Volkswagen Amarok",
+      "image": "https://cdn.wheel-size.com/thumbs/0b/23/0b2371c07b57900798eef71b58bc693d.jpg",
+      "price": 22300,
+      "model": 2019,
+      "message": "Ideal para caminos rurales y con todo el confort que te ofrecen la pantalla tactil, control crucero, control de traccion, etc.",
+      "airbag": "2 airbags frontales",
+      "gearbox": "Manual",
+      "trunk": "grande",
+      "doors": 4,
+      "airConditioning": true,
+      "ABSBrake": true,
+      "fuel": "Diesel Premium"
+    },
+    {
+      "id": 18,
+      "status": {
+        "isRented": false,
+        "startDate": "25/02/2023",
+        "endDate": "28/02/2023"
+      },
+      "category": "Pickup truck",
+      "name": "Ford Ranger",
+      "image": "https://fotos.perfil.com/2021/11/26/trim/1280/720/ford-ranger-xl-1275718.jpg",
+      "price": 23000,
+      "model": 2019,
+      "message": "Ideal para caminos rurales y con todo el confort que te ofrecen la pantalla tactil, control crucero, control de traccion, etc.",
+      "airbag": "2 airbags frontales",
+      "gearbox": "Manual",
+      "trunk": "grande",
+      "doors": 4,
+      "airConditioning": true,
+      "ABSBrake": true,
       "fuel": "Diesel Premium"
     }
   ]
