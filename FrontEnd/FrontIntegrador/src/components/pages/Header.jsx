@@ -6,11 +6,13 @@ import { Link, useNavigate } from 'react-router-dom'
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import { deepOrange, deepPurple } from '@mui/material/colors';
+import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
+import { IconButton } from '@mui/material'
 
 
 const Header = () => {
 
-  const { headerType, setHeaderType, newUser, isLog } = useContext(HeaderContext);
+  const { headerType, setHeaderType, newUser, isLog, setIsLog } = useContext(HeaderContext);
 
   const nagivate = useNavigate()
 
@@ -26,6 +28,11 @@ const Header = () => {
 
   const handleLogoClick = () => {
     nagivate('/')
+    setHeaderType('initial')
+  }
+
+  const handleSignOut = () => {
+    setIsLog(prev => !prev)
     setHeaderType('initial')
   }
 
@@ -45,6 +52,9 @@ const Header = () => {
           <p>Hola, </p>
           <span>{newUser.name} {newUser.surname}</span>
         </div>
+        <IconButton disableRipple='false' onClick={handleSignOut} >
+          <PowerSettingsNewIcon />
+        </IconButton>
       </div> :
         headerType === 'initial' ?
           <div className={styles.btnContainer}>
