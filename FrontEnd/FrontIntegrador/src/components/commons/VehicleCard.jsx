@@ -13,12 +13,14 @@ import AcUnitIcon from '@mui/icons-material/AcUnit';
 import TuneIcon from '@mui/icons-material/Tune';
 import HealthAndSafetyIcon from '@mui/icons-material/HealthAndSafety';
 import { DoorBack } from '@mui/icons-material';
+import styles from '../styles/Body.module.css'
+import { Box } from '@mui/system';
 
 export default function VehicleCard({ car }) {
   return (
-    <Card sx={{ maxWidth: 635 }}>
+    <Card sx={{ maxWidth: 650 }}>
       <CardMedia
-        sx={{ height: 280 }}
+        sx={{ height: 500 }}
         image={car.image}
         title={car.name}
       />
@@ -27,20 +29,29 @@ export default function VehicleCard({ car }) {
         <Typography gutterBottom variant="h5" component="div">
           {car.name}
         </Typography>
-        <Typography variant='h7' component={'div'}><InfoIcon />Modelo {car.model}</Typography>
-        <Typography variant='h7' component={'div'}><AirlineSeatReclineNormalIcon />{car.airbag}</Typography>
-        <Typography variant='h7' component={'div'}><TuneIcon />{car.gearbox}</Typography>
-        <Typography variant='h7' component={'div'}><LuggageIcon />Baul {car.trunk}</Typography>
-        <Typography variant='h7' component={'div'}><DoorBack />{car.doors}</Typography>
-        {car.airConditioning && <Typography variant='h7' component={'div'}><AcUnitIcon />Aire acondicionado</Typography>}
-        {car.ABSBrake ? <Typography variant='h7' component={'div'}><HealthAndSafetyIcon />Frenos ABS</Typography> : <Typography variant='h7' component={'div'}><HealthAndSafetyIcon />Frenos a disco</Typography>}
-        <Typography variant='h7' component={'div'}><LocalGasStationIcon />{car.fuel}</Typography>
+        <Box className={styles.iconsContainer} >
+
+          <Box>
+            <Typography className={styles.cardContainer} ><InfoIcon />Modelo {car.model}</Typography>
+            <Typography className={styles.cardContainer}><AirlineSeatReclineNormalIcon />{car.airbag}</Typography>
+            <Typography className={styles.cardContainer}><TuneIcon />{car.gearbox}</Typography>
+            <Typography className={styles.cardContainer}><LuggageIcon />Baul {car.trunk}</Typography>
+          </Box>
+
+          <Box>
+            <Typography className={styles.cardContainer}><DoorBack />{car.doors} puertas</Typography>
+            {car.airConditioning && <Typography className={styles.cardContainer}><AcUnitIcon />Aire acondicionado</Typography>}
+            {car.ABSBrake ? <Typography className={styles.cardContainer}><HealthAndSafetyIcon />Frenos ABS</Typography> : <Typography className={styles.cardContainer}><HealthAndSafetyIcon />Frenos a disco</Typography>}
+            <Typography className={styles.cardContainer}><LocalGasStationIcon />{car.fuel}</Typography>
+
+          </Box>
+        </Box>
         <Typography variant="body2" color="text.secondary">
           {car.message}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button variant='contained' size="small">ver mas</Button>
+        <Button variant='contained' size="small" fullWidth>ver mas</Button>
       </CardActions>
     </Card>
   );

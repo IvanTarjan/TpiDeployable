@@ -5,16 +5,17 @@ import { useFormik } from "formik";
 import * as Yup from 'yup';
 import styles from '../styles/Login.module.css';
 import { HeaderContext } from "../contexts/HeaderContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
 const Login = () => {
-  const { user, setUser, setHeaderType } = useContext(HeaderContext)
-  const [isSubmit, setIsSubmit] = useState(false)
+  const { user, setUser, setHeaderType, setIsLog } = useContext(HeaderContext)
   const [showPassword, setShowPassword] = useState(false);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
+
+  const navigate = useNavigate()
 
   const { handleSubmit, handleChange, values, errors } = useFormik({
     initialValues: {
@@ -27,8 +28,9 @@ const Login = () => {
       password: Yup.string().min(7, 'La contrasena debe tener mas de 6 caracteres').required('Campo obligatorio'),
     }),
     onSubmit: (data) => {
-      setIsSubmit(prev => !prev)
+      setIsLog(prev => !prev)
       setUser(data)
+      navigate('/')
     }
   })
 

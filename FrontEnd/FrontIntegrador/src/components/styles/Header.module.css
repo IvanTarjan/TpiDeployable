@@ -1,12 +1,13 @@
 .headerContainer{
   width: 100vw;
-  height: 80px;
+  height: 100px;
   background-color: #fff;
   display: flex;
   justify-content: space-between;
   padding: 30px 30px;
   position: fixed;
   top: 0;
+  z-index: 1;
 }
 
 .logoContainer{
@@ -48,6 +49,33 @@ button{
   border: #1DBEB4 1px solid;
 }
 
+button:hover, img:hover{
+  cursor: pointer;
+  transform: scale(0.975);
+}
+
 .btnFilter{
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.avatarContainer{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatarContainer p{
+  font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+color: rgba(0, 0, 0, 0.5);
+}
+
+.avatarContainer span{
+  color: #1DBEB4;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
 }

@@ -1,7 +1,20 @@
 .homeContainer{
   display: flex;
   flex-wrap: wrap;
+justify-content: space-around;
   width: 100vw;
   height: 100vh;
   gap: 14px;
+}
+
+.cardContainer{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.iconsContainer{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
 }

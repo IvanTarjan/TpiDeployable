@@ -5,7 +5,7 @@ import { useFormik } from "formik";
 import * as Yup from 'yup';
 import styles from '../styles/CreateAccount.module.css';
 import { HeaderContext } from "../contexts/HeaderContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
@@ -15,6 +15,8 @@ const CreateAccount = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
+
+  const nagivate = useNavigate()
 
   const { handleSubmit, handleChange, values, errors } = useFormik({
     initialValues: {
@@ -35,6 +37,7 @@ const CreateAccount = () => {
     onSubmit: (data) => {
       setIsSubmit(prev => !prev)
       setNewUser(data)
+      nagivate('/login')
     }
   })
 

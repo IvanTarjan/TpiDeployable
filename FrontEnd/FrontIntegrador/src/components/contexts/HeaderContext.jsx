@@ -7,6 +7,7 @@ const HeaderContextProvider = ({ children }) => {
   const [headerType, setHeaderType] = useState('initial');
   const [newUser, setNewUser] = useState(null)
   const [user, setUser] = useState(null)
+  const [isLog, setIsLog] = useState(false)
 
   const data = {
     headerType,
@@ -14,7 +15,9 @@ const HeaderContextProvider = ({ children }) => {
     newUser,
     setNewUser,
     user,
-    setUser
+    setUser,
+    isLog,
+    setIsLog
   }
 
   return (
