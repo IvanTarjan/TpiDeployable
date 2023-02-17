@@ -18,7 +18,7 @@ function App() {
         <HeaderContextProvider>
           <BrowserRouter>
             <Header />
-            
+            <BarraDeBusqueda/>
             
             <Routes>
               <Route path='/register' element={<CreateAccount />} ></Route>

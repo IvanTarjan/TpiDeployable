@@ -38,10 +38,10 @@ const BarraDeBusqueda = () => {
 
 
     return (
-        <Box display='flex' flexDirection={'column'} justifyContent='space-between' alignItems='center' width='100vw' backgroundColor={colors.c3} padding={"20px 0px"}>
+        <Box display='flex' flexDirection={'column'} justifyContent='center' alignItems='center' width='100vw'height={'200px'} marginTop={'60px'} backgroundColor={colors.c3} padding={"20px 0px"}>
             <Typography variant='h1' fontSize={'36px'} fontWeight="bold" color={colors.c4}>Busca ofertas en hoteles, casas y mucho más</Typography>
             
-                <FormControl sx={{ m: 1, width: '70%', mt: 3, display:'flex', justifyContent:'center', alignItems:"center", flexDirection: "row"}}>
+                <FormControl sx={{ m: 1, width: '70%', mt: 3, display:'flex', justifyContent:'center', alignItems:"center", flexDirection: "row", gap:'10px'}}>
                     <Select
                         displayEmpty
                         sx={{ width: '500px', height: '40px', backgroundColor: colors.background, borderRadius: '5px' }}
