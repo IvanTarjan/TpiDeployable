@@ -23,7 +23,7 @@ public class CategoriaService {
 
     public Categoria guardarCategoria(Categoria categoria){
         LOGGER.info("Se inició una operación de guardado de la categoria con titulo: "+
-                categoria.getTitulo());
+                categoria.getName());
         return categoriaRepository.save(categoria);
     }
 
