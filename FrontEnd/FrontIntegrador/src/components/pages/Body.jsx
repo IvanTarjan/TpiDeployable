@@ -14,6 +14,7 @@ const Body = () => {
 
   return (
     <div className={styles.homeContainer}>
+      <BarraDeBusqueda/>
       {cars.map(car => (
         <VehicleCard
           key={car.id}

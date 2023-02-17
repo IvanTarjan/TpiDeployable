@@ -2,6 +2,7 @@ import './App.css'
 import Header from './components/pages/Header'
 import Body from './components/pages/Body'
 import Footer from './components/pages/Footer'
+import BarraDeBusqueda from './components/pages/BarraDeBusqueda'
 import HeaderContextProvider from './components/contexts/HeaderContext'
 import CreateAccount from './components/pages/CreateAccount'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -17,12 +18,14 @@ function App() {
         <HeaderContextProvider>
           <BrowserRouter>
             <Header />
-            <Footer />
+            
+            
             <Routes>
               <Route path='/register' element={<CreateAccount />} ></Route>
               <Route path='/login' element={<Login />} />
               <Route path='/' element={<Body />} />
             </Routes>
+            <Footer />
           </BrowserRouter>
         </HeaderContextProvider>
       </Palette>
