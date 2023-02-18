@@ -1,21 +1,27 @@
-import React, { createContext, useState } from 'react'
+import axios from 'axios';
+import React, { createContext, useEffect, useState } from 'react'
 
 export const HeaderContext = createContext()
 
 const HeaderContextProvider = ({ children }) => {
 
   const [headerType, setHeaderType] = useState('initial');
-  const [newUser, setNewUser] = useState(null)
-  const [user, setUser] = useState(null)
+  const [users, setUsers] = useState([])
   const [isLog, setIsLog] = useState(false)
+
+  useEffect(() => {
+    axios.get("http://localhost:5000/users")
+      .then(res => setUsers(res.data))
+      .catch(err => console.log(err))
+  }, [])
+
+  console.log(users)
 
   const data = {
     headerType,
     setHeaderType,
-    newUser,
-    setNewUser,
-    user,
-    setUser,
+    users,
+    setUsers,
     isLog,
     setIsLog
   }

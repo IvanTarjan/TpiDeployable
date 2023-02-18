@@ -315,7 +315,6 @@
       "ABSBrake": true,
       "fuel": "Nafta Premium"
     },
-    
     {
       "id": 16,
       "status": {
@@ -380,7 +379,7 @@
       "fuel": "Diesel Premium"
     },
     {
-      "id": 18,
+      "id": 19,
       "status": {
         "isRented": false,
         "startDate": "",
@@ -401,7 +400,7 @@
       "fuel": "Diesel Premium"
     },
     {
-      "id": 18,
+      "id": 20,
       "status": {
         "isRented": false,
         "startDate": "25/02/2023",
@@ -420,6 +419,36 @@
       "airConditioning": true,
       "ABSBrake": true,
       "fuel": "Diesel Premium"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Emilio",
+      "surname": "Pino",
+      "email": "pinoe@gmail.com",
+      "password": "pinoe23"
+    },
+    {
+      "id": 2,
+      "name": "Ivan",
+      "surname": "Tarjan",
+      "email": "tarjani@gmail.com",
+      "password": "tarjani23"
+    },
+    {
+      "name": "Laura",
+      "surname": "Mena",
+      "email": "menal@gmail.com",
+      "password": "menal23",
+      "id": 3
+    },
+    {
+      "name": "Enzo",
+      "surname": "Torrez",
+      "email": "torreze@gmail.com",
+      "password": "torreze23",
+      "id": 4
     }
   ]
 }
