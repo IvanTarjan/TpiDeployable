@@ -3,11 +3,7 @@ import { forwardRef } from "react"
 import colors from "../styles/colors"
 import EventIcon from '@mui/icons-material/Event';
 
-
-
-export const CustomInput = forwardRef(({ value,  handleOpen }, ref) => (
-
-
+export const CustomInput = forwardRef(({ value, handleOpen }, ref) => (
     <Box sx={{ display: 'flex', width: '300px', height: '40px', backgroundColor: colors.background, borderRadius: '5px', alignItems: 'center', color: value ? colors.c3 : colors.fuenteBarraBusqueda, paddingLeft: '7px', gap: '5px' }} onClick={handleOpen} ref={ref}>
         <EventIcon /><Typography fontWeight={600} variant='subtitle1'>{value ? value : 'Check in - Check out'}</Typography>
     </Box>

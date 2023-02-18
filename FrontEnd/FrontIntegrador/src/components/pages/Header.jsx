@@ -12,7 +12,7 @@ import { IconButton } from '@mui/material'
 
 const Header = () => {
 
-  const { headerType, setHeaderType, newUser, isLog, setIsLog } = useContext(HeaderContext);
+  const { headerType, setHeaderType, users, isLog, setIsLog } = useContext(HeaderContext);
 
   const nagivate = useNavigate()
 
@@ -44,13 +44,13 @@ const Header = () => {
         <p>Viaja como quieras</p>
       </div>
 
-      {newUser != null && isLog ? <div className={styles.avatarContainer}>
+      {isLog ? <div className={styles.avatarContainer}>
         <Stack direction="row" spacing={2}>
-          <Avatar sx={{ bgcolor: deepPurple[500], fontWeight: 700, height: 48, width: 48 }}>{newUser.name[0]} {newUser.surname[0]}</Avatar>
+          <Avatar sx={{ bgcolor: deepPurple[500], fontWeight: 700, height: 48, width: 48 }}>{users[0].name[0]} {users[0].surname[0]}</Avatar>
         </Stack>
         <div>
           <p>Hola, </p>
-          <span>{newUser.name} {newUser.surname}</span>
+          <span>{users[0].name} {users[0].surname}</span>
         </div>
         <IconButton disableRipple='false' onClick={handleSignOut} >
           <PowerSettingsNewIcon />

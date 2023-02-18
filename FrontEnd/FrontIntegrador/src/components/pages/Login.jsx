@@ -10,7 +10,7 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
 const Login = () => {
-  const { user, setUser, setHeaderType, setIsLog, newUser } = useContext(HeaderContext)
+  const { users, setHeaderType, setIsLog } = useContext(HeaderContext)
   const [showPassword, setShowPassword] = useState(false);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -24,12 +24,11 @@ const Login = () => {
       confirm: '',
     },
     validationSchema: Yup.object({
-      email: Yup.string().email("Ingresar una direccion de email valida").matches(newUser.email, 'Por favor vuelva a intentarlo, sus credenciales son invalidas').required('Campo obligatorio'),
-      password: Yup.string().matches(newUser.password, 'Por favor vuelva a intentarlo, sus credenciales son invalidas').required('Campo obligatorio'),
+      email: Yup.string().email("Ingresar una direccion de email valida").matches(users[0].email, 'El email ingresado no se encuentra en nuestra base de datos.').required('Campo obligatorio'),
+      password: Yup.string().matches(users[0].password, 'Por favor vuelva a intentarlo, sus credenciales son invalidas').required('Campo obligatorio'),
     }),
     onSubmit: (data) => {
       setIsLog(prev => !prev)
-      setUser(data)
       navigate('/')
     }
   })
