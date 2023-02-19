@@ -6,7 +6,6 @@ import BarraDeBusqueda from "./BarraDeBusqueda";
 
 
 const Body = () => {
-
   const [cars, setCars] = useState([])
   useEffect(() => {
     axios.get("http://localhost:5000/cars")
@@ -16,7 +15,6 @@ const Body = () => {
 
   return (
     <div className={styles.homeContainer}>
-      
       {cars.map(car => (
         <VehicleCard
           key={car.id}
