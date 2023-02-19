@@ -17,6 +17,9 @@ const Login = () => {
 
   const navigate = useNavigate()
 
+  const emailsList = users.map(user => user.email);
+  const passwordsList = users.map(user => user.password);
+
   const { handleSubmit, handleChange, values, errors } = useFormik({
     initialValues: {
       email: '',
@@ -24,8 +27,8 @@ const Login = () => {
       confirm: '',
     },
     validationSchema: Yup.object({
-      email: Yup.string().email("Ingresar una direccion de email valida").matches(users[0].email, 'El email ingresado no se encuentra en nuestra base de datos.').required('Campo obligatorio'),
-      password: Yup.string().matches(users[0].password, 'Por favor vuelva a intentarlo, sus credenciales son invalidas').required('Campo obligatorio'),
+      email: Yup.string().email("Ingresar una direccion de email valida").oneOf(emailsList, "El email ingresado no es valido").required('Campo obligatorio'),
+      password: Yup.string().oneOf(passwordsList, "El password ingresado no es valido").required('Campo obligatorio'),
     }),
     onSubmit: (data) => {
       setIsLog(prev => !prev)
