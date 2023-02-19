@@ -12,7 +12,9 @@ import { IconButton } from '@mui/material'
 
 const Header = () => {
 
-  const { headerType, setHeaderType, users, isLog, setIsLog } = useContext(HeaderContext);
+  const { headerType, setHeaderType, users, isLog, setIsLog, currentUser } = useContext(HeaderContext);
+
+  let loggedUser = users.find(user => user.email === currentUser);
 
   const nagivate = useNavigate()
 
@@ -46,14 +48,14 @@ const Header = () => {
 
       {isLog ? <div className={styles.avatarContainer}>
         <Stack direction="row" spacing={2}>
-          <Avatar sx={{ bgcolor: deepPurple[500], fontWeight: 700, height: 48, width: 48 }}>{users[0].name[0]} {users[0].surname[0]}</Avatar>
+          <Avatar sx={{ bgcolor: deepPurple[500], fontWeight: 700, height: 48, width: 48 }}>{loggedUser.name[0]} {loggedUser.surname[0]}</Avatar>
         </Stack>
         <div>
           <p>Hola, </p>
-          <span>{users[0].name} {users[0].surname}</span>
+          <span>{loggedUser.name} {loggedUser.surname}</span>
         </div>
         <IconButton disableRipple='false' onClick={handleSignOut} >
-          <PowerSettingsNewIcon />
+          <PowerSettingsNewIcon fontSize='large' />
         </IconButton>
       </div> :
         headerType === 'initial' ?

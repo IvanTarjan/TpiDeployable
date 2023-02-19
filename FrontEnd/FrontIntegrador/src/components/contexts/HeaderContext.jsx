@@ -8,6 +8,7 @@ const HeaderContextProvider = ({ children }) => {
   const [headerType, setHeaderType] = useState('initial');
   const [users, setUsers] = useState([])
   const [isLog, setIsLog] = useState(false)
+  const [currentUser, setCurrentUser] = useState('')
 
   useEffect(() => {
     axios.get("http://localhost:5000/users")
@@ -15,15 +16,15 @@ const HeaderContextProvider = ({ children }) => {
       .catch(err => console.log(err))
   }, [])
 
-  console.log(users)
-
   const data = {
     headerType,
     setHeaderType,
     users,
     setUsers,
     isLog,
-    setIsLog
+    setIsLog,
+    currentUser,
+    setCurrentUser
   }
 
   return (
