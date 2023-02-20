@@ -38,7 +38,6 @@ const Header = () => {
     setHeaderType('initial')
   }
 
-
   return (
     <div className={styles.headerContainer}>
       <div className={styles.logoContainer} onClick={handleLogoClick} >

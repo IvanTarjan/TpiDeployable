@@ -1,6 +1,6 @@
-import { Box, Button, Typography } from "@mui/material"
+import { Box, Typography } from "@mui/material"
 import { forwardRef } from "react"
-import colors from "../styles/colors"
+import colors from "../commons/colors"
 import EventIcon from '@mui/icons-material/Event';
 
 export const CustomInput = forwardRef(({ value, handleOpen }, ref) => (

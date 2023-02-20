@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import { Box, Button, TextField, useMediaQuery } from '@mui/material'
+import { Box, Button, useMediaQuery } from '@mui/material'
 import DatePicker, { registerLocale } from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import dayjs from 'dayjs';
-import colors from '../styles/colors';
+import colors from '../commons/colors';
 import { CustomInput, CustomHeader } from './RangeDatePickerComponents';
 import es from 'date-fns/locale/es';
 

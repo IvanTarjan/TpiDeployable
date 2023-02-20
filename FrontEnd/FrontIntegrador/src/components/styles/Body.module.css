@@ -3,8 +3,9 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 100vw;
-  height: 100vh;
+  height: auto;
   gap: 20px;
+  padding-bottom: 85px;
 }
 
 .cardContainer{
@@ -26,7 +27,7 @@
 }
 
 .carImages{
-  width: 360px;
+  width: 370px;
   height: 280px;
 }
 
