@@ -17,7 +17,25 @@ import { Box } from '@mui/system';
 
 export default function VehicleCard({ car }) {
   return (
-    <Card sx={{ width: 680, height: 380, display: 'flex', alignItems: 'center' }}>
+    <Card sx={{
+      width: {
+        xs: 380,
+        md: 680,
+        lg: 680
+      },
+      height: {
+        xs: 700,
+        md: 380,
+        lg: 380,
+      },
+      display: 'flex',
+      flexDirection: {
+        xs: 'column',
+        md: 'row',
+        lg: 'row'
+      },
+      alignItems: 'center'
+    }}>
       <Box className={styles.imageContainer}>
         <CardMedia className={styles.carImages}
           sx={{ height: 280 }}
