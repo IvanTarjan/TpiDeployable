@@ -1,0 +1,25 @@
+.footerContainer{
+  width: 100vw;
+  height: 80px;
+  background-color: #1DBEB4;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 30px;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+}
+
+.footerContainer p{
+  font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+color: #FFFFFF;
+}
+
+.logoContainer{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
