@@ -21,12 +21,14 @@ export default function VehicleCard({ car }) {
       width: {
         xs: 380,
         md: 680,
-        lg: 680
+        lg: 680,
+        xl: 680,
       },
       height: {
         xs: 700,
         md: 380,
         lg: 380,
+        xl: 380
       },
       display: 'flex',
       flexDirection: {

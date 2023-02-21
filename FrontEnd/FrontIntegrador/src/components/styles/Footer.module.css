@@ -23,3 +23,9 @@ color: #FFFFFF;
   align-items: center;
   gap: 30px;
 }
+
+@media(max-width: 460px){
+  .logoContainer{
+    display: none;
+  }
+}

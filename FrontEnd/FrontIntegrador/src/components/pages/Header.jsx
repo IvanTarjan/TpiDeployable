@@ -74,7 +74,6 @@ const Header = () => {
       <div className={styles.hamburger}>
         <MenuIcon />
       </div>
-
     </div>
   )
 }

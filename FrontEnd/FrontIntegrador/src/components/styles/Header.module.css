@@ -102,11 +102,8 @@ color: #545776;
   }
 }
 
-@media (max-width: 768px){
+@media (max-width: 868px){
   .travel{
     display: none;
-  }
-  .hamburger{
-    display: flex;
   }
 }

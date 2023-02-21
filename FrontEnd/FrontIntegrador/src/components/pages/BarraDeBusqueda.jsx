@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { Typography, Box, useMediaQuery, InputLabel, MenuItem, FormControl, Select, OutlinedInput, TextField, Button } from '@mui/material';
+import { Typography, Box, useMediaQuery, MenuItem, FormControl, Select, OutlinedInput, Button } from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import colors from '../commons/colors';
-import dayjs from 'dayjs';
 import RangeDatePicker from '../commons/RangeDatePicker';
 
 const BarraDeBusqueda = () => {
