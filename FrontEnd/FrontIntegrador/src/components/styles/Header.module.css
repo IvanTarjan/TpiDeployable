@@ -64,12 +64,14 @@ button:hover, img:hover{
   gap: 10px;
 }
 
-.avatarContainer p{
-  font-style: normal;
-font-weight: 700;
-font-size: 16px;
-line-height: 19px;
-color: rgba(0, 0, 0, 0.5);
+.travel{
+  font-style: italic;
+font-weight: 300;
+font-size: 20px;
+line-height: 23px;
+display: flex;
+align-items: flex-end;
+color: #545776;
 }
 
 .avatarContainer span{
@@ -78,4 +80,30 @@ color: rgba(0, 0, 0, 0.5);
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
+}
+
+.hamburger{
+  display: none;
+}
+
+@media (max-width: 460px){
+  button{
+    display: none;
+  }
+  img{
+    width: 65px;
+    height: 50px;
+  }
+  .travel{
+    display: none;
+  }
+  .hamburger{
+    display: flex;
+  }
+}
+
+@media (max-width: 868px){
+  .travel{
+    display: none;
+  }
 }

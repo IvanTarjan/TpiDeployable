@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
@@ -18,41 +17,56 @@ import { Box } from '@mui/system';
 
 export default function VehicleCard({ car }) {
   return (
-    <Card sx={{ maxWidth: 650 }}>
-      <CardMedia
-        sx={{ height: 500 }}
-        image={car.image}
-        title={car.name}
-      />
-      <CardContent>
+    <Card sx={{
+      width: {
+        xs: 380,
+        md: 680,
+        lg: 680,
+        xl: 680,
+      },
+      height: {
+        xs: 700,
+        md: 380,
+        lg: 380,
+        xl: 380
+      },
+      display: 'flex',
+      flexDirection: {
+        xs: 'column',
+        md: 'row',
+        lg: 'row'
+      },
+      alignItems: 'center'
+    }}>
+      <Box className={styles.imageContainer}>
+        <CardMedia className={styles.carImages}
+          sx={{ height: 280 }}
+          image={car.image}
+          title={car.name}
+        />
+
+        <Button variant='contained' size="small" >ver mas</Button>
+      </Box>
+
+      <CardContent className={styles.cardContent}>
         <p>{car.category}</p>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant="h6" component="div">
           {car.name}
         </Typography>
         <Box className={styles.iconsContainer} >
-
-          <Box>
-            <Typography className={styles.cardContainer} ><InfoIcon />Modelo {car.model}</Typography>
-            <Typography className={styles.cardContainer}><AirlineSeatReclineNormalIcon />{car.airbag}</Typography>
-            <Typography className={styles.cardContainer}><TuneIcon />{car.gearbox}</Typography>
-            <Typography className={styles.cardContainer}><LuggageIcon />Baul {car.trunk}</Typography>
-          </Box>
-
-          <Box>
-            <Typography className={styles.cardContainer}><DoorBack />{car.doors} puertas</Typography>
-            {car.airConditioning && <Typography className={styles.cardContainer}><AcUnitIcon />Aire acondicionado</Typography>}
-            {car.ABSBrake ? <Typography className={styles.cardContainer}><HealthAndSafetyIcon />Frenos ABS</Typography> : <Typography className={styles.cardContainer}><HealthAndSafetyIcon />Frenos a disco</Typography>}
-            <Typography className={styles.cardContainer}><LocalGasStationIcon />{car.fuel}</Typography>
-
-          </Box>
+          <Typography fontSize={'14px'} className={styles.cardContainer} ><InfoIcon fontSize='small' />Modelo {car.model}</Typography>
+          <Typography fontSize={'14px'} className={styles.cardContainer}><AirlineSeatReclineNormalIcon fontSize='small' />{car.airbag}</Typography>
+          <Typography fontSize={'14px'} className={styles.cardContainer}><TuneIcon fontSize='small' />Caja {car.gearbox}</Typography>
+          <Typography fontSize={'14px'} className={styles.cardContainer}><LuggageIcon fontSize='small' />Baul {car.trunk}</Typography>
+          <Typography fontSize={'14px'} className={styles.cardContainer}><DoorBack fontSize='small' />{car.doors} puertas</Typography>
+          {car.airConditioning && <Typography fontSize={'14px'} className={styles.cardContainer}><AcUnitIcon fontSize='small' />Aire acondicionado</Typography>}
+          {car.ABSBrake ? <Typography fontSize={'14px'} className={styles.cardContainer}><HealthAndSafetyIcon fontSize='small' />Frenos ABS</Typography> : <Typography fontSize={'14px'} className={styles.cardContainer}><HealthAndSafetyIcon fontSize='small' />Frenos a disco</Typography>}
+          <Typography fontSize={'14px'} className={styles.cardContainer}><LocalGasStationIcon fontSize='small' />{car.fuel}</Typography>
         </Box>
-        <Typography variant="body2" color="text.secondary">
+        <Typography sx={{ paddingTop: '10px', paddingBottom: '10px' }} variant="body2" color="text.secondary">
           {car.message}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button variant='contained' size="small" fullWidth>ver mas</Button>
-      </CardActions>
     </Card>
   );
 }

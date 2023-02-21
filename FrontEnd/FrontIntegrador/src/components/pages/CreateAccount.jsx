@@ -8,13 +8,17 @@ import { HeaderContext } from "../contexts/HeaderContext";
 import { Link, useNavigate } from "react-router-dom";
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import axios from "axios";
 
 const CreateAccount = () => {
-  const { newUser, setNewUser, setHeaderType } = useContext(HeaderContext)
+  const { users, setUsers, setHeaderType } = useContext(HeaderContext)
   const [isSubmit, setIsSubmit] = useState(false)
   const [showPassword, setShowPassword] = useState(false);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
+
+  const emailsList = users.map(user => user.email);
+  const passwordsList = users.map(user => user.password);
 
   const nagivate = useNavigate()
 
@@ -27,18 +31,27 @@ const CreateAccount = () => {
       confirm: '',
     },
     validationSchema: Yup.object({
-      name: Yup.string().required('Campo obligatorio'),
-      surname: Yup.string().required('Campo obligatorio'),
-      email: Yup.string().email("Ingresar una direccion de email valida").required('Campo obligatorio'),
-      password: Yup.string().min(7, 'La contrasena debe tener mas de 6 caracteres').required('Campo obligatorio'),
-      confirm: Yup.string().label('Confirmar el password ingresado').required('Campo obligatorio').oneOf([Yup.ref('password'), null], 'Las contrasenas deben ser iguales'),
-
+      name: Yup.string().min(3, "El nombre debe contener al menos 3 letras").required('Campo obligatorio'),
+      surname: Yup.string().min(3, "El apellido debe tener al menos 3 letras").required('Campo obligatorio'),
+      email: Yup.string().lowercase().email("Ingresar una direccion de email valida").notOneOf(emailsList, "El email ingresado se ya encuentra registrado").required('Campo obligatorio'),
+      password: Yup.string().min(7, 'La contrasena debe tener mas de 6 caracteres').notOneOf(passwordsList, "La contrasena ingresada ya se encuentra registrada").required('Campo obligatorio'),
+      confirm: Yup.string().label('Confirmar el password ingresado').oneOf([Yup.ref('password')], 'Las contrasenas deben ser iguales').required('Campo obligatorio')
     }),
-    onSubmit: (data) => {
+    onSubmit: (data) => axios.post('http://localhost:5000/users', {
+      name: data.name,
+      surname: data.surname,
+      email: data.email,
+      password: data.confirm
+    }).then(res => {
       setIsSubmit(prev => !prev)
-      setNewUser(data)
+      setUsers(preUsers => [...preUsers, {
+        name: data.name,
+        surname: data.surname,
+        email: data.email,
+        password: data.confirm
+      }])
       nagivate('/login')
-    }
+    }).catch(err => console.log(err))
   })
 
   return (

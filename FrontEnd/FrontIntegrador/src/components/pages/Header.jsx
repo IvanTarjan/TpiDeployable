@@ -2,17 +2,20 @@ import React, { useContext } from 'react'
 import styles from '../styles/Header.module.css'
 import logo from '../../assets/logo.svg'
 import { HeaderContext } from '../contexts/HeaderContext'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
-import { deepOrange, deepPurple } from '@mui/material/colors';
+import { deepPurple } from '@mui/material/colors';
 import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
 import { IconButton } from '@mui/material'
+import MenuIcon from '@mui/icons-material/Menu';
 
 
 const Header = () => {
 
-  const { headerType, setHeaderType, newUser, isLog, setIsLog } = useContext(HeaderContext);
+  const { headerType, setHeaderType, users, isLog, setIsLog, currentUser } = useContext(HeaderContext);
+
+  let loggedUser = users.find(user => user.email === currentUser);
 
   const nagivate = useNavigate()
 
@@ -36,24 +39,23 @@ const Header = () => {
     setHeaderType('initial')
   }
 
-
   return (
     <div className={styles.headerContainer}>
       <div className={styles.logoContainer} onClick={handleLogoClick} >
         <img src={logo} />
-        <p>Viaja como quieras</p>
+        <p className={styles.travel}>Viaja como quieras</p>
       </div>
 
-      {newUser != null && isLog ? <div className={styles.avatarContainer}>
+      {isLog ? <div className={styles.avatarContainer}>
         <Stack direction="row" spacing={2}>
-          <Avatar sx={{ bgcolor: deepPurple[500], fontWeight: 700, height: 48, width: 48 }}>{newUser.name[0]} {newUser.surname[0]}</Avatar>
+          <Avatar sx={{ bgcolor: deepPurple[500], fontWeight: 700, height: 48, width: 48 }}>{loggedUser.name[0]} {loggedUser.surname[0]}</Avatar>
         </Stack>
         <div>
           <p>Hola, </p>
-          <span>{newUser.name} {newUser.surname}</span>
+          <span>{loggedUser.name} {loggedUser.surname}</span>
         </div>
         <IconButton disableRipple='false' onClick={handleSignOut} >
-          <PowerSettingsNewIcon />
+          <PowerSettingsNewIcon fontSize='large' />
         </IconButton>
       </div> :
         headerType === 'initial' ?
@@ -69,6 +71,9 @@ const Header = () => {
               <button onClick={handleCreateAccount}>Crear cuenta</button>
             </div>
       }
+      <div className={styles.hamburger}>
+        <MenuIcon />
+      </div>
     </div>
   )
 }

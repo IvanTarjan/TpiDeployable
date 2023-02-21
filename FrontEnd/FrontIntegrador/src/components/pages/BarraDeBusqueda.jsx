@@ -1,25 +1,20 @@
 import React, { useEffect, useState } from 'react'
-import { Typography, Box, useMediaQuery, InputLabel, MenuItem, FormControl, Select, OutlinedInput, TextField, Button} from '@mui/material';
+import { Typography, Box, useMediaQuery, MenuItem, FormControl, Select, OutlinedInput, Button } from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
-import colors from '../styles/colors';
-import dayjs from 'dayjs';
-import RangeDatePicker from './RangeDatePicker';
-
+import colors from '../commons/colors';
+import RangeDatePicker from '../commons/RangeDatePicker';
 
 const BarraDeBusqueda = () => {
-
     const isMobile = useMediaQuery('(max-width:600px)');
     const [listaLocalizaciones, setListaLocalizaciones] = useState([])
     const [localizacion, setLocalizacion] = useState({ provincia: "", pais: "" });
     const [dateRange, setDateRange] = useState([null, null]);
-
     const handleChange = (event) => {
         setLocalizacion(listaLocalizaciones[event.target.value]);
     }
 
     useEffect(() => {
-
         // Axios imaginario
         setListaLocalizaciones([{ provincia: "San Carlos de Bariloche", pais: "Argentina" }, { provincia: "Buenos Aires", pais: "Argentina" }, { provincia: "Mendoza", pais: "Argentina" }, { provincia: "Cordoba", pais: "Argentina" }])
     }, [])
@@ -35,10 +30,8 @@ const BarraDeBusqueda = () => {
         },
     };
 
-
-
     return (
-        <Box display='flex' flexDirection={'column'} justifyContent='center' alignItems='center' width='100vw'height={'200px'} marginTop={'60px'} backgroundColor={colors.c3} padding={"20px 0px"}>
+        <Box display='flex' flexDirection={'column'} justifyContent='center' alignItems='center' width='100vw' height={'200px'} marginTop={'60px'} backgroundColor={colors.c3} padding={"20px 0px"}>
             <Typography variant='h1' fontSize={'36px'} fontWeight="bold" color={colors.c4}>Busca ofertas en hoteles, casas y mucho más</Typography>
             
                 <FormControl sx={{ m: 1, width: {sx: '90%',lg:'75%'}, mt: 3, display:'flex', justifyContent:'center', alignItems:"center", flexDirection: {xs:"column", lg:"row"}, gap:'10px' }}>
@@ -76,7 +69,7 @@ const BarraDeBusqueda = () => {
                         ))}
                     </Select>
 
-                    <RangeDatePicker dateRange={dateRange} setDateRange={setDateRange}/>
+                <RangeDatePicker dateRange={dateRange} setDateRange={setDateRange} />
 
                     <Button sx={{backgroundColor: colors.principal, color: colors.background, textTransform:'none', width:{sx: '100%', lg:'200px'}, height:'40px', '&:hover':{backgroundColor: colors.principal}}}
                     onClick={()=>{console.log(`${localizacion.provincia}, ${localizacion.pais} fecha: ${dateRange[0]} al ${dateRange[1]}`);}}>

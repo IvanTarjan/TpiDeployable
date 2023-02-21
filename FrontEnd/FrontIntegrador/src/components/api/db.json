@@ -2,11 +2,6 @@
   "cars": [
     {
       "id": 1,
-      "status": {
-        "isRented": true,
-        "startDate": "20/02/2023",
-        "endDate": "25/02/2023"
-      },
       "category": "Economico",
       "name": "Chevrolet Classic",
       "image": "https://gower.ar/wp-content/uploads/2022/02/Chevrolet-Classic-2013.jpg",
@@ -14,7 +9,7 @@
       "model": 2013,
       "message": "Disfruta su viaje en este auto compacto y Economico, ideal para paseos por la ciudad y la zona de viñedos.",
       "airbag": "2 airbags frontales",
-      "gearbox": "Manual",
+      "gearbox": "manual",
       "trunk": "mediano",
       "doors": 4,
       "airConditioning": true,
@@ -23,11 +18,6 @@
     },
     {
       "id": 2,
-      "status": {
-        "isRented": true,
-        "startDate": "20/02/2023",
-        "endDate": "25/02/2023"
-      },
       "category": "Economico",
       "name": "Ford Ka SEL Full",
       "image": "https://gower.ar/wp-content/uploads/2022/05/1-1.jpg",
@@ -35,7 +25,7 @@
       "model": 2016,
       "message": "Disfrutá a bordo de este moderno y confortable vehículo. Ideal para paseos en ciudad y ruta. Excelente confort de marcha y seguridad gracias a su dirección eléctrica asistida y control de estabilidad (ESP)",
       "airbag": "2 airbags frontales",
-      "gearbox": "Manual",
+      "gearbox": "manual",
       "trunk": "pequeno",
       "doors": 5,
       "airConditioning": true,
@@ -44,11 +34,6 @@
     },
     {
       "id": 3,
-      "status": {
-        "isRented": true,
-        "startDate": "20/02/2023",
-        "endDate": "25/02/2023"
-      },
       "category": "Economico",
       "name": "Volkswagen Fox",
       "image": "https://gower.ar/wp-content/uploads/2022/05/FOX-2.jpg",
@@ -56,7 +41,7 @@
       "model": 2017,
       "message": "Este auto te permitirá conocer los mejores lugares en forma económica, Ideal para la ciudad y la ruta!",
       "airbag": "2 airbags frontales",
-      "gearbox": "Manual",
+      "gearbox": "manual",
       "trunk": "chico",
       "doors": 5,
       "airConditioning": true,
@@ -65,11 +50,6 @@
     },
     {
       "id": 4,
-      "status": {
-        "isRented": true,
-        "startDate": "20/02/2023",
-        "endDate": "25/02/2023"
-      },
       "category": "Economico",
       "name": "Peugeot 207 Compact",
       "image": "https://gower.ar/wp-content/uploads/2021/12/Catalogo-Peugeot-207.jpg",
@@ -77,7 +57,7 @@
       "model": 2016,
       "message": "Disfruta en este auto compacto y Economico, ideal para paseos por la ciudad y la zona rural.",
       "airbag": "2 airbags frontales",
-      "gearbox": "Manual",
+      "gearbox": "manual",
       "trunk": "chico",
       "doors": 4,
       "airConditioning": true,
@@ -86,11 +66,6 @@
     },
     {
       "id": 5,
-      "status": {
-        "isRented": true,
-        "startDate": "20/02/2023",
-        "endDate": "25/02/2023"
-      },
       "category": "Economico",
       "name": "Nissan March",
       "image": "https://gower.ar/wp-content/uploads/2021/12/March-1.jpg",
@@ -98,7 +73,7 @@
       "model": 2014,
       "message": "Disfruta su viaje en este auto compacto y Economico, ideal para paseos por la ciudad y la zona de viñedos.",
       "airbag": "2 airbags frontales",
-      "gearbox": "Manual",
+      "gearbox": "manual",
       "trunk": "chico",
       "doors": 5,
       "airConditioning": true,
@@ -107,11 +82,6 @@
     },
     {
       "id": 6,
-      "status": {
-        "isRented": true,
-        "startDate": "20/02/2023",
-        "endDate": "25/02/2023"
-      },
       "category": "Economico",
       "name": "Fiat Palio Attractive",
       "image": "https://gower.ar/wp-content/uploads/2022/05/Palio-final.jpg",
@@ -119,7 +89,7 @@
       "model": 2016,
       "message": "Recorre los mejores lugares en este auto Economico, Ideal para recorrer la ciudad y sus alrededores en forma cómoda y segura.",
       "airbag": "2 airbags frontales",
-      "gearbox": "Manual",
+      "gearbox": "manual",
       "trunk": "pequeno",
       "doors": 5,
       "airConditioning": true,
@@ -128,19 +98,14 @@
     },
     {
       "id": 7,
-      "status": {
-        "isRented": false,
-        "startDate": "",
-        "endDate": ""
-      },
       "category": "Gama media",
       "name": "Renault Logan Privilege",
       "image": "https://gower.ar/wp-content/uploads/2022/01/Logan-1.jpg",
       "price": 12000,
       "model": 2017,
-      "message": "Disfruta de la comodidad que este auto te ofrece, mucho espacio y baúl para viajar cómodo con amigos o familia!  Además tendrás toda la tecnología como velocidad crucero, climatizador automático, computadora de abordo, sensor de estacionamiento, etc.",
+      "message": "Disfruta de la comodidad, mucho espacio y baúl para viajar cómodo con amigos o familia!  Además tendrás toda la tecnología como velocidad crucero, climatizador automático, computadora de abordo, sensor de estacionamiento, etc.",
       "airbag": "2 airbags frontales",
-      "gearbox": "Manual",
+      "gearbox": "manual",
       "trunk": "grande",
       "doors": 4,
       "airConditioning": true,
@@ -149,11 +114,6 @@
     },
     {
       "id": 8,
-      "status": {
-        "isRented": false,
-        "startDate": "",
-        "endDate": ""
-      },
       "category": "Gama media",
       "name": "Fiat Cronos",
       "image": "https://gower.ar/wp-content/uploads/2021/12/Catalogo-Citroen-C3-1-1.jpg",
@@ -161,7 +121,7 @@
       "model": 2020,
       "message": "Recorre tu destino en este moderno auto, el cual te permitirá disfrutar paseos por la cuidad y sus alrededores. Su caja automática hace que manejarlo sea muy fácil.",
       "airbag": "2 airbags frontales",
-      "gearbox": "Automatica",
+      "gearbox": "automatica",
       "trunk": "grande",
       "doors": 4,
       "airConditioning": true,
@@ -170,11 +130,6 @@
     },
     {
       "id": 9,
-      "status": {
-        "isRented": false,
-        "startDate": "",
-        "endDate": ""
-      },
       "category": "Gama media",
       "name": "Ecosport",
       "image": "https://gower.ar/wp-content/uploads/2022/02/Ecosport-2016.jpg",
@@ -182,7 +137,7 @@
       "model": 2016,
       "message": "Este es el auto ideal para los que eligen viajar cómodos, con espacios interiores amplios y toda la comodidad de una SUV. Posee todo lo que necesitas para disfrutar tu paseo sintiéndote seguro/a en cada momento.",
       "airbag": "2 airbags frontales",
-      "gearbox": "Manual",
+      "gearbox": "manual",
       "trunk": "mediano",
       "doors": 4,
       "airConditioning": true,
@@ -191,11 +146,6 @@
     },
     {
       "id": 10,
-      "status": {
-        "isRented": false,
-        "startDate": "",
-        "endDate": ""
-      },
       "category": "Gama media",
       "name": "Renault Stepway",
       "image": "https://gower.ar/wp-content/uploads/2022/01/Catalogo-Onix-4.jpg",
@@ -203,7 +153,7 @@
       "model": 2020,
       "message": "Con este cómodo vehículo podrás vivir las mejores aventuras, disfruta su confort y espacio, además de su equipamiento como control de velocidad crucero, bluetooth, aire acondicionado y mas!!!",
       "airbag": "2 airbags frontales",
-      "gearbox": "Manual",
+      "gearbox": "manual",
       "trunk": "grande",
       "doors": 5,
       "airConditioning": true,
@@ -212,11 +162,6 @@
     },
     {
       "id": 11,
-      "status": {
-        "isRented": false,
-        "startDate": "",
-        "endDate": ""
-      },
       "category": "Gama media",
       "name": "Volkswagen Suran",
       "image": "https://gower.ar/wp-content/uploads/2021/12/Catalogo-Renegade-1.jpg",
@@ -224,7 +169,7 @@
       "model": 2017,
       "message": "Este es el auto ideal para los que eligen viajar cómodos, con espacios interiores amplios y toda la comodidad de una SUV. Posee todo lo que necesitas para disfrutar tu paseo sintiéndote seguro/a en cada momento.",
       "airbag": "2 airbags frontales",
-      "gearbox": "Manual",
+      "gearbox": "manual",
       "trunk": "grande",
       "doors": 5,
       "airConditioning": true,
@@ -233,11 +178,6 @@
     },
     {
       "id": 12,
-      "status": {
-        "isRented": false,
-        "startDate": "",
-        "endDate": ""
-      },
       "category": "Gama media",
       "name": "Peugeot 208 Feline",
       "image": "https://gower.ar/wp-content/uploads/2022/08/208-Caro-768x768.jpg",
@@ -245,7 +185,7 @@
       "model": 2020,
       "message": "Viaja en este auto con techo panorámico y disfruta todo el confort y tecnología que te ofrece como control de velocidad crucero, climatizador automático, sensor de estacionamiento y mucho mas!",
       "airbag": "2 airbags frontales",
-      "gearbox": "Manual",
+      "gearbox": "manual",
       "trunk": "chico",
       "doors": 5,
       "airConditioning": true,
@@ -254,19 +194,14 @@
     },
     {
       "id": 13,
-      "status": {
-        "isRented": false,
-        "startDate": "",
-        "endDate": ""
-      },
       "category": "Premium",
       "name": "Toyota Corolla",
-      "image": "https://www.mararentacar.com/images/autos/corolla/main.png",
+      "image": "https://img1.static.reweb.io/tiny/0/0/dealers.rewebmkt.com/images/20230117071214-blanco.png",
       "price": 19000,
       "model": 2017,
-      "message": "Disfruta de la comodidad que este auto te ofrece, mucho espacio y baúl para viajar cómodo con amigos o familia!  Además tendrás toda la tecnología como velocidad crucero, climatizador automático, computadora de abordo, sensor de estacionamiento, pantalla tactil.",
+      "message": "Disfruta de la comodidad, mucho espacio y baúl para viajar cómodo con amigos o familia! Además tendrás toda la tecnología como velocidad crucero, climatizador automático, computadora de abordo, sensor de estacionamiento, pantalla tactil.",
       "airbag": "2 airbags frontales",
-      "gearbox": "Automatica",
+      "gearbox": "automatica",
       "trunk": "grande",
       "doors": 4,
       "airConditioning": true,
@@ -275,11 +210,6 @@
     },
     {
       "id": 14,
-      "status": {
-        "isRented": false,
-        "startDate": "",
-        "endDate": ""
-      },
       "category": "Premium",
       "name": "Jeep Renegade",
       "image": "https://gower.ar/wp-content/uploads/2022/05/Renegade-1.jpg",
@@ -287,7 +217,7 @@
       "model": 2018,
       "message": "Con este vehículo podes viajar de forma segura y confortable, teniendo mucho espacio y confort.",
       "airbag": "2 airbags frontales",
-      "gearbox": "Manual",
+      "gearbox": "manual",
       "trunk": "grande",
       "doors": 5,
       "airConditioning": true,
@@ -296,11 +226,6 @@
     },
     {
       "id": 15,
-      "status": {
-        "isRented": false,
-        "startDate": "",
-        "endDate": ""
-      },
       "category": "Premium",
       "name": "Chevrolet Spin",
       "image": "https://gower.ar/wp-content/uploads/2018/08/Spin.jpg",
@@ -308,29 +233,23 @@
       "model": 2017,
       "message": "Viaja en esta vehículo con capacidad de hasta 7 personas, el cual te permitirá disfrutar con familia y amigos los mejores paisajes",
       "airbag": "2 airbags frontales",
-      "gearbox": "Manual",
+      "gearbox": "manual",
       "trunk": "grande",
       "doors": 5,
       "airConditioning": true,
       "ABSBrake": true,
       "fuel": "Nafta Premium"
     },
-    
     {
       "id": 16,
-      "status": {
-        "isRented": false,
-        "startDate": "",
-        "endDate": ""
-      },
       "category": "Premium",
       "name": "Chevrolet Cruze RS",
       "image": "https://gower.ar/wp-content/uploads/2022/08/Cruze-1-768x768.jpg",
       "price": 21500,
       "model": 2022,
-      "message": "Vivi lo mejor de tu viaje en este nuevo auto de alta gama, el cual posee caja Automatica, tapizados en cuero, techo panoramico, velocidad crucero, sensores de estacionamiento , centro de entretenimiento y mucho mas para que tu visita sea unica!",
+      "message": "Vivi lo mejor de tu viaje en este auto que posee caja automatica, tapizados en cuero, techo panoramico, velocidad crucero, sensores de estacionamiento , centro de entretenimiento y mucho mas para que tu visita sea unica!",
       "airbag": "2 airbags frontales",
-      "gearbox": "Automatica",
+      "gearbox": "automatica",
       "trunk": "grande",
       "doors": 5,
       "airConditioning": true,
@@ -339,19 +258,14 @@
     },
     {
       "id": 17,
-      "status": {
-        "isRented": false,
-        "startDate": "",
-        "endDate": ""
-      },
       "category": "Pickup truck",
       "name": "Toyota Hilux 4WD",
-      "image": "https://www.mararentacar.com/images/autos/hilux_at/main.png",
+      "image": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_306e84f8dec84ba4ad1f3372499ac72e.jpg",
       "price": 22000,
       "model": 2019,
       "message": "Ideal para caminos rurales y con todo el confort que te ofrecen la pantalla tactil, control crucero, control de traccion, etc.",
       "airbag": "2 airbags frontales",
-      "gearbox": "Automatica",
+      "gearbox": "automatica",
       "trunk": "grande",
       "doors": 4,
       "airConditioning": true,
@@ -360,19 +274,14 @@
     },
     {
       "id": 18,
-      "status": {
-        "isRented": false,
-        "startDate": "",
-        "endDate": ""
-      },
       "category": "Pickup truck",
       "name": "Chevrolet S-10",
-      "image": "https://content.r9cdn.net/rimg/carimages/generic/12_truck_white.png?height=174",
+      "image": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_55c0731587d04e45a3114064289cabb7.jpg",
       "price": 23000,
       "model": 2019,
       "message": "Ideal para caminos rurales y con todo el confort que te ofrecen la pantalla tactil, control crucero, control de traccion, etc.",
       "airbag": "2 airbags frontales",
-      "gearbox": "Manual",
+      "gearbox": "manual",
       "trunk": "grande",
       "doors": 4,
       "airConditioning": true,
@@ -380,20 +289,15 @@
       "fuel": "Diesel Premium"
     },
     {
-      "id": 18,
-      "status": {
-        "isRented": false,
-        "startDate": "",
-        "endDate": ""
-      },
+      "id": 19,
       "category": "Pickup truck",
       "name": "Volkswagen Amarok",
-      "image": "https://cdn.wheel-size.com/thumbs/0b/23/0b2371c07b57900798eef71b58bc693d.jpg",
+      "image": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_eb920fd356044f8b854396b536b9b78b.jpg",
       "price": 22300,
       "model": 2019,
       "message": "Ideal para caminos rurales y con todo el confort que te ofrecen la pantalla tactil, control crucero, control de traccion, etc.",
       "airbag": "2 airbags frontales",
-      "gearbox": "Manual",
+      "gearbox": "manual",
       "trunk": "grande",
       "doors": 4,
       "airConditioning": true,
@@ -401,25 +305,66 @@
       "fuel": "Diesel Premium"
     },
     {
-      "id": 18,
-      "status": {
-        "isRented": false,
-        "startDate": "25/02/2023",
-        "endDate": "28/02/2023"
-      },
+      "id": 20,
       "category": "Pickup truck",
       "name": "Ford Ranger",
-      "image": "https://fotos.perfil.com/2021/11/26/trim/1280/720/ford-ranger-xl-1275718.jpg",
+      "image": "https://cdn.drivek.com/configurator-imgs/trucks/it/800/FORD/RANGER/7953_AUTOCARRO-4-PORTE/ford-ranger-pickup-4-doors.jpg",
       "price": 23000,
       "model": 2019,
       "message": "Ideal para caminos rurales y con todo el confort que te ofrecen la pantalla tactil, control crucero, control de traccion, etc.",
       "airbag": "2 airbags frontales",
-      "gearbox": "Manual",
+      "gearbox": "manual",
       "trunk": "grande",
       "doors": 4,
       "airConditioning": true,
       "ABSBrake": true,
       "fuel": "Diesel Premium"
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Emilio",
+      "surname": "Pino",
+      "email": "pinoe@gmail.com",
+      "password": "pinoe23"
+    },
+    {
+      "id": 2,
+      "name": "Ivan",
+      "surname": "Tarjan",
+      "email": "tarjani@gmail.com",
+      "password": "tarjani23"
+    },
+    {
+      "name": "Laura",
+      "surname": "Mena",
+      "email": "menal@gmail.com",
+      "password": "menal23",
+      "id": 3
+    },
+    {
+      "name": "Enzo",
+      "surname": "Torrez",
+      "email": "torreze@gmail.com",
+      "password": "torreze23",
+      "id": 4
+    }
+  ],
+  "reservations": [
+   {
+    "id": 1,
+    "car_id": 1,
+    "client_id": 1,
+    "startDate": "25/02/2023",
+    "endDate": "28/02/2023"
+   },
+   {
+    "id": 2,
+    "car_id": 2,
+    "client_id": 2,
+    "startDate": "02/03/2023",
+    "endDate": "09/03/2023"
+   }
   ]
 }

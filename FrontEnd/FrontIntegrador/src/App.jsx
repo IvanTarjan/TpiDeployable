@@ -9,7 +9,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Login from './components/pages/Login'
 import Palette from './components/contexts/ThemeContext'
 
-
 function App() {
   return (
     <div>
@@ -18,8 +17,7 @@ function App() {
         <HeaderContextProvider>
           <BrowserRouter>
             <Header />
-            <BarraDeBusqueda/>
-            
+            <BarraDeBusqueda />
             <Routes>
               <Route path='/register' element={<CreateAccount />} ></Route>
               <Route path='/login' element={<Login />} />

@@ -10,26 +10,28 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
 const Login = () => {
-  const { user, setUser, setHeaderType, setIsLog, newUser } = useContext(HeaderContext)
+  const { users, setHeaderType, setIsLog, setCurrentUser } = useContext(HeaderContext)
   const [showPassword, setShowPassword] = useState(false);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
   const navigate = useNavigate()
 
+  const emailsList = users.map(user => user.email);
+  const passwordsList = users.map(user => user.password);
+
   const { handleSubmit, handleChange, values, errors } = useFormik({
     initialValues: {
       email: '',
       password: '',
-      confirm: '',
     },
     validationSchema: Yup.object({
-      email: Yup.string().email("Ingresar una direccion de email valida").matches(newUser.email, 'Por favor vuelva a intentarlo, sus credenciales son invalidas').required('Campo obligatorio'),
-      password: Yup.string().matches(newUser.password, 'Por favor vuelva a intentarlo, sus credenciales son invalidas').required('Campo obligatorio'),
+      email: Yup.string().email("Ingresar una direccion de email valida").oneOf(emailsList, "El email ingresado no es valido").required('Campo obligatorio'),
+      password: Yup.string().oneOf(passwordsList, "El password ingresado no es valido").required('Campo obligatorio'),
     }),
     onSubmit: (data) => {
       setIsLog(prev => !prev)
-      setUser(data)
+      setCurrentUser(data.email)
       navigate('/')
     }
   })
