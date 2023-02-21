@@ -12,9 +12,14 @@ import java.util.Optional;
 
 @Service
 public class CategoriaService {
-    @Autowired
+
     private CategoriaRepository categoriaRepository;
-    private static final Logger LOGGER=Logger.getLogger(CategoriaService.class);
+    private  Logger LOGGER=Logger.getLogger(CategoriaService.class);
+    @Autowired
+
+    public CategoriaService(CategoriaRepository categoriaRepository) {
+        this.categoriaRepository = categoriaRepository;
+    }
 
     public List<Categoria> listarCategorias() {
         LOGGER.info("Se inició el listado de todas las Categorias");
