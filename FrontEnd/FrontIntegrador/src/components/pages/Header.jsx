@@ -7,8 +7,8 @@ import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import { deepPurple } from '@mui/material/colors';
 import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
-import { IconButton } from '@mui/material'
-import MenuIcon from '@mui/icons-material/Menu';
+import { IconButton, useMediaQuery } from '@mui/material'
+import Hamburguer from '../commons/Hamburguer'
 
 
 const Header = () => {
@@ -39,6 +39,8 @@ const Header = () => {
     setHeaderType('initial')
   }
 
+  const isMobile = useMediaQuery('(max-width:600px)');
+
   return (
     <div className={styles.headerContainer}>
       <div className={styles.logoContainer} onClick={handleLogoClick} >
@@ -48,11 +50,11 @@ const Header = () => {
 
       {isLog ? <div className={styles.avatarContainer}>
         <Stack direction="row" spacing={2}>
-          <Avatar sx={{ bgcolor: deepPurple[500], fontWeight: 700, height: 48, width: 48 }}>{loggedUser.name[0]} {loggedUser.surname[0]}</Avatar>
+          <Avatar sx={{ bgcolor: deepPurple[500], fontWeight: 700, height: { xs: 34, md: 48, lg: 48 }, width: { xs: 34, md: 48, lg: 48 } }}>{loggedUser.name[0]} {loggedUser.surname[0]}</Avatar>
         </Stack>
         <div>
           <p>Hola, </p>
-          <span>{loggedUser.name} {loggedUser.surname}</span>
+          <span>{isMobile ? loggedUser.name : loggedUser.name + ' ' + loggedUser.surname}</span>
         </div>
         <IconButton disableRipple='false' onClick={handleSignOut} >
           <PowerSettingsNewIcon fontSize='large' />
@@ -72,7 +74,7 @@ const Header = () => {
             </div>
       }
       <div className={styles.hamburger}>
-        <MenuIcon />
+        <Hamburguer />
       </div>
     </div>
   )
