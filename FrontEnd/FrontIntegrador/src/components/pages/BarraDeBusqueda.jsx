@@ -41,7 +41,7 @@ const BarraDeBusqueda = () => {
         <Box display='flex' flexDirection={'column'} justifyContent='center' alignItems='center' width='100vw'height={'200px'} marginTop={'60px'} backgroundColor={colors.c3} padding={"20px 0px"}>
             <Typography variant='h1' fontSize={'36px'} fontWeight="bold" color={colors.c4}>Busca ofertas en hoteles, casas y mucho más</Typography>
             
-                <FormControl sx={{ m: 1, width: '70%', mt: 3, display:'flex', justifyContent:'center', alignItems:"center", flexDirection: "row", gap:'10px'}}>
+                <FormControl sx={{ m: 1, width: {sx: '90%',lg:'75%'}, mt: 3, display:'flex', justifyContent:'center', alignItems:"center", flexDirection: {xs:"column", lg:"row"}, gap:'10px' }}>
                     <Select
                         displayEmpty
                         sx={{ width: '500px', height: '40px', backgroundColor: colors.background, borderRadius: '5px' }}
@@ -78,9 +78,9 @@ const BarraDeBusqueda = () => {
 
                     <RangeDatePicker dateRange={dateRange} setDateRange={setDateRange}/>
 
-                    <Button sx={{backgroundColor: colors.principal, color: colors.background, textTransform:'none', width:'100px', height:'40px', '&:hover':{backgroundColor: colors.principal}}}
+                    <Button sx={{backgroundColor: colors.principal, color: colors.background, textTransform:'none', width:{sx: '100%', lg:'200px'}, height:'40px', '&:hover':{backgroundColor: colors.principal}}}
                     onClick={()=>{console.log(`${localizacion.provincia}, ${localizacion.pais} fecha: ${dateRange[0]} al ${dateRange[1]}`);}}>
-                        Aplicar
+                        Buscar
                     </Button>
                 </FormControl>
             
