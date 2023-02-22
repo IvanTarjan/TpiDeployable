@@ -1,3 +1,4 @@
+
 .homeContainer{
   display: flex;
   flex-wrap: wrap;
@@ -35,4 +36,7 @@
   width: 310px;
 }
 
-
+.categoryImages{
+  width: 370px;
+  height: 280px;
+}
