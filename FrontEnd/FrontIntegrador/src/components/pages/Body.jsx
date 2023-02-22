@@ -3,6 +3,9 @@ import styles from '../styles/Body.module.css'
 import VehicleCard from '../commons/VehicleCard'
 import axios from 'axios'
 import BarraDeBusqueda from "./BarraDeBusqueda";
+import CategoryContainer from './CategoryContainer';
+import CategoryCard from '../commons/CategoryCard';
+import { Box } from '@mui/material';
 
 
 const Body = () => {
@@ -14,8 +17,9 @@ const Body = () => {
   }, [])
 
   return (
-    <>
+    <Box display={"flex"} flexDirection="column" justifyContent={"center"} alignItems="center">
       <BarraDeBusqueda />
+      <CategoryContainer/>
       <div className={styles.homeContainer}>
         {cars.map(car => (
           <VehicleCard
@@ -24,7 +28,7 @@ const Body = () => {
           />
         ))}
       </div>
-    </>
+    </Box>
   )
 }
 
