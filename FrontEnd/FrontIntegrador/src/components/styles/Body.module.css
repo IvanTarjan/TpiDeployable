@@ -1,0 +1,38 @@
+.homeContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100vw;
+  height: auto;
+  gap: 20px;
+  padding-bottom: 85px;
+}
+
+.cardContainer{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.imageContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iconsContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.carImages{
+  width: 370px;
+  height: 280px;
+}
+
+.cardContent{
+  width: 310px;
+}
+
+
