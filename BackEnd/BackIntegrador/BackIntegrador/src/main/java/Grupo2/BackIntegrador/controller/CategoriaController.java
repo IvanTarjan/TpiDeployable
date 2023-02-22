@@ -49,7 +49,7 @@ public class CategoriaController {
         Optional<Categoria> categoriaAActualizar=categoriaService.buscarCategoriaXId(categoria.getId());
         if (categoriaAActualizar.isPresent()){
             categoriaService.actualizarCategoria(categoria);
-            return ResponseEntity.ok("La categoria con id= "+categoria.getId()+" fue actualizada");
+            return ResponseEntity.ok("La categoria con el id= "+categoria.getId()+" fue actualizada");
         }
         else{
             return ResponseEntity.badRequest().body("No se puede actualizar una categoria que no existe en la base de datos");
