@@ -3,6 +3,8 @@ import styles from '../styles/Body.module.css'
 import VehicleCard from '../commons/VehicleCard'
 import axios from 'axios'
 import BarraDeBusqueda from "./BarraDeBusqueda";
+import CategoryContainer from './CategoryContainer';
+import CategoryCard from '../commons/CategoryCard';
 
 
 const Body = () => {
