@@ -16,14 +16,17 @@ const Body = () => {
   }, [])
 
   return (
-    <div className={styles.homeContainer}>
-      {cars.map(car => (
-        <VehicleCard
-          key={car.id}
-          car={car}
-        />
-      ))}
-    </div>
+    <>
+      <BarraDeBusqueda />
+      <div className={styles.homeContainer}>
+        {cars.map(car => (
+          <VehicleCard
+            key={car.id}
+            car={car}
+          />
+        ))}
+      </div>
+    </>
   )
 }
 
