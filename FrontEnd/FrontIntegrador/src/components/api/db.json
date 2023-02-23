@@ -349,22 +349,29 @@
       "email": "torreze@gmail.com",
       "password": "torreze23",
       "id": 4
+    },
+    {
+      "name": "Pablo",
+      "surname": "Velez",
+      "email": "velezp@gmail.com",
+      "password": "velez23",
+      "id": 5
     }
   ],
   "reservations": [
-   {
-    "id": 1,
-    "car_id": 1,
-    "client_id": 1,
-    "startDate": "25/02/2023",
-    "endDate": "28/02/2023"
-   },
-   {
-    "id": 2,
-    "car_id": 2,
-    "client_id": 2,
-    "startDate": "02/03/2023",
-    "endDate": "09/03/2023"
-   }
+    {
+      "id": 1,
+      "car_id": 1,
+      "client_id": 1,
+      "startDate": "25/02/2023",
+      "endDate": "28/02/2023"
+    },
+    {
+      "id": 2,
+      "car_id": 2,
+      "client_id": 2,
+      "startDate": "02/03/2023",
+      "endDate": "09/03/2023"
+    }
   ]
 }
