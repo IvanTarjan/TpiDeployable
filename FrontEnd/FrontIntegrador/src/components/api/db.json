@@ -349,22 +349,47 @@
       "email": "torreze@gmail.com",
       "password": "torreze23",
       "id": 4
+    },
+    {
+      "name": "Ivan",
+      "surname": "Tarjan",
+      "email": "pepepepe@gmail.com",
+      "password": "asdfasdf",
+      "id": 5
     }
   ],
   "reservations": [
-   {
-    "id": 1,
-    "car_id": 1,
-    "client_id": 1,
-    "startDate": "25/02/2023",
-    "endDate": "28/02/2023"
-   },
-   {
-    "id": 2,
-    "car_id": 2,
-    "client_id": 2,
-    "startDate": "02/03/2023",
-    "endDate": "09/03/2023"
-   }
+    {
+      "id": 1,
+      "car_id": 1,
+      "client_id": 1,
+      "startDate": "25/02/2023",
+      "endDate": "28/02/2023"
+    },
+    {
+      "id": 2,
+      "car_id": 2,
+      "client_id": 2,
+      "startDate": "02/03/2023",
+      "endDate": "09/03/2023"
+    }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "nombre": "Economico"
+    },
+    {
+      "id": 2,
+      "nombre": "Gama media"
+    },
+    {
+      "id": 3,
+      "nombre": "Premium"
+    },
+    {
+      "id": 4,
+      "nombre": "Pickup truck"
+    }
   ]
 }
