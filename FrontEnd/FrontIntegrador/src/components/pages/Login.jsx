@@ -65,7 +65,7 @@ const Login = () => {
             <TextField
               InputProps={{
                 endAdornment: (
-                  <IconButton disableRipple='false' onClick={handleClickShowPassword}>
+                  <IconButton disableRipple={false} onClick={handleClickShowPassword}>
                     {showPassword ? <Visibility /> : <VisibilityOff />}
                   </IconButton>
                 ),

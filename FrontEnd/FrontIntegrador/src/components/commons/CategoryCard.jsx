@@ -3,7 +3,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
-import React from 'react'
+import React, { useEffect } from 'react'
 import colors from './colors';
 import styles from '../styles/Body.module.css'
 
@@ -14,14 +14,14 @@ const CategoryCard = ({ categoria, carImgs }) => {
     }
     
     const randomImgIndex = getRandomInt(carImgs.length)
-
+    
     return (
         <Card sx={{ height: 380, width: 360}}>
                 <CardMedia
                     className={styles.categoryImages}
                     component="img"
                     sx={{ height: 280 }}
-                    image={carImgs[randomImgIndex].image}
+                    image={carImgs[randomImgIndex]}
                     alt={categoria.nombre}
                 />
                 <CardContent>

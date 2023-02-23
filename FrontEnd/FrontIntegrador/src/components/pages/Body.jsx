@@ -15,6 +15,7 @@ const Body = () => {
       .then(res => setCars(res.data))
       .catch(err => console.log(err))
   }, [])
+  
 
   return (
     <Box display={"flex"} flexDirection="column" justifyContent={"center"} alignItems="center">
