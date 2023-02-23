@@ -19,7 +19,7 @@ const Body = () => {
   return (
     <Box display={"flex"} flexDirection="column" justifyContent={"center"} alignItems="center">
       <BarraDeBusqueda />
-      <CategoryContainer/>
+      <CategoryContainer cars={cars}/>
       <div className={styles.homeContainer}>
         {cars.map(car => (
           <VehicleCard
