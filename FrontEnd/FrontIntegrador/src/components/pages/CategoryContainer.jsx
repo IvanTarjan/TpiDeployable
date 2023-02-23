@@ -14,7 +14,7 @@ const CategoryContainer = ({cars}) => {
       .catch(err => console.log(err))
     }, [])
 
-    const filterByCategoriaNombre = (nombre) => cars.filter(car=> car.category == nombre);
+    const filterByCategoriaNombre = (nombre) => cars.filter(car=> car.category == nombre).map((carImg) => carImg.image);
 
   return (
     <Box display={"flex"} flexDirection="column" margin={"15px 0px"} justifyContent="center" alignItems="center">
