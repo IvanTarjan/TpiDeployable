@@ -14,7 +14,7 @@ import java.util.Optional;
 public class CategoriaService {
 
     private CategoriaRepository categoriaRepository;
-    private  Logger LOGGER=Logger.getLogger(CategoriaService.class);
+    private static final Logger LOGGER=Logger.getLogger(CategoriaService.class);
     @Autowired
 
     public CategoriaService(CategoriaRepository categoriaRepository) {
@@ -28,7 +28,7 @@ public class CategoriaService {
 
     public Categoria guardarCategoria(Categoria categoria){
         LOGGER.info("Se inició una operación de guardado de la categoria con titulo: "+
-                categoria.getName());
+                categoria.getTitulo());
         return categoriaRepository.save(categoria);
     }
 
