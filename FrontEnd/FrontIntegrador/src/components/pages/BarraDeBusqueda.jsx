@@ -10,7 +10,7 @@ import Toolbar from 'react-multi-date-picker/plugins/toolbar';
 
 
 const BarraDeBusqueda = () => {
-    const isMobile = useMediaQuery('(max-width:520px)');
+    const isMobile = useMediaQuery('(max-width:600px)');
     const isTablet = useMediaQuery('(max-width:800px)');
     const [listaLocalizaciones, setListaLocalizaciones] = useState([])
     const [localizacion, setLocalizacion] = useState({ provincia: "", pais: "" });
@@ -37,7 +37,7 @@ const BarraDeBusqueda = () => {
 
     return (
         <Box display='flex' flexDirection={'column'} justifyContent='center' alignItems='center' width='100vw' marginTop={'60px'} backgroundColor={colors.c3} padding={"30px 0px"}>
-            <Typography variant='h1' fontSize={'36px'} fontWeight="bold" color={colors.c4} textAlign="center" padding={'20px'}>Busca ofertas en Autos Economicos, Pick Ups y mucho más</Typography>
+            <Typography variant='h1' fontSize={isMobile?'30px': '36px'} fontWeight="bold" color={colors.c4} textAlign="center" padding={'20px'} >Busca ofertas en Autos Economicos, Pick Ups y mucho más</Typography>
 
             <FormControl sx={{ m: 1, width: isTablet ? '90%' : '70%', mt: 3, display: 'flex', justifyContent: 'center', alignItems: "center", flexDirection: isMobile ? 'column' : 'row', gap: '10px' }}>
                 <Select

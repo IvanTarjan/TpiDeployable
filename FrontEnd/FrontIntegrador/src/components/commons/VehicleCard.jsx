@@ -19,10 +19,10 @@ export default function VehicleCard({ car }) {
   return (
     <Card sx={{
       width: {
-        xs: 380,
-        md: 680,
-        lg: 680,
-        xl: 680,
+        xs: 360,
+        md: 735,
+        lg: 735,
+        xl: 735,
       },
       height: {
         xs: 700,
@@ -36,7 +36,8 @@ export default function VehicleCard({ car }) {
         md: 'row',
         lg: 'row'
       },
-      alignItems: 'center'
+      alignItems: 'center', 
+      justifyContent:'space-between'
     }}>
       <Box className={styles.imageContainer}>
         <CardMedia className={styles.carImages}

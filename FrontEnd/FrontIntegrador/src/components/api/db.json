@@ -373,5 +373,23 @@
       "startDate": "02/03/2023",
       "endDate": "09/03/2023"
     }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "nombre": "Economico"
+    },
+    {
+      "id": 2,
+      "nombre": "Gama media"
+    },
+    {
+      "id": 3,
+      "nombre": "Premium"
+    },
+    {
+      "id": 4,
+      "nombre": "Pickup truck"
+    }
   ]
 }
