@@ -5,7 +5,8 @@ import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import colors from '../commons/colors';
 import DatePicker from "react-multi-date-picker"
 import { CustomInput } from '../commons/DatePickerCustomComponents';
-import Toolbar from 'react-multi-date-picker/plugins/toolbar';
+import axios from 'axios'
+
 
 
 
@@ -30,25 +31,27 @@ const BarraDeBusqueda = () => {
     const months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
 
     useEffect(() => {
-        // Axios imaginario
-        setListaLocalizaciones([{ provincia: "San Carlos de Bariloche", pais: "Argentina" }, { provincia: "Buenos Aires", pais: "Argentina" }, { provincia: "Mendoza", pais: "Argentina" }, { provincia: "Cordoba", pais: "Argentina" }])
-    }, [])
+        axios.get("http://localhost:5000/localizaciones")
+            .then(res => setListaLocalizaciones(res.data))
+            .catch(err => console.log(err))
+            }, [])
 
 
     return (
         <Box display='flex' flexDirection={'column'} justifyContent='center' alignItems='center' width='100vw' marginTop={'60px'} backgroundColor={colors.c3} padding={"30px 0px"}>
-            <Typography variant='h1' fontSize={isMobile?'30px': '36px'} fontWeight="bold" color={colors.c4} textAlign="center" padding={'20px'} >Busca ofertas en Autos Economicos, Pick Ups y mucho más</Typography>
+            <Typography variant='h1' fontSize={isMobile ? '30px' : '36px'} fontWeight="bold" color={colors.c4} textAlign="center" padding={'20px'} >Busca ofertas en Autos Economicos, Pick Ups y mucho más</Typography>
 
             <FormControl sx={{ m: 1, width: isTablet ? '90%' : '70%', mt: 3, display: 'flex', justifyContent: 'center', alignItems: "center", flexDirection: isMobile ? 'column' : 'row', gap: '10px' }}>
                 <Select
+                    id='selectLocalizacion'
                     displayEmpty
-                    sx={{ width: isMobile? '100%': '37.5%', height: '40px', backgroundColor: colors.background, borderRadius: '5px' }}
+                    sx={{ width: isMobile ? '100%' : '37.5%', height: '40px', backgroundColor: colors.background, borderRadius: '5px' }}
                     defaultValue=""
                     onChange={handleChange}
                     input={<OutlinedInput />}
                     renderValue={(selected) => {
 
-                        return <Box sx={{ display: 'flex', alignItems: 'center', color: selected === "" ? colors.fuenteBarraBusqueda: colors.c3, gap: '5px'}}>
+                        return <Box sx={{ display: 'flex', alignItems: 'center', color: selected === "" ? colors.fuenteBarraBusqueda : colors.c3, gap: '5px' }}>
                             <LocationOnIcon fontSize='medium' />
                             {selected === "" ? <Typography fontWeight={600} variant='subtitle1'>¿A dónde vamos?</Typography> :
                                 <Typography fontWeight={600} variant='subtitle1'>{localizacion.provincia}, {localizacion.pais}</Typography>}
@@ -70,8 +73,8 @@ const BarraDeBusqueda = () => {
                 </Select>
 
                 <DatePicker
-                    style={{width:'100%'}}
-                    containerStyle={{width: isMobile?'100%':'37.5%'}}
+                    style={{ width: '100%' }}
+                    containerStyle={{ width: isMobile ? '100%' : '37.5%' }}
                     ref={calendarRef}
                     value={dateRange}
                     onChange={setDateRange}
@@ -92,7 +95,7 @@ const BarraDeBusqueda = () => {
                     ]}
                 />
 
-                <Button sx={{ backgroundColor: colors.principal, color: colors.background, textTransform: 'none', width: isMobile? '100%': '25%', height: '40px', '&:hover': { backgroundColor: colors.principal } }}
+                <Button sx={{ backgroundColor: colors.principal, color: colors.background, textTransform: 'none', width: isMobile ? '100%' : '25%', height: '40px', '&:hover': { backgroundColor: colors.principal } }}
                     onClick={handleSubmit}>
                     Buscar
                 </Button>
