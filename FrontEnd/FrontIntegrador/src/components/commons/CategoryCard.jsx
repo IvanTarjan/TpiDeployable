@@ -7,14 +7,21 @@ import React from 'react'
 import colors from './colors';
 import styles from '../styles/Body.module.css'
 
-const CategoryCard = ({ categoria }) => {
+const CategoryCard = ({ categoria, carImgs }) => {
+
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+    }
+    
+    const randomImgIndex = getRandomInt(carImgs.length)
+
     return (
-        <Card sx={{ height: 380, width: 380}}>
+        <Card sx={{ height: 380, width: 360}}>
                 <CardMedia
                     className={styles.categoryImages}
                     component="img"
                     sx={{ height: 280 }}
-                    image={categoria.foto}
+                    image={carImgs[randomImgIndex].image}
                     alt={categoria.nombre}
                 />
                 <CardContent>
@@ -22,7 +29,7 @@ const CategoryCard = ({ categoria }) => {
                         {categoria.nombre}
                     </Typography>
                     <Typography variant="body2" fontWeight={600} color={colors.fuenteBarraBusqueda}>
-                        {categoria.cantProductos} vehiculos
+                        {carImgs.length} vehiculos
                     </Typography>
                 </CardContent>
             
