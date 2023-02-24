@@ -393,8 +393,17 @@
     }
   ], 
   "localizaciones": [
-    { "provincia": "San Carlos de Bariloche", "pais": "Argentina" }, 
-    { "provincia": "Buenos Aires", "pais": "Argentina" }, 
-    { "provincia": "Mendoza", "pais": "Argentina" }, 
-    { "provincia": "Cordoba", "pais": "Argentina" }]
+    { 
+      "provincia": "San Carlos de Bariloche", 
+      "pais": "Argentina" }, 
+    { "provincia": "Buenos Aires", "pais": "Argentina" 
+    }, 
+    { 
+      "provincia": "Mendoza", 
+      "pais": "Argentina" 
+    }, 
+    { 
+      "provincia": "Cordoba", 
+      "pais": "Argentina" 
+      }]
 }
