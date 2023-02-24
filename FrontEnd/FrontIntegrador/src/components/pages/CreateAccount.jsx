@@ -113,7 +113,7 @@ const CreateAccount = () => {
             <TextField
               InputProps={{
                 endAdornment: (
-                  <IconButton disableRipple={false} onClick={handleClickShowPassword}>
+                  <IconButton disableRipple={true} onClick={handleClickShowPassword}>
                     {showPassword ? <Visibility /> : <VisibilityOff />}
                   </IconButton>
                 ),
