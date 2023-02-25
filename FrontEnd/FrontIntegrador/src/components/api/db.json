@@ -356,6 +356,20 @@
       "email": "velezp@gmail.com",
       "password": "velez23",
       "id": 5
+    },
+    {
+      "name": "Miguel",
+      "surname": "Zapata",
+      "email": "zapatam@gmail.com",
+      "password": "zapatam23",
+      "id": 6
+    },
+    {
+      "name": "Larizza",
+      "surname": "Januzi",
+      "email": "januzil@gmail.com",
+      "password": "januzil23",
+      "id": 7
     }
   ],
   "reservations": [
