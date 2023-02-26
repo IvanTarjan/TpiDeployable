@@ -7,6 +7,7 @@
       "image": "https://gower.ar/wp-content/uploads/2022/02/Chevrolet-Classic-2013.jpg",
       "price": 9000,
       "model": 2013,
+      "title": "El tremendo titulo de este auto", 
       "message": "Disfruta su viaje en este auto compacto y Economico, ideal para paseos por la ciudad y la zona de viñedos.",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
@@ -23,6 +24,7 @@
       "image": "https://gower.ar/wp-content/uploads/2022/05/1-1.jpg",
       "price": 9500,
       "model": 2016,
+      "title": "El tremendo titulo de este auto", 
       "message": "Disfrutá a bordo de este moderno y confortable vehículo. Ideal para paseos en ciudad y ruta. Excelente confort de marcha y seguridad gracias a su dirección eléctrica asistida y control de estabilidad (ESP)",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
@@ -39,6 +41,7 @@
       "image": "https://gower.ar/wp-content/uploads/2022/05/FOX-2.jpg",
       "price": 10000,
       "model": 2017,
+      "title": "El tremendo titulo de este auto", 
       "message": "Este auto te permitirá conocer los mejores lugares en forma económica, Ideal para la ciudad y la ruta!",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
@@ -55,6 +58,7 @@
       "image": "https://gower.ar/wp-content/uploads/2021/12/Catalogo-Peugeot-207.jpg",
       "price": 10500,
       "model": 2016,
+      "title": "El tremendo titulo de este auto", 
       "message": "Disfruta en este auto compacto y Economico, ideal para paseos por la ciudad y la zona rural.",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
@@ -71,6 +75,7 @@
       "image": "https://gower.ar/wp-content/uploads/2021/12/March-1.jpg",
       "price": 11000,
       "model": 2014,
+      "title": "El tremendo titulo de este auto", 
       "message": "Disfruta su viaje en este auto compacto y Economico, ideal para paseos por la ciudad y la zona de viñedos.",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
@@ -87,6 +92,7 @@
       "image": "https://gower.ar/wp-content/uploads/2022/05/Palio-final.jpg",
       "price": 9000,
       "model": 2016,
+      "title": "El tremendo titulo de este auto", 
       "message": "Recorre los mejores lugares en este auto Economico, Ideal para recorrer la ciudad y sus alrededores en forma cómoda y segura.",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
@@ -103,6 +109,7 @@
       "image": "https://gower.ar/wp-content/uploads/2022/01/Logan-1.jpg",
       "price": 12000,
       "model": 2017,
+      "title": "El tremendo titulo de este auto", 
       "message": "Disfruta de la comodidad, mucho espacio y baúl para viajar cómodo con amigos o familia!  Además tendrás toda la tecnología como velocidad crucero, climatizador automático, computadora de abordo, sensor de estacionamiento, etc.",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
@@ -119,6 +126,7 @@
       "image": "https://gower.ar/wp-content/uploads/2021/12/Catalogo-Citroen-C3-1-1.jpg",
       "price": 16500,
       "model": 2020,
+      "title": "El tremendo titulo de este auto", 
       "message": "Recorre tu destino en este moderno auto, el cual te permitirá disfrutar paseos por la cuidad y sus alrededores. Su caja automática hace que manejarlo sea muy fácil.",
       "airbag": "2 airbags frontales",
       "gearbox": "automatica",
@@ -135,6 +143,7 @@
       "image": "https://gower.ar/wp-content/uploads/2022/02/Ecosport-2016.jpg",
       "price": 14000,
       "model": 2016,
+      "title": "El tremendo titulo de este auto", 
       "message": "Este es el auto ideal para los que eligen viajar cómodos, con espacios interiores amplios y toda la comodidad de una SUV. Posee todo lo que necesitas para disfrutar tu paseo sintiéndote seguro/a en cada momento.",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
@@ -151,6 +160,7 @@
       "image": "https://gower.ar/wp-content/uploads/2022/01/Catalogo-Onix-4.jpg",
       "price": 12500,
       "model": 2020,
+      "title": "El tremendo titulo de este auto", 
       "message": "Con este cómodo vehículo podrás vivir las mejores aventuras, disfruta su confort y espacio, además de su equipamiento como control de velocidad crucero, bluetooth, aire acondicionado y mas!!!",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
@@ -167,6 +177,7 @@
       "image": "https://gower.ar/wp-content/uploads/2021/12/Catalogo-Renegade-1.jpg",
       "price": 12000,
       "model": 2017,
+      "title": "El tremendo titulo de este auto", 
       "message": "Este es el auto ideal para los que eligen viajar cómodos, con espacios interiores amplios y toda la comodidad de una SUV. Posee todo lo que necesitas para disfrutar tu paseo sintiéndote seguro/a en cada momento.",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
@@ -183,6 +194,7 @@
       "image": "https://gower.ar/wp-content/uploads/2022/08/208-Caro-768x768.jpg",
       "price": 12000,
       "model": 2020,
+      "title": "El tremendo titulo de este auto", 
       "message": "Viaja en este auto con techo panorámico y disfruta todo el confort y tecnología que te ofrece como control de velocidad crucero, climatizador automático, sensor de estacionamiento y mucho mas!",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
@@ -199,6 +211,7 @@
       "image": "https://img1.static.reweb.io/tiny/0/0/dealers.rewebmkt.com/images/20230117071214-blanco.png",
       "price": 19000,
       "model": 2017,
+      "title": "El tremendo titulo de este auto", 
       "message": "Disfruta de la comodidad, mucho espacio y baúl para viajar cómodo con amigos o familia! Además tendrás toda la tecnología como velocidad crucero, climatizador automático, computadora de abordo, sensor de estacionamiento, pantalla tactil.",
       "airbag": "2 airbags frontales",
       "gearbox": "automatica",
@@ -215,6 +228,7 @@
       "image": "https://gower.ar/wp-content/uploads/2022/05/Renegade-1.jpg",
       "price": 19500,
       "model": 2018,
+      "title": "El tremendo titulo de este auto", 
       "message": "Con este vehículo podes viajar de forma segura y confortable, teniendo mucho espacio y confort.",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
@@ -231,6 +245,7 @@
       "image": "https://gower.ar/wp-content/uploads/2018/08/Spin.jpg",
       "price": 21000,
       "model": 2017,
+      "title": "El tremendo titulo de este auto", 
       "message": "Viaja en esta vehículo con capacidad de hasta 7 personas, el cual te permitirá disfrutar con familia y amigos los mejores paisajes",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
@@ -247,6 +262,7 @@
       "image": "https://gower.ar/wp-content/uploads/2022/08/Cruze-1-768x768.jpg",
       "price": 21500,
       "model": 2022,
+      "title": "El tremendo titulo de este auto", 
       "message": "Vivi lo mejor de tu viaje en este auto que posee caja automatica, tapizados en cuero, techo panoramico, velocidad crucero, sensores de estacionamiento , centro de entretenimiento y mucho mas para que tu visita sea unica!",
       "airbag": "2 airbags frontales",
       "gearbox": "automatica",
@@ -263,6 +279,7 @@
       "image": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_306e84f8dec84ba4ad1f3372499ac72e.jpg",
       "price": 22000,
       "model": 2019,
+      "title": "El tremendo titulo de este auto", 
       "message": "Ideal para caminos rurales y con todo el confort que te ofrecen la pantalla tactil, control crucero, control de traccion, etc.",
       "airbag": "2 airbags frontales",
       "gearbox": "automatica",
@@ -279,6 +296,7 @@
       "image": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_55c0731587d04e45a3114064289cabb7.jpg",
       "price": 23000,
       "model": 2019,
+      "title": "El tremendo titulo de este auto", 
       "message": "Ideal para caminos rurales y con todo el confort que te ofrecen la pantalla tactil, control crucero, control de traccion, etc.",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
@@ -292,6 +310,7 @@
       "id": 19,
       "category": "Pickup truck",
       "name": "Volkswagen Amarok",
+      "title": "El tremendo titulo de este auto", 
       "image": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_eb920fd356044f8b854396b536b9b78b.jpg",
       "price": 22300,
       "model": 2019,
@@ -311,6 +330,7 @@
       "image": "https://cdn.drivek.com/configurator-imgs/trucks/it/800/FORD/RANGER/7953_AUTOCARRO-4-PORTE/ford-ranger-pickup-4-doors.jpg",
       "price": 23000,
       "model": 2019,
+      "title": "El tremendo titulo de este auto", 
       "message": "Ideal para caminos rurales y con todo el confort que te ofrecen la pantalla tactil, control crucero, control de traccion, etc.",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
@@ -356,6 +376,13 @@
       "email": "velezp@gmail.com",
       "password": "velez23",
       "id": 5
+    },
+    {
+      "name": "Ivan",
+      "surname": "Tarjan",
+      "email": "pepepepe@gmail.com",
+      "password": "asdfasdf",
+      "id": 6
     }
   ],
   "reservations": [
@@ -391,19 +418,27 @@
       "id": 4,
       "nombre": "Pickup truck"
     }
-  ], 
+  ],
   "localizaciones": [
-    { 
-      "provincia": "San Carlos de Bariloche", 
-      "pais": "Argentina" }, 
-    { "provincia": "Buenos Aires", "pais": "Argentina" 
-    }, 
-    { 
-      "provincia": "Mendoza", 
-      "pais": "Argentina" 
-    }, 
-    { 
-      "provincia": "Cordoba", 
-      "pais": "Argentina" 
-      }]
+    {
+      "id": 1,
+      "provincia": "San Carlos de Bariloche",
+      "pais": "Argentina"
+    },
+    {
+      "id": 1,
+      "provincia": "Buenos Aires",
+      "pais": "Argentina"
+    },
+    {
+      "id": 1,
+      "provincia": "Mendoza",
+      "pais": "Argentina"
+    },
+    {
+      "id": 1,
+      "provincia": "Cordoba",
+      "pais": "Argentina"
+    }
+  ]
 }
