@@ -14,8 +14,14 @@ import HealthAndSafetyIcon from '@mui/icons-material/HealthAndSafety';
 import { DoorBack } from '@mui/icons-material';
 import styles from '../styles/Body.module.css'
 import { Box } from '@mui/system';
+import { useNavigate } from 'react-router-dom';
 
 export default function VehicleCard({ car }) {
+  const navigate = useNavigate()
+  const handleClick = () => {
+    navigate(`car/${car.id}`)
+  }
+
   return (
     <Card data-testid="car-card" sx={{
       width: {
@@ -46,7 +52,7 @@ export default function VehicleCard({ car }) {
           title={car.name}
         />
 
-        <Button variant='contained' size="small" >ver mas</Button>
+        <Button onClick={handleClick} variant='contained' size="small" >ver mas</Button>
       </Box>
 
       <CardContent className={styles.cardContent}>
