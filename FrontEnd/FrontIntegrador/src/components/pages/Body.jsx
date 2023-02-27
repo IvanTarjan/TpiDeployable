@@ -1,12 +1,10 @@
 import React, { useContext } from 'react'
 import styles from '../styles/Body.module.css'
 import VehicleCard from '../commons/VehicleCard'
-import axios from 'axios'
 import BarraDeBusqueda from "./BarraDeBusqueda";
 import CategoryContainer from './CategoryContainer';
 import { Box } from '@mui/material';
 import { BodyContext } from '../contexts/BodyContext';
-
 
 const Body = () => {
   const { cars } = useContext(BodyContext)
