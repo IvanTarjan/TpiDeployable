@@ -71,7 +71,7 @@ export default function VehicleCard({ car }) {
           <Typography fontSize={'14px'} className={styles.cardContainer}><LocalGasStationIcon fontSize='small' />{car.fuel}</Typography>
         </Box>
         <Typography sx={{ paddingTop: '10px', paddingBottom: '10px' }} variant="body2" color="text.secondary">
-          {car.message}
+          {car.message.slice(0, 50)}...
         </Typography>
       </CardContent>
     </Card>
