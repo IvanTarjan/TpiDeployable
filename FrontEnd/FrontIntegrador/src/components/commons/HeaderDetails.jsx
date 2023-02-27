@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from '../styles/Header.module.css'
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { IconButton } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { BodyContext } from '../contexts/BodyContext';
 
-const HeaderDetails = () => {
+const HeaderDetails = ({ car }) => {
+
+  const { localizaciones } = useContext(BodyContext)
+  const randomLocation = Math.floor(localizaciones.length * Math.random())
+
   const navigate = useNavigate()
   const handleClick = () => {
     navigate('/')
@@ -14,8 +19,8 @@ const HeaderDetails = () => {
     <>
       <div className={styles.headerDetails}>
         <div className={styles.headerDetailsTitle}>
-          <p>Categoria</p>
-          <h1>Nombre</h1>
+          <p>{car.category}</p>
+          <h1>{car.name}</h1>
         </div>
         <IconButton onClick={handleClick}>
           <ArrowBackIosNewIcon fontSize='large' color='action' />
@@ -24,15 +29,17 @@ const HeaderDetails = () => {
 
       <div className={styles.locationData}>
         <div className={styles.locationDataTitle}>
-          <div className={styles.locationDataTitleCity}><LocationOnIcon color='secondary'></LocationOnIcon><span>Ciudad, Provincia, Pais</span></div>
-          <p>Distancia desde el centro</p>
+          <LocationOnIcon color='secondary'></LocationOnIcon>
+          <div className={styles.locationDataTitleCity}>
+            <span>{localizaciones[randomLocation].ciudad}, {localizaciones[randomLocation].provincia}, {localizaciones[randomLocation].pais}</span>
+            <p>A {localizaciones[randomLocation].distancia} m del centro</p>
+          </div>
         </div>
 
         <div className={styles.locationDataValue}>
-          <p>Valoracion</p>
-          <div className={styles.locationDataValueNumber}>10</div>
+          <p>{car.score > 9 ? "Excelente" : car.score > 7 ? "Muy bueno" : "Bueno"}</p>
+          <div className={styles.locationDataValueNumber}>{car.score}</div>
         </div>
-
       </div>
     </>
   )
