@@ -1,25 +1,26 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useContext, useRef, useState } from 'react'
 import { Typography, Box, useMediaQuery, MenuItem, FormControl, Select, OutlinedInput, Button } from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import colors from '../commons/colors';
 import DatePicker from "react-multi-date-picker"
 import { CustomInput } from '../commons/DatePickerCustomComponents';
-import axios from 'axios'
-
+import Toolbar from 'react-multi-date-picker/plugins/toolbar';
+import { BodyContext } from '../contexts/BodyContext';
 
 
 
 const BarraDeBusqueda = () => {
     const isMobile = useMediaQuery('(max-width:600px)');
     const isTablet = useMediaQuery('(max-width:800px)');
-    const [listaLocalizaciones, setListaLocalizaciones] = useState([])
     const [localizacion, setLocalizacion] = useState({ provincia: "", pais: "" });
     const [dateRange, setDateRange] = useState([null, null]);
     const calendarRef = useRef();
 
+    const { localizaciones } = useContext(BodyContext)
+
     const handleChange = (event) => {
-        setLocalizacion(listaLocalizaciones[event.target.value]);
+        setLocalizacion(localizaciones[event.target.value]);
     }
 
     const handleSubmit = () => {
@@ -29,13 +30,6 @@ const BarraDeBusqueda = () => {
 
     const weekDays = ["S", "M", "T", "W", "T", "F", "S"];
     const months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
-
-    useEffect(() => {
-        axios.get("http://localhost:5000/localizaciones")
-            .then(res => setListaLocalizaciones(res.data))
-            .catch(err => console.log(err))
-            }, [])
-
 
     return (
         <Box display='flex' flexDirection={'column'} justifyContent='center' alignItems='center' width='100vw' marginTop={'60px'} backgroundColor={colors.c3} padding={"30px 0px"}>
@@ -59,7 +53,7 @@ const BarraDeBusqueda = () => {
                     }}
                     inputProps={{ 'aria-label': 'Without label' }}
                 >
-                    {listaLocalizaciones.map((locali, i) => (
+                    {localizaciones.map((locali, i) => (
                         <MenuItem value={i} key={i} >
                             <Box sx={{ display: 'flex', alignItems: 'center', borderBottom: `1.5px solid ${colors.principal}`, gap: '15px', padding: '5px', width: "100%" }}>
                                 <LocationOnOutlinedIcon fontSize='medium' />

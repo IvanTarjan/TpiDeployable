@@ -14,10 +14,16 @@ import HealthAndSafetyIcon from '@mui/icons-material/HealthAndSafety';
 import { DoorBack } from '@mui/icons-material';
 import styles from '../styles/Body.module.css'
 import { Box } from '@mui/system';
+import { useNavigate } from 'react-router-dom';
 
 export default function VehicleCard({ car }) {
+  const navigate = useNavigate()
+  const handleClick = () => {
+    navigate(`car/${car.id}`)
+  }
+
   return (
-    <Card sx={{
+    <Card data-testid="car-card" sx={{
       width: {
         xs: 360,
         md: 735,
@@ -36,8 +42,8 @@ export default function VehicleCard({ car }) {
         md: 'row',
         lg: 'row'
       },
-      alignItems: 'center', 
-      justifyContent:'space-between'
+      alignItems: 'center',
+      justifyContent: 'space-between'
     }}>
       <Box className={styles.imageContainer}>
         <CardMedia className={styles.carImages}
@@ -46,7 +52,7 @@ export default function VehicleCard({ car }) {
           title={car.name}
         />
 
-        <Button variant='contained' size="small" >ver mas</Button>
+        <Button onClick={handleClick} variant='contained' size="small" >ver mas</Button>
       </Box>
 
       <CardContent className={styles.cardContent}>
@@ -65,7 +71,7 @@ export default function VehicleCard({ car }) {
           <Typography fontSize={'14px'} className={styles.cardContainer}><LocalGasStationIcon fontSize='small' />{car.fuel}</Typography>
         </Box>
         <Typography sx={{ paddingTop: '10px', paddingBottom: '10px' }} variant="body2" color="text.secondary">
-          {car.message}
+          {car.message.slice(0, 50)}...
         </Typography>
       </CardContent>
     </Card>
