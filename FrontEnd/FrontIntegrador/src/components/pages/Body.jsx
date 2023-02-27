@@ -1,20 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import styles from '../styles/Body.module.css'
 import VehicleCard from '../commons/VehicleCard'
 import axios from 'axios'
 import BarraDeBusqueda from "./BarraDeBusqueda";
 import CategoryContainer from './CategoryContainer';
 import { Box } from '@mui/material';
+import { BodyContext } from '../contexts/BodyContext';
 
 
 const Body = () => {
-  const [cars, setCars] = useState([])
-  useEffect(() => {
-    axios.get("http://localhost:5000/cars")
-      .then(res => setCars(res.data))
-      .catch(err => console.log(err))
-  }, [])
-
+  const { cars } = useContext(BodyContext)
 
   return (
     <Box display={"flex"} flexDirection="column" justifyContent={"center"} alignItems="center">
