@@ -56,7 +56,7 @@ const Header = () => {
           <p>Hola, </p>
           <span>{isMobile ? loggedUser.name : loggedUser.name + ' ' + loggedUser.surname}</span>
         </div>
-        <IconButton disableRipple='false' onClick={handleSignOut} >
+        <IconButton sx={{ width: '48px' }} disableRipple='false' onClick={handleSignOut} >
           <PowerSettingsNewIcon fontSize='large' />
         </IconButton>
       </div> :

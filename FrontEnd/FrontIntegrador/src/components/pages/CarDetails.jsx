@@ -1,5 +1,5 @@
-import { Box, Typography } from '@mui/material'
-import React, { useContext } from 'react'
+import { Box, IconButton, Typography } from '@mui/material'
+import React, { useContext, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import HeaderDetails from '../commons/HeaderDetails'
 import { BodyContext } from '../contexts/BodyContext'
@@ -11,19 +11,36 @@ import LuggageIcon from '@mui/icons-material/Luggage';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import TuneIcon from '@mui/icons-material/Tune';
 import HealthAndSafetyIcon from '@mui/icons-material/HealthAndSafety';
-import { DoorBack } from '@mui/icons-material';
+import { DoorBack, Share } from '@mui/icons-material';
 import Policies from '../commons/Policies'
+import ShareIcon from '@mui/icons-material/Share';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 
 const CarDetails = () => {
   const { id } = useParams()
-  const { cars } = useContext(BodyContext)
+  const { cars, isLike, setIsLike } = useContext(BodyContext)
+
+
+  const handleClick = () => {
+    setIsLike(prev => !prev)
+  }
 
   const selectedCar = cars.find(car => car.id == id);
 
   return (
     <div>
       <HeaderDetails car={selectedCar} />
+      <div className={styles.shareLikeBtnContainer}>
+        <IconButton sx={{ width: 24 }} edge={'end'} disableRipple={true} >
+          <ShareIcon />
+        </IconButton>
+        <IconButton sx={{ width: 24 }} edge={'start'} disableRipple={true} onClick={handleClick}>
+          {isLike ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+        </IconButton>
+      </div>
+
       <div className={styles.photosContainer}>
         <div className={styles.bigPhoto}>
           <img src={selectedCar.image} />

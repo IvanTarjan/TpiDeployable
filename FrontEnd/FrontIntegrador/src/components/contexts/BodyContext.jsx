@@ -6,6 +6,8 @@ export const BodyContext = createContext()
 const BodyContextProvider = ({ children }) => {
   const [cars, setCars] = useState([])
   const [localizaciones, setLocalizaciones] = useState([])
+  const [isLike, setIsLike] = useState(false)
+
 
   useEffect(() => {
     axios.get("http://localhost:5000/cars")
@@ -19,12 +21,13 @@ const BodyContextProvider = ({ children }) => {
       .catch(err => console.log(err))
   }, [])
 
-
   const data = {
     cars,
     setCars,
     localizaciones,
-    setLocalizaciones
+    setLocalizaciones,
+    isLike,
+    setIsLike
   }
 
   return (

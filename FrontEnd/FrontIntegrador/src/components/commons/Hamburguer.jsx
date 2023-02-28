@@ -29,7 +29,7 @@ const Hamburguer = () => {
 
   return (
     <div>
-      <Button
+      <Button sx={{ width: '24px' }}
         id="basic-button"
         aria-controls={open ? 'basic-menu' : undefined}
         aria-haspopup="true"
