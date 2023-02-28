@@ -122,7 +122,7 @@ color: #545776;
   margin-top: 80px;
 }
 
-.headerDetails p {
+.headerDetailsTitle p {
   padding-left: 40px;
   font-style: normal;
   font-weight: 700;
@@ -131,7 +131,7 @@ color: #545776;
   color: #F3F1ED;
 }
 
-.headerDetails h1{
+.headerDetailsTitle h1{
   padding-left: 40px;
   font-style: normal;
   font-weight: 700;
@@ -205,5 +205,14 @@ color: #545776;
 @media (max-width: 868px){
   .travel{
     display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .locationDataTitleCity p {
+    display: none;
+  }
+  .headerDetailsTitle p, .headerDetailsTitle h1, .locationDataTitleCity span {
+    padding-left: 20px;
   }
 }

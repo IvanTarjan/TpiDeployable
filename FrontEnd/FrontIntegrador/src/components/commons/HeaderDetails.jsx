@@ -22,7 +22,7 @@ const HeaderDetails = ({ car }) => {
           <p>{car.category}</p>
           <h1>{car.name}</h1>
         </div>
-        <IconButton onClick={handleClick}>
+        <IconButton sx={{ width: 75 }} onClick={handleClick}>
           <ArrowBackIosNewIcon fontSize='large' color='action' />
         </IconButton>
       </div>
