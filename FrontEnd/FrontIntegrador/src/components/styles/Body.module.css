@@ -127,3 +127,29 @@
   display: flex;
   gap: 35px;
 }
+
+@media (max-width: 1200px) {
+  .iconsContainerDetail{
+    gap: 20px;
+  }
+  .smallPhotoOne, .smallPhotoTwo, .smallPhotoThree, .smallPhotoFour{
+    display: none;
+  }
+  .bigPhoto{
+    padding-left: 75px;
+  }
+}
+
+@media (max-width: 640px) {
+  .bigPhoto{
+    padding-left: 0;
+
+  }
+  .bigPhoto img{
+    width: 375px;
+  }
+  .iconsContainerDetail{
+    gap: 0px;
+  }
+  
+}
