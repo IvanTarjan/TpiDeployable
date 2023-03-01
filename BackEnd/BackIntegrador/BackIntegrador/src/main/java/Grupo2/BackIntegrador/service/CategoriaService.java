@@ -16,8 +16,8 @@ public class CategoriaService {
     private CategoriaRepository categoriaRepository;
     private static final Logger LOGGER=Logger.getLogger(CategoriaService.class);
     @Autowired
-
     public CategoriaService(CategoriaRepository categoriaRepository) {
+
         this.categoriaRepository = categoriaRepository;
     }
 

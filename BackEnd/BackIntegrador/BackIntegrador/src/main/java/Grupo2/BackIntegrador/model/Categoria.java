@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name="CATEGORIA")
+@Table(name="CATEGORIAS")
 public class Categoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,6 +18,10 @@ public class Categoria {
     private String descripcion;
     @Column
     private String url_imagen;
+
+    @OneToMany(mappedBy = "categoria",fetch = FetchType.LAZY)
+    @JsonIgnore
+    private Set<Producto> productos= new HashSet<>();
 
     public Categoria() {
     }
