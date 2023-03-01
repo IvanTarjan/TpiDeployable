@@ -9,6 +9,7 @@ import Login from './components/pages/Login'
 import Palette from './components/contexts/ThemeContext'
 import CarDetails from './components/pages/CarDetails'
 import BodyContextProvider from './components/contexts/BodyContext'
+import CarsCategory from './components/pages/CarsCategory'
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
                 <Route path='/register' element={<CreateAccount />} />
                 <Route path='/login' element={<Login />} />
                 <Route path='/' element={<Body />} />
-                <Route path='/car/:id' element={<CarDetails />} />
+                <Route path='/category/:name/car/:id' element={<CarDetails />} />
+                <Route path='/category/:name' element={<CarsCategory />} />
               </Routes>
               <Footer />
             </BrowserRouter>
