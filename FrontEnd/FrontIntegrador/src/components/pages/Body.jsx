@@ -7,12 +7,12 @@ import { Box } from '@mui/material';
 import { BodyContext } from '../contexts/BodyContext';
 
 const Body = () => {
-  const { cars } = useContext(BodyContext)
+  const { cars, categorias } = useContext(BodyContext)
 
   return (
     <Box display={"flex"} flexDirection="column" justifyContent={"center"} alignItems="center">
       <BarraDeBusqueda />
-      <CategoryContainer cars={cars} />
+      <CategoryContainer cars={cars} categorias={categorias} />
       <div className={styles.homeContainer}>
         {cars.map(car => (
           <VehicleCard
