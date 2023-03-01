@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface CaracteristicaRepository extends JpaRepository<Caracteristica, Long> {
 
-    List<Caracteristica> findTagsByTutorialsId(Long tutorialId);
+    List<Caracteristica> findCaracteristicasByProductoId(Long tutorialId);
 }
