@@ -33,6 +33,13 @@ public class Categoria {
         this.url_imagen = url_imagen;
     }
 
+    public Categoria(String titulo, String descripcion, String url_imagen, Set<Producto> productos) {
+        this.titulo = titulo;
+        this.descripcion = descripcion;
+        this.url_imagen = url_imagen;
+        this.productos = productos;
+    }
+
     public Long getId() {
         return id;
     }

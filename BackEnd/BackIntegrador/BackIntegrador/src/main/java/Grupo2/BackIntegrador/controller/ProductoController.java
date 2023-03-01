@@ -37,6 +37,12 @@ public class ProductoController {
         return ResponseEntity.ok(productoService.guardarProducto(producto));
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> eliminarProducto(@PathVariable Long id) throws ResourceNotFoundException {
+        productoService.eliminarProducto(id);
+        return ResponseEntity.ok("Se eliminó el producto con id= "+id);
+    }
+
 
 }
 
