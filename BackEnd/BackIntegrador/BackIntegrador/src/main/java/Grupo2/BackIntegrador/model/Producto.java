@@ -23,6 +23,10 @@ public class Producto {
     @JoinColumn(name = "categoria_id",referencedColumnName = "id")
     private Categoria categoria;
 
+    @ManyToOne
+    @JoinColumn(name = "ubicacion_id",referencedColumnName = "id")
+    private Ubicacion ubicacion;
+
     @OneToMany(mappedBy = "producto",fetch = FetchType.LAZY)
     @JsonIgnore
     private Set<Imagen> imagen= new HashSet<>();

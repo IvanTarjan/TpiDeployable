@@ -1,6 +1,10 @@
 package Grupo2.BackIntegrador.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name="UBICACION")
@@ -15,6 +19,9 @@ public class Ubicacion {
     @Column
     private String pais;
 
+    @OneToMany(mappedBy = "ubicacion",fetch = FetchType.LAZY)
+    @JsonIgnore
+    private Set<Producto> productos= new HashSet<>();
     public Ubicacion() {
     }
 
