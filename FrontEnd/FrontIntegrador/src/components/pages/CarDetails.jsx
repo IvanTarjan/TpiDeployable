@@ -66,6 +66,8 @@ const CarDetails = () => {
         <p>{selectedCar.message}</p>
 
         <h1>¿Qué ofrece este vehiculo?</h1>
+        <hr className={styles.line} />
+        <br />
         <Box className={styles.iconsContainerDetail} >
           <div>
             <Typography fontSize={'14px'} className={styles.cardContainer} ><InfoIcon fontSize='small' />Modelo {selectedCar.model}</Typography>
@@ -96,6 +98,8 @@ const CarDetails = () => {
         </div>
 
         <h1>Qué tenés que saber</h1>
+        <hr className={styles.line} />
+        <br />
         <p>Entrega en aeropuerto: Consultar costo</p>
         <p>Devolución en aeropuerto: Consultar costo</p>
         <p>Sillita de bebé: Consultar costo</p>
