@@ -8,7 +8,6 @@ const BodyContextProvider = ({ children }) => {
   const [localizaciones, setLocalizaciones] = useState([])
   const [isLike, setIsLike] = useState(false)
 
-
   useEffect(() => {
     axios.get("http://localhost:5000/cars")
       .then(res => setCars(res.data))
@@ -21,13 +20,16 @@ const BodyContextProvider = ({ children }) => {
       .catch(err => console.log(err))
   }, [])
 
+  const randomLocation = Math.floor(localizaciones.length * Math.random())
+
   const data = {
     cars,
     setCars,
     localizaciones,
     setLocalizaciones,
     isLike,
-    setIsLike
+    setIsLike,
+    randomLocation
   }
 
   return (

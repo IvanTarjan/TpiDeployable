@@ -16,12 +16,14 @@ import Policies from '../commons/Policies'
 import ShareIcon from '@mui/icons-material/Share';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import MapView from '../commons/MapView'
 
 
 const CarDetails = () => {
   const { id } = useParams()
-  const { cars, isLike, setIsLike } = useContext(BodyContext)
+  const { cars, isLike, setIsLike, localizaciones, randomLocation } = useContext(BodyContext)
 
+  const coordinates = [localizaciones[randomLocation].lat, localizaciones[randomLocation].lon]
 
   const handleClick = () => {
     setIsLike(prev => !prev)
@@ -85,6 +87,13 @@ const CarDetails = () => {
             <Typography fontSize={'14px'} className={styles.cardContainer}><LocalGasStationIcon fontSize='small' />{selectedCar.fuel}</Typography>
           </div>
         </Box>
+
+        <h1>¿Dónde vas a estar?</h1>
+        <hr className={styles.line} />
+        <br />
+        <div className={styles.mapContainer} >
+          <MapView coordinates={coordinates} />
+        </div>
 
         <h1>Qué tenés que saber</h1>
         <p>Entrega en aeropuerto: Consultar costo</p>

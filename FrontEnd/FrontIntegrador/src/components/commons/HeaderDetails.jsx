@@ -8,8 +8,7 @@ import { BodyContext } from '../contexts/BodyContext';
 
 const HeaderDetails = ({ car }) => {
 
-  const { localizaciones } = useContext(BodyContext)
-  const randomLocation = Math.floor(localizaciones.length * Math.random())
+  const { localizaciones, randomLocation } = useContext(BodyContext)
 
   const navigate = useNavigate()
   const handleClick = () => {

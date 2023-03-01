@@ -452,28 +452,36 @@
       "ciudad": "San Carlos de Bariloche",
       "provincia": "Rio Negro",
       "pais": "Argentina",
-      "distancia": 550
+      "distancia": 550,
+      "lat": -41.1335,
+      "lon": -71.3103
     },
     {
       "id": 2,
       "ciudad": "Ciudad Autonoma de Buenos Aires",
       "provincia": "Buenos Aires",
       "pais": "Argentina",
-      "distancia": 750
+      "distancia": 750,
+      "lat": -34.6037,
+      "lon": -58.3816
     },
     {
       "id": 3,
       "ciudad": "Mendoza",
       "provincia": "Mendoza",
       "pais": "Argentina",
-      "distancia": 650
+      "distancia": 650,
+      "lat": -32.8895,
+      "lon": -68.8458
     },
     {
       "id": 4,
       "ciudad": "Cordoba",
       "provincia": "Cordoba",
       "pais": "Argentina",
-      "distancia": 850
+      "distancia": 850,
+      "lat": -31.4201,
+      "lon": -64.1888
     }
   ]
 }
