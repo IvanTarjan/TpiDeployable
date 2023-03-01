@@ -104,7 +104,7 @@
     },
     {
       "id": 7,
-      "category": "Gama media",
+      "category": "Gama-media",
       "name": "Renault Logan Privilege",
       "image": "https://gower.ar/wp-content/uploads/2022/01/Logan-1.jpg",
       "price": 12000,
@@ -121,7 +121,7 @@
     },
     {
       "id": 8,
-      "category": "Gama media",
+      "category": "Gama-media",
       "name": "Fiat Cronos",
       "image": "https://gower.ar/wp-content/uploads/2021/12/Catalogo-Citroen-C3-1-1.jpg",
       "price": 16500,
@@ -138,7 +138,7 @@
     },
     {
       "id": 9,
-      "category": "Gama media",
+      "category": "Gama-media",
       "name": "Ecosport",
       "image": "https://gower.ar/wp-content/uploads/2022/02/Ecosport-2016.jpg",
       "price": 14000,
@@ -155,7 +155,7 @@
     },
     {
       "id": 10,
-      "category": "Gama media",
+      "category": "Gama-media",
       "name": "Renault Stepway",
       "image": "https://gower.ar/wp-content/uploads/2022/01/Catalogo-Onix-4.jpg",
       "price": 12500,
@@ -172,7 +172,7 @@
     },
     {
       "id": 11,
-      "category": "Gama media",
+      "category": "Gama-media",
       "name": "Volkswagen Suran",
       "image": "https://gower.ar/wp-content/uploads/2021/12/Catalogo-Renegade-1.jpg",
       "price": 12000,
@@ -189,7 +189,7 @@
     },
     {
       "id": 12,
-      "category": "Gama media",
+      "category": "Gama-media",
       "name": "Peugeot 208 Feline",
       "image": "https://gower.ar/wp-content/uploads/2022/08/208-Caro-768x768.jpg",
       "price": 12000,
@@ -274,7 +274,7 @@
     },
     {
       "id": 17,
-      "category": "Pickup truck",
+      "category": "Pickups",
       "name": "Toyota Hilux 4WD",
       "image": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_306e84f8dec84ba4ad1f3372499ac72e.jpg",
       "price": 22000,
@@ -291,7 +291,7 @@
     },
     {
       "id": 18,
-      "category": "Pickup truck",
+      "category": "Pickups",
       "name": "Chevrolet S-10",
       "image": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_55c0731587d04e45a3114064289cabb7.jpg",
       "price": 23000,
@@ -308,7 +308,7 @@
     },
     {
       "id": 19,
-      "category": "Pickup truck",
+      "category": "Pickups",
       "name": "Volkswagen Amarok",
       "image": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_eb920fd356044f8b854396b536b9b78b.jpg",
       "price": 22300,
@@ -325,7 +325,7 @@
     },
     {
       "id": 20,
-      "category": "Pickup truck",
+      "category": "Pickups",
       "name": "Ford Ranger",
       "image": "https://cdn.drivek.com/configurator-imgs/trucks/it/800/FORD/RANGER/7953_AUTOCARRO-4-PORTE/ford-ranger-pickup-4-doors.jpg",
       "price": 23000,
@@ -415,7 +415,7 @@
     },
     {
       "id": 2,
-      "nombre": "Gama media"
+      "nombre": "Gama-media"
     },
     {
       "id": 3,
@@ -423,7 +423,7 @@
     },
     {
       "id": 4,
-      "nombre": "Pickup truck"
+      "nombre": "Pickups"
     }
   ],
   "localizaciones": [
