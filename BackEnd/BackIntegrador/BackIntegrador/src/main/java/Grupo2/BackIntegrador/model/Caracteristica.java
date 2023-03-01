@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name="CARACTERISTICAS")
+@Table(name="CARACTERISTICA")
 public class Caracteristica {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
