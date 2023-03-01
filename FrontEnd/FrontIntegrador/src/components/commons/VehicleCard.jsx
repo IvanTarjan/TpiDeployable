@@ -19,7 +19,7 @@ import { useNavigate } from 'react-router-dom';
 export default function VehicleCard({ car }) {
   const navigate = useNavigate()
   const handleClick = () => {
-    navigate(`car/${car.id}`)
+    navigate(`/category/${car.category}/car/${car.id}`)
   }
 
   return (
