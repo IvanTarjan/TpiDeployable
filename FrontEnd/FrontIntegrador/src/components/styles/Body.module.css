@@ -6,6 +6,7 @@
   width: 100vw;
   height: auto;
   gap: 20px;
+  padding-top: 55px;
   padding-bottom: 85px;
 }
 
@@ -130,11 +131,13 @@
 
 .line{
   border: 1px solid #F0572D;
-  width: 98.5%;
+  width: 92vw;
 }
 
 .mapContainer{
-  width: 100vw;
+  display: flex;
+  justify-content: center;
+  width: 90vw;
   height: 550px;
   z-index: 0;
 }
