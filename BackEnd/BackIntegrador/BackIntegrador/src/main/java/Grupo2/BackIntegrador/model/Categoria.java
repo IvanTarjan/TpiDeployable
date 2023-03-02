@@ -19,6 +19,10 @@ public class Categoria {
     @Column
     private String url_imagen;
 
+    @OneToMany(mappedBy = "categoria",fetch = FetchType.LAZY)
+    @JsonIgnore
+    private Set<Producto> productos= new HashSet<>();
+
     public Categoria() {
     }
 
@@ -27,6 +31,13 @@ public class Categoria {
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.url_imagen = url_imagen;
+    }
+
+    public Categoria(String titulo, String descripcion, String url_imagen, Set<Producto> productos) {
+        this.titulo = titulo;
+        this.descripcion = descripcion;
+        this.url_imagen = url_imagen;
+        this.productos = productos;
     }
 
     public Long getId() {

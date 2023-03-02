@@ -1,0 +1,11 @@
+[2023-02-23 12:34:43] [ INFO ] [CategoriaService:25] Se inició el listado de todas las Categorias
+[2023-02-23 12:38:05] [ INFO ] [CategoriaService:30] Se inició una operación de guardado de la categoria con titulo: economi
+[2023-02-23 12:39:59] [ INFO ] [CategoriaService:56] Se inició una operación de búsqueda de la categoria con id=1
+[2023-02-23 12:40:46] [ INFO ] [CategoriaService:56] Se inició una operación de búsqueda de la categoria con id=1
+[2023-02-23 12:40:46] [ WARN ] [CategoriaService:45] Se realizo una operación de eliminación de la categoria conid=1
+[2023-02-23 12:41:04] [ INFO ] [CategoriaService:30] Se inició una operación de guardado de la categoria con titulo: economi
+[2023-02-23 12:41:08] [ INFO ] [CategoriaService:56] Se inició una operación de búsqueda de la categoria con id=1
+[2023-02-23 12:41:13] [ INFO ] [CategoriaService:56] Se inició una operación de búsqueda de la categoria con id=2
+[2023-02-23 12:43:56] [ INFO ] [CategoriaService:56] Se inició una operación de búsqueda de la categoria con id=1
+[2023-02-23 12:44:22] [ INFO ] [CategoriaService:56] Se inició una operación de búsqueda de la categoria con id=2
+[2023-02-23 12:44:22] [ INFO ] [CategoriaService:36] Se inició una operación de actualización de la categoria con id=2
