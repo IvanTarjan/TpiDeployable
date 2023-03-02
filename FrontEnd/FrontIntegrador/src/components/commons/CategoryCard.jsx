@@ -22,7 +22,7 @@ const CategoryCard = ({ categoria, carImgs }) => {
             />
             <CardContent>
                 <Typography gutterBottom variant="h5" fontWeight={600}>
-                    <Link to={`/category/${categoria.nombre}`} style={{ color: colors.c3 }} >{categoria.nombre}</Link>
+                    <Link to={`/category/${categoria.nombre}`} style={{ color: colors.c3 }} >{categoria.nombre[0].toUpperCase() + categoria.nombre.slice(1)}</Link>
                 </Typography>
                 <Typography variant="body2" fontWeight={600} color={colors.fuenteBarraBusqueda}>
                     {carImgs.length} vehiculos
