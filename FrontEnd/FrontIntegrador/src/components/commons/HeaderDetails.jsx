@@ -19,7 +19,7 @@ const HeaderDetails = ({ car }) => {
       <div className={styles.headerDetails}>
         <div className={styles.headerDetailsTitle}>
           <p>{car.category}</p>
-          <h1>{car.name}</h1>
+          <h1 style={{ paddingTop: '0' }}>{car.name}</h1>
         </div>
         <IconButton sx={{ width: 75 }} onClick={handleClick}>
           <ArrowBackIosNewIcon fontSize='large' color='action' />
