@@ -89,7 +89,7 @@ const CarDetails = () => {
           </div>
         </Box>
 
-        <DateAvailability/>
+        <DateAvailability id={id}/>
 
         <h1>Qué tenés que saber</h1>
         <p>Entrega en aeropuerto: Consultar costo</p>

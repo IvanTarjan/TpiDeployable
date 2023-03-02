@@ -1,17 +1,18 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import colors from '../commons/colors';
 import DatePicker, { Calendar, getAllDatesInRange } from "react-multi-date-picker"
 import { CustomInput } from '../commons/DatePickerCustomComponents';
 import { BodyContext } from '../contexts/BodyContext';
 import { Box, Button, Typography, useMediaQuery } from '@mui/material';
 import { bgcolor } from '@mui/system';
-import getDaysArray from './dayRangeToArr';
+import {getDaysArray} from './datePickerHelpers';
+import { useNavigate } from 'react-router-dom';
 
-const DateAvailability = ({dateRangeArr}) => {
+const DateAvailability = ({dateRangeArr, id}) => {
   const calendarRef = useRef();
-  const [dateRange, setDateRange] = useState([null, null]);
-  const [allDates, setAllDates] = useState([])
+  const {dateRange, setDateRange, allDates, setAllDates} = useContext(BodyContext)
   const [disabledDays, setDisabledDays] = useState([])
+  const navigator = useNavigate()
   const isMobile = useMediaQuery('(max-width:600px)');
 
   const weekDays = ["S", "M", "T", "W", "T", "F", "S"];
@@ -70,7 +71,7 @@ const DateAvailability = ({dateRangeArr}) => {
 
         <Box width={{xs: 'auto', md: "30%"}} minWidth="300px" display="flex" flexDirection={{xs: 'column', sm: 'row', md: 'column'}} bgcolor={{xs: "none", md: colors.background}} height="min-content" padding={"18px"} borderRadius="12px" boxShadow={{xs:"none", md:"0px 3px 4px lightgray"}}>
           <Typography variant='subtitle2' fontWeight={600}>Agregá tus fechas de alquiler para obtener precios exactos</Typography>
-          <Button onClick={()=> console.log(allDates)} variant="contained" sx={{textTransform:"none", bgcolor:"#f0572d", color: colors.background, width: '100%'}}>Iniciar reserva</Button>
+          <Button onClick={()=> dateRange[1]!= null? navigator(`/cars/${id}/reserve`) : alert("Tenes que seleccionar una fecha disponible")} variant="contained" sx={{textTransform:"none", bgcolor:"#f0572d", color: colors.background, width: '100%'}}>Iniciar reserva</Button>
         </Box>
       </Box>
     </Box>
