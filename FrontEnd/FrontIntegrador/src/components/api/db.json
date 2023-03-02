@@ -2,7 +2,7 @@
   "cars": [
     {
       "id": 1,
-      "category": "Economico",
+      "category": "economico",
       "name": "Chevrolet Classic",
       "image": [
         {
@@ -39,19 +39,19 @@
       ],
       "price": 9000,
       "model": 2013,
-      "message": "Disfruta su viaje en este auto compacto y Economico, ideal para paseos por la ciudad y la zona de viñedos.",
+      "message": "Disfruta su viaje en este auto compacto y economico, ideal para paseos por la ciudad y la zona de viñedos.",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
       "trunk": "mediano",
       "doors": 4,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 7
     },
     {
       "id": 2,
-      "category": "Economico",
+      "category": "economico",
       "name": "Ford Ka SEL Full",
       "image": [
         {
@@ -90,12 +90,12 @@
       "doors": 5,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 7
     },
     {
       "id": 3,
-      "category": "Economico",
+      "category": "economico",
       "name": "Volkswagen Fox",
       "image": [
         {
@@ -134,12 +134,12 @@
       "doors": 5,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 8
     },
     {
       "id": 4,
-      "category": "Economico",
+      "category": "economico",
       "name": "Peugeot 207 Compact",
       "image": [
         {
@@ -171,19 +171,19 @@
       ],
       "price": 10500,
       "model": 2016,
-      "message": "Disfruta en este auto compacto y Economico, ideal para paseos por la ciudad y la zona rural.",
+      "message": "Disfruta en este auto compacto y economico, ideal para paseos por la ciudad y la zona rural.",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
       "trunk": "chico",
       "doors": 4,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 7
     },
     {
       "id": 5,
-      "category": "Economico",
+      "category": "economico",
       "name": "Nissan March",
       "image": [
         {
@@ -215,19 +215,19 @@
       ],
       "price": 11000,
       "model": 2014,
-      "message": "Disfruta su viaje en este auto compacto y Economico, ideal para paseos por la ciudad y la zona de viñedos.",
+      "message": "Disfruta su viaje en este auto compacto y economico, ideal para paseos por la ciudad y la zona de viñedos.",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
       "trunk": "chico",
       "doors": 5,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 9
     },
     {
       "id": 6,
-      "category": "Economico",
+      "category": "economico",
       "name": "Fiat Palio Attractive",
       "image": [
         {
@@ -239,7 +239,6 @@
           "original": "https://carroecarros.com.br/wp-content/uploads/2016/01/novo-classic-2017-6.jpg",
           "thumbnail": "https://carroecarros.com.br/wp-content/uploads/2016/01/novo-classic-2017-6.jpg",
           "description": "Chevrolet Classic - Vista interior"
-      
         },
         {
           "original": "https://carroecarros.com.br/wp-content/uploads/2016/01/novo-classic-2017-3.jpg",
@@ -259,19 +258,19 @@
       ],
       "price": 9000,
       "model": 2016,
-      "message": "Recorre los mejores lugares en este auto Economico, Ideal para recorrer la ciudad y sus alrededores en forma cómoda y segura.",
+      "message": "Recorre los mejores lugares en este auto economico, Ideal para recorrer la ciudad y sus alrededores en forma cómoda y segura.",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
       "trunk": "pequeno",
       "doors": 5,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 8
     },
     {
       "id": 7,
-      "category": "Gama-media",
+      "category": "gama-media",
       "name": "Renault Logan Privilege",
       "image": [
         {
@@ -310,12 +309,12 @@
       "doors": 4,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 10
     },
     {
       "id": 8,
-      "category": "Gama-media",
+      "category": "gama-media",
       "name": "Fiat Cronos",
       "image": [
         {
@@ -354,12 +353,12 @@
       "doors": 4,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 9
     },
     {
       "id": 9,
-      "category": "Gama-media",
+      "category": "gama-media",
       "name": "Ecosport",
       "image": [
         {
@@ -398,12 +397,12 @@
       "doors": 4,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 7
     },
     {
       "id": 10,
-      "category": "Gama-media",
+      "category": "gama-media",
       "name": "Renault Stepway",
       "image": [
         {
@@ -443,12 +442,12 @@
       "doors": 5,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 7
     },
     {
       "id": 11,
-      "category": "Gama-media",
+      "category": "gama-media",
       "name": "Volkswagen Suran",
       "image": [
         {
@@ -487,12 +486,12 @@
       "doors": 5,
       "airConditioning": true,
       "ABSBrake": false,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 8
     },
     {
       "id": 12,
-      "category": "Gama-media",
+      "category": "gama-media",
       "name": "Peugeot 208 Feline",
       "image": [
         {
@@ -531,12 +530,12 @@
       "doors": 5,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 9
     },
     {
       "id": 13,
-      "category": "Premium",
+      "category": "premium",
       "name": "Toyota Corolla",
       "image": [
         {
@@ -575,12 +574,12 @@
       "doors": 4,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 10
     },
     {
       "id": 14,
-      "category": "Premium",
+      "category": "premium",
       "name": "Jeep Renegade",
       "image": [
         {
@@ -619,12 +618,12 @@
       "doors": 5,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 9
     },
     {
       "id": 15,
-      "category": "Premium",
+      "category": "premium",
       "name": "Chevrolet Spin",
       "image": [
         {
@@ -663,12 +662,12 @@
       "doors": 5,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 8
     },
     {
       "id": 16,
-      "category": "Premium",
+      "category": "premium",
       "name": "Chevrolet Cruze RS",
       "image": [
         {
@@ -712,12 +711,12 @@
       "doors": 5,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 8
     },
     {
       "id": 17,
-      "category": "Pickups",
+      "category": "pickups",
       "name": "Toyota Hilux 4WD",
       "image": [
         {
@@ -761,12 +760,12 @@
       "doors": 4,
       "airConditioning": true,
       "ABSBrake": false,
-      "fuel": "Diesel Premium",
+      "fuel": "Diesel premium",
       "score": 10
     },
     {
       "id": 18,
-      "category": "Pickups",
+      "category": "pickups",
       "name": "Chevrolet S-10",
       "image": [
         {
@@ -810,12 +809,12 @@
       "doors": 4,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Diesel Premium",
+      "fuel": "Diesel premium",
       "score": 8
     },
     {
       "id": 19,
-      "category": "Pickups",
+      "category": "pickups",
       "name": "Volkswagen Amarok",
       "image": [
         {
@@ -859,12 +858,12 @@
       "doors": 4,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Diesel Premium",
+      "fuel": "Diesel premium",
       "score": 10
     },
     {
       "id": 20,
-      "category": "Pickups",
+      "category": "pickups",
       "name": "Ford Ranger",
       "image": [
         {
@@ -908,7 +907,7 @@
       "doors": 4,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Diesel Premium",
+      "fuel": "Diesel premium",
       "score": 9
     }
   ],
@@ -982,19 +981,19 @@
   "categorias": [
     {
       "id": 1,
-      "nombre": "Economico"
+      "nombre": "economico"
     },
     {
       "id": 2,
-      "nombre": "Gama-media"
+      "nombre": "gama-media"
     },
     {
       "id": 3,
-      "nombre": "Premium"
+      "nombre": "premium"
     },
     {
       "id": 4,
-      "nombre": "Pickups"
+      "nombre": "pickups"
     }
   ],
   "localizaciones": [
