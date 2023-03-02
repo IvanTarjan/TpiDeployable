@@ -48,7 +48,7 @@ export default function VehicleCard({ car }) {
       <Box className={styles.imageContainer}>
         <CardMedia className={styles.carImages}
           sx={{ height: 280 }}
-          image={car.image}
+          image={car.image[0].original}
           title={car.name}
         />
 
