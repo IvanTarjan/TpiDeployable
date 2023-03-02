@@ -16,14 +16,13 @@ import Policies from '../commons/Policies'
 import ShareIcon from '@mui/icons-material/Share';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import MapView from '../commons/MapView'
+import DateAvailability from '../commons/DateAvailability'
 
 
 const CarDetails = () => {
   const { id } = useParams()
-  const { cars, isLike, setIsLike, localizaciones, randomLocation } = useContext(BodyContext)
+  const { cars, isLike, setIsLike } = useContext(BodyContext)
 
-  const coordinates = [localizaciones[randomLocation].lat, localizaciones[randomLocation].lon]
 
   const handleClick = () => {
     setIsLike(prev => !prev)
@@ -62,8 +61,10 @@ const CarDetails = () => {
       </div>
 
       <div className={styles.moreData}>
-        <h1>Descripcion para {selectedCar.name}</h1>
-        <p>{selectedCar.message}</p>
+        <div className={styles.carDescription}>
+          <h1>Descripcion para {selectedCar.name}</h1>
+          <p>{selectedCar.message}</p>
+        </div>
 
         <h1>¿Qué ofrece este vehiculo?</h1>
         <Box className={styles.iconsContainerDetail} >
@@ -88,12 +89,7 @@ const CarDetails = () => {
           </div>
         </Box>
 
-        <h1>¿Dónde vas a estar?</h1>
-        <hr className={styles.line} />
-        <br />
-        <div className={styles.mapContainer} >
-          <MapView coordinates={coordinates} />
-        </div>
+        <DateAvailability id={id}/>
 
         <h1>Qué tenés que saber</h1>
         <p>Entrega en aeropuerto: Consultar costo</p>

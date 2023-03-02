@@ -5,7 +5,6 @@ import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import colors from '../commons/colors';
 import DatePicker from "react-multi-date-picker"
 import { CustomInput } from '../commons/DatePickerCustomComponents';
-import Toolbar from 'react-multi-date-picker/plugins/toolbar';
 import { BodyContext } from '../contexts/BodyContext';
 
 
@@ -33,13 +32,13 @@ const BarraDeBusqueda = () => {
 
     return (
         <Box display='flex' flexDirection={'column'} justifyContent='center' alignItems='center' width='100vw' marginTop={'60px'} backgroundColor={colors.c3} padding={"30px 0px"}>
-            <Typography variant='h1' fontSize={isMobile ? '30px' : '36px'} fontWeight="bold" color={colors.c4} textAlign="center" padding={'20px'} >Busca ofertas en Autos Economicos, Pick Ups y mucho más</Typography>
+            <Typography variant='h1' fontSize={{xs: '30px', md:'36px'}} fontWeight="bold" color={colors.c4} textAlign="center" padding={'20px'} >Busca ofertas en Autos Economicos, Pick Ups y mucho más</Typography>
 
-            <FormControl sx={{ m: 1, width: isTablet ? '90%' : '70%', mt: 3, display: 'flex', justifyContent: 'center', alignItems: "center", flexDirection: isMobile ? 'column' : 'row', gap: '10px' }}>
+            <FormControl sx={{ m: 1, width: {xs:'90%', md: '70%'}, mt: 3, display: 'flex', justifyContent: 'center', alignItems: "center", flexDirection: {xs: 'column', sm: 'row'}, gap: '10px' }}>
                 <Select
                     id='selectLocalizacion'
                     displayEmpty
-                    sx={{ width: isMobile ? '100%' : '37.5%', height: '40px', backgroundColor: colors.background, borderRadius: '5px' }}
+                    sx={{ width: {xs:'100%', sm: '37.5%'}, height: '40px', backgroundColor: colors.background, borderRadius: '5px' }}
                     defaultValue=""
                     onChange={handleChange}
                     input={<OutlinedInput />}
@@ -71,6 +70,7 @@ const BarraDeBusqueda = () => {
                     containerStyle={{ width: isMobile ? '100%' : '37.5%' }}
                     ref={calendarRef}
                     value={dateRange}
+                    hideYear={true}
                     onChange={setDateRange}
                     months={months}
                     weekDays={weekDays}
@@ -89,7 +89,7 @@ const BarraDeBusqueda = () => {
                     ]}
                 />
 
-                <Button sx={{ backgroundColor: colors.principal, color: colors.background, textTransform: 'none', width: isMobile ? '100%' : '25%', height: '40px', '&:hover': { backgroundColor: colors.principal } }}
+                <Button sx={{ backgroundColor: colors.principal, color: colors.background, textTransform: 'none', width: {xs: '100%', sm: '25%'}, height: '40px', '&:hover': { backgroundColor: colors.principal } }}
                     onClick={handleSubmit}>
                     Buscar
                 </Button>

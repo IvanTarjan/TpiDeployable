@@ -6,7 +6,9 @@ export const BodyContext = createContext()
 const BodyContextProvider = ({ children }) => {
   const [cars, setCars] = useState([])
   const [localizaciones, setLocalizaciones] = useState([])
-  const [isLike, setIsLike] = useState(false)
+  const [isLike, setIsLike] = useState(false);
+  const [dateRange, setDateRange] = useState([null, null]);
+  const [allDates, setAllDates] = useState([])
 
   useEffect(() => {
     axios.get("http://localhost:5000/cars")
@@ -29,7 +31,11 @@ const BodyContextProvider = ({ children }) => {
     setLocalizaciones,
     isLike,
     setIsLike,
-    randomLocation
+    randomLocation, 
+    dateRange, 
+    setDateRange, 
+    allDates, 
+    setAllDates
   }
 
   return (
