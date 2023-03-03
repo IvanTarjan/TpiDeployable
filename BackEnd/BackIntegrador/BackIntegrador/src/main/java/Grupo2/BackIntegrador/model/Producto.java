@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name="PRODUCTO")
+@Table(name="producto")
 public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,6 +19,16 @@ public class Producto {
     @Column
     private String precio;
 
+    // One to many
+    @OneToMany(mappedBy = "producto",fetch = FetchType.LAZY)
+    @JsonIgnore
+    private Set<Imagen> imagen= new HashSet<>();
+
+    @OneToMany(mappedBy = "producto",fetch = FetchType.LAZY)
+    @JsonIgnore
+    private Set<Politica> politica= new HashSet<>();
+
+    //Many to one
     @ManyToOne
     @JoinColumn(name = "categoria_id",referencedColumnName = "id")
     private Categoria categoria;
@@ -27,10 +37,7 @@ public class Producto {
     @JoinColumn(name = "ubicacion_id",referencedColumnName = "id")
     private Ubicacion ubicacion;
 
-    @OneToMany(mappedBy = "producto",fetch = FetchType.LAZY)
-    @JsonIgnore
-    private Set<Imagen> imagen= new HashSet<>();
-
+    //Many to Many
     @ManyToMany(fetch = FetchType.LAZY,
             cascade = {
                     CascadeType.PERSIST,

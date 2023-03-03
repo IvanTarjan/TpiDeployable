@@ -3,7 +3,7 @@ package Grupo2.BackIntegrador.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name="IMAGEN")
+@Table(name="imagen")
 public class Imagen {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
