@@ -17,7 +17,7 @@ public class ProductoDTO {
     private Long id;
     private String titulo, descripcion;
     private Categoria categoria;
-    private ubicacion ubicacion;
+    private Ubicacion ubicacion;
     private Set<Imagen> imagen;
     private Set<Politica> politica;
     private Set<Caracteristica> caracteristica;

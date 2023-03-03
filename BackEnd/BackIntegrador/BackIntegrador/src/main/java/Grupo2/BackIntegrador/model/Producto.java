@@ -6,7 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -42,7 +41,7 @@ public class Producto {
 
     @ManyToOne (cascade = CascadeType.PERSIST)
     @JoinColumn(name = "ubicacion_id",referencedColumnName = "id")
-    private ubicacion ubicacion;
+    private Ubicacion ubicacion;
 
     //Many to Many
     @ManyToMany(fetch = FetchType.LAZY,

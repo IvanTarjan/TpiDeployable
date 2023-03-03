@@ -1,4 +1,4 @@
 package Grupo2.BackIntegrador.controller;
 
-public class CiudadController {
+public class UbicacionController {
 }

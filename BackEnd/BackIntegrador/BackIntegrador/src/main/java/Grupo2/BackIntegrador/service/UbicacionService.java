@@ -1,7 +1,7 @@
 package Grupo2.BackIntegrador.service;
 
 import Grupo2.BackIntegrador.Exception.ResourceNotFoundException;
-import Grupo2.BackIntegrador.model.ubicacion;
+import Grupo2.BackIntegrador.model.Ubicacion;
 import Grupo2.BackIntegrador.repository.UbicacionRepository;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,35 +11,35 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class CiudadService {
+public class UbicacionService {
 
     private UbicacionRepository ubicacionRepository;
-    private static final Logger LOGGER=Logger.getLogger(CiudadService.class);
+    private static final Logger LOGGER=Logger.getLogger(UbicacionService.class);
     @Autowired
-    public CiudadService(UbicacionRepository ubicacionRepository) {
+    public UbicacionService(UbicacionRepository ubicacionRepository) {
 
         this.ubicacionRepository = ubicacionRepository;
     }
 
-    public List<ubicacion> listarUbicacion() {
+    public List<Ubicacion> listarUbicacion() {
         LOGGER.info("Se inició el listado de todas las ubicacion");
         return ubicacionRepository.findAll();
     }
 
-    public ubicacion guardarUbicacion(ubicacion ubicacion){
+    public Ubicacion guardarUbicacion(Ubicacion ubicacion){
         LOGGER.info("Se inició una operación de guardado de la ciudad con id=: "+
                 ubicacion.getId());
         return ubicacionRepository.save(ubicacion);
     }
 
-    public void actualizarUbicacion(ubicacion ubicacion){
+    public void actualizarUbicacion(Ubicacion ubicacion){
         LOGGER.info("Se inició una operación de actualización de la ciudad con id="+
                 ubicacion.getId());
         ubicacionRepository.save(ubicacion);
     }
 
     public void eliminarUbicacion(Long id) throws ResourceNotFoundException {
-        Optional<ubicacion> ubicacionAEliminar=buscarUbicacionXId(id);
+        Optional<Ubicacion> ubicacionAEliminar=buscarUbicacionXId(id);
         if (ubicacionAEliminar.isPresent()){
             ubicacionRepository.deleteById(id);
             LOGGER.warn("Se realizo una operación de eliminación de la ubicacion con" +
@@ -52,7 +52,7 @@ public class CiudadService {
 
     }
 
-    public Optional<ubicacion> buscarUbicacionXId(Long id){
+    public Optional<Ubicacion> buscarUbicacionXId(Long id){
         LOGGER.info("Se inició una operación de búsqueda de la ubicacion con id="+id);
         return ubicacionRepository.findById(id);
     }
