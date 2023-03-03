@@ -17,7 +17,7 @@ public class PoliticaService {
     private PoliticaRepository politicaRepository;
     private static final Logger LOGGER=Logger.getLogger(PoliticaService.class);
     @Autowired
-    public PoliticaService(PoliticaService politicaService) {
+    public PoliticaService(PoliticaRepository politicaRepository) {
 
         this.politicaRepository = politicaRepository;
     }

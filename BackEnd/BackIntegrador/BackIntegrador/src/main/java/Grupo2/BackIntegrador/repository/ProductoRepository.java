@@ -2,7 +2,7 @@ package Grupo2.BackIntegrador.repository;
 
 import Grupo2.BackIntegrador.model.Caracteristica;
 import Grupo2.BackIntegrador.model.Categoria;
-import Grupo2.BackIntegrador.model.Ciudad;
+import Grupo2.BackIntegrador.model.Ubicacion;
 import Grupo2.BackIntegrador.model.Producto;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -14,5 +14,5 @@ public interface ProductoRepository extends JpaRepository<Producto, Long> {
 
     List<Producto> findByCategoria (Categoria id);
 
-    List<Producto> findByCiudad (Ciudad id);
+    List<Producto> findByUbicacion (Ubicacion id);
 }

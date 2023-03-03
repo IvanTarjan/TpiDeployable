@@ -17,7 +17,7 @@ public class ProductoDTO {
     private Long id;
     private String titulo, descripcion;
     private Categoria categoria;
-    private Ciudad ciudad;
+    private Ubicacion ubicacion;
     private Set<Imagen> imagen;
     private Set<Politica> politica;
     private Set<Caracteristica> caracteristica;
@@ -29,7 +29,7 @@ public class ProductoDTO {
                 ", titulo=" + titulo +
                 ", descipcion=" + descripcion +
                 ", categoria=" + categoria +
-                ", ciudad=" + ciudad +
+                ", ciudad=" + ubicacion +
                 ", imagenes=" + imagen +
                 ", politicas=" + politica +
                 ", caracteristicas=" + caracteristica +
