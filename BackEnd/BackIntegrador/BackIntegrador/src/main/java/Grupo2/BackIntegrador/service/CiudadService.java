@@ -21,39 +21,39 @@ public class CiudadService {
         this.ciudadRepository = ciudadRepository;
     }
 
-    public List<Ciudad> listarUbicacion() {
-        LOGGER.info("Se inició el listado de todas las ubicacion");
+    public List<Ciudad> listarCiudad() {
+        LOGGER.info("Se inició el listado de todas las ciudad");
         return ciudadRepository.findAll();
     }
 
-    public Ciudad guardarUbicacion(Ciudad ciudad){
+    public Ciudad guardarCiudad(Ciudad ciudad){
         LOGGER.info("Se inició una operación de guardado de la ciudad con id=: "+
                 ciudad.getId());
         return ciudadRepository.save(ciudad);
     }
 
-    public void actualizarUbicacion(Ciudad ciudad){
+    public void actualizarCiudad(Ciudad ciudad){
         LOGGER.info("Se inició una operación de actualización de la ciudad con id="+
                 ciudad.getId());
         ciudadRepository.save(ciudad);
     }
 
-    public void eliminarUbicacion(Long id) throws ResourceNotFoundException {
-        Optional<Ciudad> ubicacionAEliminar=buscarUbicacionXId(id);
-        if (ubicacionAEliminar.isPresent()){
+    public void eliminarCiudad(Long id) throws ResourceNotFoundException {
+        Optional<Ciudad> CiudadAEliminar=buscarCiudadXId(id);
+        if (CiudadAEliminar.isPresent()){
             ciudadRepository.deleteById(id);
-            LOGGER.warn("Se realizo una operación de eliminación de la ubicacion con" +
+            LOGGER.warn("Se realizo una operación de eliminación de la ciudad con" +
                     "id="+id);
         }
         else{
-            throw new ResourceNotFoundException("La ubicacion a eliminar no existe" +
+            throw new ResourceNotFoundException("La ciudad a eliminar no existe" +
                     " en la base de datos, se intentó encontrar sin éxito en id= "+id);
         }
 
     }
 
-    public Optional<Ciudad> buscarUbicacionXId(Long id){
-        LOGGER.info("Se inició una operación de búsqueda de la ubicacion con id="+id);
+    public Optional<Ciudad> buscarCiudadXId(Long id){
+        LOGGER.info("Se inició una operación de búsqueda de la ciudad con id="+id);
         return ciudadRepository.findById(id);
     }
 }
