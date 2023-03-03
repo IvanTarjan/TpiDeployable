@@ -53,6 +53,8 @@ const CarDetails = () => {
         <br />
         <Features selectedCar={selectedCar} />
 
+        <DateAvailability id={id} />
+
         <h1>¿Dónde vas a estar?</h1>
         <hr className={styles.line} />
         <br />
