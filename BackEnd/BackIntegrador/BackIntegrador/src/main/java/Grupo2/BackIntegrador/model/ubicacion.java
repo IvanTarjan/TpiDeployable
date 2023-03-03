@@ -13,7 +13,7 @@ import java.util.Set;
 @Entity
 @Getter @Setter @AllArgsConstructor @NoArgsConstructor
 @Table(name="ubicacion")
-public class Ciudad {
+public class ubicacion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

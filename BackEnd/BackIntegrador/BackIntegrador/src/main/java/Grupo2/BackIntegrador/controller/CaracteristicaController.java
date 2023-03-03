@@ -19,7 +19,7 @@ public class CaracteristicaController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Caracteristica> buscarCaracteristicaPorID(@PathVariable Long id){
-        Optional<Caracteristica> caracteristicaBuscada= caracteristicaService.buscarCaracteristicaXId();
+        Optional<Caracteristica> caracteristicaBuscada= caracteristicaService.buscarCaracteristicaXId(id);
         if (caracteristicaBuscada.isPresent()){
             return ResponseEntity.ok(caracteristicaBuscada.get());
         }

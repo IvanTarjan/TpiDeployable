@@ -1,8 +1,8 @@
 package Grupo2.BackIntegrador.service;
 
 import Grupo2.BackIntegrador.Exception.ResourceNotFoundException;
-import Grupo2.BackIntegrador.model.Ciudad;
-import Grupo2.BackIntegrador.repository.CiudadRepository;
+import Grupo2.BackIntegrador.model.ubicacion;
+import Grupo2.BackIntegrador.repository.UbicacionRepository;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,35 +13,35 @@ import java.util.Optional;
 @Service
 public class CiudadService {
 
-    private CiudadRepository ciudadRepository;
+    private UbicacionRepository ubicacionRepository;
     private static final Logger LOGGER=Logger.getLogger(CiudadService.class);
     @Autowired
-    public CiudadService(CiudadRepository ciudadRepository) {
+    public CiudadService(UbicacionRepository ubicacionRepository) {
 
-        this.ciudadRepository = ciudadRepository;
+        this.ubicacionRepository = ubicacionRepository;
     }
 
-    public List<Ciudad> listarUbicacion() {
+    public List<ubicacion> listarUbicacion() {
         LOGGER.info("Se inició el listado de todas las ubicacion");
-        return ciudadRepository.findAll();
+        return ubicacionRepository.findAll();
     }
 
-    public Ciudad guardarUbicacion(Ciudad ciudad){
+    public ubicacion guardarUbicacion(ubicacion ubicacion){
         LOGGER.info("Se inició una operación de guardado de la ciudad con id=: "+
-                ciudad.getId());
-        return ciudadRepository.save(ciudad);
+                ubicacion.getId());
+        return ubicacionRepository.save(ubicacion);
     }
 
-    public void actualizarUbicacion(Ciudad ciudad){
+    public void actualizarUbicacion(ubicacion ubicacion){
         LOGGER.info("Se inició una operación de actualización de la ciudad con id="+
-                ciudad.getId());
-        ciudadRepository.save(ciudad);
+                ubicacion.getId());
+        ubicacionRepository.save(ubicacion);
     }
 
     public void eliminarUbicacion(Long id) throws ResourceNotFoundException {
-        Optional<Ciudad> ubicacionAEliminar=buscarUbicacionXId(id);
+        Optional<ubicacion> ubicacionAEliminar=buscarUbicacionXId(id);
         if (ubicacionAEliminar.isPresent()){
-            ciudadRepository.deleteById(id);
+            ubicacionRepository.deleteById(id);
             LOGGER.warn("Se realizo una operación de eliminación de la ubicacion con" +
                     "id="+id);
         }
@@ -52,8 +52,8 @@ public class CiudadService {
 
     }
 
-    public Optional<Ciudad> buscarUbicacionXId(Long id){
+    public Optional<ubicacion> buscarUbicacionXId(Long id){
         LOGGER.info("Se inició una operación de búsqueda de la ubicacion con id="+id);
-        return ciudadRepository.findById(id);
+        return ubicacionRepository.findById(id);
     }
 }

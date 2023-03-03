@@ -1,10 +1,12 @@
 package Grupo2.BackIntegrador.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -25,22 +27,22 @@ public class Producto {
     private String precio;
 
     // One to many
-    @OneToMany(mappedBy = "producto",fetch = FetchType.LAZY)
-    @JsonIgnore
+    @OneToMany(mappedBy = "producto",fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
+    @JsonIgnoreProperties("producto")
     private Set<Imagen> imagen= new HashSet<>();
 
-    @OneToMany(mappedBy = "producto",fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "producto",fetch = FetchType.LAZY , cascade = CascadeType.PERSIST)
     @JsonIgnore
     private Set<Politica> politica= new HashSet<>();
 
     //Many to one
-    @ManyToOne
-    @JoinColumn(name = "categoria_id",referencedColumnName = "id")
+    @ManyToOne( cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "categoria_id",referencedColumnName = "id" )
     private Categoria categoria;
 
-    @ManyToOne
+    @ManyToOne (cascade = CascadeType.PERSIST)
     @JoinColumn(name = "ubicacion_id",referencedColumnName = "id")
-    private Ciudad ciudad;
+    private ubicacion ubicacion;
 
     //Many to Many
     @ManyToMany(fetch = FetchType.LAZY,
