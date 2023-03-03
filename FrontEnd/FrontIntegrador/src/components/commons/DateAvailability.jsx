@@ -47,6 +47,7 @@ const DateAvailability = ({dateRangeArr, id}) => {
       <h1>Fechas Disponibles</h1>
       <Box display={"flex"} justifyContent="space-between" width="100%" alignItems={"center"} flexDirection={{xs: 'column', md: "row"}}>
         <Calendar
+          
           ref={calendarRef}
           value={dateRange}
           onChange={dateObjects => {
