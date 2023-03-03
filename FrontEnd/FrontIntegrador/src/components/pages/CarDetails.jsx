@@ -89,7 +89,7 @@ const CarDetails = () => {
           </div>
         </Box>
 
-        <DateAvailability id={id}/>
+        <DateAvailability id={id} /> {/*hay que agregarle prop de dias deshabilitados*/}
 
         <h1>Qué tenés que saber</h1>
         <p>Entrega en aeropuerto: Consultar costo</p>
