@@ -5,7 +5,7 @@ import { CustomInput } from '../commons/DatePickerCustomComponents';
 import { BodyContext } from '../contexts/BodyContext';
 import { Box, Button, Typography, useMediaQuery } from '@mui/material';
 import { bgcolor } from '@mui/system';
-import {getDaysArray} from './datePickerHelpers';
+import {getDaysArray, hasOverlappingDays} from './datePickerHelpers';
 import { useNavigate } from 'react-router-dom';
 
 const DateAvailability = ({dateRangeArr, id}) => {
@@ -29,18 +29,13 @@ const DateAvailability = ({dateRangeArr, id}) => {
   }, [])
 
   useEffect(() => {
-    checkForOverlappingDays()
+    if (hasOverlappingDays(allDates, disabledDays)) {
+      setDateRange([null, null])
+      setAllDates([])
+    }
+    
   }, [allDates])
-  
-  const checkForOverlappingDays = () => {
-    allDates.forEach(day=>  {
-      if (disabledDays.includes(day.format("YYYY/M/D"))) {
-        console.log(day.format("YYYY/M/D"));
-        setDateRange([null, null])
-        setAllDates([])
-    }})
-  }
-  
+
 
   return (
     <Box display={"flex"} flexDirection="column" justifyContent={"center"} alignItems="flex-start" width={"100vw"} bgcolor={"#ececef"} marginLeft="-40px" padding={"0px 40px 40px"}>
