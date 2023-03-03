@@ -1,5 +1,6 @@
 package Grupo2.BackIntegrador.repository;
 
+import Grupo2.BackIntegrador.model.Caracteristica;
 import Grupo2.BackIntegrador.model.Categoria;
 import Grupo2.BackIntegrador.model.Producto;
 import Grupo2.BackIntegrador.model.Ubicacion;
@@ -9,7 +10,7 @@ import java.util.List;
 
 public interface ProductoRepository extends JpaRepository<Producto, Long> {
 
-    List<Producto> findProductosByCaracteristicaId(Long caracteristicaId);
+    List<Producto> findProductosByCaracteristicaId(Caracteristica id);
 
     List<Producto> findByCategoria (Categoria id);
 
