@@ -13,14 +13,13 @@ import java.util.Set;
 @Entity
 @Getter @Setter @AllArgsConstructor @NoArgsConstructor
 @Table(name="ubicacion")
-public class Ubicacion {
+public class Ciudad {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column
-    private String ciudad;
-    @Column
-    private String provincia;
+    private String nombre;
+
     @Column
     private String pais;
 

@@ -40,7 +40,7 @@ public class Producto {
 
     @ManyToOne
     @JoinColumn(name = "ubicacion_id",referencedColumnName = "id")
-    private Ubicacion ubicacion;
+    private Ciudad ciudad;
 
     //Many to Many
     @ManyToMany(fetch = FetchType.LAZY,

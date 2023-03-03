@@ -11,19 +11,17 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class UbicacionDTO {
+public class CiudadDTO {
 
     private Long id;
-    private String ciudad;
-    private String provincia;
+    private String nombre;
     private String pais;
 
     @Override
     public String toString() {
         return "UbicacionDTO{"+
                 "id="+ id +
-                ", ciudad=" + ciudad +
-                ", provincia=" + provincia +
+                ", nombre=" + nombre +
                 ", pais=" + pais +
                 "}";
     }
