@@ -27,5 +27,5 @@ public class Ubicacion {
     @OneToMany(mappedBy = "ubicacion",fetch = FetchType.LAZY)
     @JsonIgnore
     private Set<Producto> productos= new HashSet<>();
-    
+
 }
