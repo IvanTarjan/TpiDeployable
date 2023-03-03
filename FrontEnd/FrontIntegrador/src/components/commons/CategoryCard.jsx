@@ -12,9 +12,8 @@ const CategoryCard = ({ categoria, carImgs }) => {
     const randomImg = Math.floor(carImgs.length * Math.random())
 
     return (
-        <Card sx={{ height: 380, width: 360 }}>
+        <Card className={styles.categoryImagesContainer} sx={{ height: 380, width: 375 }}>
             <CardMedia
-                className={styles.categoryImages}
                 component="img"
                 sx={{ height: 280 }}
                 image={carImgs[randomImg]}
