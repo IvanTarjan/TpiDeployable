@@ -77,7 +77,6 @@
       ],
       "price": 9500,
       "model": 2016,
-      "title": "El tremendo titulo de este auto", 
       "message": "Disfrutá a bordo de este moderno y confortable vehículo. Ideal para paseos en ciudad y ruta. Excelente confort de marcha y seguridad gracias a su dirección eléctrica asistida y control de estabilidad (ESP)",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
@@ -121,7 +120,6 @@
       ],
       "price": 10000,
       "model": 2017,
-      "title": "El tremendo titulo de este auto", 
       "message": "Este auto te permitirá conocer los mejores lugares en forma económica, Ideal para la ciudad y la ruta!",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
@@ -295,7 +293,6 @@
       ],
       "price": 12000,
       "model": 2017,
-      "title": "El tremendo titulo de este auto", 
       "message": "Disfruta de la comodidad, mucho espacio y baúl para viajar cómodo con amigos o familia!  Además tendrás toda la tecnología como velocidad crucero, climatizador automático, computadora de abordo, sensor de estacionamiento, etc.",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
@@ -339,7 +336,6 @@
       ],
       "price": 16500,
       "model": 2020,
-      "title": "El tremendo titulo de este auto", 
       "message": "Recorre tu destino en este moderno auto, el cual te permitirá disfrutar paseos por la cuidad y sus alrededores. Su caja automática hace que manejarlo sea muy fácil.",
       "airbag": "2 airbags frontales",
       "gearbox": "automatica",
@@ -383,7 +379,6 @@
       ],
       "price": 14000,
       "model": 2016,
-      "title": "El tremendo titulo de este auto", 
       "message": "Este es el auto ideal para los que eligen viajar cómodos, con espacios interiores amplios y toda la comodidad de una SUV. Posee todo lo que necesitas para disfrutar tu paseo sintiéndote seguro/a en cada momento.",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
@@ -428,7 +423,6 @@
       ],
       "price": 12500,
       "model": 2020,
-      "title": "El tremendo titulo de este auto", 
       "message": "Con este cómodo vehículo podrás vivir las mejores aventuras, disfruta su confort y espacio, además de su equipamiento como control de velocidad crucero, bluetooth, aire acondicionado y mas!!!",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
@@ -472,7 +466,6 @@
       ],
       "price": 12000,
       "model": 2017,
-      "title": "El tremendo titulo de este auto", 
       "message": "Este es el auto ideal para los que eligen viajar cómodos, con espacios interiores amplios y toda la comodidad de una SUV. Posee todo lo que necesitas para disfrutar tu paseo sintiéndote seguro/a en cada momento.",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
@@ -516,7 +509,6 @@
       ],
       "price": 12000,
       "model": 2020,
-      "title": "El tremendo titulo de este auto", 
       "message": "Viaja en este auto con techo panorámico y disfruta todo el confort y tecnología que te ofrece como control de velocidad crucero, climatizador automático, sensor de estacionamiento y mucho mas!",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
@@ -560,7 +552,6 @@
       ],
       "price": 19000,
       "model": 2017,
-      "title": "El tremendo titulo de este auto", 
       "message": "Disfruta de la comodidad, mucho espacio y baúl para viajar cómodo con amigos o familia! Además tendrás toda la tecnología como velocidad crucero, climatizador automático, computadora de abordo, sensor de estacionamiento, pantalla tactil.",
       "airbag": "2 airbags frontales",
       "gearbox": "automatica",
@@ -605,7 +596,6 @@
       ],
       "price": 19500,
       "model": 2018,
-      "title": "El tremendo titulo de este auto", 
       "message": "Con este vehículo podes viajar de forma segura y confortable, teniendo mucho espacio y confort.",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
@@ -649,7 +639,6 @@
       ],
       "price": 21000,
       "model": 2017,
-      "title": "El tremendo titulo de este auto", 
       "message": "Viaja en esta vehículo con capacidad de hasta 7 personas, el cual te permitirá disfrutar con familia y amigos los mejores paisajes",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
@@ -693,7 +682,6 @@
       ],
       "price": 21500,
       "model": 2022,
-      "title": "El tremendo titulo de este auto", 
       "message": "Vivi lo mejor de tu viaje en este auto que posee caja automatica, tapizados en cuero, techo panoramico, velocidad crucero, sensores de estacionamiento , centro de entretenimiento y mucho mas para que tu visita sea unica!",
       "airbag": "2 airbags frontales",
       "gearbox": "automatica",
@@ -706,7 +694,7 @@
     },
     {
       "id": 17,
-      "category": "pickups",
+      "category": "pickup",
       "name": "Toyota Hilux",
       "image": [
         {
@@ -737,7 +725,6 @@
       ],
       "price": 22000,
       "model": 2019,
-      "title": "El tremendo titulo de este auto", 
       "message": "Ideal para caminos rurales y con todo el confort que te ofrecen la pantalla tactil, control crucero, control de traccion, etc.",
       "airbag": "2 airbags frontales",
       "gearbox": "automatica",
@@ -750,7 +737,7 @@
     },
     {
       "id": 18,
-      "category": "pickups",
+      "category": "pickup",
       "name": "Chevrolet S-10",
       "image": [
         {
@@ -774,14 +761,13 @@
           "description": "Chevrolet S-10 - Baulera"
         },
         {
-          "original": "https://www.chevrolet.com.ar/content/dam/chevrolet/mercosur/argentina/espanol/index/pickups-and-trucks/2021-s10-cd-hc/01-images/mov/01-images/s10-high-country-box-garantia.jpg?imwidth=960",
-          "thumbnail": "https://www.chevrolet.com.ar/content/dam/chevrolet/mercosur/argentina/espanol/index/pickups-and-trucks/2021-s10-cd-hc/01-images/mov/01-images/s10-high-country-box-garantia.jpg?imwidth=960",
+          "original": "https://www.chevrolet.com.ar/content/dam/chevrolet/mercosur/argentina/espanol/index/pickup-and-trucks/2021-s10-cd-hc/01-images/mov/01-images/s10-high-country-box-garantia.jpg?imwidth=960",
+          "thumbnail": "https://www.chevrolet.com.ar/content/dam/chevrolet/mercosur/argentina/espanol/index/pickup-and-trucks/2021-s10-cd-hc/01-images/mov/01-images/s10-high-country-box-garantia.jpg?imwidth=960",
           "description": "Chevrolet S-10 - Vista lateral"
         }
       ],
       "price": 23000,
       "model": 2019,
-      "title": "El tremendo titulo de este auto", 
       "message": "Ideal para caminos rurales y con todo el confort que te ofrecen la pantalla tactil, control crucero, control de traccion, etc.",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
@@ -794,7 +780,7 @@
     },
     {
       "id": 19,
-      "category": "pickups",
+      "category": "pickup",
       "name": "Volkswagen Amarok",
       "image": [
         {
@@ -837,7 +823,7 @@
     },
     {
       "id": 20,
-      "category": "pickups",
+      "category": "pickup",
       "name": "Ford Ranger",
       "image": [
         {
@@ -868,7 +854,6 @@
       ],
       "price": 23000,
       "model": 2019,
-      "title": "El tremendo titulo de este auto", 
       "message": "Ideal para caminos rurales y con todo el confort que te ofrecen la pantalla tactil, control crucero, control de traccion, etc.",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
@@ -962,7 +947,7 @@
     },
     {
       "id": 4,
-      "nombre": "pickups"
+      "nombre": "pickup"
     }
   ],
   "localizaciones": [
