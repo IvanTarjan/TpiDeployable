@@ -12,7 +12,7 @@ import java.util.Set;
 
 @Getter @Setter @AllArgsConstructor @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class productoDTO {
+public class ProductoDTO {
 
     private Long id;
     private String titulo, descripcion;
