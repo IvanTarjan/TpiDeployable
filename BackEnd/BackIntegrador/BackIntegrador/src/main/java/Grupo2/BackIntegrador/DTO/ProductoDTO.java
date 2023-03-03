@@ -1,4 +1,4 @@
-package Grupo2.BackIntegrador.Dao;
+package Grupo2.BackIntegrador.DTO;
 
 import Grupo2.BackIntegrador.model.*;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

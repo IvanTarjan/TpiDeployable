@@ -1,4 +1,4 @@
-package Grupo2.BackIntegrador.Dao;
+package Grupo2.BackIntegrador.DTO;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
@@ -8,20 +8,18 @@ import lombok.Setter;
 
 @Getter @Setter @AllArgsConstructor @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class CategoriaDTO {
+public class CaracteristicaDTO {
 
     private Long id;
     private String titulo;
-    private String descripcion;
-    private String url_imagen;
+    private String icono;
 
     @Override
     public String toString() {
-        return "CategoriaDTO{"+
+        return "CaracteristicaDTO{"+
                 "id="+ id +
                 ", titulo=" + titulo +
-                ", descripcion=" + descripcion +
-                ", url_imagen=" + url_imagen +
+                ", icono=" + icono +
                 "}";
     }
 }
