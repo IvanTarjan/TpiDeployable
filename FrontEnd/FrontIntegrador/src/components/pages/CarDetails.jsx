@@ -12,11 +12,14 @@ import DateAvailability from '../commons/DateAvailability'
 import Features from '../commons/Features'
 import GalleryGrid from '../commons/GalleryGrid'
 import Gallery from '../commons/Gallery'
+import MapView from '../commons/MapView'
+
 
 const CarDetails = () => {
   const { id } = useParams()
-  const { cars, isLike, setIsLike } = useContext(BodyContext)
+  const { cars, isLike, setIsLike, localizaciones, randomLocation } = useContext(BodyContext)
 
+  const coordinates = [localizaciones[randomLocation].lat, localizaciones[randomLocation].lon]
 
   const handleClick = () => {
     setIsLike(prev => !prev)
@@ -66,7 +69,6 @@ const CarDetails = () => {
         <Policies />
       </div>
     </div>
-
   )
 }
 
