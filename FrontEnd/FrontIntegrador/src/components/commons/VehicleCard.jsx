@@ -19,7 +19,7 @@ import { useNavigate } from 'react-router-dom';
 export default function VehicleCard({ car }) {
   const navigate = useNavigate()
   const handleClick = () => {
-    navigate(`car/${car.id}`)
+    navigate(`/category/${car.category}/car/${car.id}`)
   }
 
   return (
@@ -48,7 +48,7 @@ export default function VehicleCard({ car }) {
       <Box className={styles.imageContainer}>
         <CardMedia className={styles.carImages}
           sx={{ height: 280 }}
-          image={car.image}
+          image={car.image[0].original}
           title={car.name}
         />
 

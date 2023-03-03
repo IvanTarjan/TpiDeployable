@@ -2,27 +2,79 @@
   "cars": [
     {
       "id": 1,
-      "category": "Economico",
+      "category": "economico",
       "name": "Chevrolet Classic",
-      "image": "https://gower.ar/wp-content/uploads/2022/02/Chevrolet-Classic-2013.jpg",
+      "image": [
+        {
+          "original": "https://carroecarros.com.br/wp-content/uploads/2016/01/novo-classic-2017.jpg",
+          "thumbnail": "https://carroecarros.com.br/wp-content/uploads/2016/01/novo-classic-2017.jpg",
+          "description": "Chevrolet Classic - Vista general"
+        },
+        {
+          "original": "https://carroecarros.com.br/wp-content/uploads/2016/01/novo-classic-2017-6.jpg",
+          "thumbnail": "https://carroecarros.com.br/wp-content/uploads/2016/01/novo-classic-2017-6.jpg",
+          "description": "Chevrolet Classic - Vista interior"
+        },
+        {
+          "original": "https://carroecarros.com.br/wp-content/uploads/2016/01/novo-classic-2017-3.jpg",
+          "thumbnail": "https://carroecarros.com.br/wp-content/uploads/2016/01/novo-classic-2017-3.jpg",
+          "description": "Chevrolet Classic - Vista desde atras"
+        },
+        {
+          "original": "https://carroecarros.com.br/wp-content/uploads/2016/01/novo-classic-2017-5.jpg",
+          "thumbnail": "https://carroecarros.com.br/wp-content/uploads/2016/01/novo-classic-2017-5.jpg",
+          "description": "Chevrolet Classic - Vista de baulera"
+        },
+        {
+          "original": "https://carroecarros.com.br/wp-content/uploads/2016/01/novo-classic-2017-4.jpg",
+          "thumbnail": "https://carroecarros.com.br/wp-content/uploads/2016/01/novo-classic-2017-4.jpg",
+          "description": "Chevrolet Classic - Vista lateral"
+        }
+      ],
       "price": 9000,
       "model": 2013,
-      "title": "El tremendo titulo de este auto", 
-      "message": "Disfruta su viaje en este auto compacto y Economico, ideal para paseos por la ciudad y la zona de viñedos.",
+      "message": "Disfruta su viaje en este auto compacto y economico, ideal para paseos por la ciudad y la zona de viñedos.",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
       "trunk": "mediano",
       "doors": 4,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 7
     },
     {
       "id": 2,
-      "category": "Economico",
-      "name": "Ford Ka SEL Full",
-      "image": "https://gower.ar/wp-content/uploads/2022/05/1-1.jpg",
+      "category": "economico",
+      "name": "Ford Ka",
+      "image": [
+        {
+          "original": "https://www.vielautomotores.com.ar/uploads/vehiculos/colores/normal/B9zOHK7B0v_1538060657.jpg",
+          "thumbnail": "https://www.vielautomotores.com.ar/uploads/vehiculos/colores/normal/B9zOHK7B0v_1538060657.jpg",
+          "description": "Ford Ka - Vista general"
+        },
+        {
+          "original": "https://d171xgro1r36rb.cloudfront.net/1mTnLl87PIIWZeh0-HfgroBO58-fCfJCW.jpg",
+          "thumbnail": "https://d171xgro1r36rb.cloudfront.net/1mTnLl87PIIWZeh0-HfgroBO58-fCfJCW.jpg",
+          "description": "Ford Ka - Vista interior"
+      
+        },
+        {
+          "original": "https://d171xgro1r36rb.cloudfront.net/1YbYhcVS_w1VZNOIAapcbBLQgjLluwZyP.jpg",
+          "thumbnail": "https://d171xgro1r36rb.cloudfront.net/1YbYhcVS_w1VZNOIAapcbBLQgjLluwZyP.jpg",
+          "description": "Ford Ka - Vista desde atras"
+        },
+        {
+          "original": "https://d171xgro1r36rb.cloudfront.net/1Vykv3MclAudFTrLa0vSG4PPnTgkm2VIM.jpg",
+          "thumbnail": "https://d171xgro1r36rb.cloudfront.net/1Vykv3MclAudFTrLa0vSG4PPnTgkm2VIM.jpg",
+          "description": "Ford Ka - Baulera"
+        },
+        {
+          "original": "https://gower.ar/wp-content/uploads/2022/05/1-1.jpg",
+          "thumbnail": "https://gower.ar/wp-content/uploads/2022/05/1-1.jpg",
+          "description": "Ford Ka - Vista lateral"
+        }
+      ],
       "price": 9500,
       "model": 2016,
       "title": "El tremendo titulo de este auto", 
@@ -33,14 +85,40 @@
       "doors": 5,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 7
     },
     {
       "id": 3,
-      "category": "Economico",
+      "category": "economico",
       "name": "Volkswagen Fox",
-      "image": "https://gower.ar/wp-content/uploads/2022/05/FOX-2.jpg",
+      "image": [
+        {
+          "original": "https://cdn.autopapo.com.br/box/uploads/2017/05/02185448/fox4.jpg",
+          "thumbnail": "https://cdn.autopapo.com.br/box/uploads/2017/05/02185448/fox4.jpg",
+          "description": "Volkswagen Fox - Vista general"
+        },
+        {
+          "original": "https://adminclasificados.lavoz.com.ar/files/imagecache/landscape_1020_560_sc/avisos/aviso_auto/aviso-auto-volkswagen-fox-13821542.jpg",
+          "thumbnail": "https://adminclasificados.lavoz.com.ar/files/imagecache/landscape_1020_560_sc/avisos/aviso_auto/aviso-auto-volkswagen-fox-13821542.jpg",
+          "description": "Volkswagen Fox - Interior"
+        },
+        {
+          "original": "https://adminclasificados.lavoz.com.ar/files/imagecache/landscape_1020_560_sc/avisos/aviso_auto/aviso-auto-volkswagen-fox-13821533.jpg",
+          "thumbnail": "https://adminclasificados.lavoz.com.ar/files/imagecache/landscape_1020_560_sc/avisos/aviso_auto/aviso-auto-volkswagen-fox-13821533.jpg",
+          "description": "Volkswagen Fox - Vista desde atras"
+        },
+        {
+          "original": "https://carroecarros.com.br/wp-content/uploads/2016/01/novo-classic-2017-5.jpg",
+          "thumbnail": "https://carroecarros.com.br/wp-content/uploads/2016/01/novo-classic-2017-5.jpg",
+          "description": "Volkswagen Fox - Vista de baulera"
+        },
+        {
+          "original": "https://adminclasificados.lavoz.com.ar/files/imagecache/landscape_1020_560_sc/avisos/aviso_auto/aviso-auto-volkswagen-fox-13821531.jpg",
+          "thumbnail": "https://adminclasificados.lavoz.com.ar/files/imagecache/landscape_1020_560_sc/avisos/aviso_auto/aviso-auto-volkswagen-fox-13821531.jpg",
+          "description": "Volkswagen Fox - Vista lateral"
+        }
+      ],
       "price": 10000,
       "model": 2017,
       "title": "El tremendo titulo de este auto", 
@@ -51,68 +129,170 @@
       "doors": 5,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 8
     },
     {
       "id": 4,
-      "category": "Economico",
-      "name": "Peugeot 207 Compact",
-      "image": "https://gower.ar/wp-content/uploads/2021/12/Catalogo-Peugeot-207.jpg",
+      "category": "economico",
+      "name": "Peugeot 207",
+      "image": [
+        {
+          "original": "https://www.gokissamos.gr/wp-content/uploads/2020/11/peugeot-207.png",
+          "thumbnail": "https://www.gokissamos.gr/wp-content/uploads/2020/11/peugeot-207.png",
+          "description": "Peugeot 207 - Vista general"
+        },
+        {
+          "original": "https://s3.amazonaws.com/static.multiaviso.com/vehicle/images/2-8ZP5UYL4PHE9-peugeot-207.jpg",
+          "thumbnail": "https://s3.amazonaws.com/static.multiaviso.com/vehicle/images/2-8ZP5UYL4PHE9-peugeot-207.jpg",
+          "description": "Peugeot 207 - Vista interior"
+        },
+        {
+          "original": "https://s3.amazonaws.com/static.multiaviso.com/vehicle/images/2-3SXN5PJ98KGY-peugeot-207.jpg",
+          "thumbnail": "https://s3.amazonaws.com/static.multiaviso.com/vehicle/images/2-3SXN5PJ98KGY-peugeot-207.jpg",
+          "description": "Peugeot 207 - Vista desde atras"
+        },
+        {
+          "original": "https://s3.amazonaws.com/static.multiaviso.com/vehicle/images/2-PC8FLY4HB992-peugeot-207.jpg",
+          "thumbnail": "https://s3.amazonaws.com/static.multiaviso.com/vehicle/images/2-PC8FLY4HB992-peugeot-207.jpg",
+          "description": "Peugeot 207 - Baulera"
+        },
+        {
+          "original": "https://s3.amazonaws.com/static.multiaviso.com/vehicle/images/2-V3VLFNPYYA6R-peugeot-207.jpg",
+          "thumbnail": "https://s3.amazonaws.com/static.multiaviso.com/vehicle/images/2-V3VLFNPYYA6R-peugeot-207.jpg",
+          "description": "Peugeot 207 - Vista lateral"
+        }
+      ],
       "price": 10500,
       "model": 2016,
-      "title": "El tremendo titulo de este auto", 
-      "message": "Disfruta en este auto compacto y Economico, ideal para paseos por la ciudad y la zona rural.",
+      "message": "Disfruta en este auto compacto y economico, ideal para paseos por la ciudad y la zona rural.",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
       "trunk": "chico",
       "doors": 4,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 7
     },
     {
       "id": 5,
-      "category": "Economico",
+      "category": "economico",
       "name": "Nissan March",
-      "image": "https://gower.ar/wp-content/uploads/2021/12/March-1.jpg",
+      "image": [
+        {
+          "original": "http://cdn.inaxiom.net/web/wp-content/uploads/2010/07/Nissan-March-00.jpg",
+          "thumbnail": "http://cdn.inaxiom.net/web/wp-content/uploads/2010/07/Nissan-March-00.jpg",
+          "description": "Nissan March - Vista general"
+        },
+        {
+          "original": "https://img.remediosdigitales.com/e985ac/nissan-march-mexico/450_1000.jpg",
+          "thumbnail": "https://img.remediosdigitales.com/e985ac/nissan-march-mexico/450_1000.jpg",
+          "description": "Nissan March - Interior"
+        },
+        {
+          "original": "https://www.panamotorscenter.com/Prod/CCP/Sesion_VIN/KL210673_1470/Vista%20Trasera/USR100725_EM213_2020_12_18_18_55_39tras.jpg",
+          "thumbnail": "https://www.panamotorscenter.com/Prod/CCP/Sesion_VIN/KL210673_1470/Vista%20Trasera/USR100725_EM213_2020_12_18_18_55_39tras.jpg",
+          "description": "Nissan March - Vista desde atras"
+        },
+        {
+          "original": "https://d171xgro1r36rb.cloudfront.net/16m8fAVqYNG1CA1remJ1GEGJy5AIFRXbJ.jpg",
+          "thumbnail": "https://d171xgro1r36rb.cloudfront.net/16m8fAVqYNG1CA1remJ1GEGJy5AIFRXbJ.jpg",
+          "description": "Nissan March - Baulera"
+        },
+        {
+          "original": "https://www.nissanautoferro.com/wp-content/uploads/2020/11/march-191022.jpg.ximg_.l_12_h.smart_-1024x530.jpg",
+          "thumbnail": "https://www.nissanautoferro.com/wp-content/uploads/2020/11/march-191022.jpg.ximg_.l_12_h.smart_-1024x530.jpg",
+          "description": "Nissan March - Vista lateral"
+        }
+      ],
       "price": 11000,
       "model": 2014,
-      "title": "El tremendo titulo de este auto", 
-      "message": "Disfruta su viaje en este auto compacto y Economico, ideal para paseos por la ciudad y la zona de viñedos.",
+      "message": "Disfruta su viaje en este auto compacto y economico, ideal para paseos por la ciudad y la zona de viñedos.",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
       "trunk": "chico",
       "doors": 5,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 9
     },
     {
       "id": 6,
-      "category": "Economico",
-      "name": "Fiat Palio Attractive",
-      "image": "https://gower.ar/wp-content/uploads/2022/05/Palio-final.jpg",
+      "category": "economico",
+      "name": "Fiat Palio",
+      "image": [
+        {
+          "original": "https://www.seprio.com.ar/img/60c8fb9161aaba946f9e0b586.png",
+          "thumbnail": "https://www.seprio.com.ar/img/60c8fb9161aaba946f9e0b586.png",
+          "description": "Fiat Palio - Vista general"
+        },
+        {
+          "original": "https://d171xgro1r36rb.cloudfront.net/11sTeAiryb8oHThm2YX0fv9YHNQJG1YXP.jpg",
+          "thumbnail": "https://d171xgro1r36rb.cloudfront.net/11sTeAiryb8oHThm2YX0fv9YHNQJG1YXP.jpg",
+          "description": "Fiat Palio - Interior"
+        },
+        {
+          "original": "https://w0.peakpx.com/wallpaper/205/248/HD-wallpaper-2012-fiat-palio-rear-car.jpg",
+          "thumbnail": "https://w0.peakpx.com/wallpaper/205/248/HD-wallpaper-2012-fiat-palio-rear-car.jpg",
+          "description": "Fiat Palio - Vista desde atras"
+        },
+        {
+          "original": "https://d171xgro1r36rb.cloudfront.net/1biRJsecJ3B1aJi9mCwrNlTl4zd04SCmN.jpg",
+          "thumbnail": "https://d171xgro1r36rb.cloudfront.net/1biRJsecJ3B1aJi9mCwrNlTl4zd04SCmN.jpg",
+          "description": "Fiat Palio - Baulera"
+        },
+        {
+          "original": "https://w0.peakpx.com/wallpaper/540/19/HD-wallpaper-2012-fiat-palio-side-car.jpg",
+          "thumbnail": "https://w0.peakpx.com/wallpaper/540/19/HD-wallpaper-2012-fiat-palio-side-car.jpg",
+          "description": "Fiat Palio - Vista lateral"
+        }
+      ],
       "price": 9000,
       "model": 2016,
-      "title": "El tremendo titulo de este auto", 
-      "message": "Recorre los mejores lugares en este auto Economico, Ideal para recorrer la ciudad y sus alrededores en forma cómoda y segura.",
+      "message": "Recorre los mejores lugares en este auto economico, Ideal para recorrer la ciudad y sus alrededores en forma cómoda y segura.",
       "airbag": "2 airbags frontales",
       "gearbox": "manual",
       "trunk": "pequeno",
       "doors": 5,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 8
     },
     {
       "id": 7,
-      "category": "Gama media",
-      "name": "Renault Logan Privilege",
-      "image": "https://gower.ar/wp-content/uploads/2022/01/Logan-1.jpg",
+      "category": "gama-media",
+      "name": "Renault Logan",
+      "image": [
+        {
+          "original": "https://i2.wp.com/tiempomotor.com/wp-content/uploads/2020/11/Renault_Logan_recreaci%C3%B3n_1.jpg?fit=960%2C603&ssl=1",
+          "thumbnail": "https://i2.wp.com/tiempomotor.com/wp-content/uploads/2020/11/Renault_Logan_recreaci%C3%B3n_1.jpg?fit=960%2C603&ssl=1",
+          "description": "Renault Logan - Vista general"
+        },
+        {
+          "original": "https://www.megautos.com/wp-content/uploads/2019/07/Renault-Logan-CVT-2020-interior-1024x683.jpg",
+          "thumbnail": "https://www.megautos.com/wp-content/uploads/2019/07/Renault-Logan-CVT-2020-interior-1024x683.jpg",
+          "description": "Renault Logan - Interior"
+      
+        },
+        {
+          "original": "http://i2.wp.com/www.mundoautomotor.com.ar/web/wp-content/uploads/2008/07/renault-logan-2008-02.jpg",
+          "thumbnail": "http://i2.wp.com/www.mundoautomotor.com.ar/web/wp-content/uploads/2008/07/renault-logan-2008-02.jpg",
+          "description": "Renault Logan - Vista desde atras"
+        },
+        {
+          "original": "https://www.carsmagazine.com.ar/wp-content/uploads/2019/12/36-nuevo-renault-logan.jpg",
+          "thumbnail": "https://www.carsmagazine.com.ar/wp-content/uploads/2019/12/36-nuevo-renault-logan.jpg",
+          "description": "Renault Logan - Baulera"
+        },
+        {
+          "original": "https://tuautoencasa.com/img/galeria/1619215248.jpg",
+          "thumbnail": "https://tuautoencasa.com/img/galeria/1619215248.jpg",
+          "description": "Renault Logan - Vista lateral"
+        }
+      ],
       "price": 12000,
       "model": 2017,
       "title": "El tremendo titulo de este auto", 
@@ -123,14 +303,40 @@
       "doors": 4,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 10
     },
     {
       "id": 8,
-      "category": "Gama media",
+      "category": "gama-media",
       "name": "Fiat Cronos",
-      "image": "https://gower.ar/wp-content/uploads/2021/12/Catalogo-Citroen-C3-1-1.jpg",
+      "image": [
+        {
+          "original": "https://cronos.fiat.com.ar/assets/images/img-version-cronos-drive-10-mt.png",
+          "thumbnail": "https://cronos.fiat.com.ar/assets/images/img-version-cronos-drive-10-mt.png",
+          "description": "Fiat Cronos - Vista general"
+        },
+        {
+          "original": "https://www.autoweb.com.ar/wp-content/uploads/2021/03/IMG_20210227_181955434-1.jpg",
+          "thumbnail": "https://www.autoweb.com.ar/wp-content/uploads/2021/03/IMG_20210227_181955434-1.jpg",
+          "description": "Fiat Cronos - Interior"
+        },
+        {
+          "original": "https://motorshow.com.br/wp-content/uploads/sites/2/2020/11/cronosdrive18at66-large-630x420.jpg",
+          "thumbnail": "https://motorshow.com.br/wp-content/uploads/sites/2/2020/11/cronosdrive18at66-large-630x420.jpg",
+          "description": "Fiat Cronos - Vista desde atras"
+        },
+        {
+          "original": "https://http2.mlstatic.com/D_NQ_NP_793200-MLA53076480567_122022-O.jpg",
+          "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_793200-MLA53076480567_122022-O.jpg",
+          "description": "Fiat Cronos - Baulera"
+        },
+        {
+          "original": "https://cronos.fiat.com.ar/assets/images/img-gallery-01-full.jpg",
+          "thumbnail": "https://cronos.fiat.com.ar/assets/images/img-gallery-01-full.jpg",
+          "description": "Fiat Cronos - Vista lateral"
+        }
+      ],
       "price": 16500,
       "model": 2020,
       "title": "El tremendo titulo de este auto", 
@@ -141,14 +347,40 @@
       "doors": 4,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 9
     },
     {
       "id": 9,
-      "category": "Gama media",
+      "category": "gama-media",
       "name": "Ecosport",
-      "image": "https://gower.ar/wp-content/uploads/2022/02/Ecosport-2016.jpg",
+      "image": [
+        {
+          "original": "https://www.ford.com.ar/content/dam/Ford/website-assets/latam/ar/nameplate/ecosport/2023/overview/colorizer/plata-lunar/far-ecosport-colorizer-plata-lunar.jpg.dam.full.high.jpg/1669645004291.jpg",
+          "thumbnail": "https://www.ford.com.ar/content/dam/Ford/website-assets/latam/ar/nameplate/ecosport/2023/overview/colorizer/plata-lunar/far-ecosport-colorizer-plata-lunar.jpg.dam.full.high.jpg/1669645004291.jpg",
+          "description": "Ecosport - Vista general"
+        },
+        {
+          "original": "http://www.carsmagazine.com.ar/wp-content/uploads/2012/04/ford-ecosport-2013-11.jpg",
+          "thumbnail": "http://www.carsmagazine.com.ar/wp-content/uploads/2012/04/ford-ecosport-2013-11.jpg",
+          "description": "Ecosport - Interior"
+        },
+        {
+          "original": "https://www.16valvulas.com.ar/wp-content/uploads/2017/10/ford-ecosport-atras.jpg",
+          "thumbnail": "https://www.16valvulas.com.ar/wp-content/uploads/2017/10/ford-ecosport-atras.jpg",
+          "description": "Ecosport - Vista desde atras"
+        },
+        {
+          "original": "https://www.medidasdecoches.com/fotos/interior/ford-ecosport-2018-maletero.jpg",
+          "thumbnail": "https://www.medidasdecoches.com/fotos/interior/ford-ecosport-2018-maletero.jpg",
+          "description": "Ecosport - Baulera"
+        },
+        {
+          "original": "https://media.ford.com/content/fordmedia/fsa/br/pt/news/2014/07/29/ecosport-ganha-nova-versao-freestyle-2-0-powershift-na-linha-201/jcr:content/image.img.881.495.jpg/1500345264191.jpg",
+          "thumbnail": "https://media.ford.com/content/fordmedia/fsa/br/pt/news/2014/07/29/ecosport-ganha-nova-versao-freestyle-2-0-powershift-na-linha-201/jcr:content/image.img.881.495.jpg/1500345264191.jpg",
+          "description": "Ecosport - Vista lateral"
+        }
+      ],
       "price": 14000,
       "model": 2016,
       "title": "El tremendo titulo de este auto", 
@@ -159,14 +391,41 @@
       "doors": 4,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 7
     },
     {
       "id": 10,
-      "category": "Gama media",
+      "category": "gama-media",
       "name": "Renault Stepway",
-      "image": "https://gower.ar/wp-content/uploads/2022/01/Catalogo-Onix-4.jpg",
+      "image": [
+        {
+          "original": "https://www.autocity.ar/wp-content/uploads/2021/12/Mask-Group-4.png",
+          "thumbnail": "https://www.autocity.ar/wp-content/uploads/2021/12/Mask-Group-4.png",
+          "description": "Renault Stepway - Vista general"
+        },
+        {
+          "original": "https://www.megautos.com/wp-content/uploads/2019/07/Renault-Sandero-CVT-2020-interior-1-1024x682.jpg",
+          "thumbnail": "https://www.megautos.com/wp-content/uploads/2019/07/Renault-Sandero-CVT-2020-interior-1-1024x682.jpg",
+          "originalHeight": "500px",
+          "description": "Renault Stepway - Interior"
+        },
+        {
+          "original": "https://gsegno2.files.wordpress.com/2014/02/renault-sandero-stepway-tweed-3-4-trasero-negro.jpg",
+          "thumbnail": "https://gsegno2.files.wordpress.com/2014/02/renault-sandero-stepway-tweed-3-4-trasero-negro.jpg",
+          "description": "Renault Stepway - Vista desde atras"
+        },
+        {
+          "original": "https://cdn.motor1.com/images/mgl/Rv4og/s3/critica-renault-sandero-r-s-2020.jpg",
+          "thumbnail": "https://cdn.motor1.com/images/mgl/Rv4og/s3/critica-renault-sandero-r-s-2020.jpg",
+          "description": "Renault Stepway - Baulera"
+        },
+        {
+          "original": "https://derco-pe-prod.s3.amazonaws.com/images/models/2021-06-08-stepway.jpg",
+          "thumbnail": "https://derco-pe-prod.s3.amazonaws.com/images/models/2021-06-08-stepway.jpg",
+          "description": "Renault Stepway - Vista lateral"
+        }
+      ],
       "price": 12500,
       "model": 2020,
       "title": "El tremendo titulo de este auto", 
@@ -177,14 +436,40 @@
       "doors": 5,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 7
     },
     {
       "id": 11,
-      "category": "Gama media",
+      "category": "gama-media",
       "name": "Volkswagen Suran",
-      "image": "https://gower.ar/wp-content/uploads/2021/12/Catalogo-Renegade-1.jpg",
+      "image": [
+        {
+          "original": "https://img.remediosdigitales.com/ada289/volkswagen_suran-2/450_1000.jpg",
+          "thumbnail": "https://img.remediosdigitales.com/ada289/volkswagen_suran-2/450_1000.jpg",
+          "description": "Volkswagen Suran - Vista general"
+        },
+        {
+          "original": "http://www.carsmagazine.com.ar/wp-content/uploads/2014/11/nueva-suran-interior.jpg",
+          "thumbnail": "http://www.carsmagazine.com.ar/wp-content/uploads/2014/11/nueva-suran-interior.jpg",
+          "description": "Volkswagen Suran - Interior"
+        },
+        {
+          "original": "http://cdn.inaxiom.net/web/wp-content/uploads/2007/11/vw-suran-04.jpg",
+          "thumbnail": "http://cdn.inaxiom.net/web/wp-content/uploads/2007/11/vw-suran-04.jpg",
+          "description": "Volkswagen Suran - Vista desde atras"
+        },
+        {
+          "original": "https://cdn.motor1.com/images/mgl/LQkNl/s3/critica-volkswagen-suran-1-6-16v-highline.jpg",
+          "thumbnail": "https://cdn.motor1.com/images/mgl/LQkNl/s3/critica-volkswagen-suran-1-6-16v-highline.jpg",
+          "description": "Volkswagen Suran - Baulera"
+        },
+        {
+          "original": "https://fotoautos.com.ar/wp-content/uploads/2020/12/fotos-de-Volkswagen-suran-01.jpg",
+          "thumbnail": "https://fotoautos.com.ar/wp-content/uploads/2020/12/fotos-de-Volkswagen-suran-01.jpg",
+          "description": "Volkswagen Suran - Vista lateral"
+        }
+      ],
       "price": 12000,
       "model": 2017,
       "title": "El tremendo titulo de este auto", 
@@ -195,14 +480,40 @@
       "doors": 5,
       "airConditioning": true,
       "ABSBrake": false,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 8
     },
     {
       "id": 12,
-      "category": "Gama media",
-      "name": "Peugeot 208 Feline",
-      "image": "https://gower.ar/wp-content/uploads/2022/08/208-Caro-768x768.jpg",
+      "category": "gama-media",
+      "name": "Peugeot 208",
+      "image": [
+        {
+          "original": "https://www.peugeotstore.com.ar/uploads/imagenes/imagen_1783.png",
+          "thumbnail": "https://www.peugeotstore.com.ar/uploads/imagenes/imagen_1783.png",
+          "description": "Peugeot 208 - Vista general"
+        },
+        {
+          "original": "https://www.km77.com/images/medium/7/6/4/3/med-int-consola-central-t02.347643.jpg",
+          "thumbnail": "https://www.km77.com/images/medium/7/6/4/3/med-int-consola-central-t02.347643.jpg",
+          "description": "Peugeot 208 - Interior"
+        },
+        {
+          "original": "https://www.carone.com.ar/wp-content/uploads/2021/09/peugeot_208_like_galeria_01.jpg",
+          "thumbnail": "https://www.carone.com.ar/wp-content/uploads/2021/09/peugeot_208_like_galeria_01.jpg",
+          "description": "Peugeot 208 - Vista desde atras"
+        },
+        {
+          "original": "https://www.km77.com/00/peugeot/208/2012/med/1023.jpg",
+          "thumbnail": "https://www.km77.com/00/peugeot/208/2012/med/1023.jpg",
+          "description": "Peugeot 208 - Baulera"
+        },
+        {
+          "original": "https://d1eip2zddc2vdv.cloudfront.net/images/400x250/lateral-peugeot-208.jpg",
+          "thumbnail": "https://d1eip2zddc2vdv.cloudfront.net/images/400x250/lateral-peugeot-208.jpg",
+          "description": "Peugeot 208 - Vista lateral"
+        }
+      ],
       "price": 12000,
       "model": 2020,
       "title": "El tremendo titulo de este auto", 
@@ -213,14 +524,40 @@
       "doors": 5,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 9
     },
     {
       "id": 13,
-      "category": "Premium",
+      "category": "premium",
       "name": "Toyota Corolla",
-      "image": "https://img1.static.reweb.io/tiny/0/0/dealers.rewebmkt.com/images/20230117071214-blanco.png",
+      "image": [
+        {
+          "original": "https://media.toyota.com.ar/bad046b3-53d6-4b63-bcb9-1fc05aed02cf.png",
+          "thumbnail": "https://media.toyota.com.ar/bad046b3-53d6-4b63-bcb9-1fc05aed02cf.png",
+          "description": "Toyota Corolla - Vista general"
+        },
+        {
+          "original": "https://cars.usnews.com/static/images/Auto/izmo/i124589149/2020_toyota_corolla_dashboard.jpg",
+          "thumbnail": "https://cars.usnews.com/static/images/Auto/izmo/i124589149/2020_toyota_corolla_dashboard.jpg",
+          "description": "Toyota Corolla - Interior"
+        },
+        {
+          "original": "https://acnews.blob.core.windows.net/imgnews/paragraph/NPAZ_c72e1797a039412ab5f093ec6e69054b.jpg",
+          "thumbnail": "https://acnews.blob.core.windows.net/imgnews/paragraph/NPAZ_c72e1797a039412ab5f093ec6e69054b.jpg",
+          "description": "Toyota Corolla - Vista desde atras"
+        },
+        {
+          "original": "http://www.carsmagazine.com.ar/wp-content/uploads/2014/03/nuevo-toyota-corolla-10.jpg",
+          "thumbnail": "http://www.carsmagazine.com.ar/wp-content/uploads/2014/03/nuevo-toyota-corolla-10.jpg",
+          "description": "Toyota Corolla - Baulera"
+        },
+        {
+          "original": "https://w0.peakpx.com/wallpaper/606/853/HD-wallpaper-2021-toyota-corolla-apex-edition-side-car.jpg",
+          "thumbnail": "https://w0.peakpx.com/wallpaper/606/853/HD-wallpaper-2021-toyota-corolla-apex-edition-side-car.jpg",
+          "description": "Toyota Corolla - Vista lateral"
+        }
+      ],
       "price": 19000,
       "model": 2017,
       "title": "El tremendo titulo de este auto", 
@@ -231,14 +568,41 @@
       "doors": 4,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 10
     },
     {
       "id": 14,
-      "category": "Premium",
+      "category": "premium",
       "name": "Jeep Renegade",
-      "image": "https://gower.ar/wp-content/uploads/2022/05/Renegade-1.jpg",
+      "image": [
+        {
+          "original": "https://www.jeep.es/content/dam/jeep/crossmarket/renegade-my-23/ice/overview/trim/longitude/jeep_renegade_eHybrid_longitude_graphite_grey_565x330.png",
+          "thumbnail": "https://www.jeep.es/content/dam/jeep/crossmarket/renegade-my-23/ice/overview/trim/longitude/jeep_renegade_eHybrid_longitude_graphite_grey_565x330.png",
+          "description": "Jeep Renegade - Vista general"
+        },
+        {
+          "original": "https://carroecarros.com.br/wp-content/uploads/2022/08/novo-jeep-renegade-2023-3.jpeg",
+          "thumbnail": "https://carroecarros.com.br/wp-content/uploads/2022/08/novo-jeep-renegade-2023-3.jpeg",
+          "description": "Jeep Renegade - Vista superior"
+      
+        },
+        {
+          "original": "https://carroecarros.com.br/wp-content/uploads/2022/08/novo-jeep-renegade-2023-5.jpeg",
+          "thumbnail": "https://carroecarros.com.br/wp-content/uploads/2022/08/novo-jeep-renegade-2023-5.jpeg",
+          "description": "Jeep Renegade - Vista desde atras"
+        },
+        {
+          "original": "https://carroecarros.com.br/wp-content/uploads/2022/08/novo-jeep-renegade-2023-11.jpeg",
+          "thumbnail": "https://carroecarros.com.br/wp-content/uploads/2022/08/novo-jeep-renegade-2023-11.jpeg",
+          "description": "Jeep Renegade - Baulera"
+        },
+        {
+          "original": "https://carroecarros.com.br/wp-content/uploads/2022/08/novo-jeep-renegade-2023-9.jpeg",
+          "thumbnail": "https://carroecarros.com.br/wp-content/uploads/2022/08/novo-jeep-renegade-2023-9.jpeg",
+          "description": "Jeep Renegade - Interior"
+        }
+      ],
       "price": 19500,
       "model": 2018,
       "title": "El tremendo titulo de este auto", 
@@ -249,14 +613,40 @@
       "doors": 5,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 9
     },
     {
       "id": 15,
-      "category": "Premium",
+      "category": "premium",
       "name": "Chevrolet Spin",
-      "image": "https://gower.ar/wp-content/uploads/2018/08/Spin.jpg",
+      "image": [
+        {
+          "original": "https://www.chevrolet.com.ar/content/dam/chevrolet/mercosur/argentina/espanol/index/cars/2021-spin/optimizacion/colorizer/2021-spin-black-meet-kettle.png?imwidth=960",
+          "thumbnail": "https://www.chevrolet.com.ar/content/dam/chevrolet/mercosur/argentina/espanol/index/cars/2021-spin/optimizacion/colorizer/2021-spin-black-meet-kettle.png?imwidth=960",
+          "description": "Chevrolet Spin - Vista general"
+        },
+        {
+          "original": "https://www.chevrolet.com.ar/content/dam/chevrolet/mercosur/argentina/espanol/index/cars/2021-spin/mov/01-images/2021-spin-tecnologia.jpg?imwidth=960",
+          "thumbnail": "https://www.chevrolet.com.ar/content/dam/chevrolet/mercosur/argentina/espanol/index/cars/2021-spin/mov/01-images/2021-spin-tecnologia.jpg?imwidth=960",
+          "description": "Chevrolet Spin - Interior"
+        },
+        {
+          "original": "http://2.bp.blogspot.com/-80fZWrsCA2I/UgNoqIP-siI/AAAAAAAAD60/d51Lg46NR18/s1600/2014-Chevrolet-SpinLTZ-GM-Argentina+%25282%2529.jpg",
+          "thumbnail": "http://2.bp.blogspot.com/-80fZWrsCA2I/UgNoqIP-siI/AAAAAAAAD60/d51Lg46NR18/s1600/2014-Chevrolet-SpinLTZ-GM-Argentina+%25282%2529.jpg",
+          "description": "Chevrolet Spin - Vista desde atras"
+        },
+        {
+          "original": "https://www.chevrolet.com.ar/content/dam/chevrolet/mercosur/argentina/espanol/index/cars/2021-spin/optimizacion/gallery/2021-spin-galeria-exterior-05.jpg?imwidth=650",
+          "thumbnail": "https://www.chevrolet.com.ar/content/dam/chevrolet/mercosur/argentina/espanol/index/cars/2021-spin/optimizacion/gallery/2021-spin-galeria-exterior-05.jpg?imwidth=650",
+          "description": "Chevrolet Spin - Baulera"
+        },
+        {
+          "original": "https://www.chevrolet.com.ar/content/dam/chevrolet/mercosur/argentina/espanol/index/cars/2021-spin/optimizacion/2021-spin-box-garantia.png?imwidth=960",
+          "thumbnail": "https://www.chevrolet.com.ar/content/dam/chevrolet/mercosur/argentina/espanol/index/cars/2021-spin/optimizacion/2021-spin-box-garantia.png?imwidth=960",
+          "description": "Chevrolet Spin - Vista lateral"
+        }
+      ],
       "price": 21000,
       "model": 2017,
       "title": "El tremendo titulo de este auto", 
@@ -267,14 +657,40 @@
       "doors": 5,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 8
     },
     {
       "id": 16,
-      "category": "Premium",
-      "name": "Chevrolet Cruze RS",
-      "image": "https://gower.ar/wp-content/uploads/2022/08/Cruze-1-768x768.jpg",
+      "category": "premium",
+      "name": "Chevrolet Cruze",
+      "image": [
+        {
+          "original": "https://ymimg1.b8cdn.com/resized/car_model/2555/pictures/2916576/mobile_listing_main_01.jpg",
+          "thumbnail": "https://ymimg1.b8cdn.com/resized/car_model/2555/pictures/2916576/mobile_listing_main_01.jpg",
+          "description": "Chevrolet Cruze - Vista general"
+        },
+        {
+          "original": "https://www.chevrolet.com.ar/content/dam/chevrolet/mercosur/argentina/espanol/index/2020-pda-migration/pda/pda-cruze5/refresh/scroller/cruze-painel.jpg?imwidth=960",
+          "thumbnail": "https://www.chevrolet.com.ar/content/dam/chevrolet/mercosur/argentina/espanol/index/2020-pda-migration/pda/pda-cruze5/refresh/scroller/cruze-painel.jpg?imwidth=960",
+          "description": "Chevrolet Cruze - Interior"
+        },
+        {
+          "original": "https://fotos.estaticosmf.com/fotos_jato/E/400/CHEVROLET/CRUZE/2013/4SA_180.JPG",
+          "thumbnail": "https://fotos.estaticosmf.com/fotos_jato/E/400/CHEVROLET/CRUZE/2013/4SA_180.JPG",
+          "description": "Chevrolet Cruze - Vista desde atras"
+        },
+        {
+          "original": "https://www.autoweb.com.ar/wp-content/uploads/2021/05/Chevrolet-Cruze-5-baul-812x530.jpg",
+          "thumbnail": "https://www.autoweb.com.ar/wp-content/uploads/2021/05/Chevrolet-Cruze-5-baul-812x530.jpg",
+          "description": "Chevrolet Cruze - Baulera"
+        },
+        {
+          "original": "https://www.collins.com.ar/wp-content/uploads/2019/08/CruzeSedanLT-LTZ_Vehiculos_3834x2208.png",
+          "thumbnail": "https://www.collins.com.ar/wp-content/uploads/2019/08/CruzeSedanLT-LTZ_Vehiculos_3834x2208.png",
+          "description": "Chevrolet Cruze - Vista lateral"
+        }
+      ],
       "price": 21500,
       "model": 2022,
       "title": "El tremendo titulo de este auto", 
@@ -285,14 +701,40 @@
       "doors": 5,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Nafta Premium",
+      "fuel": "Nafta premium",
       "score": 8
     },
     {
       "id": 17,
-      "category": "Pickup truck",
-      "name": "Toyota Hilux 4WD",
-      "image": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_306e84f8dec84ba4ad1f3372499ac72e.jpg",
+      "category": "pickups",
+      "name": "Toyota Hilux",
+      "image": [
+        {
+          "original": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_5f4024782d854ab3a56779e286268878.webp",
+          "thumbnail": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_5f4024782d854ab3a56779e286268878.webp",
+          "description": "Toyota Hilux - Vista general"
+        },
+        {
+          "original": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_6964793a13534d2bbecf2bc1fb52ce13.webp",
+          "thumbnail": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_6964793a13534d2bbecf2bc1fb52ce13.webp",
+          "description": "Toyota Hilux - Vista interior"
+        },
+        {
+          "original": "https://www.megautos.com/wp-content/uploads/2019/07/toyota-hilux-2020-trasera.jpg",
+          "thumbnail": "https://www.megautos.com/wp-content/uploads/2019/07/toyota-hilux-2020-trasera.jpg",
+          "description": "Toyota Hilux - Vista desde atras"
+        },
+        {
+          "original": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_99c2bb02e51046aa9d62533a84813fc7.webp",
+          "thumbnail": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_99c2bb02e51046aa9d62533a84813fc7.webp",
+          "description": "Toyota Hilux - Vista de baulera"
+        },
+        {
+          "original": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_4d1d7cd1ea2c41cda765d82568212d2b.webp",
+          "thumbnail": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_4d1d7cd1ea2c41cda765d82568212d2b.webp",
+          "description": "Toyota Hilux - Vista lateral"
+        }
+      ],
       "price": 22000,
       "model": 2019,
       "title": "El tremendo titulo de este auto", 
@@ -303,14 +745,40 @@
       "doors": 4,
       "airConditioning": true,
       "ABSBrake": false,
-      "fuel": "Diesel Premium",
+      "fuel": "Diesel premium",
       "score": 10
     },
     {
       "id": 18,
-      "category": "Pickup truck",
+      "category": "pickups",
       "name": "Chevrolet S-10",
-      "image": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_55c0731587d04e45a3114064289cabb7.jpg",
+      "image": [
+        {
+          "original": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_55c0731587d04e45a3114064289cabb7.jpg",
+          "thumbnail": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_55c0731587d04e45a3114064289cabb7.jpg",
+          "description": "Chevrolet S-10 - Vista general"
+        },
+        {
+          "original": "https://www.autoweb.com.ar/wp-content/uploads/2021/01/interior-2.jpg",
+          "thumbnail": "https://www.autoweb.com.ar/wp-content/uploads/2021/01/interior-2.jpg",
+          "description": "Chevrolet S-10 - Interior"
+        },
+        {
+          "original": "https://autotest.com.ar/wp-content/uploads/2021/06/CHEVROLET-S10-2023-1.jpg",
+          "thumbnail": "https://autotest.com.ar/wp-content/uploads/2021/06/CHEVROLET-S10-2023-1.jpg",
+          "description": "Chevrolet S-10 - Vista desde atras"
+        },
+        {
+          "original": "https://http2.mlstatic.com/D_NQ_NP_671978-MLA42001951880_052020-O.jpg",
+          "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_671978-MLA42001951880_052020-O.jpg",
+          "description": "Chevrolet S-10 - Baulera"
+        },
+        {
+          "original": "https://www.chevrolet.com.ar/content/dam/chevrolet/mercosur/argentina/espanol/index/pickups-and-trucks/2021-s10-cd-hc/01-images/mov/01-images/s10-high-country-box-garantia.jpg?imwidth=960",
+          "thumbnail": "https://www.chevrolet.com.ar/content/dam/chevrolet/mercosur/argentina/espanol/index/pickups-and-trucks/2021-s10-cd-hc/01-images/mov/01-images/s10-high-country-box-garantia.jpg?imwidth=960",
+          "description": "Chevrolet S-10 - Vista lateral"
+        }
+      ],
       "price": 23000,
       "model": 2019,
       "title": "El tremendo titulo de este auto", 
@@ -321,15 +789,40 @@
       "doors": 4,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Diesel Premium",
+      "fuel": "Diesel premium",
       "score": 8
     },
     {
       "id": 19,
-      "category": "Pickup truck",
+      "category": "pickups",
       "name": "Volkswagen Amarok",
-      "title": "El tremendo titulo de este auto", 
-      "image": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_eb920fd356044f8b854396b536b9b78b.jpg",
+      "image": [
+        {
+          "original": "https://cf-cdn-v6.volkswagen.at/media/Content_Model_Equipment_Lightbox_Child_MediaBig_Image_Component/59564-737481_lightbox-502466-mediaBig-child/dh-1143-00fe24/d0467f53/1674123540/color-amarok-v6-blaco-candy.png",
+          "thumbnail": "https://cf-cdn-v6.volkswagen.at/media/Content_Model_Equipment_Lightbox_Child_MediaBig_Image_Component/59564-737481_lightbox-502466-mediaBig-child/dh-1143-00fe24/d0467f53/1674123540/color-amarok-v6-blaco-candy.png",
+          "description": "Volkswagen Amarok - Vista general"
+        },
+        {
+          "original": "https://www.km77.com/images/medium/9/7/3/7/ext-vw-amarok-lor-1201.319737.jpg",
+          "thumbnail": "https://www.km77.com/images/medium/9/7/3/7/ext-vw-amarok-lor-1201.319737.jpg",
+          "description": "Volkswagen Amarok - Interior"
+        },
+        {
+          "original": "https://cdn.motor1.com/images/mgl/PEL8W/s3/vw-amarok-v6-black-style-asi-es-la-nueva-pick-up-argentina-con-258-caballos.jpg",
+          "thumbnail": "https://cdn.motor1.com/images/mgl/PEL8W/s3/vw-amarok-v6-black-style-asi-es-la-nueva-pick-up-argentina-con-258-caballos.jpg",
+          "description": "Volkswagen Amarok - Vista desde atras"
+        },
+        {
+          "original": "https://www.elcarrocolombiano.com/wp-content/uploads/2020/11/20201102-VOLKSWAGEN-AMAROK-2021-02-01-750x518.jpg",
+          "thumbnail": "https://www.elcarrocolombiano.com/wp-content/uploads/2020/11/20201102-VOLKSWAGEN-AMAROK-2021-02-01-750x518.jpg",
+          "description": "Volkswagen Amarok - Baulera"
+        },
+        {
+          "original": "https://www.alravw.com/files/modelos/1612200245_trendline.jpg",
+          "thumbnail": "https://www.alravw.com/files/modelos/1612200245_trendline.jpg",
+          "description": "Volkswagen Amarok - Vista lateral"
+        }
+      ],
       "price": 22300,
       "model": 2019,
       "message": "Ideal para caminos rurales y con todo el confort que te ofrecen la pantalla tactil, control crucero, control de traccion, etc.",
@@ -339,14 +832,40 @@
       "doors": 4,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Diesel Premium",
+      "fuel": "Diesel premium",
       "score": 10
     },
     {
       "id": 20,
-      "category": "Pickup truck",
+      "category": "pickups",
       "name": "Ford Ranger",
-      "image": "https://cdn.drivek.com/configurator-imgs/trucks/it/800/FORD/RANGER/7953_AUTOCARRO-4-PORTE/ford-ranger-pickup-4-doors.jpg",
+      "image": [
+        {
+          "original": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_57e26e28b95a4620ae3b3dec50fb5a22.jpg",
+          "thumbnail": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_57e26e28b95a4620ae3b3dec50fb5a22.jpg",
+          "description": "Ford Ranger - Vista general"
+        },
+        {
+          "original": "https://www.thedrive.com/content/2022/02/Next-Gen-Ranger-Raptor-Interior-LHD-2.jpg?quality=85&crop=16%3A9&auto=webp&optimize=high&quality=70&width=1440",
+          "thumbnail": "https://www.thedrive.com/content/2022/02/Next-Gen-Ranger-Raptor-Interior-LHD-2.jpg?quality=85&crop=16%3A9&auto=webp&optimize=high&quality=70&width=1440",
+          "description": "Ford Ranger - Vista interior"
+        },
+        {
+          "original": "https://pxb.cdn.0221.com.ar/0221/042021/1619360408758.jpg",
+          "thumbnail": "https://pxb.cdn.0221.com.ar/0221/042021/1619360408758.jpg",
+          "description": "Ford Ranger - Vista desde atras"
+        },
+        {
+          "original": "https://fotos.perfil.com/2021/10/21/ford-maverick-caja-vs-ranger-caja-1252282.jpg",
+          "thumbnail": "https://fotos.perfil.com/2021/10/21/ford-maverick-caja-vs-ranger-caja-1252282.jpg",
+          "description": "Ford Ranger - Vista de baulera"
+        },
+        {
+          "original": "https://www.forddimas.com.br/ranger/www/img/models/xl-dupla/5.jpg",
+          "thumbnail": "https://www.forddimas.com.br/ranger/www/img/models/xl-dupla/5.jpg",
+          "description": "Ford Ranger - Vista lateral"
+        }
+      ],
       "price": 23000,
       "model": 2019,
       "title": "El tremendo titulo de este auto", 
@@ -357,7 +876,7 @@
       "doors": 4,
       "airConditioning": true,
       "ABSBrake": true,
-      "fuel": "Diesel Premium",
+      "fuel": "Diesel premium",
       "score": 9
     }
   ],
@@ -431,19 +950,19 @@
   "categorias": [
     {
       "id": 1,
-      "nombre": "Economico"
+      "nombre": "economico"
     },
     {
       "id": 2,
-      "nombre": "Gama media"
+      "nombre": "gama-media"
     },
     {
       "id": 3,
-      "nombre": "Premium"
+      "nombre": "premium"
     },
     {
       "id": 4,
-      "nombre": "Pickup truck"
+      "nombre": "pickups"
     }
   ],
   "localizaciones": [

@@ -4,7 +4,7 @@ import 'leaflet/dist/leaflet.css'
 
 const MapView = ({ coordinates }) => {
   return (
-    <MapContainer style={{ height: '500px', width: '95vw' }} center={coordinates} zoom={10} scrollWheelZoom={false} >
+    <MapContainer style={{ height: '500px', width: '85vw' }} center={coordinates} zoom={10} scrollWheelZoom={false} >
       <TileLayer
         url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' />
