@@ -24,7 +24,7 @@ public class Categoria {
     @Column
     private String url_imagen;
 
-    @OneToMany(mappedBy = "categoria",fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "categoria",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JsonIgnore
     private Set<Producto> productos= new HashSet<>();
 
