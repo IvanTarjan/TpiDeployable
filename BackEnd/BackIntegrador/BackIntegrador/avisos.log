@@ -16,3 +16,42 @@
 [2023-03-03 18:50:46] [ INFO ] [ProductoService:33] Se inició una operación de guardado de la producto con titulo: Autito
 [2023-03-03 18:50:50] [ INFO ] [ProductoService:33] Se inició una operación de guardado de la producto con titulo: Autito
 [2023-03-03 18:56:09] [ INFO ] [ProductoService:33] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-04 16:02:40] [ INFO ] [ProductoService:33] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-04 16:04:11] [ INFO ] [ProductoService:28] Se inició el listado de todas las productos
+[2023-03-04 16:06:27] [ INFO ] [ProductoService:33] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-04 16:06:34] [ INFO ] [ProductoService:28] Se inició el listado de todas las productos
+[2023-03-04 16:07:10] [ INFO ] [ProductoService:59] Se inició una operación de búsqueda de la producto con id=1
+[2023-03-04 16:07:15] [ INFO ] [ProductoService:59] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-04 16:08:29] [ INFO ] [ProductoService:59] Se inició una operación de búsqueda de la producto con id=8
+[2023-03-04 16:08:29] [ WARN ] [ProductoService:48] Se realizo una operación de eliminación de la producto conid=8
+[2023-03-04 16:08:36] [ INFO ] [ProductoService:59] Se inició una operación de búsqueda de la producto con id=8
+[2023-03-04 16:09:40] [ INFO ] [ProductoService:59] Se inició una operación de búsqueda de la producto con id=null
+[2023-03-04 16:09:55] [ INFO ] [ProductoService:59] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-04 16:09:55] [ INFO ] [ProductoService:39] Se inició una operación de actualización de la producto con id=7
+[2023-03-04 16:10:02] [ INFO ] [ProductoService:59] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-04 16:13:44] [ INFO ] [CategoriaService:30] Se inició una operación de guardado de la categoria con titulo: asdf
+[2023-03-04 16:14:43] [ INFO ] [ProductoService:33] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-04 16:15:20] [ INFO ] [ProductoService:33] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-04 16:36:12] [ INFO ] [ProductoService:33] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-04 16:36:46] [ INFO ] [ProductoService:33] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-04 16:38:35] [ INFO ] [ProductoService:33] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-04 16:42:51] [ INFO ] [ProductoService:33] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-04 16:43:30] [ INFO ] [ProductoService:33] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-04 16:43:48] [ INFO ] [ProductoService:33] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-04 16:44:13] [ INFO ] [ProductoService:33] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-04 16:44:22] [ INFO ] [ProductoService:33] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-04 16:49:48] [ INFO ] [ProductoService:35] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-04 16:49:54] [ INFO ] [ProductoService:35] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-04 16:55:03] [ INFO ] [ProductoService:35] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-04 16:55:12] [ INFO ] [ProductoService:35] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-04 16:57:11] [ INFO ] [ProductoService:35] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-04 17:02:25] [ INFO ] [ProductoService:37] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-04 17:02:37] [ INFO ] [ProductoService:37] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-04 17:09:41] [ INFO ] [ProductoService:37] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-04 17:11:12] [ INFO ] [ProductoService:37] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-04 17:11:27] [ INFO ] [ProductoService:37] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-04 17:19:32] [ INFO ] [ProductoService:39] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-04 17:19:37] [ INFO ] [ProductoService:39] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-04 17:19:56] [ INFO ] [ProductoService:39] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-04 17:44:00] [ INFO ] [ProductoService:39] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-04 18:04:50] [ INFO ] [ProductoService:39] Se inició una operación de guardado de la producto con titulo: Autito
