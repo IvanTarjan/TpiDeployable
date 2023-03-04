@@ -35,11 +35,11 @@ public class Producto {
     private Set<Politica> politica= new HashSet<>();
 
     //Many to one
-    @ManyToOne( cascade = CascadeType.PERSIST)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "categoria_id",referencedColumnName = "id" )
     private Categoria categoria;
 
-    @ManyToOne (cascade = CascadeType.PERSIST)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "ubicacion_id",referencedColumnName = "id")
     private Ubicacion ubicacion;
 
