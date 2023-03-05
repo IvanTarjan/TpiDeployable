@@ -13,6 +13,7 @@ import locale from 'date-fns/locale/es';
 const SearchingBar = () => {
   const { localizaciones } = useContext(BodyContext)
   const [openCal, setOpenCal] = useState(false)
+  const [isDateSelected, setIsDateSelected] = useState('range')
   const [date, setDate] = useState([{
     startDate: new Date(),
     endDate: new Date(),
@@ -25,6 +26,7 @@ const SearchingBar = () => {
 
   const handleOpenCal = () => {
     setOpenCal(pre => !pre)
+    setIsDateSelected('')
   }
 
   const handleSearch = () => {
@@ -48,7 +50,8 @@ const SearchingBar = () => {
 
         <div className={styles.searchingBoxItem}>
           <EventIcon />
-          <span onClick={handleOpenCal} className={styles.searchingBoxDates}>{`${format(date[0].startDate, "dd/MM/yyyy")} al ${format(date[0].endDate, "dd/MM/yyyy")}`}</span>
+          {isDateSelected == 'range' ? <span onClick={handleOpenCal} className={styles.searchingBoxDates}>Retiro / Devolucion</span> :
+            <span onClick={handleOpenCal} className={styles.searchingBoxDates}>{`${format(date[0].startDate, "dd/MM/yyyy")} al ${format(date[0].endDate, "dd/MM/yyyy")}`}</span>}
           {openCal && <DateRange
             editableDateInputs={true}
             onChange={item => setDate([item.selection])}
