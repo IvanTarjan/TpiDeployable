@@ -10,6 +10,7 @@ const BodyContextProvider = ({ children }) => {
   const [dateRange, setDateRange] = useState([null, null]);
   const [allDates, setAllDates] = useState([])
   const [categorias, setCategorias] = useState([])
+  const [selectedCity, setSelectedCity] = useState(null)
 
   useEffect(() => {
     axios.get("http://localhost:5000/cars")
@@ -44,7 +45,9 @@ const BodyContextProvider = ({ children }) => {
     allDates,
     setAllDates,
     categorias,
-    setCategorias
+    setCategorias,
+    selectedCity,
+    setSelectedCity
   }
 
   return (
