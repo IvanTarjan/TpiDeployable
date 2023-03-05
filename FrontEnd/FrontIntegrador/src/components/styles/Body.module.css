@@ -223,3 +223,153 @@ h1{
     gap: 0px;
   }
 }
+
+/* searching bar  */
+
+.searchingBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin-top: 60px;
+  background-color: #545776;
+  padding: 30px 0px;
+  height: 150px;
+}
+
+.searchingP{
+  font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 42px;
+text-align: center;
+color: #FFFFFF;
+padding-bottom: 20px;
+}
+
+.searchingBoxData {
+  width: 100vw;
+  max-width: 1024px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  
+}
+
+.searchingBoxItem{
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+}
+
+.searchingBoxInput{
+  padding: 10px 10px;
+  width: 420px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  height: 40px;
+  font-size: 16px;
+}
+
+.searchingBoxDates{
+  padding: 10px 0px;
+  width: 420px;
+}
+.searchingBoxButton{
+  width: 200px;
+  background-color: #1DBEB4;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+  
+}
+.searchingBoxButton:hover{
+  transform: scale(1);
+}
+
+.calendar{
+  position: absolute;
+  top: 40px;
+}
+
+select {
+    -webkit-appearance: none;
+}
+
+.availabilityContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 95vw;
+  background-color: #ececef;
+  height: 500px;
+}
+
+.availabilityContainer p {
+  font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+color: #383B58;
+padding-left: 40px;
+}
+
+.availabilityContainerCalendar{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 50px;
+  padding-left: 150px;
+}
+
+.availabilityContainerBtn{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 410px;
+  height: 150px;
+  background: #FFFFFF;
+border: 1px solid #DFE4EA;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 8px;
+}
+
+.availabilityContainerBtn p{
+  font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+color: #4F4F50;
+}
+.availabilityContainerBtn button{
+  width: 80%;
+  background: #F0572D;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+border-radius: 5px;
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+color: #FFFFFF;
+border: none;
+}
+
+
+
+
