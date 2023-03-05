@@ -10,6 +10,7 @@ import Palette from './components/contexts/ThemeContext'
 import CarDetails from './components/pages/CarDetails'
 import BodyContextProvider from './components/contexts/BodyContext'
 import CarsCategory from './components/pages/CarsCategory'
+import SearchResults from './components/pages/SearchResults'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
                 <Route path='/' element={<Body />} />
                 <Route path='/category/:name/car/:id' element={<CarDetails />} />
                 <Route path='/category/:name' element={<CarsCategory />} />
+                <Route path='/results/' element={<SearchResults />} />
               </Routes>
               <Footer />
             </BrowserRouter>
