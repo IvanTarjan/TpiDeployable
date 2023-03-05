@@ -13,13 +13,15 @@ import Features from '../commons/Features'
 import GalleryGrid from '../commons/GalleryGrid'
 import Gallery from '../commons/Gallery'
 import MapView from '../commons/MapView'
-
+import Availability from '../commons/Availability'
 
 const CarDetails = () => {
   const { id } = useParams()
-  const { cars, isLike, setIsLike, localizaciones, randomLocation } = useContext(BodyContext)
+  const { cars, isLike, setIsLike, localizaciones, selectedCity, randomLocation } = useContext(BodyContext)
 
-  const coordinates = [localizaciones[randomLocation].lat, localizaciones[randomLocation].lon]
+  const cityCoord = localizaciones.find(location => location.ciudad == selectedCity)
+
+  const coordinates = selectedCity ? [cityCoord.lat, cityCoord.lon] : [localizaciones[randomLocation].lat, localizaciones[randomLocation].lon]
 
   const handleClick = () => {
     setIsLike(prev => !prev)
@@ -53,7 +55,8 @@ const CarDetails = () => {
         <br />
         <Features selectedCar={selectedCar} />
 
-        <DateAvailability id={id} />
+        {/* <DateAvailability id={id} /> */}
+        <Availability />
 
         <h1>¿Dónde vas a estar?</h1>
         <hr className={styles.line} />
