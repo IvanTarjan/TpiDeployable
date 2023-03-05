@@ -986,6 +986,60 @@
       "distancia": 850,
       "lat": -31.4201,
       "lon": -64.1888
+    },
+    {
+      "id": 5,
+      "ciudad": "Salta",
+      "provincia": "Salta",
+      "pais": "Argentina",
+      "distancia": 950,
+      "lat": -24.7883,
+      "lon": -65.41055
+    },
+    {
+      "id": 6,
+      "ciudad": "Ushuaia",
+      "provincia": "Tierra del Fuego",
+      "pais": "Argentina",
+      "distancia": 450,
+      "lat": -54.8019,
+      "lon": -68.3030
+    },
+    {
+      "id": 7,
+      "ciudad": "Puerto Iguazu",
+      "provincia": "Misiones",
+      "pais": "Argentina",
+      "distancia": 550,
+      "lat": -25.5972,
+      "lon": -54.5786
+    },
+    {
+      "id": 8,
+      "ciudad": "Puerto Madryn",
+      "provincia": "Chubut",
+      "pais": "Argentina",
+      "distancia": 450,
+      "lat": -42.7636,
+      "lon": -65.0348
+    },
+    {
+      "id": 9,
+      "ciudad": "Calafate",
+      "provincia": "Santa Cruz",
+      "pais": "Argentina",
+      "distancia": 350,
+      "lat": -50.3380,
+      "lon": -72.2648
+    },
+    {
+      "id": 10,
+      "ciudad": "San Martin de los Andes",
+      "provincia": "Neuquen",
+      "pais": "Argentina",
+      "distancia": 1150,
+      "lat": -40.1572,
+      "lon": -71.3524
     }
   ]
 }
