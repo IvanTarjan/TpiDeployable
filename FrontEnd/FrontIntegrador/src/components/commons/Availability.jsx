@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import { DateRange } from 'react-date-range'
 import styles from '../styles/Body.module.css'
 import locale from 'date-fns/locale/es';
+import { useMediaQuery } from '@mui/material';
+import 'react-date-range/dist/styles.css';
+import 'react-date-range/dist/theme/default.css';
 
 const Availability = () => {
   const [date, setDate] = useState([{
@@ -10,6 +13,8 @@ const Availability = () => {
     key: 'selection'
   }
   ]);
+
+  const isMobile = useMediaQuery('(max-width:640px)');
 
   return (
     <div className={styles.availabilityContainer}>
@@ -22,8 +27,8 @@ const Availability = () => {
           ranges={date}
           minDate={new Date()}
           locale={locale}
-          months={2}
           direction='horizontal'
+          months={isMobile ? 1 : 2}
         />
         <div className={styles.availabilityContainerBtn}>
           <p>Agregá tus fechas de viaje para obtener precios exactos</p>
