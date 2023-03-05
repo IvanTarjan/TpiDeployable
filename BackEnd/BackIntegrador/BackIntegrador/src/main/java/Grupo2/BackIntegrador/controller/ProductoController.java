@@ -29,7 +29,7 @@ public class ProductoController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Producto>> buscarProductoa(){
+    public ResponseEntity<List<Producto>> buscarProductos(){
         return ResponseEntity.ok(productoService.listarProducto());
     }
 

@@ -45,13 +45,22 @@ public class Producto {
 
     //Many to Many
     @ManyToMany(fetch = FetchType.LAZY,
-            cascade = {
-                    CascadeType.PERSIST,
-                    CascadeType.MERGE
-            })
+            cascade = {CascadeType.MERGE})
+    @JsonIgnoreProperties("producto")
     @JoinTable(name = "producto_caracteristica",
             joinColumns = { @JoinColumn(name = "producto_id") },
             inverseJoinColumns = { @JoinColumn(name = "caracteristica_id") })
     private Set<Caracteristica> caracteristica = new HashSet<>();
+
+    public void addCaracteristica (Caracteristica caracteristica){
+        this.caracteristica.add(caracteristica);
+        caracteristica.getProducto().add(this);
+    }
+
+    public void removeCaracteristica (Caracteristica caracteristica){
+        this.caracteristica.remove(caracteristica);
+        caracteristica.getProducto().remove(this);
+    }
+
 
 }
