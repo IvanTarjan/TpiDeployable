@@ -10,6 +10,8 @@ const HeaderDetails = ({ car }) => {
 
   const { localizaciones, selectedCity, randomLocation } = useContext(BodyContext)
 
+  const selectedCityData = localizaciones.find(location => location.ciudad == selectedCity)
+
   const navigate = useNavigate()
   const handleClick = () => {
     navigate('/')
@@ -30,7 +32,7 @@ const HeaderDetails = ({ car }) => {
         <div className={styles.locationDataTitle}>
           <LocationOnIcon color='secondary'></LocationOnIcon>
           <div className={styles.locationDataTitleCity}>
-            {selectedCity ? <span>{selectedCity}</span> :
+            {selectedCity ? <span>{selectedCityData.ciudad}, {selectedCityData.provincia}, {selectedCityData.pais}</span> :
               <span>{localizaciones[randomLocation].ciudad}, {localizaciones[randomLocation].provincia}, {localizaciones[randomLocation].pais}</span>}
             <p>A {localizaciones[randomLocation].distancia} m del centro</p>
           </div>
