@@ -11,7 +11,7 @@ import { useNavigate } from 'react-router-dom';
 import locale from 'date-fns/locale/es';
 
 const SearchingBar = () => {
-  const { localizaciones } = useContext(BodyContext)
+  const { localizaciones, selectedCity, setSelectedCity } = useContext(BodyContext)
   const [openCal, setOpenCal] = useState(false)
   const [isDateSelected, setIsDateSelected] = useState('range')
   const [date, setDate] = useState([{
@@ -30,7 +30,7 @@ const SearchingBar = () => {
   }
 
   const handleSearch = () => {
-    const selectedCity = cities.value
+    setSelectedCity(cities.value)
     navigate('/results/', { state: { selectedCity, date } })
   }
 
