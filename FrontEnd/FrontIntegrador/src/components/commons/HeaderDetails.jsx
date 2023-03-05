@@ -8,7 +8,7 @@ import { BodyContext } from '../contexts/BodyContext';
 
 const HeaderDetails = ({ car }) => {
 
-  const { localizaciones, randomLocation } = useContext(BodyContext)
+  const { localizaciones, selectedCity, randomLocation } = useContext(BodyContext)
 
   const navigate = useNavigate()
   const handleClick = () => {
@@ -30,7 +30,8 @@ const HeaderDetails = ({ car }) => {
         <div className={styles.locationDataTitle}>
           <LocationOnIcon color='secondary'></LocationOnIcon>
           <div className={styles.locationDataTitleCity}>
-            <span>{localizaciones[randomLocation].ciudad}, {localizaciones[randomLocation].provincia}, {localizaciones[randomLocation].pais}</span>
+            {selectedCity ? <span>{selectedCity}</span> :
+              <span>{localizaciones[randomLocation].ciudad}, {localizaciones[randomLocation].provincia}, {localizaciones[randomLocation].pais}</span>}
             <p>A {localizaciones[randomLocation].distancia} m del centro</p>
           </div>
         </div>
