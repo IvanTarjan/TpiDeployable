@@ -41,7 +41,8 @@
       "airConditioning": true,
       "ABSBrake": true,
       "fuel": "Nafta premium",
-      "score": 7
+      "score": 7,
+      "locations": ["San Carlos de Bariloche", "Ciudad Autonoma de Buenos Aires", "Mendoza", "Cordoba"]
     },
     {
       "id": 2,
@@ -85,7 +86,8 @@
       "airConditioning": true,
       "ABSBrake": true,
       "fuel": "Nafta premium",
-      "score": 7
+      "score": 7,
+      "locations": ["Salta", "Ushuaia", "Puerto Iguazu", "Puerto Madryn"]
     },
     {
       "id": 3,
@@ -128,7 +130,8 @@
       "airConditioning": true,
       "ABSBrake": true,
       "fuel": "Nafta premium",
-      "score": 8
+      "score": 8,
+      "locations": ["San Carlos de Bariloche", "Ciudad Autonoma de Buenos Aires", "Mendoza", "Cordoba"]
     },
     {
       "id": 4,
@@ -171,7 +174,8 @@
       "airConditioning": true,
       "ABSBrake": true,
       "fuel": "Nafta premium",
-      "score": 7
+      "score": 7,
+      "locations": ["San Carlos de Bariloche", "Ciudad Autonoma de Buenos Aires", "Calafate", "San Martin de los Andes"]
     },
     {
       "id": 5,
@@ -214,7 +218,8 @@
       "airConditioning": true,
       "ABSBrake": true,
       "fuel": "Nafta premium",
-      "score": 9
+      "score": 9,
+      "locations": ["Salta", "Ushuaia", "Mendoza", "Cordoba"]
     },
     {
       "id": 6,
@@ -257,7 +262,8 @@
       "airConditioning": true,
       "ABSBrake": true,
       "fuel": "Nafta premium",
-      "score": 8
+      "score": 8,
+      "locations": ["Puerto Iguazu", "Puerto Madryn", "Calafate", "San Martin de los Andes"]
     },
     {
       "id": 7,
@@ -301,7 +307,8 @@
       "airConditioning": true,
       "ABSBrake": true,
       "fuel": "Nafta premium",
-      "score": 10
+      "score": 10,
+      "locations": ["San Carlos de Bariloche", "Ciudad Autonoma de Buenos Aires", "Mendoza", "Cordoba"]
     },
     {
       "id": 8,
@@ -344,7 +351,8 @@
       "airConditioning": true,
       "ABSBrake": true,
       "fuel": "Nafta premium",
-      "score": 9
+      "score": 9,
+      "locations": ["Salta", "Ushuaia", "Puerto Iguazu", "Puerto Madryn"]
     },
     {
       "id": 9,
@@ -387,7 +395,8 @@
       "airConditioning": true,
       "ABSBrake": true,
       "fuel": "Nafta premium",
-      "score": 7
+      "score": 7,
+      "locations": ["San Carlos de Bariloche", "Ciudad Autonoma de Buenos Aires", "Calafate", "San Martin de los Andes"]
     },
     {
       "id": 10,
@@ -431,7 +440,8 @@
       "airConditioning": true,
       "ABSBrake": true,
       "fuel": "Nafta premium",
-      "score": 7
+      "score": 7,
+      "locations": ["San Carlos de Bariloche", "Ciudad Autonoma de Buenos Aires", "Mendoza", "Cordoba"]
     },
     {
       "id": 11,
@@ -474,7 +484,8 @@
       "airConditioning": true,
       "ABSBrake": false,
       "fuel": "Nafta premium",
-      "score": 8
+      "score": 8,
+      "locations": ["Salta", "Ushuaia", "Puerto Iguazu", "Puerto Madryn"]
     },
     {
       "id": 12,
@@ -517,7 +528,8 @@
       "airConditioning": true,
       "ABSBrake": true,
       "fuel": "Nafta premium",
-      "score": 9
+      "score": 9,
+      "locations": ["San Carlos de Bariloche", "Ciudad Autonoma de Buenos Aires", "Calafate", "San Martin de los Andes"]
     },
     {
       "id": 13,
@@ -560,7 +572,8 @@
       "airConditioning": true,
       "ABSBrake": true,
       "fuel": "Nafta premium",
-      "score": 10
+      "score": 10,
+      "locations": ["San Carlos de Bariloche", "Ciudad Autonoma de Buenos Aires", "Mendoza", "Cordoba"]
     },
     {
       "id": 14,
@@ -604,7 +617,8 @@
       "airConditioning": true,
       "ABSBrake": true,
       "fuel": "Nafta premium",
-      "score": 9
+      "score": 9,
+      "locations": ["Salta", "Ushuaia", "Puerto Iguazu", "Puerto Madryn"]
     },
     {
       "id": 15,
@@ -647,7 +661,8 @@
       "airConditioning": true,
       "ABSBrake": true,
       "fuel": "Nafta premium",
-      "score": 8
+      "score": 8,
+      "locations": ["San Carlos de Bariloche", "Ciudad Autonoma de Buenos Aires", "Calafate", "San Martin de los Andes"]
     },
     {
       "id": 16,
@@ -690,7 +705,8 @@
       "airConditioning": true,
       "ABSBrake": true,
       "fuel": "Nafta premium",
-      "score": 8
+      "score": 8,
+      "locations": ["San Carlos de Bariloche", "Ciudad Autonoma de Buenos Aires", "Mendoza", "Cordoba"]
     },
     {
       "id": 17,
@@ -733,7 +749,8 @@
       "airConditioning": true,
       "ABSBrake": false,
       "fuel": "Diesel premium",
-      "score": 10
+      "score": 10,
+      "locations": ["Salta", "Ushuaia", "Puerto Iguazu", "Puerto Madryn"]
     },
     {
       "id": 18,
@@ -776,7 +793,8 @@
       "airConditioning": true,
       "ABSBrake": true,
       "fuel": "Diesel premium",
-      "score": 8
+      "score": 8,
+      "locations": ["San Carlos de Bariloche", "Ciudad Autonoma de Buenos Aires", "Calafate", "San Martin de los Andes"]
     },
     {
       "id": 19,
@@ -819,7 +837,8 @@
       "airConditioning": true,
       "ABSBrake": true,
       "fuel": "Diesel premium",
-      "score": 10
+      "score": 10,
+      "locations": ["San Carlos de Bariloche", "Ciudad Autonoma de Buenos Aires", "Mendoza", "Cordoba"]
     },
     {
       "id": 20,
@@ -862,7 +881,8 @@
       "airConditioning": true,
       "ABSBrake": true,
       "fuel": "Diesel premium",
-      "score": 9
+      "score": 9,
+      "locations": ["Salta", "Ushuaia", "Puerto Iguazu", "Puerto Madryn"]
     }
   ],
   "users": [
