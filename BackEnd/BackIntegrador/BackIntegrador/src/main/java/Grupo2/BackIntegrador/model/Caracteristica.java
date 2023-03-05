@@ -1,6 +1,7 @@
 package Grupo2.BackIntegrador.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,12 +24,20 @@ public class Caracteristica {
     private String icono;
 
     @ManyToMany(fetch = FetchType.LAZY,
-            cascade = {
-                    CascadeType.PERSIST,
-                    CascadeType.MERGE
-            },
+            cascade =
+                    {CascadeType.MERGE, CascadeType.DETACH},
             mappedBy = "caracteristica")
-    @JsonIgnore
+    @JsonIgnoreProperties("caracteristica")
     private Set<Producto> producto = new HashSet<>();
+
+    public void addProducto (Producto producto){
+        this.producto.add(producto);
+        producto.getCaracteristica().add(this);
+    }
+
+    public void removeProducto (Producto producto){
+        this.producto.remove(producto);
+        producto.getCaracteristica().remove(this);
+    }
 
 }
