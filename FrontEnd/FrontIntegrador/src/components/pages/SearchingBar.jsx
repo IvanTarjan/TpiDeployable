@@ -9,6 +9,7 @@ import 'react-date-range/dist/theme/default.css';
 import { format } from 'date-fns';
 import { useNavigate } from 'react-router-dom';
 import locale from 'date-fns/locale/es';
+import { useMediaQuery } from '@mui/material';
 
 const SearchingBar = () => {
   const { localizaciones, selectedCity, setSelectedCity } = useContext(BodyContext)
@@ -21,6 +22,7 @@ const SearchingBar = () => {
   }
   ]);
 
+  const isMobile = useMediaQuery('(max-width:640px)');
   const cities = document.getElementById('destination');
   const navigate = useNavigate()
 
@@ -39,7 +41,7 @@ const SearchingBar = () => {
       <p className={styles.searchingP}>Encontra el vehiculo ideal para tu proximo viaje</p>
       <div className={styles.searchingBoxData} >
         <div className={styles.searchingBoxItem}>
-          <LocationOnIcon />
+          <LocationOnIcon color='secondary' fontSize='large' />
           <select className={styles.searchingBoxInput} name='destination' id='destination' >
             <option value={''}>¿A dónde vamos?</option>
             {localizaciones.map(ciudad => (
@@ -49,7 +51,7 @@ const SearchingBar = () => {
         </div>
 
         <div className={styles.searchingBoxItem}>
-          <EventIcon />
+          <EventIcon fontSize='large' />
           {isDateSelected == 'range' ? <span onClick={handleOpenCal} className={styles.searchingBoxDates}>Retiro / Devolucion</span> :
             <span onClick={handleOpenCal} className={styles.searchingBoxDates}>{`${format(date[0].startDate, "dd/MM/yyyy")} al ${format(date[0].endDate, "dd/MM/yyyy")}`}</span>}
           {openCal && <DateRange
@@ -60,7 +62,7 @@ const SearchingBar = () => {
             className={styles.calendar}
             minDate={new Date()}
             locale={locale}
-            months={2}
+            months={isMobile ? 1 : 2}
             direction='horizontal'
           />}
         </div>
