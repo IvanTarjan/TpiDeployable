@@ -1,4 +1,3 @@
-
 .homeContainer{
   display: flex;
   flex-wrap: wrap;
@@ -38,12 +37,13 @@
 }
 .headerCategory{
   width: 100vw;
-  height: 80px;
+  height: auto;
   background-color: #545776;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 80px;
+  padding: 20px 0px;
 }
 .headerCategory h1{
   padding-left: 40px;
@@ -52,6 +52,7 @@
   font-size: 25px;
   line-height: 18px;
   color: #F3F1ED;
+  line-height: normal;
 }
 .categoryImagesContainer{
   display: flex;
@@ -199,30 +200,6 @@
 h1{
   padding-top: 30px;
 }
-@media (max-width: 1200px) {
-  .iconsContainerDetail{
-    gap: 20px;
-  }
-  .smallPhotoOne, .smallPhotoTwo, .smallPhotoThree, .smallPhotoFour{
-    display: none;
-  }
-  .bigPhoto{
-    padding-left: 75px;
-  }
-}
-
-@media (max-width: 640px) {
-  .bigPhoto{
-    padding-left: 0;
-
-  }
-  .bigPhoto img{
-    width: 375px;
-  }
-  .iconsContainerDetail{
-    gap: 0px;
-  }
-}
 
 /* searching bar  */
 
@@ -235,74 +212,67 @@ h1{
   margin-top: 60px;
   background-color: #545776;
   padding: 30px 0px;
-  height: 150px;
+  height: 175px;
 }
 
 .searchingP{
   font-style: normal;
 font-weight: 700;
-font-size: 36px;
-line-height: 42px;
+font-size: 32px;
 text-align: center;
 color: #FFFFFF;
 padding-bottom: 20px;
+line-height: 1.2;
 }
 
 .searchingBoxData {
   width: 100vw;
   max-width: 1024px;
-  height: 40px;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  gap: 10px;
-  
+  gap: 20px;
+  color: #7F7F7F;
 }
 
 .searchingBoxItem{
   background-color: #FFFFFF;
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: space-around;
   cursor: pointer;
   border-radius: 5px;
+  font-size: 14px;
   position: relative;
+  padding: 5px 0px;
+  height: 40px;
+  width: 420px;
 }
 
 .searchingBoxInput{
-  padding: 10px 10px;
-  width: 420px;
   border: none;
   outline: none;
   cursor: pointer;
   background-color: #FFFFFF;
   border-radius: 5px;
-  height: 40px;
-  font-size: 16px;
+  color: #545776;
 }
 
-.searchingBoxDates{
-  padding: 10px 0px;
-  width: 420px;
-}
 .searchingBoxButton{
-  width: 200px;
+  width: 100%;
   background-color: #1DBEB4;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
-  line-height: 19px;
-  text-align: center;
   color: #FFFFFF;
-  
 }
 .searchingBoxButton:hover{
-  transform: scale(1);
+  transform: scale(1.01);
 }
 
 .calendar{
   position: absolute;
-  top: 40px;
+  top: 42px;
 }
 
 select {
@@ -316,7 +286,8 @@ select {
   align-items: flex-start;
   width: 95vw;
   background-color: #ececef;
-  height: 500px;
+  height: auto;
+  padding: 20px 0px;
 }
 
 .availabilityContainer p {
@@ -344,9 +315,9 @@ padding-left: 40px;
   width: 410px;
   height: 150px;
   background: #FFFFFF;
-border: 1px solid #DFE4EA;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 8px;
+  border: 1px solid #DFE4EA;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
 }
 
 .availabilityContainerBtn p{
@@ -370,6 +341,66 @@ color: #FFFFFF;
 border: none;
 }
 
+@media (max-width: 1200px) {
+  .iconsContainerDetail{
+    gap: 20px;
+  }
+  .smallPhotoOne, .smallPhotoTwo, .smallPhotoThree, .smallPhotoFour{
+    display: none;
+  }
+  .bigPhoto{
+    padding-left: 75px;
+  }
+  .carImages{
+    width: 350px;
+  }
+ 
+  .searchingBoxItem{
+    width: 250px;
+    justify-content: space-around;
+  }
 
+  .calendar{
+    left: -250px
+  }
+  .availabilityContainerCalendar{
+    flex-direction: column;
+    padding-left: 20px;
+    gap: 20px;
+  }
+}
 
+@media (max-width: 640px) {
+  .bigPhoto{
+    padding-left: 0;
 
+  }
+  .bigPhoto img{
+    width: 375px;
+  }
+  .iconsContainerDetail{
+    gap: 0px;
+  }
+  
+  .searchingBox{
+    height: 300px;
+  }
+ 
+  .searchingBoxData{
+    flex-direction: column;
+  }
+  .calendar{
+    left: -50px;
+    top: 42px;
+    z-index: 1;
+  }
+  .searchingBoxButton{
+    display: block;
+  }
+  .availabilityContainerBtn{
+    width: 280px;
+  }
+  .availabilityContainerBtn button{
+    display: block;
+  }
+}
