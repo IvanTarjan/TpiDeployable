@@ -6,25 +6,25 @@ import colors from '../commons/colors';
 import DatePicker from "react-multi-date-picker"
 import { CustomInput } from '../commons/DatePickerCustomComponents';
 import { BodyContext } from '../contexts/BodyContext';
-
-
+import { useNavigate } from 'react-router-dom';
 
 const BarraDeBusqueda = () => {
     const isMobile = useMediaQuery('(max-width:600px)');
     const isTablet = useMediaQuery('(max-width:800px)');
-    const [localizacion, setLocalizacion] = useState({ provincia: "", pais: "" });
+    const [location, setLocation] = useState({ ciudad: "", provincia: "" });
     const [dateRange, setDateRange] = useState([null, null]);
     const calendarRef = useRef();
+    const navigate = useNavigate()
 
-    const { localizaciones } = useContext(BodyContext)
+    const { localizaciones, selectedCity, setSelectedCity } = useContext(BodyContext)
 
     const handleChange = (event) => {
-        setLocalizacion(localizaciones[event.target.value]);
+        setLocation(localizaciones[event.target.value]);
     }
 
     const handleSubmit = () => {
-        console.log(`${localizacion.provincia}, ${localizacion.pais} fecha: ${dateRange[0]} al ${dateRange[1]}`);
-        // para modificar
+        setSelectedCity(location.ciudad)
+        navigate('/results/', { state: [dateRange[0].format(), dateRange[1].format()] })
     }
 
     const weekDays = ["S", "M", "T", "W", "T", "F", "S"];
@@ -47,7 +47,7 @@ const BarraDeBusqueda = () => {
                         return <Box sx={{ display: 'flex', alignItems: 'center', color: selected === "" ? colors.fuenteBarraBusqueda : colors.c3, gap: '5px' }}>
                             <LocationOnIcon fontSize='medium' />
                             {selected === "" ? <Typography fontWeight={600} variant='subtitle1'>¿A dónde vamos?</Typography> :
-                                <Typography fontWeight={600} variant='subtitle1'>{localizacion.provincia}, {localizacion.pais}</Typography>}
+                                <Typography fontWeight={600} variant='subtitle1'>{location.ciudad}, {location.provincia}</Typography>}
                         </Box>;
                     }}
                     inputProps={{ 'aria-label': 'Without label' }}
@@ -57,8 +57,8 @@ const BarraDeBusqueda = () => {
                             <Box sx={{ display: 'flex', alignItems: 'center', borderBottom: `1.5px solid ${colors.principal}`, gap: '15px', padding: '5px', width: "100%" }}>
                                 <LocationOnOutlinedIcon fontSize='medium' />
                                 <Box display='flex' flexDirection='column' justifyContent='center' alignItems='flex-start' color={colors.c3} >
-                                    <Typography variant='subtitle2' fontWeight={'600'} color={'black'}>{locali.provincia}</Typography>
-                                    <Typography variant='caption' color={colors.c3} fontWeight={'600'}>{locali.pais}</Typography>
+                                    <Typography variant='subtitle2' fontWeight={'600'} color={'black'}>{locali.ciudad}</Typography>
+                                    <Typography variant='caption' color={colors.c3} fontWeight={'600'}>{locali.provincia}</Typography>
                                 </Box>
                             </Box>
                         </MenuItem>
@@ -92,7 +92,6 @@ const BarraDeBusqueda = () => {
                     Buscar
                 </Button>
             </FormControl>
-
         </Box>
     )
 }
