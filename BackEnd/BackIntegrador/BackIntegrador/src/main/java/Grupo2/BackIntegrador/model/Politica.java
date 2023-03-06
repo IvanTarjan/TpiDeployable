@@ -1,8 +1,15 @@
 package Grupo2.BackIntegrador.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 
 @Entity
+@Getter @Setter @AllArgsConstructor @NoArgsConstructor
 @Table(name="politica")
 public class Politica {
 
@@ -14,55 +21,8 @@ public class Politica {
     @Column
     private String descripcion;
 
-    @ManyToOne
-    @JoinColumn(name = "producto_id",referencedColumnName = "id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JsonIgnoreProperties("politica")
     private Producto producto;
 
-    public Politica() {
-    }
-
-    public Politica(Long id, String titulo, String descripcion, Producto producto) {
-        this.id = id;
-        this.titulo = titulo;
-        this.descripcion = descripcion;
-        this.producto = producto;
-    }
-
-    public Politica(String titulo, String descripcion, Producto producto) {
-        this.titulo = titulo;
-        this.descripcion = descripcion;
-        this.producto = producto;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    public Producto getProducto() {
-        return producto;
-    }
-
-    public void setProducto(Producto producto) {
-        this.producto = producto;
-    }
 }

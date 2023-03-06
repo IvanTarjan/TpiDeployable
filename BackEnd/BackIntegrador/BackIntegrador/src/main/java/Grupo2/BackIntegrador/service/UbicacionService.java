@@ -27,13 +27,13 @@ public class UbicacionService {
     }
 
     public Ubicacion guardarUbicacion(Ubicacion ubicacion){
-        LOGGER.info("Se inició una operación de guardado de la ubicacion con id=: "+
+        LOGGER.info("Se inició una operación de guardado de la ciudad con id=: "+
                 ubicacion.getId());
         return ubicacionRepository.save(ubicacion);
     }
 
     public void actualizarUbicacion(Ubicacion ubicacion){
-        LOGGER.info("Se inició una operación de actualización de la ubicacion con id="+
+        LOGGER.info("Se inició una operación de actualización de la ciudad con id="+
                 ubicacion.getId());
         ubicacionRepository.save(ubicacion);
     }

@@ -1,12 +1,18 @@
 package Grupo2.BackIntegrador.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
+@Getter @Setter @AllArgsConstructor @NoArgsConstructor
 @Table(name="categoria")
 public class Categoria {
     @Id
@@ -19,56 +25,8 @@ public class Categoria {
     @Column
     private String url_imagen;
 
-    @OneToMany(mappedBy = "categoria",fetch = FetchType.LAZY)
-    @JsonIgnore
+    @OneToMany(mappedBy = "categoria",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JsonIgnoreProperties("categoria")
     private Set<Producto> productos= new HashSet<>();
 
-    public Categoria() {
-    }
-
-    public Categoria(Long id, String titulo, String descripcion, String url_imagen) {
-        this.id = id;
-        this.titulo = titulo;
-        this.descripcion = descripcion;
-        this.url_imagen = url_imagen;
-    }
-
-    public Categoria(String titulo, String descripcion, String url_imagen, Set<Producto> productos) {
-        this.titulo = titulo;
-        this.descripcion = descripcion;
-        this.url_imagen = url_imagen;
-        this.productos = productos;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    public String getUrl_imagen() {
-        return url_imagen;
-    }
-
-    public void setUrl_imagen(String url_imagen) {
-        this.url_imagen = url_imagen;
-    }
 }
