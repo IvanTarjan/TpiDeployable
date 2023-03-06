@@ -19,13 +19,14 @@ public class CategoriaController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Categoria> buscarCategoriaPorID(@PathVariable Long id){
-        Optional<Categoria> categoriaBuscada= categoriaService.buscarCategoriaXId(id);
-        if (categoriaBuscada.isPresent()){
+        Optional<Categoria> categoriaBuscada;
+        try {
+            categoriaBuscada = categoriaService.buscarCategoriaXId(id);
             return ResponseEntity.ok(categoriaBuscada.get());
-        }
-        else{
+        } catch (ResourceNotFoundException e) {
             return ResponseEntity.notFound().build();
         }
+
     }
 
     @GetMapping
@@ -46,12 +47,12 @@ public class CategoriaController {
 
     @PutMapping
     public ResponseEntity<String> actualizarCategoria(@RequestBody Categoria categoria){
-        Optional<Categoria> categoriaAActualizar=categoriaService.buscarCategoriaXId(categoria.getId());
-        if (categoriaAActualizar.isPresent()){
+        Optional<Categoria> categoriaBuscada;
+        try {
+            categoriaBuscada = categoriaService.buscarCategoriaXId(categoria.getId());
             categoriaService.actualizarCategoria(categoria);
             return ResponseEntity.ok("La categoria con el id= "+categoria.getId()+" fue actualizada");
-        }
-        else{
+        } catch (ResourceNotFoundException e) {
             return ResponseEntity.badRequest().body("No se puede actualizar una categoria que no existe en la base de datos");
         }
     }

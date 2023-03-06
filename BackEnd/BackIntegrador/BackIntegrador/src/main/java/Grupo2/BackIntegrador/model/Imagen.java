@@ -1,5 +1,6 @@
 package Grupo2.BackIntegrador.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,8 +20,8 @@ public class Imagen {
     @Column
     private String url_img;
 
-    @ManyToOne
-    @JoinColumn(name = "producto_id",referencedColumnName = "id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JsonIgnoreProperties("imagen")
     private Producto producto;
 
 

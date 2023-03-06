@@ -2,7 +2,9 @@ package Grupo2.BackIntegrador.service;
 
 import Grupo2.BackIntegrador.Exception.ResourceNotFoundException;
 
+import Grupo2.BackIntegrador.model.Imagen;
 import Grupo2.BackIntegrador.model.Politica;
+import Grupo2.BackIntegrador.model.Producto;
 import Grupo2.BackIntegrador.repository.PoliticaRepository;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 public class PoliticaService {
@@ -56,5 +59,13 @@ public class PoliticaService {
     public Optional<Politica> buscarPoliticaXId(Long id){
         LOGGER.info("Se inició una operación de búsqueda de la politica con id="+id);
         return politicaRepository.findById(id);
+    }
+
+    public void guardarPoliticas (Set<Politica> politicaSet, Producto producto){
+        if (politicaSet == null) return;
+        for (Politica politica : politicaSet) {
+            politica.setProducto(producto);
+            politicaRepository.save(politica);
+        }
     }
 }

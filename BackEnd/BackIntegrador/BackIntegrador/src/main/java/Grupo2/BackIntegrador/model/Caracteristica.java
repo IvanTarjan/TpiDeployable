@@ -25,7 +25,7 @@ public class Caracteristica {
 
     @ManyToMany(fetch = FetchType.LAZY,
             cascade =
-                    {CascadeType.MERGE, CascadeType.DETACH},
+                    {CascadeType.MERGE},
             mappedBy = "caracteristica")
     @JsonIgnoreProperties("caracteristica")
     private Set<Producto> producto = new HashSet<>();

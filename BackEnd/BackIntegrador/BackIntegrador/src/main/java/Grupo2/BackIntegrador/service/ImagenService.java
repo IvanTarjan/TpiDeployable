@@ -3,14 +3,17 @@ package Grupo2.BackIntegrador.service;
 import Grupo2.BackIntegrador.Exception.ResourceNotFoundException;
 import Grupo2.BackIntegrador.model.Categoria;
 import Grupo2.BackIntegrador.model.Imagen;
+import Grupo2.BackIntegrador.model.Producto;
 import Grupo2.BackIntegrador.repository.CategoriaRepository;
 import Grupo2.BackIntegrador.repository.ImagenRepository;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.awt.*;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 public class ImagenService {
@@ -57,5 +60,13 @@ public class ImagenService {
     public Optional<Imagen> buscarImagenXId(Long id){
         LOGGER.info("Se inició una operación de búsqueda de la imagen con id="+id);
         return imagenRepository.findById(id);
+    }
+
+    public void guardarImagenes(Set<Imagen> imagenSet, Producto producto){
+        if (imagenSet == null) return;
+        for (Imagen imagen : imagenSet) {
+            imagen.setProducto(producto);
+            imagenRepository.save(imagen);
+        }
     }
 }

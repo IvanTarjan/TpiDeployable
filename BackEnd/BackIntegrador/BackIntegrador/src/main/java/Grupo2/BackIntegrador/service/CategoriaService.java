@@ -39,21 +39,19 @@ public class CategoriaService {
     }
 
     public void eliminarCategoria(Long id) throws ResourceNotFoundException {
-        Optional<Categoria> categoriaAEliminar=buscarCategoriaXId(id);
-        if (categoriaAEliminar.isPresent()){
-            categoriaRepository.deleteById(id);
-            LOGGER.warn("Se realizo una operación de eliminación de la categoria con" +
-                    "id="+id);
-        }
-        else{
-            throw new ResourceNotFoundException("La categoria a eliminar no existe" +
-                    " en la base de datos, se intentó encontrar sin éxito en id= "+id);
-        }
-
+        buscarCategoriaXId(id);
+        categoriaRepository.deleteById(id);
+        LOGGER.warn("Se realizo una operación de eliminación de la categoria con id= "+id);
     }
 
-    public Optional<Categoria> buscarCategoriaXId(Long id){
-        LOGGER.info("Se inició una operación de búsqueda de la categoria con id="+id);
-        return categoriaRepository.findById(id);
+    public Optional<Categoria> buscarCategoriaXId(Long id) throws ResourceNotFoundException {
+        Optional<Categoria> categoriaABuscar=categoriaRepository.findById(id);
+        if (categoriaABuscar.isPresent()){
+            LOGGER.info("Se inició una operación de búsqueda de la categoria con id="+id);
+            return categoriaABuscar;
+        }
+        else{
+            throw new ResourceNotFoundException("La categoria con id= "+id+" no existe");
+        }
     }
 }
