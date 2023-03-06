@@ -39,13 +39,9 @@ public class ProductoController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> eliminarProducto(@PathVariable Long id){
-        try {
+    public ResponseEntity<String> eliminarProducto(@PathVariable Long id) throws ResourceNotFoundException {
             productoService.eliminarProducto(id);
             return ResponseEntity.ok("Se eliminó la producto con id= "+id);
-        } catch (ResourceNotFoundException e) {
-            return ResponseEntity.badRequest().body("No se pudo borrar el producto con id= "+id);
-        }
     }
 
     @PutMapping

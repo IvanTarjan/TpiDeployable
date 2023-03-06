@@ -35,16 +35,16 @@ public class Producto {
     private Float longitud;
 
     // One to many
-    @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "producto",cascade = CascadeType.ALL , fetch = FetchType.EAGER)
     @JsonIgnoreProperties("producto")
     private Set<Imagen> imagen= new HashSet<>();
 
-    @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL , fetch = FetchType.EAGER)
     @JsonIgnoreProperties("producto")
     private Set<Politica> politica= new HashSet<>();
 
     //Many to one
-    @ManyToOne(cascade = CascadeType.MERGE)
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH})
     @JoinColumn(name = "categoria_id")
     @JsonIgnoreProperties("productos")
     private Categoria categoria;

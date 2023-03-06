@@ -21,7 +21,7 @@ public class Politica {
     @Column
     private String descripcion;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JsonIgnoreProperties("politica")
     private Producto producto;
 
