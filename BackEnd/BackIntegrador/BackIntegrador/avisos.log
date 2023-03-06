@@ -130,3 +130,274 @@
 [2023-03-04 23:10:07] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=7
 [2023-03-04 23:10:07] [ WARN ] [ProductoService:49] Se realizo una operación de eliminación de la producto conid=7
 [2023-03-04 23:10:10] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-04 23:13:24] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-04 23:13:24] [ WARN ] [ProductoService:49] Se realizo una operación de eliminación de la producto conid=7
+[2023-03-04 23:13:27] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-04 23:13:27] [ WARN ] [ProductoService:49] Se realizo una operación de eliminación de la producto conid=7
+[2023-03-04 23:13:28] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-04 23:13:28] [ WARN ] [ProductoService:49] Se realizo una operación de eliminación de la producto conid=7
+[2023-03-04 23:13:28] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-04 23:13:28] [ WARN ] [ProductoService:49] Se realizo una operación de eliminación de la producto conid=7
+[2023-03-04 23:13:28] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-04 23:13:28] [ WARN ] [ProductoService:49] Se realizo una operación de eliminación de la producto conid=7
+[2023-03-04 23:13:29] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-04 23:13:29] [ WARN ] [ProductoService:49] Se realizo una operación de eliminación de la producto conid=7
+[2023-03-04 23:13:31] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-05 15:08:44] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-05 15:09:17] [ INFO ] [CaracteristicaService:56] Se inició una operación de búsqueda de la Caracteristica con id=16
+[2023-03-05 15:09:45] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-05 15:09:45] [ INFO ] [ProductoService:40] Se inició una operación de actualización de la producto con id=7
+[2023-03-05 15:09:51] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-05 15:10:03] [ INFO ] [ProductoService:29] Se inició el listado de todas las productos
+[2023-03-05 15:10:40] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-05 15:10:40] [ INFO ] [ProductoService:40] Se inició una operación de actualización de la producto con id=7
+[2023-03-05 15:10:44] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-05 15:10:53] [ INFO ] [CaracteristicaService:56] Se inició una operación de búsqueda de la Caracteristica con id=17
+[2023-03-05 15:11:17] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-05 15:11:25] [ INFO ] [CaracteristicaService:56] Se inició una operación de búsqueda de la Caracteristica con id=16
+[2023-03-05 15:11:28] [ INFO ] [CaracteristicaService:56] Se inició una operación de búsqueda de la Caracteristica con id=19
+[2023-03-05 15:11:37] [ INFO ] [CaracteristicaService:56] Se inició una operación de búsqueda de la Caracteristica con id=16
+[2023-03-05 15:11:40] [ INFO ] [CaracteristicaService:56] Se inició una operación de búsqueda de la Caracteristica con id=16
+[2023-03-05 15:11:40] [ WARN ] [CaracteristicaService:45] Se realizo una operación de eliminación de la Caracteristica conid=16
+[2023-03-05 15:11:44] [ INFO ] [CaracteristicaService:56] Se inició una operación de búsqueda de la Caracteristica con id=16
+[2023-03-05 15:11:52] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-05 15:11:52] [ WARN ] [ProductoService:49] Se realizo una operación de eliminación de la producto conid=7
+[2023-03-05 15:11:55] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-05 15:12:04] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-05 15:12:04] [ INFO ] [ProductoService:40] Se inició una operación de actualización de la producto con id=7
+[2023-03-05 15:12:07] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-05 15:12:10] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-05 15:12:10] [ WARN ] [ProductoService:49] Se realizo una operación de eliminación de la producto conid=7
+[2023-03-05 15:12:12] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-05 15:16:22] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-05 15:16:22] [ WARN ] [ProductoService:49] Se realizo una operación de eliminación del producto conid=7
+[2023-03-05 15:16:25] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-05 15:19:25] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-05 15:19:28] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-05 15:19:28] [ WARN ] [ProductoService:49] Se realizo una operación de eliminación del producto conid=7
+[2023-03-05 15:19:31] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-05 15:34:53] [ INFO ] [ImagenService:27] Se inició el listado de todas las imagenes
+[2023-03-05 15:45:30] [ INFO ] [ImagenService:27] Se inició el listado de todas las imagenes
+[2023-03-05 15:49:01] [ INFO ] [ProductoService:34] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-05 15:49:04] [ INFO ] [ImagenService:27] Se inició el listado de todas las imagenes
+[2023-03-05 15:55:44] [ INFO ] [ImagenService:27] Se inició el listado de todas las imagenes
+[2023-03-05 15:57:11] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-05 15:57:21] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-05 15:57:21] [ WARN ] [ProductoService:49] Se realizo una operación de eliminación del producto conid=7
+[2023-03-05 15:57:54] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-05 16:01:22] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-05 16:01:31] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=9
+[2023-03-05 16:02:01] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=9
+[2023-03-05 16:02:02] [ INFO ] [ProductoService:40] Se inició una operación de actualización de la producto con id=9
+[2023-03-05 16:02:15] [ INFO ] [CaracteristicaService:56] Se inició una operación de búsqueda de la Caracteristica con id=13
+[2023-03-05 16:02:20] [ INFO ] [CaracteristicaService:56] Se inició una operación de búsqueda de la Caracteristica con id=13
+[2023-03-05 16:02:20] [ WARN ] [CaracteristicaService:45] Se realizo una operación de eliminación de la Caracteristica conid=13
+[2023-03-05 16:02:23] [ INFO ] [CaracteristicaService:56] Se inició una operación de búsqueda de la Caracteristica con id=13
+[2023-03-05 16:02:31] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=9
+[2023-03-05 16:02:36] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=9
+[2023-03-05 16:02:36] [ WARN ] [ProductoService:49] Se realizo una operación de eliminación del producto conid=9
+[2023-03-05 16:02:39] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=9
+[2023-03-05 16:03:26] [ INFO ] [ProductoService:34] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-05 16:03:33] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=32
+[2023-03-05 16:04:18] [ INFO ] [ImagenService:27] Se inició el listado de todas las imagenes
+[2023-03-05 16:04:39] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=32
+[2023-03-05 16:05:25] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=32
+[2023-03-05 16:05:28] [ INFO ] [ProductoService:34] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-05 16:05:38] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=33
+[2023-03-05 16:08:15] [ INFO ] [ProductoService:34] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-05 16:08:26] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 16:09:58] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 16:10:38] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 16:10:38] [ WARN ] [ProductoService:49] Se realizo una operación de eliminación del producto conid=34
+[2023-03-05 16:10:41] [ INFO ] [ProductoService:60] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 16:23:23] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 16:23:26] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 16:23:26] [ WARN ] [ProductoService:49] Se realizo una operación de eliminación del producto conid=34
+[2023-03-05 16:23:29] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 16:26:20] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 16:26:23] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 16:26:23] [ WARN ] [ProductoService:49] Se realizo una operación de eliminación del producto conid=34
+[2023-03-05 16:26:27] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 16:28:42] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 16:28:51] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 16:28:51] [ WARN ] [ProductoService:49] Se realizo una operación de eliminación del producto conid=34
+[2023-03-05 16:28:55] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 16:28:59] [ INFO ] [ImagenService:58] Se inició una operación de búsqueda de la imagen con id=57
+[2023-03-05 16:29:05] [ INFO ] [ImagenService:58] Se inició una operación de búsqueda de la imagen con id=58
+[2023-03-05 16:29:11] [ INFO ] [ImagenService:58] Se inició una operación de búsqueda de la imagen con id=58
+[2023-03-05 16:29:11] [ WARN ] [ImagenService:47] Se realizo una operación de eliminación de la imagen conid=58
+[2023-03-05 16:29:15] [ INFO ] [ImagenService:58] Se inició una operación de búsqueda de la imagen con id=58
+[2023-03-05 16:32:59] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 16:33:02] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 16:33:02] [ WARN ] [ProductoService:49] Se realizo una operación de eliminación del producto conid=34
+[2023-03-05 16:33:04] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 17:22:09] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 17:22:12] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 17:22:12] [ WARN ] [ProductoService:49] Se realizo una operación de eliminación del producto conid=34
+[2023-03-05 17:25:40] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 17:25:40] [ WARN ] [ProductoService:49] Se realizo una operación de eliminación del producto conid=34
+[2023-03-05 17:25:43] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 17:25:46] [ INFO ] [ImagenService:32] Se inició una operación de guardado de la imagen con titulo: Autito
+[2023-03-05 17:25:50] [ INFO ] [ImagenService:58] Se inició una operación de búsqueda de la imagen con id=58
+[2023-03-05 17:25:55] [ INFO ] [ImagenService:27] Se inició el listado de todas las imagenes
+[2023-03-05 17:26:01] [ INFO ] [ImagenService:32] Se inició una operación de guardado de la imagen con titulo: Autito
+[2023-03-05 17:26:07] [ INFO ] [ImagenService:58] Se inició una operación de búsqueda de la imagen con id=90
+[2023-03-05 17:26:07] [ WARN ] [ImagenService:47] Se realizo una operación de eliminación de la imagen conid=90
+[2023-03-05 17:26:12] [ INFO ] [ImagenService:58] Se inició una operación de búsqueda de la imagen con id=90
+[2023-03-05 17:26:22] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 17:31:25] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 17:31:27] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 17:31:27] [ WARN ] [ProductoService:49] Se realizo una operación de eliminación del producto conid=34
+[2023-03-05 17:31:30] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 17:34:31] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 17:34:34] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 17:34:34] [ WARN ] [ProductoService:49] Se realizo una operación de eliminación del producto conid=34
+[2023-03-05 17:34:36] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 17:39:49] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 17:39:51] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 17:39:51] [ WARN ] [ProductoService:49] Se realizo una operación de eliminación del producto conid=34
+[2023-03-05 17:39:54] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 18:08:36] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 18:08:39] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 18:08:39] [ WARN ] [ProductoService:49] Se realizo una operación de eliminación del producto conid=34
+[2023-03-05 18:08:42] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=34
+[2023-03-05 18:08:49] [ INFO ] [ProductoService:34] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-05 18:09:01] [ ERROR] [GlobalExceptions:14] Error, el sistema detectó un problema, se registro el siguiente mensaje: No se encontro el producto con id = 91
+[2023-03-05 18:09:10] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=35
+[2023-03-05 18:13:30] [ INFO ] [ProductoService:29] Se inició el listado de todas las productos
+[2023-03-05 18:15:04] [ INFO ] [ProductoService:34] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-05 18:15:39] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=36
+[2023-03-05 18:16:45] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=36
+[2023-03-05 18:20:22] [ INFO ] [ProductoService:34] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-05 18:20:27] [ INFO ] [ProductoService:34] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-05 18:20:54] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: titulongo
+[2023-03-05 18:21:01] [ INFO ] [ProductoService:34] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-05 18:21:15] [ INFO ] [ProductoService:34] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-05 18:21:58] [ INFO ] [CategoriaService:30] Se inició una operación de guardado de la categoria con titulo: asdf
+[2023-03-05 18:22:07] [ INFO ] [ProductoService:34] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-05 18:22:16] [ INFO ] [ProductoService:34] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-05 18:28:35] [ INFO ] [UbicacionService:30] Se inició una operación de guardado de la ciudad con id=: null
+[2023-03-05 18:28:45] [ INFO ] [ProductoService:34] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-05 18:28:58] [ ERROR] [GlobalExceptions:14] Error, el sistema detectó un problema, se registro el siguiente mensaje: No se encontro el producto con id = 1
+[2023-03-05 18:29:06] [ INFO ] [ProductoService:29] Se inició el listado de todas las productos
+[2023-03-05 18:29:13] [ INFO ] [ProductoService:55] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-05 18:29:34] [ INFO ] [ImagenService:27] Se inició el listado de todas las imagenes
+[2023-03-05 19:10:48] [ INFO ] [ProductoService:37] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-05 19:11:00] [ INFO ] [ProductoService:58] Se inició una operación de búsqueda de la producto con id=8
+[2023-03-05 19:19:38] [ INFO ] [ProductoService:61] Se inició una operación de búsqueda de la producto con id=8
+[2023-03-05 19:19:45] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-05 19:19:52] [ INFO ] [ProductoService:61] Se inició una operación de búsqueda de la producto con id=9
+[2023-03-05 19:20:07] [ INFO ] [ProductoService:61] Se inició una operación de búsqueda de la producto con id=9
+[2023-03-05 19:20:07] [ WARN ] [ProductoService:55] Se realizo una operación de eliminación del producto conid=9
+[2023-03-05 19:20:10] [ INFO ] [ProductoService:61] Se inició una operación de búsqueda de la producto con id=9
+[2023-03-05 19:24:41] [ INFO ] [ProductoService:61] Se inició una operación de búsqueda de la producto con id=9
+[2023-03-05 19:24:48] [ WARN ] [ProductoService:55] Se realizo una operación de eliminación del producto conid=9
+[2023-03-05 19:24:56] [ INFO ] [ProductoService:61] Se inició una operación de búsqueda de la producto con id=9
+[2023-03-05 19:25:54] [ INFO ] [ProductoService:61] Se inició una operación de búsqueda de la producto con id=9
+[2023-03-05 19:25:58] [ WARN ] [ProductoService:55] Se realizo una operación de eliminación del producto conid=9
+[2023-03-05 19:26:12] [ INFO ] [ProductoService:61] Se inició una operación de búsqueda de la producto con id=9
+[2023-03-05 19:27:02] [ INFO ] [ProductoService:61] Se inició una operación de búsqueda de la producto con id=9
+[2023-03-05 19:27:05] [ WARN ] [ProductoService:55] Se realizo una operación de eliminación del producto conid=9
+[2023-03-05 19:27:12] [ INFO ] [ProductoService:61] Se inició una operación de búsqueda de la producto con id=9
+[2023-03-05 19:27:50] [ INFO ] [ProductoService:61] Se inició una operación de búsqueda de la producto con id=9
+[2023-03-05 19:27:53] [ WARN ] [ProductoService:55] Se realizo una operación de eliminación del producto conid=9
+[2023-03-05 19:27:55] [ INFO ] [ProductoService:61] Se inició una operación de búsqueda de la producto con id=9
+[2023-03-05 19:29:55] [ INFO ] [CaracteristicaService:56] Se inició una operación de búsqueda de la Caracteristica con id=1
+[2023-03-05 19:30:03] [ INFO ] [CaracteristicaService:56] Se inició una operación de búsqueda de la Caracteristica con id=1
+[2023-03-05 19:31:48] [ INFO ] [ProductoService:61] Se inició una operación de búsqueda de la producto con id=9
+[2023-03-05 19:31:48] [ INFO ] [ProductoService:47] Se inició una operación de actualización de la producto con id=9
+[2023-03-05 19:31:56] [ INFO ] [ProductoService:61] Se inició una operación de búsqueda de la producto con id=9
+[2023-03-05 19:32:15] [ INFO ] [ProductoService:61] Se inició una operación de búsqueda de la producto con id=9
+[2023-03-05 19:32:30] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-05 19:32:40] [ INFO ] [ProductoService:61] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-05 19:32:50] [ WARN ] [ProductoService:55] Se realizo una operación de eliminación del producto conid=10
+[2023-03-05 19:32:53] [ INFO ] [ProductoService:61] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-05 19:33:07] [ INFO ] [ProductoService:61] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-05 19:33:07] [ INFO ] [ProductoService:47] Se inició una operación de actualización de la producto con id=10
+[2023-03-05 19:33:21] [ INFO ] [ProductoService:61] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-05 19:33:21] [ INFO ] [ProductoService:47] Se inició una operación de actualización de la producto con id=10
+[2023-03-05 19:34:50] [ INFO ] [ProductoService:61] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-05 19:35:06] [ WARN ] [ProductoService:55] Se realizo una operación de eliminación del producto conid=10
+[2023-03-05 19:35:09] [ INFO ] [ProductoService:61] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-05 19:37:14] [ INFO ] [ProductoService:63] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-05 19:37:14] [ INFO ] [ProductoService:50] Se inició una operación de actualización de la producto con id=10
+[2023-03-05 19:37:17] [ INFO ] [ProductoService:63] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-05 19:37:29] [ WARN ] [ProductoService:57] Se realizo una operación de eliminación del producto conid=10
+[2023-03-05 19:38:43] [ INFO ] [ProductoService:63] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-05 19:38:44] [ INFO ] [ProductoService:50] Se inició una operación de actualización de la producto con id=10
+[2023-03-05 19:38:48] [ INFO ] [ProductoService:63] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-05 19:43:00] [ INFO ] [ProductoService:63] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-05 19:43:03] [ INFO ] [ProductoService:63] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-05 19:43:03] [ INFO ] [ProductoService:50] Se inició una operación de actualización de la producto con id=10
+[2023-03-05 19:43:06] [ INFO ] [ProductoService:63] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-05 19:43:27] [ INFO ] [ProductoService:63] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-05 19:43:27] [ INFO ] [ProductoService:50] Se inició una operación de actualización de la producto con id=10
+[2023-03-05 19:43:41] [ INFO ] [ProductoService:63] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-05 19:44:05] [ INFO ] [ProductoService:63] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-05 19:44:05] [ INFO ] [ProductoService:50] Se inició una operación de actualización de la producto con id=10
+[2023-03-05 19:44:08] [ INFO ] [ProductoService:63] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-05 19:44:16] [ INFO ] [ProductoService:63] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-05 19:44:28] [ INFO ] [ProductoService:63] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-05 19:44:28] [ INFO ] [ProductoService:50] Se inició una operación de actualización de la producto con id=10
+[2023-03-05 19:44:31] [ INFO ] [ProductoService:63] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-05 19:49:14] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-05 19:49:16] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-05 19:49:57] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-05 19:52:21] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-05 19:54:09] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-05 19:54:10] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-05 19:54:41] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-05 20:01:22] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-05 20:02:17] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-05 20:03:01] [ INFO ] [CategoriaService:25] Se inició el listado de todas las Categorias
+[2023-03-05 20:03:18] [ INFO ] [ProductoService:63] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-05 20:03:29] [ INFO ] [CategoriaService:25] Se inició el listado de todas las Categorias
+[2023-03-05 23:18:04] [ INFO ] [CategoriaService:25] Se inició el listado de todas las Categorias
+[2023-03-05 23:23:45] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-05 23:24:00] [ INFO ] [ProductoService:63] Se inició una operación de búsqueda de la producto con id=21
+[2023-03-05 23:25:36] [ INFO ] [CategoriaService:56] Se inició una operación de búsqueda de la categoria con id=1
+[2023-03-05 23:26:45] [ INFO ] [CategoriaService:56] Se inició una operación de búsqueda de la categoria con id=1
+[2023-03-05 23:26:51] [ INFO ] [CategoriaService:56] Se inició una operación de búsqueda de la categoria con id=1
+[2023-03-05 23:26:51] [ WARN ] [CategoriaService:45] Se realizo una operación de eliminación de la categoria conid=1
+[2023-03-05 23:26:55] [ INFO ] [CategoriaService:56] Se inició una operación de búsqueda de la categoria con id=1
+[2023-03-05 23:27:02] [ INFO ] [ProductoService:32] Se inició el listado de todas las productos
+[2023-03-05 23:27:36] [ INFO ] [CategoriaService:30] Se inició una operación de guardado de la categoria con titulo: asdf
+[2023-03-05 23:27:44] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-05 23:27:52] [ INFO ] [ProductoService:63] Se inició una operación de búsqueda de la producto con id=23
+[2023-03-05 23:27:59] [ INFO ] [ProductoService:63] Se inició una operación de búsqueda de la producto con id=23
+[2023-03-05 23:27:59] [ WARN ] [ProductoService:57] Se realizo una operación de eliminación del producto conid=23
+[2023-03-05 23:28:03] [ INFO ] [ProductoService:63] Se inició una operación de búsqueda de la producto con id=23
+[2023-03-05 23:29:13] [ INFO ] [CaracteristicaService:25] Se inició el listado de todas las Caracteristicas
+[2023-03-05 23:33:10] [ INFO ] [CategoriaService:25] Se inició el listado de todas las Categorias
+[2023-03-05 23:39:41] [ INFO ] [CategoriaService:56] Se inició una operación de búsqueda de la categoria con id=2
+[2023-03-05 23:39:41] [ INFO ] [CategoriaService:36] Se inició una operación de actualización de la categoria con id=2
+[2023-03-05 23:39:49] [ INFO ] [CategoriaService:25] Se inició el listado de todas las Categorias
+[2023-03-05 23:39:56] [ INFO ] [ProductoService:32] Se inició el listado de todas las productos
+[2023-03-05 23:41:37] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-05 23:41:46] [ INFO ] [CategoriaService:25] Se inició el listado de todas las Categorias
+[2023-03-05 23:42:03] [ INFO ] [ProductoService:32] Se inició el listado de todas las productos
+[2023-03-05 23:42:46] [ INFO ] [CategoriaService:25] Se inició el listado de todas las Categorias
+[2023-03-05 23:46:10] [ INFO ] [ProductoService:32] Se inició el listado de todas las productos
+[2023-03-05 23:46:35] [ INFO ] [ProductoService:32] Se inició el listado de todas las productos
+[2023-03-05 23:49:34] [ INFO ] [CategoriaService:56] Se inició una operación de búsqueda de la categoria con id=2
+[2023-03-05 23:58:20] [ INFO ] [CategoriaService:25] Se inició el listado de todas las Categorias
+[2023-03-05 23:58:23] [ INFO ] [CategoriaService:50] Se inició una operación de búsqueda de la categoria con id=2
+[2023-03-05 23:58:29] [ INFO ] [CategoriaService:50] Se inició una operación de búsqueda de la categoria con id=2
+[2023-03-05 23:58:29] [ INFO ] [CategoriaService:36] Se inició una operación de actualización de la categoria con id=2
+[2023-03-05 23:58:39] [ INFO ] [CategoriaService:50] Se inició una operación de búsqueda de la categoria con id=2
+[2023-03-05 23:58:58] [ INFO ] [ProductoService:32] Se inició el listado de todas las productos
+[2023-03-05 23:59:14] [ ERROR] [GlobalExceptions:14] Error, el sistema detectó un problema, se registro el siguiente mensaje: La categoria con id= 1 no existe
+[2023-03-05 23:59:17] [ INFO ] [CategoriaService:50] Se inició una operación de búsqueda de la categoria con id=2
+[2023-03-05 23:59:17] [ WARN ] [CategoriaService:44] Se realizo una operación de eliminación de la categoria con id= 2
+[2023-03-05 23:59:21] [ INFO ] [CategoriaService:25] Se inició el listado de todas las Categorias
+[2023-03-05 23:59:31] [ INFO ] [CategoriaService:30] Se inició una operación de guardado de la categoria con titulo: asdf
+[2023-03-06 00:00:26] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 00:01:27] [ INFO ] [ProductoService:32] Se inició el listado de todas las productos
+[2023-03-06 00:02:06] [ INFO ] [CategoriaService:25] Se inició el listado de todas las Categorias
+[2023-03-06 00:04:13] [ INFO ] [CategoriaService:50] Se inició una operación de búsqueda de la categoria con id=3
+[2023-03-06 00:04:13] [ INFO ] [CategoriaService:36] Se inició una operación de actualización de la categoria con id=3
+[2023-03-06 00:04:17] [ INFO ] [CategoriaService:25] Se inició el listado de todas las Categorias
+[2023-03-06 00:04:42] [ INFO ] [ProductoService:32] Se inició el listado de todas las productos
+[2023-03-06 00:06:47] [ INFO ] [CategoriaService:50] Se inició una operación de búsqueda de la categoria con id=3
+[2023-03-06 00:06:47] [ WARN ] [CategoriaService:44] Se realizo una operación de eliminación de la categoria con id= 3
+[2023-03-06 00:06:51] [ INFO ] [ProductoService:32] Se inició el listado de todas las productos

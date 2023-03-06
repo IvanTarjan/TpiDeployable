@@ -18,7 +18,7 @@ public class ProductoController {
     private ProductoService productoService;
 
     @GetMapping("/{id}")
-    public ResponseEntity<Producto> buscarProductoPorID(@PathVariable Long id){
+    public ResponseEntity<Producto> buscarProductoPorID(@PathVariable Long id) throws ResourceNotFoundException {
         Optional<Producto> productoBuscado= productoService.buscarProductoXId(id);
         if (productoBuscado.isPresent()){
             return ResponseEntity.ok(productoBuscado.get());
@@ -39,19 +39,21 @@ public class ProductoController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> eliminarProducto(@PathVariable Long id) throws ResourceNotFoundException {
-        productoService.eliminarProducto(id);
-        return ResponseEntity.ok("Se eliminó la producto con id= "+id);
+    public ResponseEntity<String> eliminarProducto(@PathVariable Long id){
+        try {
+            productoService.eliminarProducto(id);
+            return ResponseEntity.ok("Se eliminó la producto con id= "+id);
+        } catch (ResourceNotFoundException e) {
+            return ResponseEntity.badRequest().body("No se pudo borrar el producto con id= "+id);
+        }
     }
 
     @PutMapping
     public ResponseEntity<String> actualizarProducto(@RequestBody Producto producto){
-        Optional<Producto> productoAActualizar=productoService.buscarProductoXId(producto.getId());
-        if (productoAActualizar.isPresent()){
+        try {
             productoService.actualizarProducto(producto);
-            return ResponseEntity.ok("La producto con el id= "+producto.getId()+" fue actualizada");
-        }
-        else{
+            return ResponseEntity.ok("Se actualizo el producto con id= "+producto.getId());
+        } catch (ResourceNotFoundException e) {
             return ResponseEntity.badRequest().body("No se puede actualizar una producto que no existe en la base de datos");
         }
     }

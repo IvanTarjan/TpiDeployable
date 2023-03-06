@@ -1,5 +1,6 @@
 package Grupo2.BackIntegrador.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,8 +21,8 @@ public class Politica {
     @Column
     private String descripcion;
 
-    @ManyToOne
-    @JoinColumn(name = "producto_id",referencedColumnName = "id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JsonIgnoreProperties("politica")
     private Producto producto;
 
 }
