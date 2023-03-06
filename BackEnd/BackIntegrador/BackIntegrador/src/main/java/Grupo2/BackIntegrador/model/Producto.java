@@ -43,6 +43,14 @@ public class Producto {
     @JsonIgnoreProperties("producto")
     private Set<Politica> politica= new HashSet<>();
 
+    @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL , fetch = FetchType.EAGER)
+    @JsonIgnoreProperties("producto")
+    private Set<Reserva> Reserva= new HashSet<>();
+
+    @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL , fetch = FetchType.EAGER)
+    @JsonIgnoreProperties("producto")
+    private Set<Puntuacion> Puntuacion= new HashSet<>();
+
     //Many to one
     @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH})
     @JoinColumn(name = "categoria_id")
@@ -62,19 +70,6 @@ public class Producto {
             inverseJoinColumns = { @JoinColumn(name = "caracteristica_id") })
     private Set<Caracteristica> caracteristica = new HashSet<>();
 
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JsonIgnoreProperties("producto")
-    @JoinTable(name = "producto_Reserva",
-            joinColumns = { @JoinColumn(name = "producto_id") },
-            inverseJoinColumns = { @JoinColumn(name = "reserva_id") })
-    private Set<Reserva> reserva = new HashSet<>();
-
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JsonIgnoreProperties("producto")
-    @JoinTable(name = "producto_puntuacion",
-            joinColumns = { @JoinColumn(name = "producto_id") },
-            inverseJoinColumns = { @JoinColumn(name = "puntuacion_id") })
-    private Set<Puntuacion> puntuacion = new HashSet<>();
 
     public void addCaracteristica (Caracteristica caracteristica){
         this.caracteristica.add(caracteristica);

@@ -7,8 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
+
 
 @Entity
 @Getter
@@ -24,19 +23,9 @@ public class Puntuacion {
     @Column
     private Integer puntiacion;
 
-    @ManyToMany(fetch = FetchType.LAZY,
-            cascade =
-                    {CascadeType.MERGE},
-            mappedBy = "puntuacion")
-    @JsonIgnoreProperties("puntuacion")
-    private Set<Producto> producto = new HashSet<>();
-
-    @ManyToMany(fetch = FetchType.LAZY,
-            cascade =
-                    {CascadeType.MERGE},
-            mappedBy = "puntuacion")
-    @JsonIgnoreProperties("puntuacion")
-    private Set<Usuario> usuario = new HashSet<>();
+    @ManyToOne
+    @JsonIgnoreProperties("Puntuacion")
+    private Producto producto;
 
 
 }

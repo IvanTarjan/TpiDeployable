@@ -27,19 +27,9 @@ public class Reserva {
     @Column
     private LocalDate fecha_fin;
 
-    @ManyToMany(fetch = FetchType.LAZY,
-            cascade =
-                    {CascadeType.MERGE},
-            mappedBy = "reserva")
+    @ManyToOne
     @JsonIgnoreProperties("reserva")
-    private Set<Producto> producto = new HashSet<>();
-
-    @ManyToMany(fetch = FetchType.LAZY,
-            cascade =
-                    {CascadeType.MERGE},
-            mappedBy = "reserva")
-    @JsonIgnoreProperties("reserva")
-    private Set<Usuario> usuario = new HashSet<>();
+    private Producto producto;
 
 
 }
