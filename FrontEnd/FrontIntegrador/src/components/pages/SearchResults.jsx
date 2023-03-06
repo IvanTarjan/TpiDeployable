@@ -5,20 +5,19 @@ import VehicleCard from '../commons/VehicleCard'
 import { BodyContext } from '../contexts/BodyContext'
 import styles from '../styles/Body.module.css'
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import { format } from 'date-fns'
 
 const SearchResults = () => {
   const { cars, selectedCity, reservations } = useContext(BodyContext)
   const location = useLocation()
-  const [date, setDate] = useState(location.state.date)
+  const [date, setDate] = useState(location.state)
 
   const navigate = useNavigate()
   const handleClick = () => {
     navigate('/')
   }
 
-  const startDay = format(date[0].startDate, 'dd/MM/yyyy')
-  const endDay = format(date[0].endDate, 'dd/MM/yyyy')
+  const startDay = date[0]
+  const endDay = date[1]
 
   const filterCarsByCity = (city) => {
     const availableCars = []
@@ -33,19 +32,19 @@ const SearchResults = () => {
   }
   const availableCarsByCity = filterCarsByCity(selectedCity)
 
-  const removeReservedCars = (avaCars, reservedCars, start, end) => {
-    for (let i = 0; i < avaCars.length; i++) {
-      for (let j = 0; j < reservedCars.length; j++) {
-        if (avaCars[i].id === reservedCars[j].car_id) {
-          if (start <= reservedCars[j].startDate && end >= reservedCars[j].endDate) {
-            avaCars.splice(avaCars.indexOf(avaCars[i]), 1)
-          }
-        }
-      }
-    }
-    return avaCars
-  }
-  const availableCarsByDate = removeReservedCars(availableCarsByCity, reservations, startDay, endDay)
+  // const removeReservedCars = (avaCars, reservedCars, start, end) => {
+  //   for (let i = 0; i < avaCars.length; i++) {
+  //     for (let j = 0; j < reservedCars.length; j++) {
+  //       if (avaCars[i].id === reservedCars[j].car_id) {
+  //         if (start <= reservedCars[j].startDate && end >= reservedCars[j].endDate) {
+  //           avaCars.splice(avaCars.indexOf(avaCars[i]), 1)
+  //         }
+  //       }
+  //     }
+  //   }
+  //   return avaCars
+  // }
+  // const availableCarsByDate = removeReservedCars(availableCarsByCity, reservations, startDay, endDay)
 
   return (
     <>
@@ -59,7 +58,7 @@ const SearchResults = () => {
       </div>
 
       <div className={styles.homeContainer}>
-        {availableCarsByDate.map(car => (
+        {availableCarsByCity.map(car => (
           <VehicleCard
             key={car.id}
             car={car}
