@@ -941,15 +941,29 @@
       "id": 1,
       "car_id": 1,
       "client_id": 1,
-      "startDate": "25/02/2023",
-      "endDate": "28/02/2023"
+      "startDate": "10/03/2023",
+      "endDate": "15/03/2023"
     },
     {
       "id": 2,
-      "car_id": 2,
+      "car_id": 1,
       "client_id": 2,
-      "startDate": "02/03/2023",
-      "endDate": "09/03/2023"
+      "startDate": "20/03/2023",
+      "endDate": "25/03/2023"
+    },
+    {
+      "id": 3,
+      "car_id": 10,
+      "client_id": 1,
+      "startDate": "01/04/2023",
+      "endDate": "05/04/2023"
+    },
+    {
+      "id": 4,
+      "car_id": 10,
+      "client_id": 2,
+      "startDate": "10/04/2023",
+      "endDate": "15/04/2023"
     }
   ],
   "categorias": [
