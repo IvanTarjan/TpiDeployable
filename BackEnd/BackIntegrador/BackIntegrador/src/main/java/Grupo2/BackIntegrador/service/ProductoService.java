@@ -52,21 +52,18 @@ public class ProductoService {
     }
 
     public void eliminarProducto(Long id) throws ResourceNotFoundException {
-        buscarProductoXId(id);
-        productoRepository.deleteById(id);
-        LOGGER.warn("Se realizo una operación de eliminación del producto con" + "id="+id);
+        Optional<Producto> productoAEliminar = buscarProductoXId(id);
+        if (productoAEliminar.isPresent()){
+            productoRepository.deleteById(id);
+            LOGGER.warn("Se realizo una operación de eliminación del producto con" + "id="+id);
+        } else {
+            throw new ResourceNotFoundException("No se pudo eliminar el producto con id = "+id+" no se pudo encontrar en la base de datos");
+        }
     }
 
     public Optional<Producto> buscarProductoXId(Long id) throws ResourceNotFoundException {
-        Optional<Producto> productoABuscar = productoRepository.findById(id);
-        if (productoABuscar.isPresent()){
             LOGGER.info("Se inició una operación de búsqueda de la producto con id="+id);
-            return productoABuscar;
-        } else {
-            throw new ResourceNotFoundException("No se encontro el producto con id = "+id);
-        }
-
-
+            return productoRepository.findById(id);
     }
 
     public List<Producto> buscarProductoPorCategoria(Categoria categoria) {
