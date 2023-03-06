@@ -8,31 +8,50 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { format } from 'date-fns'
 
 const SearchResults = () => {
-  const { cars, selectedCity } = useContext(BodyContext)
+  const { cars, selectedCity, reservations } = useContext(BodyContext)
   const location = useLocation()
   const [date, setDate] = useState(location.state.date)
-
-  const filterCarsByCity = (city) => {
-    const availableCities = []
-    for (let i = 0; i < cars.length; i++) {
-      for (let j = 0; j < cars[i].locations.length; j++) {
-        if (cars[i].locations[j] == city) {
-          availableCities.push(cars[i])
-        }
-      }
-    }
-    return availableCities
-  }
 
   const navigate = useNavigate()
   const handleClick = () => {
     navigate('/')
   }
+
+  const startDay = format(date[0].startDate, 'dd/MM/yyyy')
+  const endDay = format(date[0].endDate, 'dd/MM/yyyy')
+
+  const filterCarsByCity = (city) => {
+    const availableCars = []
+    for (let i = 0; i < cars.length; i++) {
+      for (let j = 0; j < cars[i].locations.length; j++) {
+        if (cars[i].locations[j] == city) {
+          availableCars.push(cars[i])
+        }
+      }
+    }
+    return availableCars
+  }
+  const availableCarsByCity = filterCarsByCity(selectedCity)
+
+  const removeReservedCars = (avaCars, reservedCars, start, end) => {
+    for (let i = 0; i < avaCars.length; i++) {
+      for (let j = 0; j < reservedCars.length; j++) {
+        if (avaCars[i].id === reservedCars[j].car_id) {
+          if (start <= reservedCars[j].startDate && end >= reservedCars[j].endDate) {
+            avaCars.splice(avaCars.indexOf(avaCars[i]), 1)
+          }
+        }
+      }
+    }
+    return avaCars
+  }
+  const availableCarsByDate = removeReservedCars(availableCarsByCity, reservations, startDay, endDay)
+
   return (
     <>
       <div className={styles.headerCategory}>
         <div>
-          <h1 style={{ paddingTop: '0' }}>Vehiculos en {selectedCity} entre los dias {format(date[0].startDate, 'dd/MM/yyyy')} y {format(date[0].endDate, 'dd/MM/yyyy')}</h1>
+          <h1 style={{ paddingTop: '0' }}>Vehiculos en {selectedCity} entre los dias {startDay} y {endDay}</h1>
         </div>
         <IconButton sx={{ width: 75 }} onClick={handleClick}>
           <ArrowBackIosNewIcon fontSize='large' color='action' />
@@ -40,7 +59,7 @@ const SearchResults = () => {
       </div>
 
       <div className={styles.homeContainer}>
-        {filterCarsByCity(selectedCity).map(car => (
+        {availableCarsByDate.map(car => (
           <VehicleCard
             key={car.id}
             car={car}
