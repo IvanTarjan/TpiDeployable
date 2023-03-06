@@ -68,9 +68,13 @@ public class ProductoService {
 
 
     }
-
     public List<Producto> buscarProductoPorCategoria(Categoria categoria) {
         LOGGER.info("Se inició euna busqueda de todos los productos con categoria id=" + categoria.getId());
         return productoRepository.findByCategoria(categoria);
     }
+
+//    private Integer calcularPromedio(Producto producto){
+//        Integer promedio = 0;
+//        if(producto.)
+//    }
 }

@@ -62,6 +62,13 @@ public class Producto {
             inverseJoinColumns = { @JoinColumn(name = "caracteristica_id") })
     private Set<Caracteristica> caracteristica = new HashSet<>();
 
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JsonIgnoreProperties("producto")
+    @JoinTable(name = "producto_Reserva",
+            joinColumns = { @JoinColumn(name = "producto_id") },
+            inverseJoinColumns = { @JoinColumn(name = "reserva_id") })
+    private Set<Reserva> reserva = new HashSet<>();
+
     public void addCaracteristica (Caracteristica caracteristica){
         this.caracteristica.add(caracteristica);
         caracteristica.getProducto().add(this);
