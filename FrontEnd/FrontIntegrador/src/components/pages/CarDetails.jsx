@@ -13,7 +13,6 @@ import Features from '../commons/Features'
 import GalleryGrid from '../commons/GalleryGrid'
 import Gallery from '../commons/Gallery'
 import MapView from '../commons/MapView'
-import Availability from '../commons/Availability'
 
 const CarDetails = () => {
   const { id } = useParams()
@@ -55,8 +54,7 @@ const CarDetails = () => {
         <br />
         <Features selectedCar={selectedCar} />
 
-        {/* <DateAvailability id={id} /> */}
-        <Availability />
+        <DateAvailability id={id} />
 
         <h1>¿Dónde vas a estar?</h1>
         <hr className={styles.line} />
