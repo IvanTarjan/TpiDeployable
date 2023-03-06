@@ -20,7 +20,7 @@ public class Imagen {
     @Column
     private String url_img;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JsonIgnoreProperties("imagen")
     private Producto producto;
 
