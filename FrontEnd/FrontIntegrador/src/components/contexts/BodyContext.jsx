@@ -11,6 +11,7 @@ const BodyContextProvider = ({ children }) => {
   const [allDates, setAllDates] = useState([])
   const [categorias, setCategorias] = useState([])
   const [selectedCity, setSelectedCity] = useState(null)
+  const [reservations, setReservations] = useState([])
 
   useEffect(() => {
     axios.get("http://localhost:5000/cars")
@@ -27,6 +28,12 @@ const BodyContextProvider = ({ children }) => {
   useEffect(() => {
     axios.get("http://localhost:5000/categorias")
       .then(res => setCategorias(res.data))
+      .catch(err => console.log(err))
+  }, [])
+
+  useEffect(() => {
+    axios.get("http://localhost:5000/reservations")
+      .then(res => setReservations(res.data))
       .catch(err => console.log(err))
   }, [])
 
@@ -47,7 +54,9 @@ const BodyContextProvider = ({ children }) => {
     categorias,
     setCategorias,
     selectedCity,
-    setSelectedCity
+    setSelectedCity,
+    reservations,
+    setReservations
   }
 
   return (
