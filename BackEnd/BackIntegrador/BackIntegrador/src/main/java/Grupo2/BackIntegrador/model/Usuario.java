@@ -35,4 +35,11 @@ public class Usuario {
             joinColumns = { @JoinColumn(name = "usuario_id") },
             inverseJoinColumns = { @JoinColumn(name = "reserva_id") })
     private Set<Reserva> reserva = new HashSet<>();
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JsonIgnoreProperties("usuario")
+    @JoinTable(name = "usuario_Puntuacion",
+            joinColumns = { @JoinColumn(name = "usuario_id") },
+            inverseJoinColumns = { @JoinColumn(name = "puntuacion_id") })
+    private Set<Puntuacion> puntuacion = new HashSet<>();
 }
