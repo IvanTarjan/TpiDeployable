@@ -23,8 +23,6 @@ public class Reserva {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column
-    private Usuario usuario;
-    @Column
     private LocalDate fecha_inicio;
     @Column
     private LocalDate fecha_fin;
