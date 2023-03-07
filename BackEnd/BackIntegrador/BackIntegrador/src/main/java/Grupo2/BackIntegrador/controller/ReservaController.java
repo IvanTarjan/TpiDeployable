@@ -37,7 +37,11 @@ public class ReservaController {
 
     @PostMapping
     public ResponseEntity<Reserva> registrarReserva(@RequestBody Reserva reserva){
-        return ResponseEntity.ok(reservaService.guardarReserva(reserva));
+        try {
+            return ResponseEntity.ok(reservaService.guardarReserva(reserva));
+        } catch (ResourceNotFoundException e) {
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @DeleteMapping("/{id}")
@@ -48,12 +52,10 @@ public class ReservaController {
 
     @PutMapping
     public ResponseEntity<String> actualizarReserva(@RequestBody Reserva reserva){
-        Optional<Reserva> reservaAActualizar=reservaService.buscarReservaXId(reserva.getId());
-        if (reservaAActualizar.isPresent()){
+        try {
             reservaService.actualizarReserva(reserva);
             return ResponseEntity.ok("La reserva con el id= "+reserva.getId()+" fue actualizada");
-        }
-        else{
+        } catch (ResourceNotFoundException e) {
             return ResponseEntity.badRequest().body("No se puede actualizar una reserva que no existe en la base de datos");
         }
     }

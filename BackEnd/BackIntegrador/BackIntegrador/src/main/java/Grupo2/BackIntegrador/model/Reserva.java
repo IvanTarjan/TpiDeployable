@@ -1,6 +1,7 @@
 package Grupo2.BackIntegrador.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIncludeProperties;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,16 +24,16 @@ public class Reserva {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column
-    private LocalDate fecha_inicio;
+    private String fecha_inicio;
     @Column
-    private LocalDate fecha_fin;
+    private String fecha_fin;
 
     @ManyToOne
-    @JsonIgnoreProperties("reserva")
+    @JsonIncludeProperties("id")
     private Producto producto;
 
     @ManyToOne
-    @JsonIgnoreProperties("reserva")
+    @JsonIncludeProperties("id")
     private Usuario usuario;
 
 }

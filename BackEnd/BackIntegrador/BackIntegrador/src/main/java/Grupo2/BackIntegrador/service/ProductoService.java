@@ -3,10 +3,7 @@ package Grupo2.BackIntegrador.service;
 import Grupo2.BackIntegrador.Exception.ResourceNotFoundException;
 
 
-import Grupo2.BackIntegrador.model.Categoria;
-import Grupo2.BackIntegrador.model.Imagen;
-import Grupo2.BackIntegrador.model.Politica;
-import Grupo2.BackIntegrador.model.Producto;
+import Grupo2.BackIntegrador.model.*;
 import Grupo2.BackIntegrador.repository.ProductoRepository;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 public class ProductoService {
@@ -51,12 +49,16 @@ public class ProductoService {
     }
 
     public void actualizarProducto(Producto producto) throws ResourceNotFoundException {
-        buscarProductoXId(producto.getId());
-        Producto productoTemp = productoRepository.save(producto);
-        imagenService.guardarImagenes(producto.getImagen(), producto);
-        politicaService.guardarPoliticas(producto.getPolitica(), producto);
-        LOGGER.info("Se inició una operación de actualización de la producto con id="+
-                producto.getId());
+        if (buscarProductoXId(producto.getId()).isPresent()){
+            productoRepository.save(producto);
+            imagenService.guardarImagenes(producto.getImagen(), producto);
+            politicaService.guardarPoliticas(producto.getPolitica(), producto);
+            LOGGER.info("Se inició una operación de actualización de la producto con id="+
+                    producto.getId());
+        } else {
+            throw new ResourceNotFoundException("No se actualizo el producto porque no se encontro en la base de datos, el id es = "+producto.getId());
+        }
+
     }
 
     public void eliminarProducto(Long id) throws ResourceNotFoundException {
@@ -84,4 +86,20 @@ public class ProductoService {
 //        Integer promedio = 0;
 //        if(producto.)
 //    }
+
+    public void guardarProductosEnUbicacion(Set<Producto> productoSet, Ubicacion ubicacion){
+        if (productoSet == null) return;
+        for (Producto producto : productoSet) {
+            producto.setUbicacion(ubicacion);
+            productoRepository.save(producto);
+        }
+    }
+
+    public void guardarProductosEnCategoria(Set<Producto> productoSet, Categoria categoria){
+        if (productoSet == null) return;
+        for (Producto producto : productoSet) {
+            producto.setCategoria(categoria);
+            productoRepository.save(producto);
+        }
+    }
 }

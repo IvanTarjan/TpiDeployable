@@ -60,11 +60,11 @@ public class PuntuacionService {
             throw new ResourceNotFoundException("No se pudo eliminar la puntuacion con id = "+id+", no se pudo encontrar en la base de datos");
         }
     }
-    public Puntuacion actualizarPuntuacion(Puntuacion puntuacion) throws ResourceNotFoundException {
+    public void actualizarPuntuacion(Puntuacion puntuacion) throws ResourceNotFoundException {
         Optional<Puntuacion> puntuacionAActualizar = buscarPuntuacionXId(puntuacion.getId());
         if (puntuacionAActualizar.isPresent()){
             LOGGER.info("Se actualizo la puntuacion con id= "+ puntuacion.getId());
-            return puntuacionRepository.save(puntuacion);
+            puntuacionRepository.save(puntuacion);
         } else {
             throw new ResourceNotFoundException("No se pudo actualizar la puntuacion con id = "+puntuacion.getId()+", no se pudo encontrar en la base de datos");
         }

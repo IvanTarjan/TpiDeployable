@@ -32,10 +32,16 @@ public class UsuarioService {
         return usuarioRepository.save(usuario);
     }
 
-    public void actualizarUsuario(Usuario usuario){
-        LOGGER.info("Se inició una operación de actualización de un usuario con id="+
-                usuario.getId());
-        usuarioRepository.save(usuario);
+    public void actualizarUsuario(Usuario usuario) throws ResourceNotFoundException {
+        Optional<Usuario> usuarioAActualizar = buscarUsuarioXId(usuario.getId());
+        if (usuarioAActualizar.isPresent()){
+            LOGGER.info("Se inició una operación de actualización de un usuario con id="+
+                    usuario.getId());
+            usuarioRepository.save(usuario);
+        } else {
+            throw new ResourceNotFoundException("el usuario con id= "+usuario.getId()+" no existe, no se puede actualizar");
+        }
+
     }
 
     public void eliminarUsuario(Long id) throws ResourceNotFoundException {
@@ -49,7 +55,7 @@ public class UsuarioService {
         }
     }
 
-    public Optional<Usuario> buscarUsuarioXId(Long id) throws ResourceNotFoundException {
+    public Optional<Usuario> buscarUsuarioXId(Long id){
         LOGGER.info("Se inicio la busqueda de un usuario con id= "+ id);
         return usuarioRepository.findById(id);
     }

@@ -46,13 +46,11 @@ public class UbicacionController {
     }
 
     @PutMapping
-    public ResponseEntity<String> actualizarCaracteristica(@RequestBody Ubicacion ubicacion){
-        Optional<Ubicacion> UbicacionAActualizar=ubicacionService.buscarUbicacionXId(ubicacion.getId());
-        if (UbicacionAActualizar.isPresent()){
+    public ResponseEntity<String> actualizarUbicacion(@RequestBody Ubicacion ubicacion){
+        try {
             ubicacionService.actualizarUbicacion(ubicacion);
             return ResponseEntity.ok("La ubicacion con el id= "+ubicacion.getId()+" fue actualizada");
-        }
-        else{
+        } catch (ResourceNotFoundException e) {
             return ResponseEntity.badRequest().body("No se puede actualizar una ubicacion que no existe en la base de datos");
         }
     }

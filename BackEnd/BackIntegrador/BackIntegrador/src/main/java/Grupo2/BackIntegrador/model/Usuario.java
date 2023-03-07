@@ -29,11 +29,11 @@ public class Usuario {
     @Column
     private String password;
 
-    @OneToMany(mappedBy = "usuario", cascade = {CascadeType.MERGE, CascadeType.DETACH} , fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "usuario", cascade = {CascadeType.MERGE, CascadeType.DETACH, CascadeType.REMOVE} , fetch = FetchType.EAGER)
     @JsonIgnoreProperties("usuario")
     private Set<Reserva> reserva= new HashSet<>();
 
-    @OneToMany(mappedBy = "usuario", cascade = {CascadeType.MERGE, CascadeType.DETACH} , fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "usuario", cascade = {CascadeType.MERGE, CascadeType.DETACH, CascadeType.REMOVE} , fetch = FetchType.EAGER)
     @JsonIgnoreProperties("usuario")
     private Set<Puntuacion> puntuacion= new HashSet<>();
 

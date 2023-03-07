@@ -809,3 +809,81 @@
 [2023-03-07 14:23:48] [ INFO ] [UsuarioService:53] Se inicio la busqueda de un usuario con id= 1
 [2023-03-07 14:23:48] [ WARN ] [UsuarioService:44] Se realizo una operación de eliminación de los Usuarios con id= 1
 [2023-03-07 14:23:52] [ INFO ] [UsuarioService:53] Se inicio la busqueda de un usuario con id= 1
+[2023-03-07 14:43:36] [ INFO ] [UsuarioService:53] Se inicio la busqueda de un usuario con id= 1
+[2023-03-07 14:43:42] [ INFO ] [UsuarioService:53] Se inicio la busqueda de un usuario con id= 1
+[2023-03-07 14:43:42] [ WARN ] [UsuarioService:44] Se realizo una operación de eliminación de los Usuarios con id= 1
+[2023-03-07 14:44:40] [ INFO ] [UsuarioService:53] Se inicio la busqueda de un usuario con id= 1
+[2023-03-07 14:44:40] [ WARN ] [UsuarioService:44] Se realizo una operación de eliminación de los Usuarios con id= 1
+[2023-03-07 14:44:44] [ INFO ] [UsuarioService:53] Se inicio la busqueda de un usuario con id= 1
+[2023-03-07 14:49:44] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 1
+[2023-03-07 14:50:15] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
+[2023-03-07 14:50:18] [ INFO ] [UsuarioService:30] Se inició una operación de guardado de los usuarios con nombre=: ivan
+[2023-03-07 14:50:23] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
+[2023-03-07 15:13:14] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
+[2023-03-07 15:13:23] [ INFO ] [PuntuacionService:33] Se inició una operación de guardado de la r eserva con id=: null
+[2023-03-07 15:13:23] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=1
+[2023-03-07 15:13:23] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 1
+[2023-03-07 15:13:28] [ INFO ] [ProductoService:34] Se inició el listado de todas las productos
+[2023-03-07 15:13:33] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
+[2023-03-07 15:13:42] [ INFO ] [PuntuacionService:33] Se inició una operación de guardado de la r eserva con id=: null
+[2023-03-07 15:13:42] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=1
+[2023-03-07 15:13:42] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 2
+[2023-03-07 15:13:47] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 1
+[2023-03-07 15:13:47] [ ERROR] [GlobalExceptions:14] Error, el sistema detectó un problema, se registro el siguiente mensaje: el usuario con id= 1 no existe
+[2023-03-07 15:13:54] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 2
+[2023-03-07 15:13:54] [ WARN ] [UsuarioService:50] Se realizo una operación de eliminación de los Usuarios con id= 2
+[2023-03-07 15:13:56] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 1
+[2023-03-07 15:14:01] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 2
+[2023-03-07 15:14:03] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
+[2023-03-07 15:14:08] [ INFO ] [ProductoService:34] Se inició el listado de todas las productos
+[2023-03-07 15:15:08] [ INFO ] [UsuarioService:30] Se inició una operación de guardado de los usuarios con nombre=: ivan
+[2023-03-07 15:15:28] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
+[2023-03-07 15:15:37] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 3
+[2023-03-07 15:15:37] [ INFO ] [UsuarioService:38] Se inició una operación de actualización de un usuario con id=3
+[2023-03-07 15:15:41] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
+[2023-03-07 15:16:21] [ INFO ] [UbicacionService:25] Se inició el listado de todas las ubicacion
+[2023-03-07 15:17:05] [ INFO ] [UbicacionService:56] Se inició una operación de búsqueda de la ubicacion con id=1
+[2023-03-07 15:19:33] [ INFO ] [UbicacionService:56] Se inició una operación de búsqueda de la ubicacion con id=1
+[2023-03-07 15:19:33] [ INFO ] [UbicacionService:36] Se inició una operación de actualización de la ciudad con id=1
+[2023-03-07 15:19:38] [ INFO ] [UbicacionService:56] Se inició una operación de búsqueda de la ubicacion con id=1
+[2023-03-07 15:19:55] [ INFO ] [UbicacionService:56] Se inició una operación de búsqueda de la ubicacion con id=1
+[2023-03-07 15:19:55] [ INFO ] [UbicacionService:56] Se inició una operación de búsqueda de la ubicacion con id=1
+[2023-03-07 15:19:58] [ INFO ] [UbicacionService:25] Se inició el listado de todas las ubicacion
+[2023-03-07 15:21:15] [ INFO ] [UbicacionService:25] Se inició el listado de todas las ubicacion
+[2023-03-07 15:21:18] [ INFO ] [UbicacionService:30] Se inició una operación de guardado de la ciudad con id=: null
+[2023-03-07 15:21:24] [ INFO ] [ProductoService:48] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-07 15:21:28] [ INFO ] [UbicacionService:25] Se inició el listado de todas las ubicacion
+[2023-03-07 15:21:34] [ INFO ] [UbicacionService:56] Se inició una operación de búsqueda de la ubicacion con id=2
+[2023-03-07 15:21:47] [ INFO ] [UbicacionService:56] Se inició una operación de búsqueda de la ubicacion con id=2
+[2023-03-07 15:21:47] [ INFO ] [UbicacionService:36] Se inició una operación de actualización de la ciudad con id=2
+[2023-03-07 15:21:52] [ INFO ] [UbicacionService:25] Se inició el listado de todas las ubicacion
+[2023-03-07 15:41:07] [ INFO ] [UbicacionService:26] Se inició el listado de todas las ubicacion
+[2023-03-07 15:41:15] [ INFO ] [ProductoService:46] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-07 15:41:20] [ INFO ] [UbicacionService:26] Se inició el listado de todas las ubicacion
+[2023-03-07 15:41:33] [ INFO ] [UbicacionService:63] Se inició una operación de búsqueda de la ubicacion con id=2
+[2023-03-07 15:41:33] [ INFO ] [UbicacionService:40] Se inició una operación de actualización de la ciudad con id=2
+[2023-03-07 15:41:37] [ INFO ] [UbicacionService:26] Se inició el listado de todas las ubicacion
+[2023-03-07 15:41:56] [ INFO ] [ProductoService:32] Se inició el listado de todas las productos
+[2023-03-07 15:42:16] [ INFO ] [UbicacionService:63] Se inició una operación de búsqueda de la ubicacion con id=2
+[2023-03-07 15:42:16] [ INFO ] [UbicacionService:40] Se inició una operación de actualización de la ciudad con id=2
+[2023-03-07 15:42:19] [ INFO ] [UbicacionService:26] Se inició el listado de todas las ubicacion
+[2023-03-07 15:42:25] [ INFO ] [UbicacionService:26] Se inició el listado de todas las ubicacion
+[2023-03-07 15:42:30] [ INFO ] [ProductoService:32] Se inició el listado de todas las productos
+[2023-03-07 15:42:51] [ INFO ] [PuntuacionService:33] Se inició una operación de guardado de la r eserva con id=: null
+[2023-03-07 15:42:51] [ INFO ] [ProductoService:77] Se inició una operación de búsqueda de la producto con id=1
+[2023-03-07 15:42:51] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 2
+[2023-03-07 15:42:57] [ INFO ] [UsuarioService:30] Se inició una operación de guardado de los usuarios con nombre=: ivan
+[2023-03-07 15:43:05] [ INFO ] [PuntuacionService:33] Se inició una operación de guardado de la r eserva con id=: null
+[2023-03-07 15:43:05] [ INFO ] [ProductoService:77] Se inició una operación de búsqueda de la producto con id=3
+[2023-03-07 15:43:05] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 4
+[2023-03-07 15:43:08] [ INFO ] [PuntuacionService:33] Se inició una operación de guardado de la r eserva con id=: null
+[2023-03-07 15:43:08] [ INFO ] [ProductoService:77] Se inició una operación de búsqueda de la producto con id=3
+[2023-03-07 15:43:08] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 4
+[2023-03-07 15:43:09] [ INFO ] [PuntuacionService:33] Se inició una operación de guardado de la r eserva con id=: null
+[2023-03-07 15:43:09] [ INFO ] [ProductoService:77] Se inició una operación de búsqueda de la producto con id=3
+[2023-03-07 15:43:09] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 4
+[2023-03-07 15:43:10] [ INFO ] [PuntuacionService:33] Se inició una operación de guardado de la r eserva con id=: null
+[2023-03-07 15:43:10] [ INFO ] [ProductoService:77] Se inició una operación de búsqueda de la producto con id=3
+[2023-03-07 15:43:10] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 4
+[2023-03-07 15:43:15] [ INFO ] [PuntuacionService:43] Se inicio el listado de todas las puntuaciones
+[2023-03-07 15:43:21] [ INFO ] [ProductoService:32] Se inició el listado de todas las productos

@@ -14,11 +14,12 @@ import java.util.Optional;
 public class UbicacionService {
 
     private UbicacionRepository ubicacionRepository;
+    private ProductoService productoService;
     private static final Logger LOGGER=Logger.getLogger(UbicacionService.class);
     @Autowired
-    public UbicacionService(UbicacionRepository ubicacionRepository) {
-
+    public UbicacionService(UbicacionRepository ubicacionRepository, ProductoService productoService) {
         this.ubicacionRepository = ubicacionRepository;
+        this.productoService = productoService;
     }
 
     public List<Ubicacion> listarUbicacion() {
@@ -32,10 +33,16 @@ public class UbicacionService {
         return ubicacionRepository.save(ubicacion);
     }
 
-    public void actualizarUbicacion(Ubicacion ubicacion){
-        LOGGER.info("Se inició una operación de actualización de la ciudad con id="+
-                ubicacion.getId());
-        ubicacionRepository.save(ubicacion);
+    public void actualizarUbicacion(Ubicacion ubicacion) throws ResourceNotFoundException {
+        if (buscarUbicacionXId(ubicacion.getId()).isPresent()){
+            ubicacionRepository.save(ubicacion);
+            productoService.guardarProductosEnUbicacion(ubicacion.getProductos(), ubicacion);
+            LOGGER.info("Se inició una operación de actualización de la ciudad con id="+
+                    ubicacion.getId());
+        } else {
+            throw new ResourceNotFoundException("No se actualizo la ubicacion porque no se encontro en la base de datos, el id es = "+ubicacion.getId());
+        }
+
     }
 
     public void eliminarUbicacion(Long id) throws ResourceNotFoundException {

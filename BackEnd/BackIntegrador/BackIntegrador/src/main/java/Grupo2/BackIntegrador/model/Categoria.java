@@ -2,6 +2,7 @@ package Grupo2.BackIntegrador.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIncludeProperties;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -26,7 +27,7 @@ public class Categoria {
     private String url_imagen;
 
     @OneToMany(mappedBy = "categoria",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JsonIgnoreProperties("categoria")
+    @JsonIncludeProperties("id")
     private Set<Producto> productos= new HashSet<>();
 
     public void removeProducto (Producto producto){
