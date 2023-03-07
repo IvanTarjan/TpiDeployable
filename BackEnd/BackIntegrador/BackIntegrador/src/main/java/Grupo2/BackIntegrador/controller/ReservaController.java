@@ -1,6 +1,8 @@
 package Grupo2.BackIntegrador.controller;
 
 import Grupo2.BackIntegrador.Exception.ResourceNotFoundException;
+import Grupo2.BackIntegrador.model.Caracteristica;
+import Grupo2.BackIntegrador.model.Politica;
 import Grupo2.BackIntegrador.model.Reserva;
 import Grupo2.BackIntegrador.service.ReservaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,14 +21,13 @@ public class ReservaController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Reserva> buscarReservaPorID(@PathVariable Long id){
-        Optional<Reserva> reservaBuscada;
-        try {
-            reservaBuscada = reservaService.buscarReservaXId(id);
-            return ResponseEntity.ok(reservaBuscada.get());
-        } catch (ResourceNotFoundException e) {
+        Optional<Reserva> ReservaBuscada= reservaService.buscarReservaXId(id);
+        if (ReservaBuscada.isPresent()){
+            return ResponseEntity.ok(ReservaBuscada.get());
+        }
+        else{
             return ResponseEntity.notFound().build();
         }
-
     }
 
     @GetMapping
@@ -47,12 +48,12 @@ public class ReservaController {
 
     @PutMapping
     public ResponseEntity<String> actualizarReserva(@RequestBody Reserva reserva){
-        Optional<Reserva> reservaBuscada;
-        try {
-            reservaBuscada = reservaService.buscarReservaXId(reserva.getId());
+        Optional<Reserva> reservaAActualizar=reservaService.buscarReservaXId(reserva.getId());
+        if (reservaAActualizar.isPresent()){
             reservaService.actualizarReserva(reserva);
             return ResponseEntity.ok("La reserva con el id= "+reserva.getId()+" fue actualizada");
-        } catch (ResourceNotFoundException e) {
+        }
+        else{
             return ResponseEntity.badRequest().body("No se puede actualizar una reserva que no existe en la base de datos");
         }
     }
