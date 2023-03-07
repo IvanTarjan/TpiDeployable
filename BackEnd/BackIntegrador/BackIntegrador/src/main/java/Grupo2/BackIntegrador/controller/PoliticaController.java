@@ -2,6 +2,7 @@ package Grupo2.BackIntegrador.controller;
 
 import Grupo2.BackIntegrador.Exception.ResourceNotFoundException;
 import Grupo2.BackIntegrador.model.Politica;
+import Grupo2.BackIntegrador.model.Puntuacion;
 import Grupo2.BackIntegrador.service.PoliticaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -19,11 +20,10 @@ public class PoliticaController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Politica> buscarPoliticaPorID(@PathVariable Long id){
-        Optional<Politica> politicaBuscada;
-        try {
-            politicaBuscada = politicaService.buscarPoliticaXId(id);
-            return ResponseEntity.ok(politicaBuscada.get());
-        } catch (ResourceNotFoundException e) {
+        Optional<Politica> politicaABuscar = politicaService.buscarPoliticaXId(id);
+        if (politicaABuscar.isPresent()){
+            return ResponseEntity.ok(politicaABuscar.get());
+        }else {
             return ResponseEntity.notFound().build();
         }
 
@@ -47,12 +47,11 @@ public class PoliticaController {
 
     @PutMapping
     public ResponseEntity<String> actualizarPolitica(@RequestBody Politica politica){
-        Optional<Politica> politicaBuscada;
         try {
-            politicaBuscada = politicaService.buscarPoliticaXId(politica.getId());
             politicaService.actualizarPolitica(politica);
             return ResponseEntity.ok("La politica con el id= "+politica.getId()+" fue actualizada");
         } catch (ResourceNotFoundException e) {
             return ResponseEntity.badRequest().body("No se puede actualizar una politica que no existe en la base de datos");
         }
     }
+}

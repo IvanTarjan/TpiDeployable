@@ -31,5 +31,8 @@ public class Reserva {
     @JsonIgnoreProperties("reserva")
     private Producto producto;
 
+    @ManyToOne
+    @JsonIgnoreProperties("reserva")
+    private Usuario usuario;
 
 }

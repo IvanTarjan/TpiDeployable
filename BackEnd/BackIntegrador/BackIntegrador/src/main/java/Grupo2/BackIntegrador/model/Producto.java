@@ -43,11 +43,11 @@ public class Producto {
     @JsonIgnoreProperties("producto")
     private Set<Politica> politica= new HashSet<>();
 
-    @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL , fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "producto", cascade = {CascadeType.MERGE, CascadeType.REMOVE} , fetch = FetchType.EAGER)
     @JsonIgnoreProperties("producto")
     private Set<Reserva> reserva= new HashSet<>();
 
-    @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL , fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "producto", cascade = {CascadeType.MERGE, CascadeType.REMOVE} , fetch = FetchType.EAGER)
     @JsonIgnoreProperties("producto")
     private Set<Puntuacion> puntuacion= new HashSet<>();
 

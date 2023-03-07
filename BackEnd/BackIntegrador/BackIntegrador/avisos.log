@@ -731,3 +731,65 @@
 [2023-03-06 19:20:01] [ INFO ] [ProductoService:79] Se inició una operación de búsqueda de la producto con id=25
 [2023-03-06 19:20:36] [ INFO ] [ImagenService:35] Se inició una operación de guardado de la imagen con titulo: Autito
 [2023-03-06 19:20:41] [ INFO ] [ProductoService:79] Se inició una operación de búsqueda de la producto con id=25
+[2023-03-07 13:46:01] [ INFO ] [UsuarioService:30] Se inició una operación de guardado de los usuarios con nombre=: ivan
+[2023-03-07 13:46:14] [ INFO ] [ProductoService:34] Se inició el listado de todas las productos
+[2023-03-07 13:48:50] [ INFO ] [PuntuacionService:33] Se inició una operación de guardado de la r eserva con id=: null
+[2023-03-07 13:48:50] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=25
+[2023-03-07 13:48:50] [ INFO ] [UsuarioService:50] Se inició una operación de búsqueda de un usuario con id=1
+[2023-03-07 13:49:24] [ INFO ] [PuntuacionService:43] Se inicio el listado de todas las puntuaciones
+[2023-03-07 13:49:58] [ INFO ] [PuntuacionService:43] Se inicio el listado de todas las puntuaciones
+[2023-03-07 13:50:22] [ INFO ] [PuntuacionService:48] Se inicio la busqueda de una puntuacion con id= 1
+[2023-03-07 13:50:46] [ INFO ] [PuntuacionService:48] Se inicio la busqueda de una puntuacion con id= 1
+[2023-03-07 13:50:51] [ INFO ] [PuntuacionService:48] Se inicio la busqueda de una puntuacion con id= 1
+[2023-03-07 13:50:51] [ WARN ] [PuntuacionService:58] Se elimino la puntuacion con id= 1
+[2023-03-07 13:50:53] [ INFO ] [PuntuacionService:48] Se inicio la busqueda de una puntuacion con id= 1
+[2023-03-07 13:51:13] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
+[2023-03-07 13:51:17] [ INFO ] [PuntuacionService:33] Se inició una operación de guardado de la r eserva con id=: null
+[2023-03-07 13:51:17] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=25
+[2023-03-07 13:51:17] [ INFO ] [UsuarioService:50] Se inició una operación de búsqueda de un usuario con id=1
+[2023-03-07 13:51:20] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
+[2023-03-07 13:51:21] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
+[2023-03-07 13:51:44] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=25
+[2023-03-07 13:52:39] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
+[2023-03-07 13:53:31] [ INFO ] [PuntuacionService:43] Se inicio el listado de todas las puntuaciones
+[2023-03-07 13:53:48] [ INFO ] [PuntuacionService:48] Se inicio la busqueda de una puntuacion con id= 2
+[2023-03-07 13:53:48] [ INFO ] [PuntuacionService:66] Se actualizo la puntuacion con id= 2
+[2023-03-07 13:53:56] [ INFO ] [PuntuacionService:48] Se inicio la busqueda de una puntuacion con id= 1
+[2023-03-07 13:54:00] [ INFO ] [PuntuacionService:43] Se inicio el listado de todas las puntuaciones
+[2023-03-07 13:54:04] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
+[2023-03-07 13:54:43] [ INFO ] [UsuarioService:50] Se inició una operación de búsqueda de un usuario con id=1
+[2023-03-07 13:55:05] [ INFO ] [UsuarioService:50] Se inició una operación de búsqueda de un usuario con id=1
+[2023-03-07 14:01:23] [ INFO ] [UsuarioService:53] Se inicio la busqueda de un usuario con id= 1
+[2023-03-07 14:01:23] [ WARN ] [UsuarioService:44] Se realizo una operación de eliminación de los Usuarios con id= 1
+[2023-03-07 14:01:58] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=25
+[2023-03-07 14:01:58] [ WARN ] [ProductoService:68] Se realizo una operación de eliminación del producto con id=25
+[2023-03-07 14:02:02] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=25
+[2023-03-07 14:07:36] [ INFO ] [UsuarioService:30] Se inició una operación de guardado de los usuarios con nombre=: ivan
+[2023-03-07 14:08:07] [ INFO ] [UsuarioService:53] Se inicio la busqueda de un usuario con id= 1
+[2023-03-07 14:08:07] [ WARN ] [UsuarioService:44] Se realizo una operación de eliminación de los Usuarios con id= 1
+[2023-03-07 14:08:11] [ INFO ] [UsuarioService:53] Se inicio la busqueda de un usuario con id= 1
+[2023-03-07 14:08:16] [ INFO ] [UsuarioService:30] Se inició una operación de guardado de los usuarios con nombre=: ivan
+[2023-03-07 14:08:21] [ INFO ] [UsuarioService:53] Se inicio la busqueda de un usuario con id= 2
+[2023-03-07 14:08:28] [ INFO ] [CategoriaService:30] Se inició una operación de guardado de la categoria con titulo: asdf
+[2023-03-07 14:08:33] [ INFO ] [UbicacionService:30] Se inició una operación de guardado de la ciudad con id=: null
+[2023-03-07 14:08:55] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: titulongo
+[2023-03-07 14:09:29] [ INFO ] [ProductoService:48] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-07 14:09:51] [ INFO ] [PuntuacionService:33] Se inició una operación de guardado de la r eserva con id=: null
+[2023-03-07 14:09:51] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=3
+[2023-03-07 14:09:51] [ INFO ] [UsuarioService:53] Se inicio la busqueda de un usuario con id= 1
+[2023-03-07 14:10:00] [ INFO ] [PuntuacionService:33] Se inició una operación de guardado de la r eserva con id=: null
+[2023-03-07 14:10:00] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=3
+[2023-03-07 14:10:00] [ INFO ] [UsuarioService:53] Se inicio la busqueda de un usuario con id= 2
+[2023-03-07 14:10:04] [ INFO ] [UsuarioService:53] Se inicio la busqueda de un usuario con id= 1
+[2023-03-07 14:10:04] [ ERROR] [GlobalExceptions:14] Error, el sistema detectó un problema, se registro el siguiente mensaje: el usuario con id= 1 no existe
+[2023-03-07 14:10:11] [ INFO ] [UsuarioService:53] Se inicio la busqueda de un usuario con id= 2
+[2023-03-07 14:10:14] [ INFO ] [UsuarioService:53] Se inicio la busqueda de un usuario con id= 2
+[2023-03-07 14:10:14] [ WARN ] [UsuarioService:44] Se realizo una operación de eliminación de los Usuarios con id= 2
+[2023-03-07 14:13:05] [ INFO ] [UsuarioService:53] Se inicio la busqueda de un usuario con id= 2
+[2023-03-07 14:13:05] [ WARN ] [UsuarioService:44] Se realizo una operación de eliminación de los Usuarios con id= 2
+[2023-03-07 14:13:11] [ INFO ] [UsuarioService:53] Se inicio la busqueda de un usuario con id= 2
+[2023-03-07 14:13:24] [ INFO ] [UsuarioService:53] Se inicio la busqueda de un usuario con id= 2
+[2023-03-07 14:15:09] [ INFO ] [UsuarioService:53] Se inicio la busqueda de un usuario con id= 2
+[2023-03-07 14:15:14] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
+[2023-03-07 14:16:34] [ INFO ] [UsuarioService:53] Se inicio la busqueda de un usuario con id= 2
+[2023-03-07 14:16:48] [ INFO ] [ProductoService:34] Se inició el listado de todas las productos

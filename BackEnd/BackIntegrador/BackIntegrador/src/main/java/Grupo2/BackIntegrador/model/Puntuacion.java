@@ -1,6 +1,7 @@
 package Grupo2.BackIntegrador.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIncludeProperties;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,11 +22,15 @@ public class Puntuacion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column
-    private Integer puntiacion;
+    private Integer puntuacion;
 
     @ManyToOne
-    @JsonIgnoreProperties("Puntuacion")
+    @JsonIncludeProperties("id")
     private Producto producto;
+
+    @ManyToOne
+    @JsonIncludeProperties("id")
+    private Usuario usuario;
 
 
 }

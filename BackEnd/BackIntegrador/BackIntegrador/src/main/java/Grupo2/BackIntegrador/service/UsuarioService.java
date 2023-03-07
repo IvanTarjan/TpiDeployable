@@ -39,19 +39,18 @@ public class UsuarioService {
     }
 
     public void eliminarUsuario(Long id) throws ResourceNotFoundException {
-        buscarUsuarioXId(id);
-        usuarioRepository.deleteById(id);
-        LOGGER.warn("Se realizo una operación de eliminación de los Usuarios con id= "+id);
-    }
-
-    public Optional<Usuario> buscarUsuarioXId(Long id) throws ResourceNotFoundException {
-        Optional<Usuario> usuarioaABuscar=usuarioRepository.findById(id);
-        if (usuarioaABuscar.isPresent()){
-            LOGGER.info("Se inició una operación de búsqueda de un usuario con id="+id);
-            return usuarioaABuscar;
+        Optional<Usuario> usuarioaAEliminar=buscarUsuarioXId(id);
+        if (usuarioaAEliminar.isPresent()){
+            LOGGER.warn("Se realizo una operación de eliminación de los Usuarios con id= "+id);
+            usuarioRepository.deleteById(id);
         }
         else{
             throw new ResourceNotFoundException("el usuario con id= "+id+" no existe");
         }
+    }
+
+    public Optional<Usuario> buscarUsuarioXId(Long id) throws ResourceNotFoundException {
+        LOGGER.info("Se inicio la busqueda de un usuario con id= "+ id);
+        return usuarioRepository.findById(id);
     }
 }
