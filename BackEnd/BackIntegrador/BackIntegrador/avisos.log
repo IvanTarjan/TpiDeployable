@@ -793,3 +793,19 @@
 [2023-03-07 14:15:14] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
 [2023-03-07 14:16:34] [ INFO ] [UsuarioService:53] Se inicio la busqueda de un usuario con id= 2
 [2023-03-07 14:16:48] [ INFO ] [ProductoService:34] Se inició el listado de todas las productos
+[2023-03-07 14:22:54] [ INFO ] [UsuarioService:30] Se inició una operación de guardado de los usuarios con nombre=: ivan
+[2023-03-07 14:22:58] [ INFO ] [UsuarioService:53] Se inicio la busqueda de un usuario con id= 2
+[2023-03-07 14:22:59] [ INFO ] [UsuarioService:53] Se inicio la busqueda de un usuario con id= 1
+[2023-03-07 14:23:05] [ INFO ] [CategoriaService:30] Se inició una operación de guardado de la categoria con titulo: asdf
+[2023-03-07 14:23:07] [ INFO ] [UbicacionService:30] Se inició una operación de guardado de la ciudad con id=: null
+[2023-03-07 14:23:10] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: titulongo
+[2023-03-07 14:23:19] [ INFO ] [ProductoService:48] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-07 14:23:35] [ INFO ] [PuntuacionService:33] Se inició una operación de guardado de la r eserva con id=: null
+[2023-03-07 14:23:35] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=1
+[2023-03-07 14:23:35] [ INFO ] [UsuarioService:53] Se inicio la busqueda de un usuario con id= 1
+[2023-03-07 14:23:38] [ INFO ] [UsuarioService:53] Se inicio la busqueda de un usuario con id= 1
+[2023-03-07 14:23:45] [ INFO ] [UsuarioService:53] Se inicio la busqueda de un usuario con id= 2
+[2023-03-07 14:23:45] [ ERROR] [GlobalExceptions:14] Error, el sistema detectó un problema, se registro el siguiente mensaje: el usuario con id= 2 no existe
+[2023-03-07 14:23:48] [ INFO ] [UsuarioService:53] Se inicio la busqueda de un usuario con id= 1
+[2023-03-07 14:23:48] [ WARN ] [UsuarioService:44] Se realizo una operación de eliminación de los Usuarios con id= 1
+[2023-03-07 14:23:52] [ INFO ] [UsuarioService:53] Se inicio la busqueda de un usuario con id= 1
