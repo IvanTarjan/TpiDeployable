@@ -45,11 +45,11 @@ public class Producto {
 
     @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL , fetch = FetchType.EAGER)
     @JsonIgnoreProperties("producto")
-    private Set<Reserva> Reserva= new HashSet<>();
+    private Set<Reserva> reserva= new HashSet<>();
 
     @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL , fetch = FetchType.EAGER)
     @JsonIgnoreProperties("producto")
-    private Set<Puntuacion> Puntuacion= new HashSet<>();
+    private Set<Puntuacion> puntuacion= new HashSet<>();
 
     //Many to one
     @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH})
@@ -79,6 +79,28 @@ public class Producto {
     public void removeCaracteristica (Caracteristica caracteristica){
         this.caracteristica.remove(caracteristica);
         caracteristica.getProducto().remove(this);
+    }
+
+    public void removeImagen (Imagen imagen){
+        this.imagen.remove(imagen);
+        imagen.setProducto(null);
+    }
+
+
+
+    public void removePolitica (Politica politica){
+        this.politica.remove(politica);
+        politica.setProducto(null);
+    }
+
+    public void removeReserva(Reserva reserva){
+        this.reserva.remove(reserva);
+        reserva.setProducto(null);
+    }
+
+    public void removePuntuacion(Puntuacion puntuacion){
+        this.puntuacion.remove(puntuacion);
+        puntuacion.setProducto(null);
     }
 
 

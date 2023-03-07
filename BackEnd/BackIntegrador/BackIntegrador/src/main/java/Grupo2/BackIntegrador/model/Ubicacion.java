@@ -30,4 +30,9 @@ public class Ubicacion {
     @JsonIgnoreProperties("ubicacion")
     private Set<Producto> productos= new HashSet<>();
 
+    public void removeProducto (Producto producto){
+        this.productos.remove(producto);
+        producto.setUbicacion(null);
+    }
+
 }

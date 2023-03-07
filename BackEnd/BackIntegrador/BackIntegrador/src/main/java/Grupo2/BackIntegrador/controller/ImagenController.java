@@ -38,7 +38,7 @@ public class ImagenController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> borrarImagenPorId(@PathVariable long id){
+    public ResponseEntity<String> borrarImagenPorId(@PathVariable Long id){
         try {
             imagenService.eliminarImagen(id);
             return ResponseEntity.ok("Se eliminó la imagen con id= "+id);

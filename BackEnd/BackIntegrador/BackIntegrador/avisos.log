@@ -489,3 +489,245 @@
 [2023-03-06 16:27:23] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=7
 [2023-03-06 16:30:38] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=7
 [2023-03-06 16:32:20] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=7
+[2023-03-06 17:20:06] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 17:20:34] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=9
+[2023-03-06 17:20:48] [ INFO ] [ImagenService:30] Se inició el listado de todas las imagenes
+[2023-03-06 17:55:37] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 17:55:53] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-06 17:56:27] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=28
+[2023-03-06 17:57:30] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-06 17:57:30] [ INFO ] [ProductoService:50] Se inició una operación de actualización de la producto con id=10
+[2023-03-06 17:57:33] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-06 17:57:37] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-06 17:57:57] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-06 17:57:57] [ INFO ] [ProductoService:50] Se inició una operación de actualización de la producto con id=10
+[2023-03-06 17:58:01] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-06 17:58:24] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-06 17:58:58] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=28
+[2023-03-06 17:58:58] [ WARN ] [ImagenService:50] Se realizo una operación de eliminación de la imagen conid=28
+[2023-03-06 17:59:00] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-06 17:59:03] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-06 17:59:16] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=28
+[2023-03-06 17:59:20] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=28
+[2023-03-06 17:59:20] [ WARN ] [ImagenService:50] Se realizo una operación de eliminación de la imagen conid=28
+[2023-03-06 17:59:22] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=28
+[2023-03-06 18:02:16] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=28
+[2023-03-06 18:02:37] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=21
+[2023-03-06 18:02:42] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=21
+[2023-03-06 18:02:42] [ WARN ] [ImagenService:50] Se realizo una operación de eliminación de la imagen conid=21
+[2023-03-06 18:02:44] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=21
+[2023-03-06 18:03:30] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=21
+[2023-03-06 18:03:34] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=21
+[2023-03-06 18:03:34] [ WARN ] [ImagenService:50] Se realizo una operación de eliminación de la imagen conid=21
+[2023-03-06 18:03:37] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=21
+[2023-03-06 18:06:24] [ INFO ] [ImagenService:60] Se inició una operación de búsqueda de la imagen con id=21
+[2023-03-06 18:06:26] [ INFO ] [ImagenService:60] Se inició una operación de búsqueda de la imagen con id=21
+[2023-03-06 18:06:26] [ WARN ] [ImagenService:50] Se realizo una operación de eliminación de la imagen con id=21
+[2023-03-06 18:06:29] [ INFO ] [ImagenService:60] Se inició una operación de búsqueda de la imagen con id=21
+[2023-03-06 18:06:37] [ INFO ] [ImagenService:60] Se inició una operación de búsqueda de la imagen con id=21
+[2023-03-06 18:06:42] [ INFO ] [ImagenService:60] Se inició una operación de búsqueda de la imagen con id=21
+[2023-03-06 18:06:42] [ WARN ] [ImagenService:50] Se realizo una operación de eliminación de la imagen con id=21
+[2023-03-06 18:10:33] [ INFO ] [ImagenService:60] Se inició una operación de búsqueda de la imagen con id=21
+[2023-03-06 18:10:36] [ INFO ] [ImagenService:60] Se inició una operación de búsqueda de la imagen con id=21
+[2023-03-06 18:10:36] [ WARN ] [ImagenService:50] Se realizo una operación de eliminación de la imagen con id=21
+[2023-03-06 18:10:39] [ INFO ] [ImagenService:60] Se inició una operación de búsqueda de la imagen con id=21
+[2023-03-06 18:12:13] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 18:12:36] [ INFO ] [ImagenService:60] Se inició una operación de búsqueda de la imagen con id=31
+[2023-03-06 18:12:38] [ INFO ] [ImagenService:60] Se inició una operación de búsqueda de la imagen con id=31
+[2023-03-06 18:12:38] [ WARN ] [ImagenService:50] Se realizo una operación de eliminación de la imagen con id=31
+[2023-03-06 18:12:40] [ INFO ] [ImagenService:60] Se inició una operación de búsqueda de la imagen con id=31
+[2023-03-06 18:15:11] [ INFO ] [ProductoService:32] Se inició el listado de todas las productos
+[2023-03-06 18:16:03] [ INFO ] [ProductoService:32] Se inició el listado de todas las productos
+[2023-03-06 18:16:16] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 18:16:20] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=13
+[2023-03-06 18:16:31] [ INFO ] [ImagenService:60] Se inició una operación de búsqueda de la imagen con id=34
+[2023-03-06 18:16:36] [ WARN ] [ImagenService:50] Se realizo una operación de eliminación de la imagen con id=34
+[2023-03-06 18:16:40] [ INFO ] [ImagenService:60] Se inició una operación de búsqueda de la imagen con id=34
+[2023-03-06 18:17:37] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=13
+[2023-03-06 18:17:40] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=13
+[2023-03-06 18:17:40] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=13
+[2023-03-06 18:17:41] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=13
+[2023-03-06 18:17:43] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=13
+[2023-03-06 18:17:44] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=13
+[2023-03-06 18:17:50] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 18:36:17] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=34
+[2023-03-06 18:36:24] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=34
+[2023-03-06 18:36:25] [ WARN ] [ImagenService:51] Se realizo una operación de eliminación de la imagen con id=34
+[2023-03-06 18:36:32] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=34
+[2023-03-06 18:37:53] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=13
+[2023-03-06 18:38:01] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=36
+[2023-03-06 18:38:01] [ WARN ] [ImagenService:51] Se realizo una operación de eliminación de la imagen con id=36
+[2023-03-06 18:38:04] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=13
+[2023-03-06 18:38:21] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 18:38:29] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=40
+[2023-03-06 18:38:29] [ WARN ] [ImagenService:51] Se realizo una operación de eliminación de la imagen con id=40
+[2023-03-06 18:38:31] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=41
+[2023-03-06 18:38:31] [ WARN ] [ImagenService:51] Se realizo una operación de eliminación de la imagen con id=41
+[2023-03-06 18:38:33] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=42
+[2023-03-06 18:38:33] [ WARN ] [ImagenService:51] Se realizo una operación de eliminación de la imagen con id=42
+[2023-03-06 18:38:39] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=15
+[2023-03-06 18:39:12] [ INFO ] [CaracteristicaService:56] Se inició una operación de búsqueda de la Caracteristica con id=2
+[2023-03-06 18:45:10] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 18:45:15] [ INFO ] [ProductoService:66] Se inició una operación de búsqueda de la producto con id=16
+[2023-03-06 18:45:20] [ INFO ] [ProductoService:66] Se inició una operación de búsqueda de la producto con id=16
+[2023-03-06 18:45:20] [ WARN ] [ProductoService:59] Se realizo una operación de eliminación del producto conid=16
+[2023-03-06 18:45:23] [ INFO ] [ProductoService:66] Se inició una operación de búsqueda de la producto con id=16
+[2023-03-06 18:45:37] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=45
+[2023-03-06 18:45:45] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=45
+[2023-03-06 18:45:45] [ WARN ] [ImagenService:51] Se realizo una operación de eliminación de la imagen con id=45
+[2023-03-06 18:45:47] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=45
+[2023-03-06 18:45:51] [ INFO ] [ProductoService:66] Se inició una operación de búsqueda de la producto con id=16
+[2023-03-06 18:46:21] [ INFO ] [ProductoService:66] Se inició una operación de búsqueda de la producto con id=16
+[2023-03-06 18:46:36] [ INFO ] [ProductoService:66] Se inició una operación de búsqueda de la producto con id=16
+[2023-03-06 18:46:36] [ INFO ] [ProductoService:50] Se inició una operación de actualización de la producto con id=16
+[2023-03-06 18:46:41] [ INFO ] [ProductoService:66] Se inició una operación de búsqueda de la producto con id=16
+[2023-03-06 18:50:17] [ INFO ] [ProductoService:67] Se inició una operación de búsqueda de la producto con id=16
+[2023-03-06 18:50:19] [ INFO ] [ProductoService:67] Se inició una operación de búsqueda de la producto con id=16
+[2023-03-06 18:51:27] [ INFO ] [ProductoService:67] Se inició una operación de búsqueda de la producto con id=16
+[2023-03-06 18:51:40] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 18:51:48] [ INFO ] [ProductoService:67] Se inició una operación de búsqueda de la producto con id=17
+[2023-03-06 18:51:48] [ WARN ] [ProductoService:60] Se realizo una operación de eliminación del producto conid=17
+[2023-03-06 18:51:51] [ INFO ] [ProductoService:67] Se inició una operación de búsqueda de la producto con id=17
+[2023-03-06 18:56:41] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 18:56:47] [ INFO ] [ProductoService:32] Se inició el listado de todas las productos
+[2023-03-06 18:57:00] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=49
+[2023-03-06 19:01:48] [ INFO ] [ProductoService:49] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 19:01:56] [ INFO ] [ProductoService:76] Se inició una operación de búsqueda de la producto con id=19
+[2023-03-06 19:02:13] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=54
+[2023-03-06 19:03:54] [ INFO ] [ProductoService:76] Se inició una operación de búsqueda de la producto con id=19
+[2023-03-06 19:03:59] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=54
+[2023-03-06 19:04:22] [ INFO ] [ProductoService:49] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 19:04:32] [ INFO ] [ProductoService:76] Se inició una operación de búsqueda de la producto con id=20
+[2023-03-06 19:04:38] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=55
+[2023-03-06 19:05:27] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=55
+[2023-03-06 19:11:33] [ INFO ] [ProductoService:52] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 19:11:46] [ INFO ] [ProductoService:52] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 19:12:40] [ INFO ] [ProductoService:52] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 19:14:11] [ INFO ] [ProductoService:52] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 19:14:14] [ INFO ] [ProductoService:34] Se inició el listado de todas las productos
+[2023-03-06 19:14:17] [ INFO ] [ProductoService:34] Se inició el listado de todas las productos
+[2023-03-06 19:14:27] [ INFO ] [ProductoService:79] Se inició una operación de búsqueda de la producto con id=24
+[2023-03-06 17:20:06] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 17:20:34] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=9
+[2023-03-06 17:20:48] [ INFO ] [ImagenService:30] Se inició el listado de todas las imagenes
+[2023-03-06 17:55:37] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 17:55:53] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-06 17:56:27] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=28
+[2023-03-06 17:57:30] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-06 17:57:30] [ INFO ] [ProductoService:50] Se inició una operación de actualización de la producto con id=10
+[2023-03-06 17:57:33] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-06 17:57:37] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-06 17:57:57] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-06 17:57:57] [ INFO ] [ProductoService:50] Se inició una operación de actualización de la producto con id=10
+[2023-03-06 17:58:01] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-06 17:58:24] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-06 17:58:58] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=28
+[2023-03-06 17:58:58] [ WARN ] [ImagenService:50] Se realizo una operación de eliminación de la imagen conid=28
+[2023-03-06 17:59:00] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-06 17:59:03] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=10
+[2023-03-06 17:59:16] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=28
+[2023-03-06 17:59:20] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=28
+[2023-03-06 17:59:20] [ WARN ] [ImagenService:50] Se realizo una operación de eliminación de la imagen conid=28
+[2023-03-06 17:59:22] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=28
+[2023-03-06 18:02:16] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=28
+[2023-03-06 18:02:37] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=21
+[2023-03-06 18:02:42] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=21
+[2023-03-06 18:02:42] [ WARN ] [ImagenService:50] Se realizo una operación de eliminación de la imagen conid=21
+[2023-03-06 18:02:44] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=21
+[2023-03-06 18:03:30] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=21
+[2023-03-06 18:03:34] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=21
+[2023-03-06 18:03:34] [ WARN ] [ImagenService:50] Se realizo una operación de eliminación de la imagen conid=21
+[2023-03-06 18:03:37] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=21
+[2023-03-06 18:06:24] [ INFO ] [ImagenService:60] Se inició una operación de búsqueda de la imagen con id=21
+[2023-03-06 18:06:26] [ INFO ] [ImagenService:60] Se inició una operación de búsqueda de la imagen con id=21
+[2023-03-06 18:06:26] [ WARN ] [ImagenService:50] Se realizo una operación de eliminación de la imagen con id=21
+[2023-03-06 18:06:29] [ INFO ] [ImagenService:60] Se inició una operación de búsqueda de la imagen con id=21
+[2023-03-06 18:06:37] [ INFO ] [ImagenService:60] Se inició una operación de búsqueda de la imagen con id=21
+[2023-03-06 18:06:42] [ INFO ] [ImagenService:60] Se inició una operación de búsqueda de la imagen con id=21
+[2023-03-06 18:06:42] [ WARN ] [ImagenService:50] Se realizo una operación de eliminación de la imagen con id=21
+[2023-03-06 18:10:33] [ INFO ] [ImagenService:60] Se inició una operación de búsqueda de la imagen con id=21
+[2023-03-06 18:10:36] [ INFO ] [ImagenService:60] Se inició una operación de búsqueda de la imagen con id=21
+[2023-03-06 18:10:36] [ WARN ] [ImagenService:50] Se realizo una operación de eliminación de la imagen con id=21
+[2023-03-06 18:10:39] [ INFO ] [ImagenService:60] Se inició una operación de búsqueda de la imagen con id=21
+[2023-03-06 18:12:13] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 18:12:36] [ INFO ] [ImagenService:60] Se inició una operación de búsqueda de la imagen con id=31
+[2023-03-06 18:12:38] [ INFO ] [ImagenService:60] Se inició una operación de búsqueda de la imagen con id=31
+[2023-03-06 18:12:38] [ WARN ] [ImagenService:50] Se realizo una operación de eliminación de la imagen con id=31
+[2023-03-06 18:12:40] [ INFO ] [ImagenService:60] Se inició una operación de búsqueda de la imagen con id=31
+[2023-03-06 18:15:11] [ INFO ] [ProductoService:32] Se inició el listado de todas las productos
+[2023-03-06 18:16:03] [ INFO ] [ProductoService:32] Se inició el listado de todas las productos
+[2023-03-06 18:16:16] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 18:16:20] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=13
+[2023-03-06 18:16:31] [ INFO ] [ImagenService:60] Se inició una operación de búsqueda de la imagen con id=34
+[2023-03-06 18:16:36] [ WARN ] [ImagenService:50] Se realizo una operación de eliminación de la imagen con id=34
+[2023-03-06 18:16:40] [ INFO ] [ImagenService:60] Se inició una operación de búsqueda de la imagen con id=34
+[2023-03-06 18:17:37] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=13
+[2023-03-06 18:17:40] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=13
+[2023-03-06 18:17:40] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=13
+[2023-03-06 18:17:41] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=13
+[2023-03-06 18:17:43] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=13
+[2023-03-06 18:17:44] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=13
+[2023-03-06 18:17:50] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 18:36:17] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=34
+[2023-03-06 18:36:24] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=34
+[2023-03-06 18:36:25] [ WARN ] [ImagenService:51] Se realizo una operación de eliminación de la imagen con id=34
+[2023-03-06 18:36:32] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=34
+[2023-03-06 18:37:53] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=13
+[2023-03-06 18:38:01] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=36
+[2023-03-06 18:38:01] [ WARN ] [ImagenService:51] Se realizo una operación de eliminación de la imagen con id=36
+[2023-03-06 18:38:04] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=13
+[2023-03-06 18:38:21] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 18:38:29] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=40
+[2023-03-06 18:38:29] [ WARN ] [ImagenService:51] Se realizo una operación de eliminación de la imagen con id=40
+[2023-03-06 18:38:31] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=41
+[2023-03-06 18:38:31] [ WARN ] [ImagenService:51] Se realizo una operación de eliminación de la imagen con id=41
+[2023-03-06 18:38:33] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=42
+[2023-03-06 18:38:33] [ WARN ] [ImagenService:51] Se realizo una operación de eliminación de la imagen con id=42
+[2023-03-06 18:38:39] [ INFO ] [ProductoService:65] Se inició una operación de búsqueda de la producto con id=15
+[2023-03-06 18:39:12] [ INFO ] [CaracteristicaService:56] Se inició una operación de búsqueda de la Caracteristica con id=2
+[2023-03-06 18:45:10] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 18:45:15] [ INFO ] [ProductoService:66] Se inició una operación de búsqueda de la producto con id=16
+[2023-03-06 18:45:20] [ INFO ] [ProductoService:66] Se inició una operación de búsqueda de la producto con id=16
+[2023-03-06 18:45:20] [ WARN ] [ProductoService:59] Se realizo una operación de eliminación del producto conid=16
+[2023-03-06 18:45:23] [ INFO ] [ProductoService:66] Se inició una operación de búsqueda de la producto con id=16
+[2023-03-06 18:45:37] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=45
+[2023-03-06 18:45:45] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=45
+[2023-03-06 18:45:45] [ WARN ] [ImagenService:51] Se realizo una operación de eliminación de la imagen con id=45
+[2023-03-06 18:45:47] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=45
+[2023-03-06 18:45:51] [ INFO ] [ProductoService:66] Se inició una operación de búsqueda de la producto con id=16
+[2023-03-06 18:46:21] [ INFO ] [ProductoService:66] Se inició una operación de búsqueda de la producto con id=16
+[2023-03-06 18:46:36] [ INFO ] [ProductoService:66] Se inició una operación de búsqueda de la producto con id=16
+[2023-03-06 18:46:36] [ INFO ] [ProductoService:50] Se inició una operación de actualización de la producto con id=16
+[2023-03-06 18:46:41] [ INFO ] [ProductoService:66] Se inició una operación de búsqueda de la producto con id=16
+[2023-03-06 18:50:17] [ INFO ] [ProductoService:67] Se inició una operación de búsqueda de la producto con id=16
+[2023-03-06 18:50:19] [ INFO ] [ProductoService:67] Se inició una operación de búsqueda de la producto con id=16
+[2023-03-06 18:51:27] [ INFO ] [ProductoService:67] Se inició una operación de búsqueda de la producto con id=16
+[2023-03-06 18:51:40] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 18:51:48] [ INFO ] [ProductoService:67] Se inició una operación de búsqueda de la producto con id=17
+[2023-03-06 18:51:48] [ WARN ] [ProductoService:60] Se realizo una operación de eliminación del producto conid=17
+[2023-03-06 18:51:51] [ INFO ] [ProductoService:67] Se inició una operación de búsqueda de la producto con id=17
+[2023-03-06 18:56:41] [ INFO ] [ProductoService:40] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 18:56:47] [ INFO ] [ProductoService:32] Se inició el listado de todas las productos
+[2023-03-06 18:57:00] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=49
+[2023-03-06 19:01:48] [ INFO ] [ProductoService:49] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 19:01:56] [ INFO ] [ProductoService:76] Se inició una operación de búsqueda de la producto con id=19
+[2023-03-06 19:02:13] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=54
+[2023-03-06 19:03:54] [ INFO ] [ProductoService:76] Se inició una operación de búsqueda de la producto con id=19
+[2023-03-06 19:03:59] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=54
+[2023-03-06 19:04:22] [ INFO ] [ProductoService:49] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 19:04:32] [ INFO ] [ProductoService:76] Se inició una operación de búsqueda de la producto con id=20
+[2023-03-06 19:04:38] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=55
+[2023-03-06 19:05:27] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=55
+[2023-03-06 19:11:33] [ INFO ] [ProductoService:52] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 19:11:46] [ INFO ] [ProductoService:52] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 19:12:40] [ INFO ] [ProductoService:52] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 19:14:11] [ INFO ] [ProductoService:52] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 19:14:14] [ INFO ] [ProductoService:34] Se inició el listado de todas las productos
+[2023-03-06 19:14:17] [ INFO ] [ProductoService:34] Se inició el listado de todas las productos
+[2023-03-06 19:14:27] [ INFO ] [ProductoService:79] Se inició una operación de búsqueda de la producto con id=24
+[2023-03-06 19:16:05] [ INFO ] [ProductoService:52] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-06 19:16:11] [ INFO ] [ProductoService:79] Se inició una operación de búsqueda de la producto con id=25
+[2023-03-06 19:16:19] [ INFO ] [ImagenService:61] Se inició una operación de búsqueda de la imagen con id=72
+[2023-03-06 19:20:01] [ INFO ] [ProductoService:79] Se inició una operación de búsqueda de la producto con id=25
+[2023-03-06 19:20:36] [ INFO ] [ImagenService:35] Se inició una operación de guardado de la imagen con titulo: Autito
+[2023-03-06 19:20:41] [ INFO ] [ProductoService:79] Se inició una operación de búsqueda de la producto con id=25

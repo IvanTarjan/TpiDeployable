@@ -29,4 +29,8 @@ public class Categoria {
     @JsonIgnoreProperties("categoria")
     private Set<Producto> productos= new HashSet<>();
 
+    public void removeProducto (Producto producto){
+        this.productos.remove(producto);
+        producto.setCategoria(null);
+    }
 }

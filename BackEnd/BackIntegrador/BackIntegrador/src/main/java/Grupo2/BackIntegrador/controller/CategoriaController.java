@@ -19,9 +19,8 @@ public class CategoriaController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Categoria> buscarCategoriaPorID(@PathVariable Long id){
-        Optional<Categoria> categoriaBuscada;
         try {
-            categoriaBuscada = categoriaService.buscarCategoriaXId(id);
+            Optional<Categoria> categoriaBuscada = categoriaService.buscarCategoriaXId(id);
             return ResponseEntity.ok(categoriaBuscada.get());
         } catch (ResourceNotFoundException e) {
             return ResponseEntity.notFound().build();

@@ -45,6 +45,7 @@ public class PoliticaService {
     public void eliminarPolitica(Long id) throws ResourceNotFoundException {
         Optional<Politica> politicaAEliminar=buscarPoliticaXId(id);
         if (politicaAEliminar.isPresent()){
+            politicaAEliminar.get().getProducto().removePolitica(politicaAEliminar.get());
             politicaRepository.deleteById(id);
             LOGGER.warn("Se realizo una operación de eliminación de la politica con" +
                     "id="+id);

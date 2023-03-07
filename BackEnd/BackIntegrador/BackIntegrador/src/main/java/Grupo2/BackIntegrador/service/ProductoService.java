@@ -4,6 +4,8 @@ import Grupo2.BackIntegrador.Exception.ResourceNotFoundException;
 
 
 import Grupo2.BackIntegrador.model.Categoria;
+import Grupo2.BackIntegrador.model.Imagen;
+import Grupo2.BackIntegrador.model.Politica;
 import Grupo2.BackIntegrador.model.Producto;
 import Grupo2.BackIntegrador.repository.ProductoRepository;
 import org.apache.log4j.Logger;
@@ -34,9 +36,15 @@ public class ProductoService {
     }
 
     public Producto guardarProducto(Producto producto){
+        for (Imagen i : producto.getImagen()) {
+            i.setProducto(producto);
+        }
+        for (Politica p : producto.getPolitica()) {
+            p.setProducto(producto);
+        }
+        System.out.println(producto.getImagen());
+        System.out.println(producto.getPolitica());
         Producto productoTemp = productoRepository.save(producto);
-        imagenService.guardarImagenes(producto.getImagen(), producto);
-        politicaService.guardarPoliticas(producto.getPolitica(), producto);
         LOGGER.info("Se inició una operación de guardado de la producto con titulo: "+
                 producto.getTitulo());
         return productoTemp;
@@ -54,8 +62,10 @@ public class ProductoService {
     public void eliminarProducto(Long id) throws ResourceNotFoundException {
         Optional<Producto> productoAEliminar = buscarProductoXId(id);
         if (productoAEliminar.isPresent()){
+            productoAEliminar.get().getCategoria().removeProducto(productoAEliminar.get());
+            productoAEliminar.get().getUbicacion().removeProducto(productoAEliminar.get());
             productoRepository.deleteById(id);
-            LOGGER.warn("Se realizo una operación de eliminación del producto con" + "id="+id);
+            LOGGER.warn("Se realizo una operación de eliminación del producto con id="+id);
         } else {
             throw new ResourceNotFoundException("No se pudo eliminar el producto con id = "+id+" no se pudo encontrar en la base de datos");
         }
