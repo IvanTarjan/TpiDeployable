@@ -12,11 +12,10 @@ const BarraDeBusqueda = () => {
     const isMobile = useMediaQuery('(max-width:600px)');
     const isTablet = useMediaQuery('(max-width:800px)');
     const [location, setLocation] = useState({ ciudad: "", provincia: "" });
-    const [dateRange, setDateRange] = useState([null, null]);
     const calendarRef = useRef();
     const navigate = useNavigate()
 
-    const { localizaciones, selectedCity, setSelectedCity } = useContext(BodyContext)
+    const { localizaciones, dateRange, setDateRange, setSelectedCity } = useContext(BodyContext)
 
     const handleChange = (event) => {
         setLocation(localizaciones[event.target.value]);
@@ -32,7 +31,7 @@ const BarraDeBusqueda = () => {
 
     return (
         <Box display='flex' flexDirection={'column'} justifyContent='center' alignItems='center' width='100vw' marginTop={'60px'} backgroundColor={colors.c3} padding={"30px 0px"}>
-            <Typography variant='h1' fontSize={{ xs: '30px', md: '36px' }} fontWeight="bold" color={colors.c4} textAlign="center" padding={'20px'} >Busca ofertas en Autos Economicos, Pick Ups y mucho más</Typography>
+            <Typography variant='h1' fontSize={{ xs: '30px', md: '36px' }} fontWeight="bold" color={colors.c4} textAlign="center" padding={'20px'} >Encontra el vehiculo ideal para tu proximo viaje</Typography>
 
             <FormControl sx={{ m: 1, width: { xs: '90%', md: '70%' }, mt: 3, display: 'flex', justifyContent: 'center', alignItems: "center", flexDirection: { xs: 'column', sm: 'row' }, gap: '10px' }}>
                 <Select
