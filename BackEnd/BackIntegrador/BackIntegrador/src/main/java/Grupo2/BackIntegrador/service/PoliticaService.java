@@ -36,15 +36,21 @@ public class PoliticaService {
         return politicaRepository.save(politica);
     }
 
-    public void actualizarPolitica(Politica politica){
-        LOGGER.info("Se inició una operación de actualización de la politica con id="+
-                politica.getId());
-        politicaRepository.save(politica);
+    public void actualizarPolitica(Politica politica) throws ResourceNotFoundException {
+        Optional<Politica> politicaAActualizar = buscarPoliticaXId(politica.getId());
+        if (politicaAActualizar.isPresent()){
+            LOGGER.info("Se inició una operación de actualización de la politica con id ="+ politica.getId());
+            politicaRepository.save(politica);
+        } else {
+            throw new ResourceNotFoundException("No se actualizo la politica con id = "+politica.getId()+ " porque no se encontro en la base de datos");
+        }
+
     }
 
     public void eliminarPolitica(Long id) throws ResourceNotFoundException {
         Optional<Politica> politicaAEliminar=buscarPoliticaXId(id);
         if (politicaAEliminar.isPresent()){
+            politicaAEliminar.get().getProducto().removePolitica(politicaAEliminar.get());
             politicaRepository.deleteById(id);
             LOGGER.warn("Se realizo una operación de eliminación de la politica con" +
                     "id="+id);

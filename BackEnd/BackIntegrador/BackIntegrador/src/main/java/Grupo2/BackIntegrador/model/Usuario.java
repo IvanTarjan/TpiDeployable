@@ -29,17 +29,21 @@ public class Usuario {
     @Column
     private String password;
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "usuario", cascade = {CascadeType.MERGE, CascadeType.DETACH, CascadeType.REMOVE} , fetch = FetchType.EAGER)
     @JsonIgnoreProperties("usuario")
-    @JoinTable(name = "usuario_Reserva",
-            joinColumns = { @JoinColumn(name = "usuario_id") },
-            inverseJoinColumns = { @JoinColumn(name = "reserva_id") })
-    private Set<Reserva> reserva = new HashSet<>();
+    private Set<Reserva> reserva= new HashSet<>();
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "usuario", cascade = {CascadeType.MERGE, CascadeType.DETACH, CascadeType.REMOVE} , fetch = FetchType.EAGER)
     @JsonIgnoreProperties("usuario")
-    @JoinTable(name = "usuario_Puntuacion",
-            joinColumns = { @JoinColumn(name = "usuario_id") },
-            inverseJoinColumns = { @JoinColumn(name = "puntuacion_id") })
-    private Set<Puntuacion> puntuacion = new HashSet<>();
+    private Set<Puntuacion> puntuacion= new HashSet<>();
+
+    public void removeReserva ( Reserva reserva){
+        this.reserva.remove(reserva);
+        reserva.setUsuario(null);
+    }
+
+    public void removePuntuacion(Puntuacion puntuacion){
+        this.puntuacion.remove(puntuacion);
+        puntuacion.setUsuario(null);
+    }
 }

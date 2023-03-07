@@ -46,9 +46,9 @@ public class ImagenService {
     public void eliminarImagen(Long id) throws ResourceNotFoundException {
         Optional<Imagen> imagenAEliminar=buscarImagenXId(id);
         if (imagenAEliminar.isPresent()){
+            imagenAEliminar.get().getProducto().removeImagen(imagenAEliminar.get());
             imagenRepository.deleteById(id);
-            LOGGER.warn("Se realizo una operación de eliminación de la imagen con" +
-                    "id="+id);
+            LOGGER.warn("Se realizo una operación de eliminación de la imagen con id="+id);
         }
         else{
             throw new ResourceNotFoundException("La imagen a eliminar no existe" +

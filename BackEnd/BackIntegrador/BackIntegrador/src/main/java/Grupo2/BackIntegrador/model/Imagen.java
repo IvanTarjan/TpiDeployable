@@ -1,15 +1,13 @@
 package Grupo2.BackIntegrador.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonIncludeProperties;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
-@Getter @Setter @AllArgsConstructor @NoArgsConstructor
+@Getter @Setter @AllArgsConstructor @NoArgsConstructor @ToString
 @Table(name="imagen")
 public class Imagen {
     @Id
@@ -21,7 +19,7 @@ public class Imagen {
     private String url_img;
 
     @ManyToOne
-    @JsonIgnoreProperties("imagen")
+    @JsonIncludeProperties("id")
     private Producto producto;
 
 

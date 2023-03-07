@@ -19,14 +19,12 @@ public class UsuarioController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Usuario> buscarUsuarioPorID(@PathVariable Long id){
-        Optional<Usuario> usuarioBuscado;
-        try {
-            usuarioBuscado = usuarioService.buscarUsuarioXId(id);
+        Optional<Usuario> usuarioBuscado= usuarioService.buscarUsuarioXId(id);
+        if (usuarioBuscado.isPresent()){
             return ResponseEntity.ok(usuarioBuscado.get());
-        } catch (ResourceNotFoundException e) {
+        } else {
             return ResponseEntity.notFound().build();
         }
-
     }
 
     @GetMapping
@@ -47,9 +45,7 @@ public class UsuarioController {
 
     @PutMapping
     public ResponseEntity<String> actualizarUsuario(@RequestBody Usuario usuario){
-        Optional<Usuario> usuarioBuscado;
         try {
-            usuarioBuscado = usuarioService.buscarUsuarioXId(usuario.getId());
             usuarioService.actualizarUsuario(usuario);
             return ResponseEntity.ok("el usuario con el id= "+usuario.getId()+" fue actualizada");
         } catch (ResourceNotFoundException e) {

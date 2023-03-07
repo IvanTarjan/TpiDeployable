@@ -14,11 +14,13 @@ import java.util.Optional;
 public class CategoriaService {
 
     private CategoriaRepository categoriaRepository;
+
+    private ProductoService productoService;
     private static final Logger LOGGER=Logger.getLogger(CategoriaService.class);
     @Autowired
-    public CategoriaService(CategoriaRepository categoriaRepository) {
-
+    public CategoriaService(CategoriaRepository categoriaRepository, ProductoService productoService) {
         this.categoriaRepository = categoriaRepository;
+        this.productoService = productoService;
     }
 
     public List<Categoria> listarCategorias() {
@@ -32,10 +34,13 @@ public class CategoriaService {
         return categoriaRepository.save(categoria);
     }
 
-    public void actualizarCategoria(Categoria categoria){
+    public void actualizarCategoria(Categoria categoria) throws ResourceNotFoundException {
+        buscarCategoriaXId(categoria.getId());
         LOGGER.info("Se inició una operación de actualización de la categoria con id="+
                 categoria.getId());
         categoriaRepository.save(categoria);
+        productoService.guardarProductosEnCategoria(categoria.getProductos(), categoria);
+
     }
 
     public void eliminarCategoria(Long id) throws ResourceNotFoundException {

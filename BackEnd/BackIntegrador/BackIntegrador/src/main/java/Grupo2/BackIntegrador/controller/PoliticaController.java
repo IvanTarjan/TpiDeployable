@@ -47,12 +47,10 @@ public class PoliticaController {
 
     @PutMapping
     public ResponseEntity<String> actualizarPolitica(@RequestBody Politica politica){
-        Optional<Politica> politicaAActualizar=politicaService.buscarPoliticaXId(politica.getId());
-        if (politicaAActualizar.isPresent()){
+        try {
             politicaService.actualizarPolitica(politica);
             return ResponseEntity.ok("La politica con el id= "+politica.getId()+" fue actualizada");
-        }
-        else{
+        } catch (ResourceNotFoundException e) {
             return ResponseEntity.badRequest().body("No se puede actualizar una politica que no existe en la base de datos");
         }
     }

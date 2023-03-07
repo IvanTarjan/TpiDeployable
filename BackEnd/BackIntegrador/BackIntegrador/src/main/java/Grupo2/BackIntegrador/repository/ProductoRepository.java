@@ -19,8 +19,4 @@ public interface ProductoRepository extends JpaRepository<Producto, Long> {
 
     List<Producto> findByUbicacion (Ubicacion id);
 
-    @Override
-    @Modifying
-    @Query("delete from Producto p where p.id= ?#{#id}")
-    void deleteById(@Param("id") Long id);
 }

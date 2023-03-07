@@ -32,26 +32,31 @@ public class UsuarioService {
         return usuarioRepository.save(usuario);
     }
 
-    public void actualizarUsuario(Usuario usuario){
-        LOGGER.info("Se inició una operación de actualización de un usuario con id="+
-                usuario.getId());
-        usuarioRepository.save(usuario);
+    public void actualizarUsuario(Usuario usuario) throws ResourceNotFoundException {
+        Optional<Usuario> usuarioAActualizar = buscarUsuarioXId(usuario.getId());
+        if (usuarioAActualizar.isPresent()){
+            LOGGER.info("Se inició una operación de actualización de un usuario con id="+
+                    usuario.getId());
+            usuarioRepository.save(usuario);
+        } else {
+            throw new ResourceNotFoundException("el usuario con id= "+usuario.getId()+" no existe, no se puede actualizar");
+        }
+
     }
 
     public void eliminarUsuario(Long id) throws ResourceNotFoundException {
-        buscarUsuarioXId(id);
-        usuarioRepository.deleteById(id);
-        LOGGER.warn("Se realizo una operación de eliminación de los Usuarios con id= "+id);
-    }
-
-    public Optional<Usuario> buscarUsuarioXId(Long id) throws ResourceNotFoundException {
-        Optional<Usuario> usuarioaABuscar=usuarioRepository.findById(id);
-        if (usuarioaABuscar.isPresent()){
-            LOGGER.info("Se inició una operación de búsqueda de un usuario con id="+id);
-            return usuarioaABuscar;
+        Optional<Usuario> usuarioaAEliminar=buscarUsuarioXId(id);
+        if (usuarioaAEliminar.isPresent()){
+            LOGGER.warn("Se realizo una operación de eliminación de los Usuarios con id= "+id);
+            usuarioRepository.deleteById(id);
         }
         else{
             throw new ResourceNotFoundException("el usuario con id= "+id+" no existe");
         }
+    }
+
+    public Optional<Usuario> buscarUsuarioXId(Long id){
+        LOGGER.info("Se inicio la busqueda de un usuario con id= "+ id);
+        return usuarioRepository.findById(id);
     }
 }
