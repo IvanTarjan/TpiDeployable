@@ -34,7 +34,7 @@ public class ReservaService {
         return reservaRepository.save(reserva);
     }
 
-    public void actualizarPolitica(Reserva reserva){
+    public void actualizarReserva(Reserva reserva){
         LOGGER.info("Se inició una operación de actualización de la reserva con id="+
                 reserva.getId());
         reservaRepository.save(reserva);
