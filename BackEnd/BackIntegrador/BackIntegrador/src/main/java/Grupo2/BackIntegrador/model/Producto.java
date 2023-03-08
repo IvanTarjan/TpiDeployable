@@ -71,6 +71,15 @@ public class Producto {
     private Set<Caracteristica> caracteristica = new HashSet<>();
 
 
+    public Producto(Long id, String titulo, String descripcion, Long precio, Float latitud, Float longitud) {
+        this.id = id;
+        this.titulo = titulo;
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.latitud = latitud;
+        this.longitud = longitud;
+    }
+
     public void addCaracteristica (Caracteristica caracteristica){
         this.caracteristica.add(caracteristica);
         caracteristica.getProducto().add(this);

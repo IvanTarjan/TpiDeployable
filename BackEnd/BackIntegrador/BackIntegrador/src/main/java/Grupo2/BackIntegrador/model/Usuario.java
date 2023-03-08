@@ -37,7 +37,15 @@ public class Usuario {
     @JsonIgnoreProperties("usuario")
     private Set<Puntuacion> puntuacion= new HashSet<>();
 
-    public void removeReserva ( Reserva reserva){
+    public Usuario(Long id, String nombre, String userName, String email, String password) {
+        this.id = id;
+        this.nombre = nombre;
+        this.userName = userName;
+        this.email = email;
+        this.password = password;
+    }
+
+    public void removeReserva (Reserva reserva){
         this.reserva.remove(reserva);
         reserva.setUsuario(null);
     }

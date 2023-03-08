@@ -32,5 +32,8 @@ public class Puntuacion {
     @JsonIncludeProperties("id")
     private Usuario usuario;
 
-
+    public Puntuacion(Long id, Integer puntuacion) {
+        this.id = id;
+        this.puntuacion = puntuacion;
+    }
 }

@@ -36,4 +36,9 @@ public class Reserva {
     @JsonIncludeProperties("id")
     private Usuario usuario;
 
+    public Reserva(Long id, String fecha_inicio, String fecha_fin) {
+        this.id = id;
+        this.fecha_inicio = fecha_inicio;
+        this.fecha_fin = fecha_fin;
+    }
 }

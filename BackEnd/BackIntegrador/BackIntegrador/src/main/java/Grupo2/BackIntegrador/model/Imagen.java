@@ -22,5 +22,9 @@ public class Imagen {
     @JsonIncludeProperties("id")
     private Producto producto;
 
-
+    public Imagen(Long id, String titulo, String url_img) {
+        this.id = id;
+        this.titulo = titulo;
+        this.url_img = url_img;
+    }
 }
