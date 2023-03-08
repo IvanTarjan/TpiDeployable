@@ -42,7 +42,12 @@
       "ABSBrake": true,
       "fuel": "Nafta premium",
       "score": 7,
-      "locations": ["San Carlos de Bariloche", "Ciudad Autonoma de Buenos Aires", "Mendoza", "Cordoba"]
+      "locations": [
+        "San Carlos de Bariloche",
+        "Ciudad Autonoma de Buenos Aires",
+        "Mendoza",
+        "Cordoba"
+      ]
     },
     {
       "id": 2,
@@ -58,7 +63,6 @@
           "original": "https://d171xgro1r36rb.cloudfront.net/1mTnLl87PIIWZeh0-HfgroBO58-fCfJCW.jpg",
           "thumbnail": "https://d171xgro1r36rb.cloudfront.net/1mTnLl87PIIWZeh0-HfgroBO58-fCfJCW.jpg",
           "description": "Ford Ka - Vista interior"
-      
         },
         {
           "original": "https://d171xgro1r36rb.cloudfront.net/1YbYhcVS_w1VZNOIAapcbBLQgjLluwZyP.jpg",
@@ -87,7 +91,12 @@
       "ABSBrake": true,
       "fuel": "Nafta premium",
       "score": 7,
-      "locations": ["Salta", "Ushuaia", "Puerto Iguazu", "Puerto Madryn"]
+      "locations": [
+        "Salta",
+        "Ushuaia",
+        "Puerto Iguazu",
+        "Puerto Madryn"
+      ]
     },
     {
       "id": 3,
@@ -131,7 +140,12 @@
       "ABSBrake": true,
       "fuel": "Nafta premium",
       "score": 8,
-      "locations": ["San Carlos de Bariloche", "Ciudad Autonoma de Buenos Aires", "Mendoza", "Cordoba"]
+      "locations": [
+        "San Carlos de Bariloche",
+        "Ciudad Autonoma de Buenos Aires",
+        "Mendoza",
+        "Cordoba"
+      ]
     },
     {
       "id": 4,
@@ -175,7 +189,12 @@
       "ABSBrake": true,
       "fuel": "Nafta premium",
       "score": 7,
-      "locations": ["San Carlos de Bariloche", "Ciudad Autonoma de Buenos Aires", "Calafate", "San Martin de los Andes"]
+      "locations": [
+        "San Carlos de Bariloche",
+        "Ciudad Autonoma de Buenos Aires",
+        "Calafate",
+        "San Martin de los Andes"
+      ]
     },
     {
       "id": 5,
@@ -219,7 +238,12 @@
       "ABSBrake": true,
       "fuel": "Nafta premium",
       "score": 9,
-      "locations": ["Salta", "Ushuaia", "Mendoza", "Cordoba"]
+      "locations": [
+        "Salta",
+        "Ushuaia",
+        "Mendoza",
+        "Cordoba"
+      ]
     },
     {
       "id": 6,
@@ -263,7 +287,12 @@
       "ABSBrake": true,
       "fuel": "Nafta premium",
       "score": 8,
-      "locations": ["Puerto Iguazu", "Puerto Madryn", "Calafate", "San Martin de los Andes"]
+      "locations": [
+        "Puerto Iguazu",
+        "Puerto Madryn",
+        "Calafate",
+        "San Martin de los Andes"
+      ]
     },
     {
       "id": 7,
@@ -279,7 +308,6 @@
           "original": "https://www.megautos.com/wp-content/uploads/2019/07/Renault-Logan-CVT-2020-interior-1024x683.jpg",
           "thumbnail": "https://www.megautos.com/wp-content/uploads/2019/07/Renault-Logan-CVT-2020-interior-1024x683.jpg",
           "description": "Renault Logan - Interior"
-      
         },
         {
           "original": "http://i2.wp.com/www.mundoautomotor.com.ar/web/wp-content/uploads/2008/07/renault-logan-2008-02.jpg",
@@ -308,7 +336,12 @@
       "ABSBrake": true,
       "fuel": "Nafta premium",
       "score": 10,
-      "locations": ["San Carlos de Bariloche", "Ciudad Autonoma de Buenos Aires", "Mendoza", "Cordoba"]
+      "locations": [
+        "San Carlos de Bariloche",
+        "Ciudad Autonoma de Buenos Aires",
+        "Mendoza",
+        "Cordoba"
+      ]
     },
     {
       "id": 8,
@@ -352,7 +385,12 @@
       "ABSBrake": true,
       "fuel": "Nafta premium",
       "score": 9,
-      "locations": ["Salta", "Ushuaia", "Puerto Iguazu", "Puerto Madryn"]
+      "locations": [
+        "Salta",
+        "Ushuaia",
+        "Puerto Iguazu",
+        "Puerto Madryn"
+      ]
     },
     {
       "id": 9,
@@ -396,7 +434,12 @@
       "ABSBrake": true,
       "fuel": "Nafta premium",
       "score": 7,
-      "locations": ["San Carlos de Bariloche", "Ciudad Autonoma de Buenos Aires", "Calafate", "San Martin de los Andes"]
+      "locations": [
+        "San Carlos de Bariloche",
+        "Ciudad Autonoma de Buenos Aires",
+        "Calafate",
+        "San Martin de los Andes"
+      ]
     },
     {
       "id": 10,
@@ -441,7 +484,12 @@
       "ABSBrake": true,
       "fuel": "Nafta premium",
       "score": 7,
-      "locations": ["San Carlos de Bariloche", "Ciudad Autonoma de Buenos Aires", "Mendoza", "Cordoba"]
+      "locations": [
+        "San Carlos de Bariloche",
+        "Ciudad Autonoma de Buenos Aires",
+        "Mendoza",
+        "Cordoba"
+      ]
     },
     {
       "id": 11,
@@ -485,7 +533,12 @@
       "ABSBrake": false,
       "fuel": "Nafta premium",
       "score": 8,
-      "locations": ["Salta", "Ushuaia", "Puerto Iguazu", "Puerto Madryn"]
+      "locations": [
+        "Salta",
+        "Ushuaia",
+        "Puerto Iguazu",
+        "Puerto Madryn"
+      ]
     },
     {
       "id": 12,
@@ -529,7 +582,12 @@
       "ABSBrake": true,
       "fuel": "Nafta premium",
       "score": 9,
-      "locations": ["San Carlos de Bariloche", "Ciudad Autonoma de Buenos Aires", "Calafate", "San Martin de los Andes"]
+      "locations": [
+        "San Carlos de Bariloche",
+        "Ciudad Autonoma de Buenos Aires",
+        "Calafate",
+        "San Martin de los Andes"
+      ]
     },
     {
       "id": 13,
@@ -573,7 +631,12 @@
       "ABSBrake": true,
       "fuel": "Nafta premium",
       "score": 10,
-      "locations": ["San Carlos de Bariloche", "Ciudad Autonoma de Buenos Aires", "Mendoza", "Cordoba"]
+      "locations": [
+        "San Carlos de Bariloche",
+        "Ciudad Autonoma de Buenos Aires",
+        "Mendoza",
+        "Cordoba"
+      ]
     },
     {
       "id": 14,
@@ -589,7 +652,6 @@
           "original": "https://carroecarros.com.br/wp-content/uploads/2022/08/novo-jeep-renegade-2023-3.jpeg",
           "thumbnail": "https://carroecarros.com.br/wp-content/uploads/2022/08/novo-jeep-renegade-2023-3.jpeg",
           "description": "Jeep Renegade - Vista superior"
-      
         },
         {
           "original": "https://carroecarros.com.br/wp-content/uploads/2022/08/novo-jeep-renegade-2023-5.jpeg",
@@ -618,7 +680,12 @@
       "ABSBrake": true,
       "fuel": "Nafta premium",
       "score": 9,
-      "locations": ["Salta", "Ushuaia", "Puerto Iguazu", "Puerto Madryn"]
+      "locations": [
+        "Salta",
+        "Ushuaia",
+        "Puerto Iguazu",
+        "Puerto Madryn"
+      ]
     },
     {
       "id": 15,
@@ -662,7 +729,12 @@
       "ABSBrake": true,
       "fuel": "Nafta premium",
       "score": 8,
-      "locations": ["San Carlos de Bariloche", "Ciudad Autonoma de Buenos Aires", "Calafate", "San Martin de los Andes"]
+      "locations": [
+        "San Carlos de Bariloche",
+        "Ciudad Autonoma de Buenos Aires",
+        "Calafate",
+        "San Martin de los Andes"
+      ]
     },
     {
       "id": 16,
@@ -706,7 +778,12 @@
       "ABSBrake": true,
       "fuel": "Nafta premium",
       "score": 8,
-      "locations": ["San Carlos de Bariloche", "Ciudad Autonoma de Buenos Aires", "Mendoza", "Cordoba"]
+      "locations": [
+        "San Carlos de Bariloche",
+        "Ciudad Autonoma de Buenos Aires",
+        "Mendoza",
+        "Cordoba"
+      ]
     },
     {
       "id": 17,
@@ -750,7 +827,12 @@
       "ABSBrake": false,
       "fuel": "Diesel premium",
       "score": 10,
-      "locations": ["Salta", "Ushuaia", "Puerto Iguazu", "Puerto Madryn"]
+      "locations": [
+        "Salta",
+        "Ushuaia",
+        "Puerto Iguazu",
+        "Puerto Madryn"
+      ]
     },
     {
       "id": 18,
@@ -794,7 +876,12 @@
       "ABSBrake": true,
       "fuel": "Diesel premium",
       "score": 8,
-      "locations": ["San Carlos de Bariloche", "Ciudad Autonoma de Buenos Aires", "Calafate", "San Martin de los Andes"]
+      "locations": [
+        "San Carlos de Bariloche",
+        "Ciudad Autonoma de Buenos Aires",
+        "Calafate",
+        "San Martin de los Andes"
+      ]
     },
     {
       "id": 19,
@@ -838,7 +925,12 @@
       "ABSBrake": true,
       "fuel": "Diesel premium",
       "score": 10,
-      "locations": ["San Carlos de Bariloche", "Ciudad Autonoma de Buenos Aires", "Mendoza", "Cordoba"]
+      "locations": [
+        "San Carlos de Bariloche",
+        "Ciudad Autonoma de Buenos Aires",
+        "Mendoza",
+        "Cordoba"
+      ]
     },
     {
       "id": 20,
@@ -882,7 +974,12 @@
       "ABSBrake": true,
       "fuel": "Diesel premium",
       "score": 9,
-      "locations": ["Salta", "Ushuaia", "Puerto Iguazu", "Puerto Madryn"]
+      "locations": [
+        "Salta",
+        "Ushuaia",
+        "Puerto Iguazu",
+        "Puerto Madryn"
+      ]
     }
   ],
   "users": [
@@ -934,6 +1031,13 @@
       "email": "januzil@gmail.com",
       "password": "januzil23",
       "id": 7
+    },
+    {
+      "name": "Enzo",
+      "surname": "Perez",
+      "email": "pereze@gmail.com",
+      "password": "pereze23",
+      "id": 8
     }
   ],
   "reservations": [
@@ -1149,7 +1253,7 @@
       "pais": "Argentina",
       "distancia": 450,
       "lat": -54.8019,
-      "lon": -68.3030
+      "lon": -68.303
     },
     {
       "id": 7,
@@ -1175,7 +1279,7 @@
       "provincia": "Santa Cruz",
       "pais": "Argentina",
       "distancia": 350,
-      "lat": -50.3380,
+      "lat": -50.338,
       "lon": -72.2648
     },
     {
