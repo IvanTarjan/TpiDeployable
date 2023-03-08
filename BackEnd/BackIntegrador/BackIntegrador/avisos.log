@@ -887,3 +887,36 @@
 [2023-03-07 15:43:10] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 4
 [2023-03-07 15:43:15] [ INFO ] [PuntuacionService:43] Se inicio el listado de todas las puntuaciones
 [2023-03-07 15:43:21] [ INFO ] [ProductoService:32] Se inició el listado de todas las productos
+[2023-03-07 15:47:38] [ INFO ] [ReservaService:37] Se inició una operación de guardado de la reserva con id=: null
+[2023-03-07 15:47:38] [ INFO ] [ProductoService:77] Se inició una operación de búsqueda de la producto con id=3
+[2023-03-07 15:47:38] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 4
+[2023-03-07 15:47:59] [ INFO ] [ReservaService:32] Se inició el listado de todas las reservas
+[2023-03-07 15:48:21] [ INFO ] [ReservaService:73] Se inició una operación de búsqueda de la reserva con id=1
+[2023-03-07 15:48:28] [ INFO ] [UbicacionService:63] Se inició una operación de búsqueda de la ubicacion con id=1
+[2023-03-07 15:48:28] [ WARN ] [UbicacionService:52] Se realizo una operación de eliminación de la ubicacion conid=1
+[2023-03-07 15:48:33] [ INFO ] [UbicacionService:63] Se inició una operación de búsqueda de la ubicacion con id=1
+[2023-03-07 15:48:37] [ INFO ] [ProductoService:32] Se inició el listado de todas las productos
+[2023-03-07 15:48:53] [ INFO ] [UbicacionService:63] Se inició una operación de búsqueda de la ubicacion con id=2
+[2023-03-07 15:49:36] [ INFO ] [ReservaService:73] Se inició una operación de búsqueda de la reserva con id=1
+[2023-03-07 15:49:36] [ WARN ] [ReservaService:62] Se realizo una operación de eliminación de la reserva conid=1
+[2023-03-07 15:49:39] [ INFO ] [ReservaService:32] Se inició el listado de todas las reservas
+[2023-03-07 15:50:14] [ INFO ] [ReservaService:37] Se inició una operación de guardado de la reserva con id=: null
+[2023-03-07 15:50:14] [ INFO ] [ProductoService:77] Se inició una operación de búsqueda de la producto con id=3
+[2023-03-07 15:50:14] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 4
+[2023-03-07 15:50:26] [ INFO ] [ReservaService:32] Se inició el listado de todas las reservas
+[2023-03-07 15:50:29] [ INFO ] [ReservaService:32] Se inició el listado de todas las reservas
+[2023-03-07 15:50:42] [ INFO ] [ReservaService:32] Se inició el listado de todas las reservas
+[2023-03-07 15:50:46] [ INFO ] [ReservaService:73] Se inició una operación de búsqueda de la reserva con id=2
+[2023-03-07 15:50:46] [ INFO ] [ReservaService:49] Se actualizo la reserva con id= 2
+[2023-03-07 15:50:52] [ INFO ] [ReservaService:32] Se inició el listado de todas las reservas
+[2023-03-08 14:08:35] [ INFO ] [CategoriaService:32] Se inició una operación de guardado de la categoria con titulo: asdf
+[2023-03-08 14:08:49] [ INFO ] [UbicacionService:31] Se inició una operación de guardado de la ciudad con id=: null
+[2023-03-08 14:09:39] [ INFO ] [UbicacionService:26] Se inició el listado de todas las ubicacion
+[2023-03-08 14:11:04] [ INFO ] [UbicacionService:31] Se inició una operación de guardado de la ciudad con id=: null
+[2023-03-08 14:17:38] [ INFO ] [CategoriaService:32] Se inició una operación de guardado de la categoria con titulo: asdf
+[2023-03-08 14:17:43] [ INFO ] [UbicacionService:26] Se inició el listado de todas las ubicacion
+[2023-03-08 14:19:26] [ INFO ] [ImagenService:30] Se inició el listado de todas las imagenes
+[2023-03-08 14:19:36] [ INFO ] [CategoriaService:27] Se inició el listado de todas las Categorias
+[2023-03-08 14:19:41] [ INFO ] [ProductoService:32] Se inició el listado de todas las productos
+[2023-03-08 14:22:13] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: titulongo
+[2023-03-08 14:22:19] [ INFO ] [ProductoService:44] Se inició una operación de guardado de la producto con titulo: Autito
