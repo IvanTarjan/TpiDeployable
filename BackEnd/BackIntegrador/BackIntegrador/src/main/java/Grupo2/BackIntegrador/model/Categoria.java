@@ -27,7 +27,7 @@ public class Categoria {
     private String url_imagen;
 
     @OneToMany(mappedBy = "categoria",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JsonIncludeProperties("id")
+    @JsonIncludeProperties({"id", "imagen"})
     private Set<Producto> productos= new HashSet<>();
 
     public void removeProducto (Producto producto){

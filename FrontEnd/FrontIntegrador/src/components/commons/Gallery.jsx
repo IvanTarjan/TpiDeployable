@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css'
 import styles from '../styles/Body.module.css'
 
 const Gallery = ({ selectedCar }) => {
-  const imgArray = selectedCar.imagen.map(item => (
-    item.url_img
-  ))
+  let imgArray = [];
+
+  useEffect(() => {
+    imgArray = selectedCar.imagen.map(item => (
+      item.url_img
+    ))
+    console.log(imgArray);
+  }, [])
+  
   return (
     <div className={styles.imagesContainerGallery}>
       <ImageGallery

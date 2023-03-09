@@ -1,6 +1,6 @@
-import { IconButton, Modal } from '@mui/material';
+import { Button, IconButton, Modal } from '@mui/material';
 import { Box } from '@mui/system';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from '../styles/Body.module.css'
 import 'react-image-gallery/styles/css/image-gallery.css'
 import CloseIcon from '@mui/icons-material/Close';
@@ -22,14 +22,20 @@ const GalleryGrid = ({ selectedCar }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  const imagesArray = selectedCar.imagen.length > 5 ? selectedCar.imagen.slice(4) : selectedCar.image
+  let imagesArray = [];
+
+  useEffect(() => {
+    imagesArray = selectedCar.imagen.length > 5 ? selectedCar.imagen.slice(4) : selectedCar.imagen;  
+    console.log(imagesArray);
+  }, [])
+  
 
   return (
 
     <div className={styles.photosContainer}>
-      {imagesArray.map(item => (
-        <div className={styles.bigPhoto}>
-          <img src={item.imagen[0].url_img} />
+      {imagesArray.map((item, index) => (
+        <div className={index == 0?styles.bigPhoto: styles.smallPhotoOne}>
+          <img src={"https://cloudfront-us-east-1.images.arcpublishing.com/infobae/OJ3CFLJB5JDJDFNTX3NBWFCDD4.jpg"} alt={item.titulo}/>
         </div>
       ))}
 

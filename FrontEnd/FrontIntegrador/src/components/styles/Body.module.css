@@ -90,11 +90,6 @@
   position: relative;
 }
 
-.smallPhotoOne{
-
-  width: 315px;
-  height: 190px;
-}
 
 .smallPhotoTwo{
 
@@ -108,7 +103,7 @@
 }
 
 
-span{
+/* span{
   position: absolute;
   bottom: 10px;
   right: 10px;
@@ -118,7 +113,7 @@ span{
   line-height: 19px;
   text-decoration-line: underline;
   color: #545776;
-}
+} */
 
 .smallPhotoFour span:hover{
   cursor: pointer;
