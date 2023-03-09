@@ -26,7 +26,7 @@ const SharePage = ({ open, handleClose, currentPageUrl }) => {
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     >
-      <Box height={'600px'} sx={style}>
+      <Box sx={style}>
         <div className={styles.closeBtnContainer}>
           <IconButton sx={{ display: 'flex', justifyContent: 'flex-end' }} disableRipple={true} onClick={handleClose}>
             <CloseIcon />
