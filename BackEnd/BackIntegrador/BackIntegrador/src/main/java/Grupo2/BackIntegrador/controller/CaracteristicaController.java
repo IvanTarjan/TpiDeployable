@@ -12,6 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/caracteristica")
+@CrossOrigin("*")
 public class CaracteristicaController {
 
     @Autowired

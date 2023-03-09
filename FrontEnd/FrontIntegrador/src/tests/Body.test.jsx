@@ -2,18 +2,18 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import Body from '../components/pages/Body'
 import matchers from "@testing-library/jest-dom/matchers";
 import { MemoryRouter } from 'react-router-dom';
+import HeaderContextProvider from '../components/contexts/HeaderContext';
 import axios from 'axios';
 import { act } from 'react-dom/test-utils';
-import BodyContextProvider from '../components/contexts/BodyContext';
 
 expect.extend(matchers);
 
 beforeEach(() => {
-  render(<BodyContextProvider><Body /></BodyContextProvider>, { wrapper: MemoryRouter })
+  render(<HeaderContextProvider><Body /></HeaderContextProvider>, { wrapper: MemoryRouter })
 })
 
 it("debe mostrar componente de busqueda", () => {
-  const motto = screen.getByText(/encontra el vehiculo ideal/i);
+  const motto = screen.getByText(/busca ofertas/i);
   expect(motto).toBeInTheDocument();
 })
 
@@ -25,6 +25,7 @@ it("debe mostrar componente que lista los vehiculos", () => {
 it('deben mostrar modelo Amarok', async () => {
   const carModel = await screen.findByText(/amarok/i)
   expect(carModel.textContent).toBe("Volkswagen Amarok")
+
 })
 
 const fetchData = () => axios.get("http://localhost:5000/cars")

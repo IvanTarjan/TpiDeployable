@@ -40,8 +40,6 @@ public class ProductoService {
         for (Politica p : producto.getPolitica()) {
             p.setProducto(producto);
         }
-        System.out.println(producto.getImagen());
-        System.out.println(producto.getPolitica());
         Producto productoTemp = productoRepository.save(producto);
         LOGGER.info("Se inició una operación de guardado de la producto con titulo: "+
                 producto.getTitulo());

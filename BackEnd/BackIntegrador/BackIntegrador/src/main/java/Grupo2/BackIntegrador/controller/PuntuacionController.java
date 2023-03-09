@@ -12,6 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/puntuacion")
+@CrossOrigin("*")
 public class PuntuacionController {
 
     @Autowired

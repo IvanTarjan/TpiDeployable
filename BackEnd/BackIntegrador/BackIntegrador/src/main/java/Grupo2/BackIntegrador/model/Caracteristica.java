@@ -30,12 +30,6 @@ public class Caracteristica {
     @JsonIgnoreProperties("caracteristica")
     private Set<Producto> producto = new HashSet<>();
 
-    public Caracteristica(Long id, String titulo, String icono) {
-        this.id = id;
-        this.titulo = titulo;
-        this.icono = icono;
-    }
-
     public void addProducto (Producto producto){
         this.producto.add(producto);
         producto.getCaracteristica().add(this);
