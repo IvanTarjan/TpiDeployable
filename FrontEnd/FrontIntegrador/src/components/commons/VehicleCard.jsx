@@ -15,11 +15,12 @@ import { DoorBack } from '@mui/icons-material';
 import styles from '../styles/Body.module.css'
 import { Box } from '@mui/system';
 import { useNavigate } from 'react-router-dom';
+import CircleIcon from '@mui/icons-material/Circle';
 
 export default function VehicleCard({ car }) {
   const navigate = useNavigate()
   const handleClick = () => {
-    navigate(`/category/${car.category}/car/${car.id}`)
+    navigate(`/category/${car.categoria.titulo}/car/${car.id}`)
   }
 
   return (
@@ -48,8 +49,8 @@ export default function VehicleCard({ car }) {
       <Box className={styles.imageContainer}>
         <CardMedia className={styles.carImages}
           sx={{ height: 280 }}
-          image={car.image[0].original}
-          title={car.name}
+          image={car.imagen[0].url_img}
+          title={car.titulo}
         />
 
         <Button onClick={handleClick} variant='contained' size="small" >ver mas</Button>
@@ -58,20 +59,17 @@ export default function VehicleCard({ car }) {
       <CardContent className={styles.cardContent}>
         <p>{car.category}</p>
         <Typography gutterBottom variant="h6" component="div">
-          {car.name}
+          {car.titulo}
         </Typography>
         <Box className={styles.iconsContainer} >
-          <Typography fontSize={'14px'} className={styles.cardContainer} ><InfoIcon fontSize='small' />Modelo {car.model}</Typography>
-          <Typography fontSize={'14px'} className={styles.cardContainer}><AirlineSeatReclineNormalIcon fontSize='small' />{car.airbag}</Typography>
-          <Typography fontSize={'14px'} className={styles.cardContainer}><TuneIcon fontSize='small' />Caja {car.gearbox}</Typography>
-          <Typography fontSize={'14px'} className={styles.cardContainer}><LuggageIcon fontSize='small' />Baul {car.trunk}</Typography>
-          <Typography fontSize={'14px'} className={styles.cardContainer}><DoorBack fontSize='small' />{car.doors} puertas</Typography>
-          {car.airConditioning && <Typography fontSize={'14px'} className={styles.cardContainer}><AcUnitIcon fontSize='small' />Aire acondicionado</Typography>}
-          {car.ABSBrake ? <Typography fontSize={'14px'} className={styles.cardContainer}><HealthAndSafetyIcon fontSize='small' />Frenos ABS</Typography> : <Typography fontSize={'14px'} className={styles.cardContainer}><HealthAndSafetyIcon fontSize='small' />Frenos a disco</Typography>}
-          <Typography fontSize={'14px'} className={styles.cardContainer}><LocalGasStationIcon fontSize='small' />{car.fuel}</Typography>
+          {/* <Typography fontSize={'14px'} className={styles.cardContainer} ><InfoIcon fontSize='small' />Modelo {car.model}</Typography> */}
+          {car.caracteristica.map(item => (
+            <Typography key={item.id} fontSize={'14px'} className={styles.cardContainer}><CircleIcon fontSize='small' />{item.titulo}</Typography>
+          ))}
+
         </Box>
         <Typography sx={{ paddingTop: '10px', paddingBottom: '10px' }} variant="body2" color="text.secondary">
-          {car.message.slice(0, 50)}...
+          {car.descripcion.slice(0, 50)}...
         </Typography>
       </CardContent>
     </Card>

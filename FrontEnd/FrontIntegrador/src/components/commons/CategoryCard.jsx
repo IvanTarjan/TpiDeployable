@@ -16,12 +16,13 @@ const CategoryCard = ({ categoria, carImgs }) => {
             <CardMedia
                 component="img"
                 sx={{ height: 280 }}
-                image={carImgs[randomImg]}
-                alt={categoria.nombre}
+                // carImgs[randomImg].imagen[0].url_img
+                image={categoria.url_imagen}
+                alt={categoria.titulo}
             />
             <CardContent>
                 <Typography gutterBottom variant="h5" fontWeight={600}>
-                    <Link to={`/category/${categoria.nombre}`} style={{ color: colors.c3 }} >{categoria.nombre[0].toUpperCase() + categoria.nombre.slice(1)}</Link>
+                    <Link to={`/category/${categoria.titulo}`} style={{ color: colors.c3 }} >{categoria.titulo[0].toUpperCase() + categoria.titulo.slice(1)}</Link>
                 </Typography>
                 <Typography variant="body2" fontWeight={600} color={colors.fuenteBarraBusqueda}>
                     {carImgs.length} vehiculos

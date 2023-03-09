@@ -87,38 +87,28 @@
   width: 330px;
   height: 190px;
   border-radius: 10px;
+  position: relative;
 }
 
 .smallPhotoOne{
-  grid-column: 3 / 4;
-  grid-row: 1 / 2;
+
   width: 315px;
   height: 190px;
 }
 
 .smallPhotoTwo{
-  grid-column: 4 / 5;
-  grid-row: 1 / 2;
-  width: 315px;
-  height: 190px;
+
 }
 
 .smallPhotoThree{
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
-  width: 315px;
-  height: 190px;
+
 }
 
 .smallPhotoFour{
-  grid-column: 4 / 5;
-  grid-row: 2 / 3;
-  width: 315px;
-  height: 190px;
-  position: relative;
 }
 
-.smallPhotoFour span{
+
+span{
   position: absolute;
   bottom: 10px;
   right: 10px;
@@ -144,6 +134,15 @@
 .closeBtnContainer{
   display: flex;
   justify-content: flex-end;
+}
+
+.shareContainer{
+  display: flex;
+  width: 300px;
+  height: 100px;
+}
+.shareContainer button{
+  display: block;
 }
 
 .moreData{

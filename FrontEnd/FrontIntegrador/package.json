@@ -33,6 +33,7 @@
     "react-leaflet": "^4.2.1",
     "react-multi-date-picker": "^3.3.4",
     "react-router-dom": "^6.8.1",
+    "react-share": "^4.4.1",
     "yup": "^1.0.0"
   },
   "devDependencies": {
