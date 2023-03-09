@@ -4,6 +4,9 @@ import 'react-image-gallery/styles/css/image-gallery.css'
 import styles from '../styles/Body.module.css'
 
 const Gallery = ({ selectedCar }) => {
+  const imgArray = selectedCar.imagen.map(item => (
+    item.url_img
+  ))
   return (
     <div className={styles.imagesContainerGallery}>
       <ImageGallery
@@ -13,8 +16,9 @@ const Gallery = ({ selectedCar }) => {
         showIndex={true}
         slideInterval={3000}
         showFullscreenButton={false}
-        items={selectedCar.image} />
+        items={imgArray} />
     </div>
+
   )
 }
 

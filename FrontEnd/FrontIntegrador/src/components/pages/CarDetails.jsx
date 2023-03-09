@@ -22,17 +22,17 @@ const CarDetails = () => {
   const currentPageUrl = window.location.href;
 
   const { id } = useParams()
-  const { cars, isLike, setIsLike, localizaciones, selectedCity, randomLocation } = useContext(BodyContext)
+  const { cars, isLike, setIsLike, localizaciones, selectedCity } = useContext(BodyContext)
 
-  const cityCoord = localizaciones.find(location => location.ciudad == selectedCity)
+  const selectedCar = cars.find(car => car.id == id);
+  const cityCoord = localizaciones.find(location => location.nombre == selectedCity)
 
-  const coordinates = selectedCity ? [cityCoord.lat, cityCoord.lon] : [localizaciones[randomLocation].lat, localizaciones[randomLocation].lon]
+  const coordinates = [selectedCar.latitud, selectedCar.longitud]
 
   const handleClick = () => {
     setIsLike(prev => !prev)
   }
 
-  const selectedCar = cars.find(car => car.id == id);
 
   const isTablet = useMediaQuery('(max-width:1000px)');
   const isMobile = useMediaQuery('(max-width:600px)');
@@ -55,8 +55,8 @@ const CarDetails = () => {
       {isTablet || isMobile ? <Gallery selectedCar={selectedCar} /> : <GalleryGrid selectedCar={selectedCar} />}
 
       <div className={styles.moreData}>
-        <h1>Descripcion para {selectedCar.name}</h1>
-        <p>{selectedCar.message}</p>
+        <h1>Descripcion para {selectedCar.titulo}</h1>
+        <p>{selectedCar.descripcion}</p>
 
         <h1>¿Qué ofrece este vehiculo?</h1>
         <hr className={styles.line} />
@@ -75,9 +75,14 @@ const CarDetails = () => {
         <h1>Qué tenés que saber</h1>
         <hr className={styles.line} />
         <br />
-        <p>Entrega en aeropuerto: Consultar costo</p>
-        <p>Devolución en aeropuerto: Consultar costo</p>
-        <p>Sillita de bebé: Consultar costo</p>
+
+        {selectedCar.politica.map(item => (
+          <div key={item.id}>
+            <p>{item.titulo}</p>
+            <p>{item.descripcion}</p>
+          </div>
+        ))}
+
         <Policies />
       </div>
     </div>
