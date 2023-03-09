@@ -31,12 +31,6 @@ public class Ubicacion {
     @JsonIncludeProperties("id")
     private Set<Producto> productos= new HashSet<>();
 
-    public Ubicacion(Long id, String nombre, String pais) {
-        this.id = id;
-        this.nombre = nombre;
-        this.pais = pais;
-    }
-
     public void removeProducto (Producto producto){
         this.productos.remove(producto);
         producto.setUbicacion(null);

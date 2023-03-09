@@ -52,7 +52,7 @@ public class Producto {
     private Set<Puntuacion> puntuacion= new HashSet<>();
 
     //Many to one
-    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH})
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "categoria_id")
     @JsonIgnoreProperties("productos")
     private Categoria categoria;
@@ -70,15 +70,6 @@ public class Producto {
             inverseJoinColumns = { @JoinColumn(name = "caracteristica_id") })
     private Set<Caracteristica> caracteristica = new HashSet<>();
 
-
-    public Producto(Long id, String titulo, String descripcion, Long precio, Float latitud, Float longitud) {
-        this.id = id;
-        this.titulo = titulo;
-        this.descripcion = descripcion;
-        this.precio = precio;
-        this.latitud = latitud;
-        this.longitud = longitud;
-    }
 
     public void addCaracteristica (Caracteristica caracteristica){
         this.caracteristica.add(caracteristica);
