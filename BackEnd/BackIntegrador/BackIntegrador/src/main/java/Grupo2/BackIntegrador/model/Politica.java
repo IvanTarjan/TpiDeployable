@@ -23,9 +23,4 @@ public class Politica {
     @JsonIncludeProperties("id")
     private Producto producto;
 
-    public Politica(Long id, String titulo, String descripcion) {
-        this.id = id;
-        this.titulo = titulo;
-        this.descripcion = descripcion;
-    }
 }

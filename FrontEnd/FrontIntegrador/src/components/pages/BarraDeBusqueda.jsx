@@ -22,9 +22,8 @@ const BarraDeBusqueda = () => {
     }
 
     const handleSubmit = () => {
-        setDateRange([dateRange[0].format(), dateRange[1].format()])
         setSelectedCity(location.ciudad)
-        navigate('/results/')
+        navigate('/results/', { state: [dateRange[0].format(), dateRange[1].format()] })
     }
 
     const weekDays = ["S", "M", "T", "W", "T", "F", "S"];

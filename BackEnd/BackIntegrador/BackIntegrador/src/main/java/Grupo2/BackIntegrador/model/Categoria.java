@@ -30,13 +30,6 @@ public class Categoria {
     @JsonIncludeProperties("id")
     private Set<Producto> productos= new HashSet<>();
 
-    public Categoria(Long id, String titulo, String descripcion, String url_imagen) {
-        this.id = id;
-        this.titulo = titulo;
-        this.descripcion = descripcion;
-        this.url_imagen = url_imagen;
-    }
-
     public void removeProducto (Producto producto){
         this.productos.remove(producto);
         producto.setCategoria(null);

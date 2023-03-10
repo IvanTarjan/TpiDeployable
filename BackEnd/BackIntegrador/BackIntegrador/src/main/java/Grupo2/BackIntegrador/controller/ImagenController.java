@@ -13,6 +13,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/imagen")
+@CrossOrigin("*")
 public class ImagenController {
 
     @Autowired

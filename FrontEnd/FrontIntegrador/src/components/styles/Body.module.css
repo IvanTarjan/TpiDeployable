@@ -146,6 +146,15 @@
   justify-content: flex-end;
 }
 
+.shareContainer{
+  display: flex;
+  width: 300px;
+  height: 100px;
+}
+.shareContainer button{
+  display: block;
+}
+
 .moreData{
   display: flex;
   flex-direction: column;

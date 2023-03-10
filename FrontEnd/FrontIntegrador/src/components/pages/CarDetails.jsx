@@ -1,5 +1,5 @@
 import { IconButton, useMediaQuery } from '@mui/material'
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import HeaderDetails from '../commons/HeaderDetails'
 import { BodyContext } from '../contexts/BodyContext'
@@ -13,8 +13,14 @@ import Features from '../commons/Features'
 import GalleryGrid from '../commons/GalleryGrid'
 import Gallery from '../commons/Gallery'
 import MapView from '../commons/MapView'
+import SharePage from '../commons/SharePage'
 
 const CarDetails = () => {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+  const currentPageUrl = window.location.href;
+
   const { id } = useParams()
   const { cars, isLike, setIsLike, localizaciones, selectedCity, randomLocation } = useContext(BodyContext)
 
@@ -35,9 +41,12 @@ const CarDetails = () => {
     <div>
       <HeaderDetails car={selectedCar} />
       <div className={styles.shareLikeBtnContainer}>
-        <IconButton sx={{ width: 24 }} edge={'end'} disableRipple={true} >
+        <IconButton sx={{ width: 24 }} edge={'end'} disableRipple={true} onClick={handleOpen} >
           <ShareIcon />
         </IconButton>
+
+        <SharePage open={open} handleClose={handleClose} currentPageUrl={currentPageUrl} />
+
         <IconButton sx={{ width: 24 }} edge={'start'} disableRipple={true} onClick={handleClick}>
           {isLike ? <FavoriteIcon /> : <FavoriteBorderIcon />}
         </IconButton>
