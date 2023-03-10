@@ -28,6 +28,8 @@ public class Usuario {
     private String email;
     @Column
     private String password;
+    @Column
+    private UsuarioRole usuarioRole;
 
     @OneToMany(mappedBy = "usuario", cascade = {CascadeType.MERGE, CascadeType.DETACH, CascadeType.REMOVE} , fetch = FetchType.EAGER)
     @JsonIgnoreProperties("usuario")
