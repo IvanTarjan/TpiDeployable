@@ -1,16 +1,11 @@
-# This file is a template, and might need editing before it works on your project.
-# To contribute improvements to CI/CD templates, please follow the Development guide at:
-# https://docs.gitlab.com/ee/development/cicd/templates.html
-# This specific template is located at:
-# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Terraform.gitlab-ci.yml
-
 include:
-  - template: Terraform/Base.gitlab-ci.yml  # https://gitlab.com/gitlab-org/gitlab/blob/master/lib/gitlab/ci/templates/Terraform/Base.latest.gitlab-ci.yml
+  - template: Terraform/Base.gitlab-ci.yml
 
 stages:
   - init
   - validate
   - build
+  - test
   - deploy
 
 init:
@@ -20,9 +15,16 @@ validate:
   extends: .validate
 
 build:
-  extends: .build
+  stage: .build
+  script: 
+    - echo "Compiling the code."
 
-deploy:
-  extends: .deploy
-  dependencies:
-    - build
+test:
+  stage: .test
+  script: "Running unit tests... This will take about 60 seconds."
+
+deploy: 
+  stage: .deploy
+  environment: production
+  script: echo "Deploying applicacion."  
+
