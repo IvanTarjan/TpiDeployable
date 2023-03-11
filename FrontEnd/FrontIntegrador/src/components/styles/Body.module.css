@@ -64,39 +64,27 @@
 
 .photosContainer{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   width: 100vw;
   height: 430px;
 }
-
-.bigPhoto{
-  grid-column: 1 / 3;
-  grid-row: 1 / 3;
+.smallPhotosContainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
-.bigPhoto img {
-  width: 700px;
-  height: 430px;
-  border-radius: 10px;
-}
-.smallPhotoOne img, .smallPhotoTwo img, .smallPhotoThree img, .smallPhotoFour img{
+.smallPhotosContainer img{
   width: 330px;
   height: 190px;
   border-radius: 10px;
   position: relative;
 }
 
-
-.smallPhotoTwo{
-
-}
-
-.smallPhotoThree{
-
-}
-
-.smallPhotoFour{
+.bigPhoto img {
+  width: 700px;
+  height: 430px;
+  border-radius: 10px;
 }
 
 

@@ -22,10 +22,10 @@ const GalleryGrid = ({ selectedCar }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  let imagesArray = [];
+  const [imagesArray, setImagesArray] = useState([])
 
   useEffect(() => {
-    imagesArray = selectedCar.imagen.length > 5 ? selectedCar.imagen.slice(4) : selectedCar.imagen;  
+    setImagesArray(selectedCar.imagen)
     console.log(imagesArray);
   }, [])
   
@@ -33,11 +33,16 @@ const GalleryGrid = ({ selectedCar }) => {
   return (
 
     <div className={styles.photosContainer}>
-      {imagesArray.map((item, index) => (
-        <div className={index == 0?styles.bigPhoto: styles.smallPhotoOne}>
-          <img src={"https://cloudfront-us-east-1.images.arcpublishing.com/infobae/OJ3CFLJB5JDJDFNTX3NBWFCDD4.jpg"} alt={item.titulo}/>
+      <div className={styles.bigPhoto}>
+          <img src={imagesArray[0].url_img} alt={imagesArray[0].titulo}/>
+      </div>
+      <div className={styles.smallPhotosContainer}>
+      {imagesArray.slice(1,5).map((item) => (
+        <div>
+          <img src={item.url_img} alt={item.titulo}/>
         </div>
       ))}
+      </div>
 
 
       <Modal

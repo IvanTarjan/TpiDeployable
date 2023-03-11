@@ -22,10 +22,9 @@ const CarDetails = () => {
   const currentPageUrl = window.location.href;
 
   const { id } = useParams()
-  const { cars, isLike, setIsLike, localizaciones, selectedCity } = useContext(BodyContext)
+  const { cars, isLike, setIsLike} = useContext(BodyContext)
 
   const selectedCar = cars.find(car => car.id == id);
-  const cityCoord = localizaciones.find(location => location.nombre == selectedCity)
 
   const coordinates = [selectedCar.latitud, selectedCar.longitud]
 
@@ -64,7 +63,7 @@ const CarDetails = () => {
         <br />
         <Features selectedCar={selectedCar} />
 
-        <DateAvailability id={id} />
+        <DateAvailability id={id} dateRangeArr={selectedCar.reserva.map(res=> [res.fecha_inicio, res.fecha_fin])}/>
 
         <h1>¿Dónde vas a estar?</h1>
         <hr className={styles.line} />
@@ -77,14 +76,8 @@ const CarDetails = () => {
         <hr className={styles.line} />
         <br />
 
-        {selectedCar.politica.map(item => (
-          <div key={item.id}>
-            <p>{item.titulo}</p>
-            <p>{item.descripcion}</p>
-          </div>
-        ))}
 
-        <Policies />
+        <Policies selectedCar={selectedCar}/>
       </div>
     </div>
   )
