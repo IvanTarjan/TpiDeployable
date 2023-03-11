@@ -24,18 +24,18 @@ export default function VehicleCard({ car }) {
   }
 
   return (
-    <Card data-testid="car-card" sx={{
+    <Card data-testid="car-card"  sx={{
       width: {
-        xs: 360,
-        md: 735,
-        lg: 735,
-        xl: 735,
+        xs: 375,
+        md: 765,
+        lg: 765,
+        xl: 765,
       },
       height: {
-        xs: 700,
-        md: 380,
-        lg: 380,
-        xl: 380
+        xs: 600,
+        md: 280,
+        lg: 280,
+        xl: 280
       },
       display: 'flex',
       flexDirection: {
@@ -48,29 +48,29 @@ export default function VehicleCard({ car }) {
     }}>
       <Box className={styles.imageContainer}>
         <CardMedia className={styles.carImages}
-          sx={{ height: 280 }}
+          sx={{ height: 280 , width: 375}}
           image={car.imagen[0].url_img}
           title={car.titulo}
         />
 
-        <Button onClick={handleClick} variant='contained' size="small" >ver mas</Button>
       </Box>
 
       <CardContent className={styles.cardContent}>
-        <p>{car.category}</p>
+        <p>{car.categoria.titulo}</p>
         <Typography gutterBottom variant="h6" component="div">
           {car.titulo}
         </Typography>
         <Box className={styles.iconsContainer} >
           {/* <Typography fontSize={'14px'} className={styles.cardContainer} ><InfoIcon fontSize='small' />Modelo {car.model}</Typography> */}
           {car.caracteristica.map(item => (
-            <Typography key={item.id} fontSize={'14px'} className={styles.cardContainer}><CircleIcon fontSize='small' />{item.titulo}</Typography>
+            <Typography key={item.id} fontSize={'14px'} className={styles.cardContainer} display="flex" gap={1}><img src={item.icono} style={{width:"auto", height:"15px"}}/>{item.titulo}</Typography>
           ))}
 
         </Box>
         <Typography sx={{ paddingTop: '10px', paddingBottom: '10px' }} variant="body2" color="text.secondary">
           {car.descripcion.slice(0, 50)}...
         </Typography>
+        <Button onClick={handleClick} variant='contained' size="small" sx={{justifySelf: "center"}} >ver mas</Button>
       </CardContent>
     </Card>
   );

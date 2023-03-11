@@ -7,18 +7,16 @@ import RequestQuoteIcon from '@mui/icons-material/RequestQuote';
 import styles from '../styles/Body.module.css'
 import { Box, Typography } from '@mui/material';
 
-const Policies = () => {
+const Policies = ({selectedCar}) => {
   return (
     <Box className={styles.iconsContainerDetail} >
-      <div>
-        <Typography fontSize={'14px'} className={styles.cardContainer} ><SmokeFreeIcon fontSize='small' />Fumar: NO</Typography>
-        <Typography fontSize={'14px'} className={styles.cardContainer}><NoMealsIcon fontSize='small' />Comer: NO</Typography>
-        <Typography fontSize={'14px'} className={styles.cardContainer}><AddRoadIcon fontSize='small' />300 kms por día</Typography>
-      </div>
-      <div>
-        <Typography fontSize={'14px'} className={styles.cardContainer}><SosIcon fontSize='small' />Asistencia 24 hs</Typography>
-        <Typography fontSize={'14px'} className={styles.cardContainer}><RequestQuoteIcon fontSize='small' />Seguro todo riesgo con franquicia de $60.000</Typography>
-      </div>
+
+  {selectedCar.politica.map(item => (
+          <div key={item.id}>
+            <h4>{item.titulo}</h4>
+            <p>{item.descripcion}</p>
+          </div>
+        ))}
     </Box>
   )
 }

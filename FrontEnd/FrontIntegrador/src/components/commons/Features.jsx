@@ -16,7 +16,7 @@ const Features = ({ selectedCar }) => {
   return (
     <Box className={styles.iconsContainerDetail} >
       {selectedCar.caracteristica.map(item => (
-            <Typography key={item.id} fontSize={'14px'} className={styles.cardContainer}><CircleIcon fontSize='small' />{item.titulo}</Typography>
+            <Typography key={item.id} fontSize={'14px'} className={styles.cardContainer} display="flex" gap={1}><img src={item.icono} style={{width:"auto", height:"15px"}}/>{item.titulo}</Typography>
           ))}
     </Box>
   )

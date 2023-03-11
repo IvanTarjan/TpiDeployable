@@ -11,7 +11,7 @@ const BodyContextProvider = ({ children }) => {
   const [allDates, setAllDates] = useState([])
   const [categorias, setCategorias] = useState([])
   const [selectedCity, setSelectedCity] = useState(null)
-  const [reservations, setReservations] = useState([])
+
 
   useEffect(() => {
     axios.get("http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/producto")
@@ -28,12 +28,6 @@ const BodyContextProvider = ({ children }) => {
   useEffect(() => {
     axios.get("http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/categoria")
       .then(res => setCategorias(res.data))
-      .catch(err => console.log(err))
-  }, [])
-
-  useEffect(() => {
-    axios.get("http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/reserva")
-      .then(res => setReservations(res.data))
       .catch(err => console.log(err))
   }, [])
 
@@ -54,9 +48,7 @@ const BodyContextProvider = ({ children }) => {
     categorias,
     setCategorias,
     selectedCity,
-    setSelectedCity,
-    reservations,
-    setReservations
+    setSelectedCity
   }
 
   return (

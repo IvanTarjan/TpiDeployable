@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 const DateAvailability = ({ dateRangeArr, id }) => {
   const calendarRef = useRef();
-  const { dateRange, setDateRange, allDates, setAllDates, reservations } = useContext(BodyContext)
+  const { dateRange, setDateRange, allDates, setAllDates} = useContext(BodyContext)
   const [disabledDays, setDisabledDays] = useState([])
   const navigator = useNavigate()
   const isMobile = useMediaQuery('(max-width:600px)');
@@ -16,21 +16,9 @@ const DateAvailability = ({ dateRangeArr, id }) => {
   const weekDays = ["S", "M", "T", "W", "T", "F", "S"];
   const months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
 
-  const reservedCarDate = (reservationArr, carId) => {
-    const reservedDates = []
-    for (let i = 0; i < reservationArr.length; i++) {
-      if (reservationArr[i].car_id == carId) {
-        reservedDates.push([reservationArr[i].startDate, reservationArr[i].endDate])
-      }
-    }
-    return reservedDates
-  }
-
-  const arrDiasOcupados = reservedCarDate(reservations, id)
-
   useEffect(() => {
     let dayArr = [];
-    arrDiasOcupados.forEach((range) => dayArr = dayArr.concat(getDaysArray(range[0], range[1])))
+    dateRangeArr.forEach((range) => dayArr = dayArr.concat(getDaysArray(range[0], range[1])))
     setDisabledDays(dayArr);
   }, [])
 
