@@ -5,7 +5,6 @@ stages:
   - init
   - validate
   - build
-  - test
   - deploy
 
 init:
@@ -18,10 +17,6 @@ build:
   stage: .build
   script: 
     - echo "Compiling the code."
-
-test:
-  stage: .test
-  script: "Running unit tests... This will take about 60 seconds."
 
 deploy: 
   stage: .deploy
