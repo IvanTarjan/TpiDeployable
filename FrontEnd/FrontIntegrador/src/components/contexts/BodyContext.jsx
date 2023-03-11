@@ -14,25 +14,25 @@ const BodyContextProvider = ({ children }) => {
   const [reservations, setReservations] = useState([])
 
   useEffect(() => {
-    axios.get("http://localhost:5000/cars")
+    axios.get("http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/producto")
       .then(res => setCars(res.data))
       .catch(err => console.log(err))
   }, [])
 
   useEffect(() => {
-    axios.get("http://localhost:5000/localizaciones")
+    axios.get("http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/ubicacion")
       .then(res => setLocalizaciones(res.data))
       .catch(err => console.log(err))
   }, [])
 
   useEffect(() => {
-    axios.get("http://localhost:5000/categorias")
+    axios.get("http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/categoria")
       .then(res => setCategorias(res.data))
       .catch(err => console.log(err))
   }, [])
 
   useEffect(() => {
-    axios.get("http://localhost:5000/reservations")
+    axios.get("http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/reserva")
       .then(res => setReservations(res.data))
       .catch(err => console.log(err))
   }, [])

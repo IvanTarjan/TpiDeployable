@@ -10,29 +10,14 @@ import { DoorBack } from '@mui/icons-material';
 import { Box } from '@mui/system';
 import { Typography } from '@mui/material';
 import styles from '../styles/Body.module.css'
+import CircleIcon from '@mui/icons-material/Circle';
 
 const Features = ({ selectedCar }) => {
   return (
     <Box className={styles.iconsContainerDetail} >
-      <div>
-        <Typography fontSize={'14px'} className={styles.cardContainer} ><InfoIcon fontSize='small' />Modelo {selectedCar.model}</Typography>
-        <Typography fontSize={'14px'} className={styles.cardContainer}><AirlineSeatReclineNormalIcon fontSize='small' />{selectedCar.airbag}</Typography>
-      </div>
-
-      <div>
-        <Typography fontSize={'14px'} className={styles.cardContainer}><TuneIcon fontSize='small' />Caja {selectedCar.gearbox}</Typography>
-        <Typography fontSize={'14px'} className={styles.cardContainer}><LuggageIcon fontSize='small' />Baul {selectedCar.trunk}</Typography>
-      </div>
-
-      <div>
-        <Typography fontSize={'14px'} className={styles.cardContainer}><DoorBack fontSize='small' />{selectedCar.doors} puertas</Typography>
-        {selectedCar.airConditioning && <Typography fontSize={'14px'} className={styles.cardContainer}><AcUnitIcon fontSize='small' />Aire acondicionado</Typography>}
-      </div>
-
-      <div>
-        {selectedCar.ABSBrake ? <Typography fontSize={'14px'} className={styles.cardContainer}><HealthAndSafetyIcon fontSize='small' />Frenos ABS</Typography> : <Typography fontSize={'14px'} className={styles.cardContainer}><HealthAndSafetyIcon fontSize='small' />Frenos a disco</Typography>}
-        <Typography fontSize={'14px'} className={styles.cardContainer}><LocalGasStationIcon fontSize='small' />{selectedCar.fuel}</Typography>
-      </div>
+      {selectedCar.caracteristica.map(item => (
+            <Typography key={item.id} fontSize={'14px'} className={styles.cardContainer}><CircleIcon fontSize='small' />{item.titulo}</Typography>
+          ))}
     </Box>
   )
 }

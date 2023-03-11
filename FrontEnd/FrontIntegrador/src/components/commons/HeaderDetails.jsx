@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import styles from '../styles/Header.module.css'
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { IconButton } from '@mui/material';
@@ -10,7 +10,26 @@ const HeaderDetails = ({ car }) => {
 
   const { localizaciones, selectedCity, randomLocation } = useContext(BodyContext)
 
-  const selectedCityData = localizaciones.find(location => location.ciudad == selectedCity)
+  const selectedCityData = localizaciones.find(location => location.ciudad == selectedCity);
+  
+
+  const [score, setScore] = useState(0);
+
+  const getAvg = (car) => {
+    let avg = 0;
+    if (car.puntuacion.length > 0){
+      car.puntuacion.forEach(c => {
+        avg+= c.puntuacion;
+      });
+      avg = avg/car.puntuacion.length;
+    }
+    return avg;
+  }
+
+  useEffect(() => {
+    setScore(getAvg(car));
+  }, [])
+  
 
   const navigate = useNavigate()
   const handleClick = () => {
@@ -20,8 +39,8 @@ const HeaderDetails = ({ car }) => {
     <>
       <div className={styles.headerDetails}>
         <div className={styles.headerDetailsTitle}>
-          <p>{car.category}</p>
-          <h1 style={{ paddingTop: '0' }}>{car.name}</h1>
+          <p>{car.categoria.titulo}</p>
+          <h1 style={{ paddingTop: '0' }}>{car.titulo}</h1>
         </div>
         <IconButton sx={{ width: 75 }} onClick={handleClick}>
           <ArrowBackIosNewIcon fontSize='large' color='action' />
@@ -32,15 +51,15 @@ const HeaderDetails = ({ car }) => {
         <div className={styles.locationDataTitle}>
           <LocationOnIcon color='secondary'></LocationOnIcon>
           <div className={styles.locationDataTitleCity}>
-            {selectedCity ? <span>{selectedCityData.ciudad}, {selectedCityData.provincia}, {selectedCityData.pais}</span> :
-              <span>{localizaciones[randomLocation].ciudad}, {localizaciones[randomLocation].provincia}, {localizaciones[randomLocation].pais}</span>}
-            <p>A {localizaciones[randomLocation].distancia} m del centro</p>
+            
+              <span>{car.ubicacion.nombre}, {car.ubicacion.pais}</span>
+            <p>A 4 m del centro</p>
           </div>
         </div>
 
         <div className={styles.locationDataValue}>
-          <p>{car.score > 9 ? "Excelente" : car.score > 7 ? "Muy bueno" : "Bueno"}</p>
-          <div className={styles.locationDataValueNumber}>{car.score}</div>
+          <p>{score > 9 ? "Excelente" : score > 7 ? "Muy bueno" : score > 5? "Bueno" : "Terrible"}</p>
+          <div className={styles.locationDataValueNumber}>{score}</div>
         </div>
       </div>
     </>

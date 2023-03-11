@@ -1,6 +1,6 @@
-import { IconButton, Modal } from '@mui/material';
+import { Button, IconButton, Modal } from '@mui/material';
 import { Box } from '@mui/system';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from '../styles/Body.module.css'
 import 'react-image-gallery/styles/css/image-gallery.css'
 import CloseIcon from '@mui/icons-material/Close';
@@ -22,24 +22,23 @@ const GalleryGrid = ({ selectedCar }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  let imagesArray = [];
+
+  useEffect(() => {
+    imagesArray = selectedCar.imagen.length > 5 ? selectedCar.imagen.slice(4) : selectedCar.imagen;  
+    console.log(imagesArray);
+  }, [])
+  
+
   return (
+
     <div className={styles.photosContainer}>
-      <div className={styles.bigPhoto}>
-        <img src={selectedCar.image[0].original} />
-      </div>
-      <div className={styles.smallPhotoOne}>
-        <img src={selectedCar.image[1].original} />
-      </div>
-      <div className={styles.smallPhotoTwo}>
-        <img src={selectedCar.image[2].original} />
-      </div>
-      <div className={styles.smallPhotoThree} >
-        <img src={selectedCar.image[3].original} />
-      </div>
-      <div className={styles.smallPhotoFour}>
-        <img src={selectedCar.image[4].original} />
-        <span onClick={handleOpen} >Ver mas</span>
-      </div>
+      {imagesArray.map((item, index) => (
+        <div className={index == 0?styles.bigPhoto: styles.smallPhotoOne}>
+          <img src={"https://cloudfront-us-east-1.images.arcpublishing.com/infobae/OJ3CFLJB5JDJDFNTX3NBWFCDD4.jpg"} alt={item.titulo}/>
+        </div>
+      ))}
+
 
       <Modal
         open={open}
