@@ -45,7 +45,8 @@ const CarDetails = () => {
           <ShareIcon />
         </IconButton>
 
-        <SharePage open={open} handleClose={handleClose} currentPageUrl={currentPageUrl} />
+        <SharePage open={open} han
+        dleClose={handleClose} currentPageUrl={currentPageUrl} />
 
         <IconButton sx={{ width: 24 }} edge={'start'} disableRipple={true} onClick={handleClick}>
           {isLike ? <FavoriteIcon /> : <FavoriteBorderIcon />}

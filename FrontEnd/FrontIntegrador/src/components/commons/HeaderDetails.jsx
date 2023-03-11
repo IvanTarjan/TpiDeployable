@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import styles from '../styles/Header.module.css'
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { IconButton } from '@mui/material';
@@ -11,19 +11,23 @@ const HeaderDetails = ({ car }) => {
   const { localizaciones, selectedCity, randomLocation } = useContext(BodyContext)
 
   const selectedCityData = localizaciones.find(location => location.ciudad == selectedCity);
+  
 
-  let score = 0;
+  const [score, setScore] = useState(0);
 
   const getAvg = (car) => {
-    if (car.puntuacion.length == 0){
-      return 0;
+    let avg = 0;
+    if (car.puntuacion.length > 0){
+      car.puntuacion.forEach(c => {
+        avg+= c.puntuacion;
+      });
+      avg = avg/car.puntuacion.length;
     }
-    return car.puntuacion.reduce((a,b)=> a+b, 0)/car.puntuacion.length;
+    return avg;
   }
 
   useEffect(() => {
-    console.log(car.puntuacion);
-    score = getAvg(car)
+    setScore(getAvg(car));
   }, [])
   
 

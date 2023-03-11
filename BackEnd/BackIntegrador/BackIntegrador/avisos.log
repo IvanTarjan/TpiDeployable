@@ -920,3 +920,22 @@
 [2023-03-08 14:19:41] [ INFO ] [ProductoService:32] Se inició el listado de todas las productos
 [2023-03-08 14:22:13] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: titulongo
 [2023-03-08 14:22:19] [ INFO ] [ProductoService:44] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-09 13:43:02] [ INFO ] [ProductoService:44] Se inició una operación de guardado de la producto con titulo: Autito
+[2023-03-09 13:43:17] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=15
+[2023-03-09 13:43:53] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=15
+[2023-03-09 13:44:00] [ WARN ] [ProductoService:68] Se realizo una operación de eliminación del producto con id=15
+[2023-03-09 13:44:04] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=15
+[2023-03-09 13:44:22] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
+[2023-03-09 13:44:32] [ INFO ] [PuntuacionService:33] Se inició una operación de guardado de la r eserva con id=: null
+[2023-03-09 13:44:32] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=19
+[2023-03-09 13:44:36] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 1
+[2023-03-09 13:44:44] [ INFO ] [ReservaService:37] Se inició una operación de guardado de la reserva con id=: null
+[2023-03-09 13:44:44] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=19
+[2023-03-09 13:44:49] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 1
+[2023-03-09 13:44:56] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=19
+[2023-03-09 13:45:02] [ WARN ] [ProductoService:68] Se realizo una operación de eliminación del producto con id=19
+[2023-03-09 13:45:07] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=19
+[2023-03-09 13:45:24] [ INFO ] [CategoriaService:27] Se inició el listado de todas las Categorias
+[2023-03-09 14:08:35] [ INFO ] [UbicacionService:31] Se inició una operación de guardado de la ciudad con id=: null
+[2023-03-09 15:47:31] [ INFO ] [CaracteristicaService:25] Se inició el listado de todas las Caracteristicas
+[2023-03-09 16:03:26] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
