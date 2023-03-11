@@ -3,52 +3,17 @@ stages:
   - test
   - deploy
 
-build-backend:      
+build:      
   stage: build
   script:
     - echo "Compiling the code..."
-  rules:
-  - changes:
-    - BackEnd/**/* 
 
-build-frontend:       
-  stage: build
-  script:
-    - echo "Compiling the code..."
-  rules:
-  - changes:
-    - FrontEnd/**/*
-
-test-backend:  
+test:  
   stage: test    
   script:
     - echo "Running unit tests..."
-rules:
-  - changes:
-    - BackEnd/**/* 
 
-test-frontend:  
-  stage: test    
-  script:
-    - echo "Running unit tests..."   
-rules:
-  - changes:
-    - FrontEnd/**/*
-
-deploy-backend:    
+deploy:    
   stage: deploy  
   script:
     - echo "Deploying application..."
-rules:
-  - changes:
-    - BackEnd/**/*  
-when: manual        
-
-deploy-frontend:    
-  stage: deploy  
-  script:
-    - echo "Deploying application..."
-rules:
-  - changes:
-    - FrontEnd/**/*     
-when: manual  
