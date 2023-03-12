@@ -22,7 +22,7 @@ const CarDetails = () => {
   const currentPageUrl = window.location.href;
 
   const { id } = useParams()
-  const { cars, isLike, setIsLike} = useContext(BodyContext)
+  const { cars, isLike, setIsLike } = useContext(BodyContext)
 
   const selectedCar = cars.find(car => car.id == id);
 
@@ -39,13 +39,13 @@ const CarDetails = () => {
   return (
     <div>
       <HeaderDetails car={selectedCar} />
+
       <div className={styles.shareLikeBtnContainer}>
         <IconButton sx={{ width: 24 }} edge={'end'} disableRipple={true} onClick={handleOpen} >
           <ShareIcon />
         </IconButton>
 
-        <SharePage open={open} han
-        dleClose={handleClose} currentPageUrl={currentPageUrl} />
+        <SharePage open={open} handleClose={handleClose} currentPageUrl={currentPageUrl} />
 
         <IconButton sx={{ width: 24 }} edge={'start'} disableRipple={true} onClick={handleClick}>
           {isLike ? <FavoriteIcon /> : <FavoriteBorderIcon />}
@@ -63,7 +63,7 @@ const CarDetails = () => {
         <br />
         <Features selectedCar={selectedCar} />
 
-        <DateAvailability id={id} dateRangeArr={selectedCar.reserva.map(res=> [res.fecha_inicio, res.fecha_fin])}/>
+        <DateAvailability id={id} dateRangeArr={selectedCar.reserva.map(res => [res.fecha_inicio, res.fecha_fin])} />
 
         <h1>¿Dónde vas a estar?</h1>
         <hr className={styles.line} />
@@ -77,7 +77,7 @@ const CarDetails = () => {
         <br />
 
 
-        <Policies selectedCar={selectedCar}/>
+        <Policies selectedCar={selectedCar} />
       </div>
     </div>
   )
