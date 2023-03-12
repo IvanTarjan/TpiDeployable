@@ -22,28 +22,24 @@ const GalleryGrid = ({ selectedCar }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  const [imagesArray, setImagesArray] = useState([])
 
-  useEffect(() => {
-    setImagesArray(selectedCar.imagen)
-    console.log(imagesArray);
-  }, [])
-  
+  const imagesArray = selectedCar.imagen
 
   return (
 
     <div className={styles.photosContainer}>
       <div className={styles.bigPhoto}>
-          <img src={imagesArray[0].url_img} alt={imagesArray[0].titulo}/>
+        <img src={imagesArray[0].url_img} alt={imagesArray[0].titulo} />
       </div>
       <div className={styles.smallPhotosContainer}>
-      {imagesArray.slice(1,5).map((item) => (
-        <div>
-          <img src={item.url_img} alt={item.titulo}/>
-        </div>
-      ))}
+        {imagesArray.slice(1, 5).map((item) => (
+          <div key={item.id}>
+            <img src={item.url_img} alt={item.titulo} />
+          </div>
+        ))}
       </div>
 
+      <span id={styles.verMasBtn} onClick={handleOpen} >Ver mas</span>
 
       <Modal
         open={open}
