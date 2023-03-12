@@ -3,7 +3,7 @@ import { Typography, Box, useMediaQuery, MenuItem, FormControl, Select, Outlined
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import colors from '../commons/colors';
-import DatePicker from "react-multi-date-picker"
+import DatePicker, { getAllDatesInRange } from "react-multi-date-picker"
 import { CustomInput } from '../commons/DatePickerCustomComponents';
 import { BodyContext } from '../contexts/BodyContext';
 import { useNavigate } from 'react-router-dom';
@@ -11,19 +11,24 @@ import { useNavigate } from 'react-router-dom';
 const BarraDeBusqueda = () => {
     const isMobile = useMediaQuery('(max-width:600px)');
     const isTablet = useMediaQuery('(max-width:800px)');
-    const [location, setLocation] = useState({ ciudad: "", provincia: "" });
+    const [location, setLocation] = useState(null);
     const calendarRef = useRef();
     const navigate = useNavigate()
 
-    const { localizaciones, dateRange, setDateRange, setSelectedCity } = useContext(BodyContext)
+    const { localizaciones, dateRange, setDateRange, setSelectedCity, allDates, setAllDates } = useContext(BodyContext)
 
     const handleChange = (event) => {
         setLocation(localizaciones[event.target.value]);
     }
 
     const handleSubmit = () => {
-        setSelectedCity(location.ciudad)
-        navigate('/results/', { state: [dateRange[0].format(), dateRange[1].format()] })
+        setSelectedCity(location)
+        if (dateRange[1] != null && location != null) {
+            navigate('/results/');
+        } else {
+            alert("Hay que seleccionar una fecha y una ciudad");
+        }
+        
     }
 
     const weekDays = ["S", "M", "T", "W", "T", "F", "S"];
@@ -46,7 +51,7 @@ const BarraDeBusqueda = () => {
                         return <Box sx={{ display: 'flex', alignItems: 'center', color: selected === "" ? colors.fuenteBarraBusqueda : colors.c3, gap: '5px' }}>
                             <LocationOnIcon fontSize='medium' />
                             {selected === "" ? <Typography fontWeight={600} variant='subtitle1'>¿A dónde vamos?</Typography> :
-                                <Typography fontWeight={600} variant='subtitle1'>{location.ciudad}, {location.provincia}</Typography>}
+                                <Typography fontWeight={600} variant='subtitle1'>{location.nombre}, {location.pais}</Typography>}
                         </Box>;
                     }}
                     inputProps={{ 'aria-label': 'Without label' }}
@@ -56,8 +61,8 @@ const BarraDeBusqueda = () => {
                             <Box sx={{ display: 'flex', alignItems: 'center', borderBottom: `1.5px solid ${colors.principal}`, gap: '15px', padding: '5px', width: "100%" }}>
                                 <LocationOnOutlinedIcon fontSize='medium' />
                                 <Box display='flex' flexDirection='column' justifyContent='center' alignItems='flex-start' color={colors.c3} >
-                                    <Typography variant='subtitle2' fontWeight={'600'} color={'black'}>{locali.ciudad}</Typography>
-                                    <Typography variant='caption' color={colors.c3} fontWeight={'600'}>{locali.provincia}</Typography>
+                                    <Typography variant='subtitle2' fontWeight={'600'} color={'black'}>{locali.nombre}</Typography>
+                                    <Typography variant='caption' color={colors.c3} fontWeight={'600'}>{locali.pais}</Typography>
                                 </Box>
                             </Box>
                         </MenuItem>
@@ -70,7 +75,10 @@ const BarraDeBusqueda = () => {
                     ref={calendarRef}
                     value={dateRange}
                     hideYear={true}
-                    onChange={setDateRange}
+                    onChange={dateObjects => {
+                        setDateRange(dateObjects)
+                        setAllDates(getAllDatesInRange(dateObjects))
+                    }}
                     months={months}
                     weekDays={weekDays}
                     range
