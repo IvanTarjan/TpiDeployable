@@ -4,15 +4,19 @@ import 'react-image-gallery/styles/css/image-gallery.css'
 import styles from '../styles/Body.module.css'
 
 const Gallery = ({ selectedCar }) => {
-  let imgArray = [];
 
-  useEffect(() => {
-    imgArray = selectedCar.imagen.map(item => (
-      item.url_img
-    ))
-    console.log(imgArray);
-  }, [])
-  
+  const imagesArray = selectedCar.imagen
+
+  console.log(imagesArray)
+
+  const formattedImages = (arr) => {
+    const newArr = []
+    for (let image of arr) {
+      newArr.push({ original: image.url_img, description: image.titulo })
+    }
+    return newArr
+  }
+
   return (
     <div className={styles.imagesContainerGallery}>
       <ImageGallery
@@ -22,9 +26,8 @@ const Gallery = ({ selectedCar }) => {
         showIndex={true}
         slideInterval={3000}
         showFullscreenButton={false}
-        items={imgArray} />
+        items={formattedImages(imagesArray)} />
     </div>
-
   )
 }
 
