@@ -72,6 +72,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  position: relative
 }
 
 .smallPhotosContainer img{
@@ -88,17 +89,23 @@
 }
 
 
-/* span{
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
+#verMasBtn{
+  position: relative;
+  display: inline;
+  bottom: 70px;
+  left: 1400px;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
   text-decoration-line: underline;
   color: #545776;
-} */
+  z-index: 1;
+}
+
+#verMasBtn:hover{
+  cursor: pointer;
+}
 
 .smallPhotoFour span:hover{
   cursor: pointer;
