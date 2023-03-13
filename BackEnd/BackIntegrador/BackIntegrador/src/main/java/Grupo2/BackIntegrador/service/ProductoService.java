@@ -7,6 +7,9 @@ import Grupo2.BackIntegrador.model.*;
 import Grupo2.BackIntegrador.repository.ProductoRepository;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -30,7 +33,7 @@ public class ProductoService {
 
     public List<Producto> listarProducto() {
         LOGGER.info("Se inició el listado de todas las productos");
-        return productoRepository.findAll();
+        return (List<Producto>) productoRepository.findAll();
     }
 
     public Producto guardarProducto(Producto producto){
@@ -78,6 +81,10 @@ public class ProductoService {
     public List<Producto> buscarProductoPorCategoria(Categoria categoria) {
         LOGGER.info("Se inició euna busqueda de todos los productos con categoria id=" + categoria.getId());
         return productoRepository.findByCategoria(categoria);
+    }
+
+    public List<Producto> buscarXProductosRandom (int pageNr){
+        return productoRepository.findXRandomProducts(8);
     }
 
 //    private Integer calcularPromedio(Producto producto){

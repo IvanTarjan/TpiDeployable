@@ -48,4 +48,12 @@ public class Usuario {
         this.puntuacion.remove(puntuacion);
         puntuacion.setUsuario(null);
     }
+
+    public Usuario(String nombre, String userName, String email, String password, UsuarioRole usuarioRole) {
+        this.nombre = nombre;
+        this.userName = userName;
+        this.email = email;
+        this.password = password;
+        this.usuarioRole = usuarioRole;
+    }
 }

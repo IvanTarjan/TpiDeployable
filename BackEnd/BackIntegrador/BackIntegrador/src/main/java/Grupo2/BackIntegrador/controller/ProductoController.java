@@ -59,6 +59,11 @@ public class ProductoController {
         }
     }
 
+    @GetMapping("/{nrOfProds}")
+    public ResponseEntity<List<Producto>> buscarXproductosRandom(@PathVariable int nrOfProds){
+        return ResponseEntity.ok(productoService.buscarXProductosRandom(nrOfProds));
+    }
+
 
 }
 
