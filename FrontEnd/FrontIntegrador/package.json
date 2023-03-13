@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "export NODE_ENV=production && export NODE_OPTIONS=--max-old-space-size=8192 && vite build",
+    "build": "export NODE_ENV=production && export NODE_OPTIONS=--max-old-space-size=8192 && vite build --config vite.config.js",
     "preview": "vite preview",
     "test": "vitest --ui",
     "coverage": "vitest run --coverage",

@@ -11,5 +11,8 @@ export default defineConfig({
   build: {
     minify: false,
     sourcemap: false,
+    rollupOptions: {
+      cache: false,
+    },
   }
 })
