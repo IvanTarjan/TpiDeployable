@@ -90,6 +90,7 @@
 
 
 #verMasBtn{
+  width: 60px;
   position: relative;
   display: inline;
   bottom: 70px;
