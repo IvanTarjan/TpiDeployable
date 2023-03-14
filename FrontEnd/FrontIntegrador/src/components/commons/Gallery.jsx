@@ -7,8 +7,6 @@ const Gallery = ({ selectedCar }) => {
 
   const imagesArray = selectedCar.imagen
 
-  console.log(imagesArray)
-
   const formattedImages = (arr) => {
     const newArr = []
     for (let image of arr) {
