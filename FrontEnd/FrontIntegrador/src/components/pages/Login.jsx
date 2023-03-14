@@ -1,17 +1,19 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Button, Grid, IconButton, TextField } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
 import { useFormik } from "formik";
 import * as Yup from 'yup';
 import styles from '../styles/Login.module.css';
 import { HeaderContext } from "../contexts/HeaderContext";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import Swal from 'sweetalert2'
 
 const Login = () => {
   const { users, setHeaderType, setIsLog, setCurrentUser } = useContext(HeaderContext)
   const [showPassword, setShowPassword] = useState(false);
+  const location = useLocation()
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -19,6 +21,20 @@ const Login = () => {
 
   const emailsList = users.map(user => user.email);
   const passwordsList = users.map(user => user.password);
+
+  useEffect(() => {
+    if (location.state === 'fromDetails') {
+      Swal.fire({
+        text: 'Para realizar una reserva necesitas estar logueado',
+        icon: 'warning',
+        color: '#FF0000',
+        background: '#fae0e0',
+        iconColor: 'red',
+        showConfirmButton: false,
+        timer: 3000
+      })
+    }
+  }, [])
 
   const { handleSubmit, handleChange, values, errors } = useFormik({
     initialValues: {
