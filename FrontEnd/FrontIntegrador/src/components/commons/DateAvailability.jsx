@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import colors from '../commons/colors';
-import { Calendar, getAllDatesInRange } from "react-multi-date-picker"
+import { Calendar, DateObject, getAllDatesInRange } from "react-multi-date-picker"
 import { BodyContext } from '../contexts/BodyContext';
 import { Box, Button, Typography, useMediaQuery } from '@mui/material';
 import { getDaysArray, hasOverlappingDays } from './datePickerHelpers';
@@ -51,6 +51,7 @@ const DateAvailability = ({ dateRangeArr, id }) => {
           hideYear={true}
           className="rmdp-mobile"
           weekDays={weekDays}
+          minDate={new DateObject()}
           range
           rangeHover
           numberOfMonths={isMobile ? 1 : 2}

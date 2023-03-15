@@ -3,7 +3,7 @@ import { Typography, Box, useMediaQuery, MenuItem, FormControl, Select, Outlined
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import colors from '../commons/colors';
-import DatePicker, { getAllDatesInRange } from "react-multi-date-picker"
+import DatePicker, { DateObject, getAllDatesInRange } from "react-multi-date-picker"
 import { CustomInput } from '../commons/DatePickerCustomComponents';
 import { BodyContext } from '../contexts/BodyContext';
 import { useNavigate } from 'react-router-dom';
@@ -81,6 +81,7 @@ const BarraDeBusqueda = () => {
                     }}
                     months={months}
                     weekDays={weekDays}
+                    minDate={new DateObject()}
                     range
                     render={<CustomInput />}
                     arrow={false}

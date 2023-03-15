@@ -7,9 +7,13 @@ import Grupo2.BackIntegrador.model.*;
 import Grupo2.BackIntegrador.repository.ProductoRepository;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.sql.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -30,7 +34,7 @@ public class ProductoService {
 
     public List<Producto> listarProducto() {
         LOGGER.info("Se inició el listado de todas las productos");
-        return productoRepository.findAll();
+        return (List<Producto>) productoRepository.findAll();
     }
 
     public Producto guardarProducto(Producto producto){
@@ -75,10 +79,30 @@ public class ProductoService {
             LOGGER.info("Se inició una operación de búsqueda de la producto con id="+id);
             return productoRepository.findById(id);
     }
-    public List<Producto> buscarProductoPorCategoria(Categoria categoria) {
-        LOGGER.info("Se inició euna busqueda de todos los productos con categoria id=" + categoria.getId());
-        return productoRepository.findByCategoria(categoria);
+    public List<Producto> buscarProductoPorCategoria(Long categoriaId) {
+        LOGGER.info("Se inició una busqueda de todos los productos con categoria id=" + categoriaId);
+        return productoRepository.findByCategoriaId(categoriaId);
     }
+
+    public List<Producto> buscarProductoPorUbicacion(Long ubicacionId) {
+        LOGGER.info("Se inició una busqueda de todos los productos con ubicacion id=" + ubicacionId);
+        return productoRepository.findByUbicacionId(ubicacionId);
+    }
+
+    public List<Producto> buscarXProductosRandom (Integer nrOfProds){
+        LOGGER.info("Se buscaron "+nrOfProds+" productos random");
+        return productoRepository.findXRandomProducts(nrOfProds);
+    }
+
+    public List<Producto> buscarProductosPorFecha_inicioAndFecha_fin(Date fecha_inicio, Date fecha_fin){
+        LOGGER.info("Se inició una busqueda de todos los productos disponibles desde el "+ fecha_inicio.toString()+" al "+ fecha_fin.toString());
+        return productoRepository.findAllAvailableByFecha_inicioAndFecha_fin(fecha_inicio, fecha_fin);
+    }
+    public List<Producto> buscarProductosPorFecha_inicioAndFecha_finAndUbicacionId(Date fecha_inicio, Date fecha_fin, Long ubicacionId){
+        LOGGER.info("Se inició una busqueda de todos los productos disponibles desde el "+ fecha_inicio.toString()+" al "+ fecha_fin.toString()+ " en la ubicacion con id = "+ubicacionId);
+        return productoRepository.findAllAvailableByFecha_inicioAndFecha_finAndUbicacionId(fecha_inicio, fecha_fin, ubicacionId);
+    }
+
 
 //    private Integer calcularPromedio(Producto producto){
 //        Integer promedio = 0;
