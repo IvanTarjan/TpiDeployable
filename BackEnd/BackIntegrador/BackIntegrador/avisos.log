@@ -997,3 +997,4 @@
 [2023-03-15 15:51:10] [ INFO ] [ProductoService:98] Se inició una busqueda de todos los productos disponibles desde el 2023-03-23 al 2023-03-19
 [2023-03-15 15:51:48] [ INFO ] [ProductoService:98] Se inició una busqueda de todos los productos disponibles desde el 2023-03-24 al 2023-03-19
 [2023-03-15 16:09:29] [ INFO ] [ProductoService:102] Se inició una busqueda de todos los productos disponibles desde el 2023-03-24 al 2023-03-19 en la ubicacion con id = 1
+[2023-03-15 16:11:05] [ INFO ] [ProductoService:102] Se inició una busqueda de todos los productos disponibles desde el 2023-03-24 al 2023-03-19 en la ubicacion con id = 1
