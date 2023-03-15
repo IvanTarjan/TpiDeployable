@@ -42,7 +42,7 @@ const HeaderDetails = ({ car }) => {
           <p>{car.categoria.titulo}</p>
           <h1 style={{ paddingTop: '0' }}>{car.titulo}</h1>
         </div>
-        <IconButton sx={{ width: 75 }} onClick={handleClick}>
+        <IconButton disableRipple={true} sx={{ width: 175 }} onClick={handleClick}>
           <ArrowBackIosNewIcon fontSize='large' color='action' />
         </IconButton>
       </div>
