@@ -10,7 +10,7 @@ const CarsCategory = () => {
   const { cars } = useContext(BodyContext)
   const { name } = useParams()
 
-  const neededCars = cars.filter(car => car.category == name)
+  const neededCars = cars.filter(car => car.categoria.titulo == name)
 
   const navigate = useNavigate()
   const handleClick = () => {

@@ -3,17 +3,50 @@ stages:
   - test
   - deploy
 
-build:      
+"build-backend":      
   stage: build
   script:
     - echo "Compiling the code..."
+  "rules":
+    - changes:
+       -backend/*/
 
-test:  
+"build-frontend":      
+  stage: build
+  script:
+    - echo "Compiling the code..."
+  "rules":
+    - changes:
+       -frontend/*/
+
+"test-backend":  
+  stage: test    
+  script:
+  - echo "Running unit tests..."
+  "rules":
+    - changes:
+       -backend/*/
+
+"test-frontend":  
   stage: test    
   script:
     - echo "Running unit tests..."
+  "rules":
+    - changes:
+       -frontend/*/
 
-deploy:    
+"deploy-backend":    
   stage: deploy  
+  evironment: production
   script:
     - echo "Deploying application..."
+    - echo "Execute bash"
+    - cd ./backend/backend && chmod +x backend.sh && sh backend.sh
+
+"deploy-frontend":    
+  stage: deploy  
+  evironment: production
+  script:
+    - echo "Deploying application..."
+    - echo "Execute bash"
+    - cd ./frontend/frontend && chmod +x backend.sh && sh frontend.sh
