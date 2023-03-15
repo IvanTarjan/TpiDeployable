@@ -971,3 +971,29 @@
 [2023-03-08 14:22:13] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: titulongo
 [2023-03-08 14:22:19] [ INFO ] [ProductoService:44] Se inició una operación de guardado de la producto con titulo: Autito
 >>>>>>> 2d6f63b7c9bacef4fb8069c6e566118393e6c42e
+[2023-03-14 17:35:38] [ INFO ] [ProductoService:35] Se inició el listado de todas las productos
+[2023-03-14 17:51:25] [ INFO ] [ProductoService:35] Se inició el listado de todas las productos
+[2023-03-14 17:52:56] [ INFO ] [ProductoService:87] Se buscaron 2 productos random
+[2023-03-14 17:53:48] [ INFO ] [ProductoService:82] Se inició una busqueda de todos los productos con categoria id=1
+[2023-03-14 18:03:06] [ INFO ] [ProductoService:87] Se inició una busqueda de todos los productos con ubicacion id=1
+[2023-03-15 11:59:05] [ INFO ] [ProductoService:87] Se inició una busqueda de todos los productos con ubicacion id=1
+[2023-03-15 12:01:02] [ INFO ] [ProductoService:92] Se buscaron 8 productos random
+[2023-03-15 12:11:22] [ INFO ] [ReservaService:32] Se inició el listado de todas las reservas
+[2023-03-15 12:11:49] [ INFO ] [ReservaService:73] Se inició una operación de búsqueda de la reserva con id=1
+[2023-03-15 12:12:09] [ WARN ] [ReservaService:62] Se realizo una operación de eliminación de la reserva conid=1
+[2023-03-15 12:12:53] [ INFO ] [ReservaService:73] Se inició una operación de búsqueda de la reserva con id=12
+[2023-03-15 12:12:55] [ ERROR] [GlobalExceptions:14] Error, el sistema detectó un problema, se registro el siguiente mensaje: La reserva a eliminar no existe en la base de datos, se intentó encontrar sin éxito en id= 12
+[2023-03-15 12:12:56] [ INFO ] [ReservaService:73] Se inició una operación de búsqueda de la reserva con id=2
+[2023-03-15 12:13:16] [ WARN ] [ReservaService:62] Se realizo una operación de eliminación de la reserva conid=2
+[2023-03-15 12:16:53] [ INFO ] [ReservaService:32] Se inició el listado de todas las reservas
+[2023-03-15 12:20:59] [ INFO ] [ReservaService:37] Se inició una operación de guardado de la reserva con id=: null
+[2023-03-15 12:20:59] [ INFO ] [ProductoService:78] Se inició una operación de búsqueda de la producto con id=3
+[2023-03-15 12:21:21] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 1
+[2023-03-15 12:21:58] [ INFO ] [ReservaService:32] Se inició el listado de todas las reservas
+[2023-03-15 13:10:44] [ INFO ] [ReservaService:37] Se inició una operación de guardado de la reserva con id=: null
+[2023-03-15 13:10:44] [ INFO ] [ProductoService:78] Se inició una operación de búsqueda de la producto con id=3
+[2023-03-15 13:11:06] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 1
+[2023-03-15 15:50:13] [ INFO ] [ProductoService:98] Se inició una busqueda de todos los productos disponibles desde el 2023-03-24 al 2023-03-19
+[2023-03-15 15:51:10] [ INFO ] [ProductoService:98] Se inició una busqueda de todos los productos disponibles desde el 2023-03-23 al 2023-03-19
+[2023-03-15 15:51:48] [ INFO ] [ProductoService:98] Se inició una busqueda de todos los productos disponibles desde el 2023-03-24 al 2023-03-19
+[2023-03-15 16:09:29] [ INFO ] [ProductoService:102] Se inició una busqueda de todos los productos disponibles desde el 2023-03-24 al 2023-03-19 en la ubicacion con id = 1

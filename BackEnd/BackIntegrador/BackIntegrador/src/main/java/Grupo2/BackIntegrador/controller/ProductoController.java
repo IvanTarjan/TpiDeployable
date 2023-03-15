@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -59,9 +60,31 @@ public class ProductoController {
         }
     }
 
-    @GetMapping("/{nrOfProds}")
-    public ResponseEntity<List<Producto>> buscarXproductosRandom(@PathVariable int nrOfProds){
+    @GetMapping("/c/{categoriaId}")
+    public ResponseEntity<List<Producto>> buscarProductosPorCategoria(@PathVariable Long categoriaId){
+        return ResponseEntity.ok(productoService.buscarProductoPorCategoria(categoriaId));
+    }
+
+    @GetMapping("/u/{ubicacionId}")
+    public ResponseEntity<List<Producto>> buscarProductosPorUbicacion(@PathVariable Long ubicacionId){
+        return ResponseEntity.ok(productoService.buscarProductoPorUbicacion(ubicacionId));
+    }
+
+    @GetMapping("/q/{nrOfProds}")
+    public ResponseEntity<List<Producto>> buscarXProductosRandom(@PathVariable Integer nrOfProds){
         return ResponseEntity.ok(productoService.buscarXProductosRandom(nrOfProds));
+    }
+
+    @GetMapping("/dates/{fecha_inicio}/{fecha_fin}")
+    public ResponseEntity<List<Producto>> buscarProductoPorFecha_inicioAndFecha_fin(
+            @PathVariable("fecha_inicio") Date fecha_inicio , @PathVariable("fecha_fin") Date fecha_fin){
+        return ResponseEntity.ok(productoService.buscarProductosPorFecha_inicioAndFecha_fin(fecha_inicio, fecha_fin));
+    }
+
+    @GetMapping("/datesAndUbi/{fecha_inicio}/{fecha_fin}/{ubicacionId}")
+    public ResponseEntity<List<Producto>> buscarProductoPorFecha_inicioAndFecha_finAndUbicacionId(
+            @PathVariable("fecha_inicio") Date fecha_inicio , @PathVariable("fecha_fin") Date fecha_fin, @PathVariable("ubicacionId") Long ubicacionId){
+        return ResponseEntity.ok(productoService.buscarProductosPorFecha_inicioAndFecha_finAndUbicacionId(fecha_inicio, fecha_fin, ubicacionId));
     }
 
 
