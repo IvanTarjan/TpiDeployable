@@ -2,9 +2,10 @@ stages:
   - build
   - deploy
 
-.image: node:16.5.0
-pages:
+
+build:
   stage: build
+  image: node:16.5.0
   cache:
     key:
       files:
