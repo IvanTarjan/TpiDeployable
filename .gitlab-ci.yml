@@ -6,9 +6,9 @@ build website:
   image: node:16.13-alpine
   stage: build
   script:
-    - npm install
-    - npm lint
-    - npm build
+    - yarn install
+    - yarn lint
+    - yarn build
   artifacts:
     paths:
       - build  
