@@ -2,15 +2,20 @@ stages:
   - build
   - deploy
 
-build website:
-  image: node:lts-alpine3.17
+build artifact:
   stage: build
+  image: node:latest
+  before_script:
+    - npm install
   script:
-    - yarn install
-    - yarn run build
+    - npm run build
   artifacts:
     paths:
-      - build  
+      - build/
+    when: always
+  rules:
+    - if: '$CI_COMMIT_REF_NAME == "main"'
+      when: always
 
 deploy to s3:
   stage: deploy
