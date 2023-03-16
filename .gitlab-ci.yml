@@ -1,52 +1,23 @@
-stages:         
+stages:
   - build
-  - test
   - deploy
 
-"build-backend":      
+build website:
+  image: node:16.13-alpine
   stage: build
   script:
-    - echo "Compiling the code..."
-  "rules":
-    - changes:
-       -backend/*/
+    - npm install
+    - npm lint
+    - npm build
+  artifacts:
+    paths:
+      - build  
 
-"build-frontend":      
-  stage: build
+deploy to s3:
+  stage: deploy
+  image: 
+    name: amazon/aws-cli:2.11.3
+    entrypoint: ['']
   script:
-    - echo "Compiling the code..."
-  "rules":
-    - changes:
-       -frontend/*/
-
-"test-backend":  
-  stage: test    
-  script:
-  - echo "Running unit tests..."
-  "rules":
-    - changes:
-       -backend/*/
-
-"test-frontend":  
-  stage: test    
-  script:
-    - echo "Running unit tests..."
-  "rules":
-    - changes:
-       -frontend/*/
-
-"deploy-backend":    
-  stage: deploy  
-  evironment: production
-  script:
-    - echo "Deploying application..."
-    - echo "Execute bash"
-    - cd ./backend/backend && chmod +x backend.sh && sh backend.sh
-
-"deploy-frontend":    
-  stage: deploy  
-  evironment: production
-  script:
-    - echo "Deploying application..."
-    - echo "Execute bash"
-    - cd ./frontend/frontend && chmod +x backend.sh && sh frontend.sh
+    - aws --version
+    - aws s3 sync build s3://$AWS_S3_BUCKET --delete
