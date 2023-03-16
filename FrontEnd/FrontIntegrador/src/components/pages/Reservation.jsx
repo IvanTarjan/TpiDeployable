@@ -1,13 +1,14 @@
 import { IconButton } from '@mui/material'
 import React, { useContext } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import VehicleCard from '../commons/VehicleCard'
 import { BodyContext } from '../contexts/BodyContext'
 import styles from '../styles/Body.module.css'
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ReservationForm from '../commons/ReservationForm'
-import DateAvailability from '../commons/DateAvailability'
 import VehicleCardBooking from '../commons/VehicleCardBooking'
+import Policies from '../commons/Policies'
+import DateAvailabilityBooking from '../commons/DateAvailabilityBooking'
+import ArrivalTime from '../commons/ArrivalTime'
 
 const Reservation = () => {
   const { cars } = useContext(BodyContext)
@@ -39,13 +40,26 @@ const Reservation = () => {
         </div>
 
         <div className={styles.bookingCalendar} >
+          <DateAvailabilityBooking id={id} dateRangeArr={selectedCar.reserva.map(res => [res.fecha_inicio, res.fecha_fin])} />
+        </div>
 
+        <div className={styles.bookingArrival}>
+          <ArrivalTime />
         </div>
 
         <div className={styles.bookingCard} >
           <VehicleCardBooking car={selectedCar} />
         </div>
+      </div>
 
+      <br />
+      <br />
+
+      <div className={styles.moreData}>
+        <h1>Qué tenés que saber</h1>
+        <hr className={styles.line} />
+        <br />
+        <Policies selectedCar={selectedCar} />
       </div>
     </>
   )
