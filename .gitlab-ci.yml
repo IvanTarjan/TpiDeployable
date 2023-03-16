@@ -10,12 +10,12 @@ build:
     key:
       files:
         - package-lock.json
-      prefix: npm
+      prefix: yarn
     paths:
       - node_modules/
   script:
-    - npm install
-    - npm run build
+    - yarn install
+    - yarn run build
     - cp -a dist/. public/
   artifacts:
     paths:
