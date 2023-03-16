@@ -1,6 +1,12 @@
-.stages:
+stages:
   - build
   - deploy
+
+build:
+  stage: build
+  script: 
+    - echo just say hi
+ 
 
 .build artifact:
   stage: build
