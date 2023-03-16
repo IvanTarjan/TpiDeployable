@@ -6,8 +6,8 @@ build website:
   image: node:16.13-alpine
   stage: build
   script:
-    - yarn install
-    - yarn build
+    - npm install
+    - npm run build
   artifacts:
     paths:
       - build  
