@@ -2,8 +2,12 @@ stages:
   - build
   - deploy
 
+test:
+  stage: build
+  script:
+    - echo just say hi
 
-build:
+.build:
   stage: build
   image: node:16.5.0
   cache:
