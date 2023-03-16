@@ -2,26 +2,25 @@ stages:
   - build
   - deploy
 
-.build:
+image: node:16.5.0
+pages:
   stage: build
-  script: 
-    - echo just say hi
- 
-
-build artifact:
-  stage: build
-  image: node:16.5.0
-  before_script:
-    - npm install
+  cache:
+    key:
+      files:
+        - package-lock.json
+      prefix: npm
+    paths:
+      - node_modules/
   script:
+    - npm install
     - npm run build
+    - cp -a dist/. public/
   artifacts:
     paths:
-      - build
-    when: always
+      - public
   rules:
-    - if: '$CI_COMMIT_REF_NAME == "main"'
-      when: always
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
 deploy to s3:
   stage: deploy
@@ -30,4 +29,4 @@ deploy to s3:
     entrypoint: ['']
   script:
     - aws --version
-    - aws s3 sync build s3://$AWS_S3_BUCKET --delete
+    - aws s3 sync public s3://$AWS_S3_BUCKET --delete
