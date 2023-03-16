@@ -1,16 +1,21 @@
 import { IconButton } from '@mui/material'
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import VehicleCard from '../commons/VehicleCard'
 import { BodyContext } from '../contexts/BodyContext'
 import styles from '../styles/Body.module.css'
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import axios from 'axios'
 
 const CarsCategory = () => {
-  const { cars } = useContext(BodyContext)
   const { name } = useParams()
+  const [neededCars, setNeededCars] = useState([])
 
-  const neededCars = cars.filter(car => car.categoria.titulo == name)
+  useEffect(() => {
+    axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/producto/c/${name}`)
+      .then(res => setNeededCars(res.data))
+      .catch(err => console.log(err))
+  }, [])
 
   const navigate = useNavigate()
   const handleClick = () => {

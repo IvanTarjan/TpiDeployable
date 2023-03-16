@@ -20,7 +20,7 @@ public interface ProductoRepository extends JpaRepository<Producto, Long> {
 
     List<Producto> findProductosByCaracteristicaId(Caracteristica id);
 
-    List<Producto> findByCategoriaId (Long categoriaId);
+    List<Producto> findByCategoriaTitulo (String categoriaId);
 
     List<Producto> findByUbicacionId (Long ubicacionId);
 

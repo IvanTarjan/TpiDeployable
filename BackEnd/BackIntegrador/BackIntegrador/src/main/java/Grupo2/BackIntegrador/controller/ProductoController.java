@@ -60,9 +60,9 @@ public class ProductoController {
         }
     }
 
-    @GetMapping("/c/{categoriaId}")
-    public ResponseEntity<List<Producto>> buscarProductosPorCategoria(@PathVariable Long categoriaId){
-        return ResponseEntity.ok(productoService.buscarProductoPorCategoria(categoriaId));
+    @GetMapping("/c/{categoriaTitulo}")
+    public ResponseEntity<List<Producto>> buscarProductosPorCategoria(@PathVariable String categoriaTitulo){
+        return ResponseEntity.ok(productoService.buscarProductoPorCategoria(categoriaTitulo));
     }
 
     @GetMapping("/u/{ubicacionId}")

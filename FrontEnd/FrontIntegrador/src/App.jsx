@@ -27,7 +27,7 @@ function App() {
                 <Route path='/' element={<Body />} />
                 <Route path='/category/:name/car/:id' element={<CarDetails />} />
                 <Route path='/category/:name' element={<CarsCategory />} />
-                <Route path='/results/' element={<SearchResults />} />
+                <Route path='/results/:fechaInicio/:fechaFin/:ubicacionId' element={<SearchResults />} />
                 <Route path='/cars/:id/reservation' element={<Reservation />} />
               </Routes>
               <Footer />

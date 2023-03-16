@@ -3,7 +3,7 @@ import React from 'react'
 import CategoryCard from '../commons/CategoryCard'
 import colors from '../commons/colors'
 
-const CategoryContainer = ({ cars, categorias }) => {
+const CategoryContainer = ({ categorias }) => {
 
   return (
     <Box display={"flex"} flexDirection="column" margin={"15px 0px"} justifyContent="center" alignItems="center">

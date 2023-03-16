@@ -79,9 +79,9 @@ public class ProductoService {
             LOGGER.info("Se inició una operación de búsqueda de la producto con id="+id);
             return productoRepository.findById(id);
     }
-    public List<Producto> buscarProductoPorCategoria(Long categoriaId) {
-        LOGGER.info("Se inició una busqueda de todos los productos con categoria id=" + categoriaId);
-        return productoRepository.findByCategoriaId(categoriaId);
+    public List<Producto> buscarProductoPorCategoria(String categoriaTitulo) {
+        LOGGER.info("Se inició una busqueda de todos los productos con categoria categoriaTitulo = " + categoriaTitulo);
+        return productoRepository.findByCategoriaTitulo(categoriaTitulo);
     }
 
     public List<Producto> buscarProductoPorUbicacion(Long ubicacionId) {

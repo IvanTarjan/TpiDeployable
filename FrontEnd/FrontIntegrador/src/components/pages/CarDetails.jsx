@@ -1,5 +1,5 @@
-import { IconButton, useMediaQuery } from '@mui/material'
-import React, { useContext, useState } from 'react'
+import { Box, IconButton, Link, Typography, useMediaQuery } from '@mui/material'
+import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import HeaderDetails from '../commons/HeaderDetails'
 import { BodyContext } from '../contexts/BodyContext'
@@ -14,17 +14,28 @@ import GalleryGrid from '../commons/GalleryGrid'
 import Gallery from '../commons/Gallery'
 import MapView from '../commons/MapView'
 import SharePage from '../commons/SharePage'
+import axios from 'axios'
 
 const CarDetails = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const [selectedCar, setSelectedCar] = useState({reserva:[]})
+  const [isLoading, setIsLoading] = useState(true)
   const currentPageUrl = window.location.href;
 
   const { id } = useParams()
-  const { cars, isLike, setIsLike } = useContext(BodyContext)
+  const { isLike, setIsLike } = useContext(BodyContext)
 
-  const selectedCar = cars.find(car => car.id == id);
+  useEffect(() => {
+    axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/producto/${id}`)
+      .then(res => {setSelectedCar(res.data)
+        setIsLoading(false)
+      })
+      .catch(err => console.log(err))
+  }, [])
+  
+  
 
   const coordinates = [selectedCar.latitud, selectedCar.longitud]
 
@@ -35,6 +46,13 @@ const CarDetails = () => {
 
   const isTablet = useMediaQuery('(max-width:1000px)');
   const isMobile = useMediaQuery('(max-width:600px)');
+  if (isLoading) {
+    return (
+      <Box display={"flex"} flexDirection="column" justifyContent={"center"} alignItems={"center"} width={"100vw"} height={"375px"} padding="20px" borderRadius={"10px"}>
+        <Typography variant='h5'>Cargando...</Typography>
+      </Box>
+    )
+  }
 
   return (
     <div>

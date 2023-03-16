@@ -11,11 +11,12 @@ import { useNavigate } from 'react-router-dom';
 const BarraDeBusqueda = () => {
     const isMobile = useMediaQuery('(max-width:600px)');
     const isTablet = useMediaQuery('(max-width:800px)');
-    const [location, setLocation] = useState(null);
+    const [location, setLocation] = useState({});
+    const [dateRange, setDateRange] = useState([null, null]);
     const calendarRef = useRef();
     const navigate = useNavigate()
 
-    const { localizaciones, dateRange, setDateRange, setSelectedCity, allDates, setAllDates } = useContext(BodyContext)
+    const { localizaciones, setSelectedCity, setAllDates } = useContext(BodyContext)
 
     const handleChange = (event) => {
         setLocation(localizaciones[event.target.value]);
@@ -23,8 +24,8 @@ const BarraDeBusqueda = () => {
 
     const handleSubmit = () => {
         setSelectedCity(location)
-        if (dateRange[1] != null && location != null) {
-            navigate('/results/');
+        if (dateRange[1] != null || location != null) {
+            navigate(`/results/${dateRange[0]?dateRange[0].format("YYYY-MM-DD"):"n"}/${dateRange[0]?dateRange[1].format("YYYY-MM-DD"):"n"}/${location.id ??"n"}`);
         } else {
             alert("Hay que seleccionar una fecha y una ciudad");
         }
