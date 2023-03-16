@@ -28,7 +28,7 @@ const CarsCategory = () => {
         <div>
           <h1 style={{ paddingTop: '0' }}>Vehiculos categoria {name}</h1>
         </div>
-        <IconButton sx={{ width: 75 }} onClick={handleClick}>
+        <IconButton disableRipple={true} sx={{ width: 175 }} onClick={handleClick} >
           <ArrowBackIosNewIcon fontSize='large' color='action' />
         </IconButton>
       </div>

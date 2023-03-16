@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "export NODE_ENV=production && export NODE_OPTIONS=--max-old-space-size=8192 && vite build --config vite.config.js",
+    "build": "vite build",
     "preview": "vite preview",
     "test": "vitest --ui",
     "coverage": "vitest run --coverage",
@@ -34,6 +34,7 @@
     "react-multi-date-picker": "^3.3.4",
     "react-router-dom": "^6.8.1",
     "react-share": "^4.4.1",
+    "sweetalert2": "^11.7.3",
     "yup": "^1.0.0"
   },
   "devDependencies": {

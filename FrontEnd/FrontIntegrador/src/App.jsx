@@ -11,6 +11,7 @@ import CarDetails from './components/pages/CarDetails'
 import BodyContextProvider from './components/contexts/BodyContext'
 import CarsCategory from './components/pages/CarsCategory'
 import SearchResults from './components/pages/SearchResults'
+import Reservation from './components/pages/Reservation'
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
                 <Route path='/category/:name/car/:id' element={<CarDetails />} />
                 <Route path='/category/:name' element={<CarsCategory />} />
                 <Route path='/results/' element={<SearchResults />} />
+                <Route path='/cars/:id/reservation' element={<Reservation />} />
               </Routes>
               <Footer />
             </BrowserRouter>

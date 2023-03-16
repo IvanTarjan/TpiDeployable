@@ -5,10 +5,13 @@ import { BodyContext } from '../contexts/BodyContext';
 import { Box, Button, Typography, useMediaQuery } from '@mui/material';
 import { getDaysArray, hasOverlappingDays } from './datePickerHelpers';
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2'
+import { HeaderContext } from '../contexts/HeaderContext';
 
 const DateAvailability = ({ dateRangeArr, id }) => {
   const calendarRef = useRef();
-  const { dateRange, setDateRange, allDates, setAllDates} = useContext(BodyContext)
+  const { dateRange, setDateRange, allDates, setAllDates } = useContext(BodyContext)
+  const { isLog } = useContext(HeaderContext)
   const [disabledDays, setDisabledDays] = useState([])
   const navigator = useNavigate()
   const isMobile = useMediaQuery('(max-width:600px)');
@@ -59,7 +62,12 @@ const DateAvailability = ({ dateRangeArr, id }) => {
 
         <Box width={{ xs: 'auto', md: "30%" }} minWidth="300px" display="flex" flexDirection={{ xs: 'column', sm: 'row', md: 'column' }} bgcolor={{ xs: "none", md: colors.background }} height="min-content" padding={"18px"} borderRadius="12px" boxShadow={{ xs: "none", md: "0px 3px 4px lightgray" }}>
           <Typography variant='subtitle2' fontWeight={600}>Agregá tus fechas de alquiler para obtener precios exactos</Typography>
-          <Button onClick={() => dateRange[1] != null ? navigator(`/cars/${id}/reserve`) : alert("Tenes que seleccionar una fecha disponible")} variant="contained" sx={{ textTransform: "none", bgcolor: "#f0572d", color: colors.background, width: '100%' }}>Iniciar reserva</Button>
+          <Button onClick={() => isLog ?
+            navigator(`/cars/${id}/reservation`) :
+            navigator('/login', { state: 'fromDetails' })
+          }
+            variant="contained"
+            sx={{ textTransform: "none", bgcolor: "#f0572d", color: colors.background, width: '100%' }}>Iniciar reserva</Button>
         </Box>
       </Box>
     </Box>

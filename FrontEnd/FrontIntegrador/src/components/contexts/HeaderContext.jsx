@@ -11,7 +11,7 @@ const HeaderContextProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState('')
 
   useEffect(() => {
-    axios.get("http://localhost:5000/users")
+    axios.get("http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/usuario")
       .then(res => setUsers(res.data))
       .catch(err => console.log(err))
   }, [])

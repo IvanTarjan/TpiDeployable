@@ -1,52 +1,37 @@
-stages:         
+stages:
   - build
-  - test
   - deploy
 
-"build-backend":      
+test:
   stage: build
   script:
-    - echo "Compiling the code..."
-  "rules":
-    - changes:
-       -backend/*/
+    - echo just say hi
 
-"build-frontend":      
+.build:
   stage: build
+  image: node:16.5.0
+  cache:
+    key:
+      files:
+        - package-lock.json
+      prefix: yarn
+    paths:
+      - node_modules/
   script:
-    - echo "Compiling the code..."
-  "rules":
-    - changes:
-       -frontend/*/
+    - yarn install
+    - yarn run build
+    - cp -a dist/. public/
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
-"test-backend":  
-  stage: test    
+.deploy to s3:
+  stage: deploy
+  image: 
+    name: amazon/aws-cli:2.11.3
+    entrypoint: ['']
   script:
-  - echo "Running unit tests..."
-  "rules":
-    - changes:
-       -backend/*/
-
-"test-frontend":  
-  stage: test    
-  script:
-    - echo "Running unit tests..."
-  "rules":
-    - changes:
-       -frontend/*/
-
-"deploy-backend":    
-  stage: deploy  
-  evironment: production
-  script:
-    - echo "Deploying application..."
-    - echo "Execute bash"
-    - cd ./backend/backend && chmod +x backend.sh && sh backend.sh
-
-"deploy-frontend":    
-  stage: deploy  
-  evironment: production
-  script:
-    - echo "Deploying application..."
-    - echo "Execute bash"
-    - cd ./frontend/frontend && chmod +x backend.sh && sh frontend.sh
+    - aws --version
+    - aws s3 sync public s3://$AWS_S3_BUCKET --delete
