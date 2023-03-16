@@ -5,8 +5,19 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import styles from '../styles/Body.module.css'
 import { Box } from '@mui/system';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import TodayIcon from '@mui/icons-material/Today';
+import { BodyContext } from '../contexts/BodyContext';
+import { Button } from '@mui/material';
 
 const VehicleCardBooking = ({ car }) => {
+
+  const { dateRange } = React.useContext(BodyContext)
+
+  const handleClick = () => {
+    console.log('reservado!')
+    // navigate(`/category/${car.categoria.titulo}/car/${car.id}`)
+  }
 
   return (
     <>
@@ -15,8 +26,9 @@ const VehicleCardBooking = ({ car }) => {
       <Card data-testid="car-card" sx={{
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'space-between'
+        justifyContent: 'space-around',
+        height: '90.7%',
+        borderRadius: '8px'
       }}>
         <Box className={styles.imageContainer}>
           <CardMedia className={styles.carImages}
@@ -25,17 +37,33 @@ const VehicleCardBooking = ({ car }) => {
           />
         </Box>
 
-        <CardContent className={styles.cardContent}>
+        <CardContent sx={{ width: '100%' }} className={styles.cardContent}>
           <p>{car.categoria.titulo}</p>
-          <Typography gutterBottom variant="h6" component="div">
+          <Typography gutterBottom variant="h5" component="div">
             {car.titulo}
           </Typography>
+          <Typography gutterBottom variant="h6" component="div" sx={{ display: 'flex', alignItems: 'center' }} >
+            <LocationOnIcon /> Ciudad: {car.ubicacion.nombre}
+          </Typography>
 
-          <Box className={styles.iconsContainer} >
-            {car.caracteristica.map(item => (
-              <Typography key={item.id} fontSize={'14px'} className={styles.cardContainer} display="flex" gap={1}><img src={item.icono} style={{ width: "auto", height: "15px" }} />{item.titulo}</Typography>
-            ))}
-          </Box>
+          <br />
+          <hr />
+          <br />
+
+          <Typography gutterBottom variant="h6" component="div" sx={{ display: 'flex', alignItems: 'center' }} >
+            <TodayIcon sx={{ paddingRight: '5px', fontSize: 30 }} />  Retiro: {dateRange[0].format()}
+          </Typography>
+
+          <br />
+          <hr />
+          <br />
+
+          <Typography gutterBottom variant="h6" component="div" sx={{ display: 'flex', alignItems: 'center' }} >
+            <TodayIcon sx={{ paddingRight: '5px', fontSize: 30 }} />  Devolucion: {dateRange[1].format()}
+          </Typography>
+
+          <Button onClick={handleClick} variant='contained' size="large" sx={{ justifySelf: "center", marginTop: '30px' }} fullWidth >Confirmar reserva</Button>
+
         </CardContent>
       </Card>
     </>
