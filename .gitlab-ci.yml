@@ -2,7 +2,7 @@ stages:
   - build
   - deploy
 
-image: node:16.5.0
+.image: node:16.5.0
 pages:
   stage: build
   cache:
@@ -22,7 +22,7 @@ pages:
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
-deploy to s3:
+.deploy to s3:
   stage: deploy
   image: 
     name: amazon/aws-cli:2.11.3
