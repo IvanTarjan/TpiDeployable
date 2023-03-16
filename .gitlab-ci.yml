@@ -6,6 +6,9 @@ build website:
   image: node:16.13-alpine
   stage: build
   script:
+    - npm install -g npm@latest
+    - npm cache clean --force
+    - npm rm -rf node_modules && rm package-lock.json
     - npm install
     - npm run build
   artifacts:
