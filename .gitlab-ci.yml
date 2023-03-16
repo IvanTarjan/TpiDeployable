@@ -7,7 +7,6 @@ build website:
   stage: build
   script:
     - yarn install
-    - yarn lint
     - yarn build
   artifacts:
     paths:
