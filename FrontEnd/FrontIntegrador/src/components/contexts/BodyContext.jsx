@@ -34,8 +34,7 @@ const BodyContextProvider = ({ children }) => {
   const randomLocation = Math.floor(localizaciones.length * Math.random())
 
   const data = {
-    cars,
-    setCars,
+
     localizaciones,
     setLocalizaciones,
     isLike,

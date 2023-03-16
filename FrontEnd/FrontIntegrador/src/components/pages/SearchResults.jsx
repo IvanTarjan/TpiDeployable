@@ -1,51 +1,62 @@
 import { Box, IconButton, Link, Typography } from '@mui/material'
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import VehicleCard from '../commons/VehicleCard'
 import { BodyContext } from '../contexts/BodyContext'
 import styles from '../styles/Body.module.css'
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { getDaysArray, hasOverlappingDays } from '../commons/datePickerHelpers'
+import axios from 'axios'
 
 
 const SearchResults = () => {
-  const { cars, selectedCity, allDates, dateRange } = useContext(BodyContext)
-
+  const {  selectedCity} = useContext(BodyContext)
+  const [availableCars, setAvailableCars] = useState([])
+  const [loading, setLoading] = useState(true)
   const navigate = useNavigate()
+  const { fechaInicio,fechaFin, ubicacionId } = useParams()
   const handleClick = () => {
     navigate('/')
   }
 
-
-  const filterCarsByCity = (city) => {
-    return cars.filter(car=> car.ubicacion.id == city.id);
-  }
-
-  const filterCarsByDays = (selectedDates, carArr) => {
-    const filteredCars = [];
-    carArr.forEach(car => {
-      let dayArr = [];
-      car.reserva.forEach((range) => dayArr = dayArr.concat(getDaysArray(range.fecha_inicio, range.fecha_fin)))
-      if (!hasOverlappingDays(selectedDates, dayArr)){
-        filteredCars.push(car)
-      }
-    });
-    return filteredCars;
-  }
-
-  const availableCars = filterCarsByDays(allDates, filterCarsByCity(selectedCity));
+  useEffect(() => {
+    if (fechaInicio=="n"& fechaFin=="n") {
+      axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/producto/u/${ubicacionId}`)
+      .then(res => {setAvailableCars(res.data)
+      setLoading(false)
+      })
+      .catch(err => console.log(err))
+    } else if (ubicacionId=="n"){
+      axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/producto/dates/${fechaInicio}/${fechaFin}`)
+      .then(res => {setAvailableCars(res.data)
+        setLoading(false)
+      })
+      .catch(err => console.log(err))
+    } else{
+      axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/producto/datesAndUbi/${fechaInicio}/${fechaFin}/${selectedCity.id}`)
+      .then(res => {setAvailableCars(res.data)
+        setLoading(false)
+      })
+      .catch(err => console.log(err))
+    }
+  }, [])
 
   return (
     <>
       <div className={styles.headerCategory}>
         <div>
-          <h1 style={{ paddingTop: '0' }}>Vehiculos disponibles en {selectedCity.nombre} desde el {dateRange[0].format()} al {dateRange[1].format()}</h1>
+          <h1 style={{ paddingTop: '0' }}>Vehiculos disponibles {selectedCity? `en ${selectedCity.nombre}`:""} {fechaFin?`desde el ${fechaInicio} al ${fechaFin}`:""}</h1>
         </div>
         <IconButton sx={{ width: 75 }} onClick={handleClick}>
           <ArrowBackIosNewIcon fontSize='large' color='action' />
         </IconButton>
       </div>
 
+      {loading? <Box display={"flex"} flexDirection="column" justifyContent={"center"} alignItems={"center"} width={"100vw"} height={"375px"} padding="20px" borderRadius={"10px"}>
+        <Typography variant='h5'>Buscando...</Typography>
+      </Box>:
+
+      
       <div className={styles.homeContainer}>
         {availableCars.length ?availableCars.map(car => (
           <VehicleCard
@@ -59,7 +70,7 @@ const SearchResults = () => {
           <Link variant="subtitle1" href='/'>Proba cambiando los filtros</Link>
         </Box>
         }
-      </div>
+      </div>}
     </>
   )
 }

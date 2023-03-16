@@ -25,7 +25,7 @@ const CarDetails = () => {
   const currentPageUrl = window.location.href;
 
   const { id } = useParams()
-  const { cars, isLike, setIsLike } = useContext(BodyContext)
+  const { isLike, setIsLike } = useContext(BodyContext)
 
   useEffect(() => {
     axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/producto/${id}`)
