@@ -2,7 +2,7 @@ stages:
   - build
   - deploy
 
-build artifact:
+.build artifact:
   stage: build
   image: node:latest
   before_script:
@@ -17,7 +17,7 @@ build artifact:
     - if: '$CI_COMMIT_REF_NAME == "main"'
       when: always
 
-deploy to s3:
+.deploy to s3:
   stage: deploy
   image: 
     name: amazon/aws-cli:2.11.3
