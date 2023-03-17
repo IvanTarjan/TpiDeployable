@@ -1,5 +1,4 @@
 import { Grid, TextField } from '@mui/material'
-import Box from '@mui/material/Box';
 import React from 'react'
 
 const ReservationForm = () => {
@@ -7,26 +6,42 @@ const ReservationForm = () => {
     < >
       <h1>Completá tus datos</h1>
 
-      <Grid container spacing={2}>
+      <Grid sx={{
+        backgroundColor: 'white',
+        boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+        borderRadius: '8px',
+        padding: '10px',
+        marginLeft: '10px',
+        width: '100%'
+
+      }} container spacing={2}>
         <Grid item xs={6}>
           <TextField
-            placeholder='Nombre'
+            label='Nombre'
+            name='nombre'
+            type={'text'}
             fullWidth
           />
         </Grid>
         <Grid item xs={6}>
           <TextField
-            placeholder='Apellido'
+            label='Apellido'
+            name='apellido'
+            type={'text'}
             fullWidth />
         </Grid>
         <Grid item xs={6}>
           <TextField
-            placeholder='Email'
+            label='Email'
+            name='email'
+            type={'email'}
             fullWidth />
         </Grid>
         <Grid item xs={6}>
           <TextField
-            placeholder='Ciudad'
+            label='Ciudad'
+            name='ciudad'
+            type={'text'}
             fullWidth />
         </Grid>
       </Grid>
