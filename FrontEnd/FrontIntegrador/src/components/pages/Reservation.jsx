@@ -11,6 +11,7 @@ import DateAvailabilityBooking from '../commons/DateAvailabilityBooking'
 import ArrivalTime from '../commons/ArrivalTime'
 import axios from 'axios'
 import { HeaderContext } from '../contexts/HeaderContext'
+import Swal from 'sweetalert2'
 
 const Reservation = () => {
   const { id } = useParams()
@@ -18,8 +19,11 @@ const Reservation = () => {
   const [selectedCar, setSelectedCar] = useState({})
   const [isLoading, setIsLoading] = useState(true)
   const { users, currentUser } = useContext(HeaderContext)
+  const { dateRange } = React.useContext(BodyContext)
+  const arrivalTime = document.querySelector('#app-time')
 
   let loggedUser = users.find(user => user.email === currentUser);
+  let loggedUserId = loggedUser.id
 
   useEffect(() => {
     axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/producto/${id}`)
@@ -29,6 +33,47 @@ const Reservation = () => {
       })
       .catch(err => console.log(err))
   }, [])
+
+  const handleConfirm = async () => {
+    if (dateRange.length != 2) {
+      return Swal.fire({
+        title: 'Error!',
+        text: 'Debe ingresar un rango de fechas',
+        icon: 'error',
+        confirmButtonColor: '#1DBEB4',
+      })
+    }
+
+    if (arrivalTime.value == '') {
+      return Swal.fire({
+        title: 'Error!',
+        text: 'Debe ingresar horario estimado de llegada',
+        icon: 'error',
+        confirmButtonColor: '#1DBEB4',
+      })
+    }
+
+    const result = await Swal.fire({
+      title: 'Muchas gracias!',
+      text: 'Su reserva se ha realizado con exito',
+      icon: 'success',
+      confirmButtonColor: '#1DBEB4',
+    })
+    if (result.isConfirmed) {
+      navigate('/')
+      axios.post(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/usuario/${loggedUserId}`, {
+        reserva: {
+          horario_llegada: arrivalTime.value,
+          fecha_inicio: dateRange[0].format(),
+          fecha_fin: dateRange[1].format(),
+          producto: {
+            id: id
+          }
+        }
+      }).then(data => console.log(data))
+        .catch(err => console.log(err))
+    }
+  }
 
   const handleClick = () => {
     navigate('/')
@@ -67,7 +112,7 @@ const Reservation = () => {
             </div>
 
             <div className={styles.bookingCard} >
-              <VehicleCardBooking car={selectedCar} />
+              <VehicleCardBooking car={selectedCar} handleConfirm={handleConfirm} dateRange={dateRange} />
             </div>
           </div>
 
