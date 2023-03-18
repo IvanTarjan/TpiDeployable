@@ -10,13 +10,7 @@ import TodayIcon from '@mui/icons-material/Today';
 import { BodyContext } from '../contexts/BodyContext';
 import { Button } from '@mui/material';
 
-const VehicleCardBooking = ({ car }) => {
-  const { dateRange } = React.useContext(BodyContext)
-
-  const handleClick = () => {
-    console.log('reservado!')
-    // navigate(`/category/${car.categoria.titulo}/car/${car.id}`)
-  }
+const VehicleCardBooking = ({ car, handleConfirm, dateRange }) => {
 
   return (
     <>
@@ -61,7 +55,7 @@ const VehicleCardBooking = ({ car }) => {
             <TodayIcon sx={{ paddingRight: '5px', fontSize: 30 }} />  Devolucion: {dateRange[1] ? dateRange[1].format() : ""}
           </Typography>
 
-          <Button onClick={handleClick} variant='contained' size="large" sx={{ justifySelf: "center", marginTop: '30px' }} fullWidth >Confirmar reserva</Button>
+          <Button onClick={handleConfirm} variant='contained' size="large" sx={{ justifySelf: "center", marginTop: '30px' }} fullWidth >Confirmar reserva</Button>
 
         </CardContent>
       </Card>
