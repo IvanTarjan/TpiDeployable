@@ -1,7 +1,7 @@
 import { Grid, TextField } from '@mui/material'
 import React from 'react'
 
-const ReservationForm = () => {
+const ReservationForm = ({ loggedUser }) => {
   return (
     < >
       <h1>Completá tus datos</h1>
@@ -18,23 +18,26 @@ const ReservationForm = () => {
         <Grid item xs={6}>
           <TextField
             label='Nombre'
-            name='nombre'
+            name={loggedUser.nombre}
             type={'text'}
+            value={loggedUser.nombre}
             fullWidth
           />
         </Grid>
         <Grid item xs={6}>
           <TextField
             label='Apellido'
-            name='apellido'
+            name={loggedUser.userName}
             type={'text'}
+            value={loggedUser.userName}
             fullWidth />
         </Grid>
         <Grid item xs={6}>
           <TextField
             label='Email'
-            name='email'
+            name={loggedUser.email}
             type={'email'}
+            value={loggedUser.email}
             fullWidth />
         </Grid>
         <Grid item xs={6}>
