@@ -10,12 +10,16 @@ import Policies from '../commons/Policies'
 import DateAvailabilityBooking from '../commons/DateAvailabilityBooking'
 import ArrivalTime from '../commons/ArrivalTime'
 import axios from 'axios'
+import { HeaderContext } from '../contexts/HeaderContext'
 
 const Reservation = () => {
   const { id } = useParams()
   const navigate = useNavigate()
   const [selectedCar, setSelectedCar] = useState({})
   const [isLoading, setIsLoading] = useState(true)
+  const { users, currentUser } = useContext(HeaderContext)
+
+  let loggedUser = users.find(user => user.email === currentUser);
 
   useEffect(() => {
     axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/producto/${id}`)
@@ -51,7 +55,7 @@ const Reservation = () => {
         <>
           <div className={styles.bookingContainer}>
             <div className={styles.bookingForm} >
-              <ReservationForm />
+              <ReservationForm loggedUser={loggedUser} />
             </div>
 
             <div className={styles.bookingCalendar} >
