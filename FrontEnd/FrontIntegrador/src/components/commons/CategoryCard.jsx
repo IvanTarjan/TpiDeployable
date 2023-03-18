@@ -15,9 +15,8 @@ const CategoryCard = ({ categoria, carImgs }) => {
         <Card className={styles.categoryImagesContainer} sx={{ height: 380, width: 335 }}>
             <CardMedia
                 component="img"
-                sx={{ height: "280px" }}
-                // carImgs[randomImg].imagen[0].url_img
-                image={categoria.url_imagen}
+                sx={{ height: "220px", width: '300px' }}
+                image={carImgs[randomImg].imagen[0].url_img}
                 alt={categoria.titulo}
             />
             <CardContent>
