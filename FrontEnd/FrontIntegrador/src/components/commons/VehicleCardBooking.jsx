@@ -11,7 +11,6 @@ import { BodyContext } from '../contexts/BodyContext';
 import { Button } from '@mui/material';
 
 const VehicleCardBooking = ({ car }) => {
-
   const { dateRange } = React.useContext(BodyContext)
 
   const handleClick = () => {
@@ -51,7 +50,7 @@ const VehicleCardBooking = ({ car }) => {
           <br />
 
           <Typography gutterBottom variant="h6" component="div" sx={{ display: 'flex', alignItems: 'center' }} >
-            <TodayIcon sx={{ paddingRight: '5px', fontSize: 30 }} />  Retiro: {dateRange[0].format()}
+            <TodayIcon sx={{ paddingRight: '5px', fontSize: 30 }} />  Retiro: {dateRange[0] ? dateRange[0].format() : ""}
           </Typography>
 
           <br />
@@ -59,7 +58,7 @@ const VehicleCardBooking = ({ car }) => {
           <br />
 
           <Typography gutterBottom variant="h6" component="div" sx={{ display: 'flex', alignItems: 'center' }} >
-            <TodayIcon sx={{ paddingRight: '5px', fontSize: 30 }} />  Devolucion: {dateRange[1].format()}
+            <TodayIcon sx={{ paddingRight: '5px', fontSize: 30 }} />  Devolucion: {dateRange[1] ? dateRange[1].format() : ""}
           </Typography>
 
           <Button onClick={handleClick} variant='contained' size="large" sx={{ justifySelf: "center", marginTop: '30px' }} fullWidth >Confirmar reserva</Button>

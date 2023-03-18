@@ -14,11 +14,9 @@ const Login = () => {
   const { users, setHeaderType, setIsLog, setCurrentUser } = useContext(HeaderContext)
   const [showPassword, setShowPassword] = useState(false);
   const location = useLocation()
-
-  const handleClickShowPassword = () => setShowPassword((show) => !show);
-
   const navigate = useNavigate()
 
+  const handleClickShowPassword = () => setShowPassword((show) => !show);
   const emailsList = users.map(user => user.email);
   const passwordsList = users.map(user => user.password);
 
@@ -41,6 +39,7 @@ const Login = () => {
       email: '',
       password: '',
     },
+    validateOnChange: false,
     validationSchema: Yup.object({
       email: Yup.string().email("Ingresar una direccion de email valida").oneOf(emailsList, "El email ingresado no es valido").required('Campo obligatorio'),
       password: Yup.string().oneOf(passwordsList, "El password ingresado no es valido").required('Campo obligatorio'),
@@ -71,7 +70,7 @@ const Login = () => {
               type={"email"}
               label="Correo electronico"
               variant="outlined"
-              error={errors.email}
+              error={errors.email ? true : false}
               helperText={errors.email}
               fullWidth
             />
@@ -92,7 +91,7 @@ const Login = () => {
               type={showPassword ? "text" : "password"}
               label="Contrasena"
               variant="outlined"
-              error={errors.password}
+              error={errors.password ? true : false}
               helperText={errors.password}
               fullWidth
             />
