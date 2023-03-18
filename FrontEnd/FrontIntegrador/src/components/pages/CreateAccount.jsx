@@ -38,16 +38,16 @@ const CreateAccount = () => {
       password: Yup.string().min(7, 'La contrasena debe tener mas de 6 caracteres').notOneOf(passwordsList, "La contrasena ingresada ya se encuentra registrada").required('Campo obligatorio'),
       confirm: Yup.string().label('Confirmar el password ingresado').oneOf([Yup.ref('password')], 'Las contrasenas deben ser iguales').required('Campo obligatorio')
     }),
-    onSubmit: (data) => axios.post('http://localhost:5000/users', {
-      name: data.name,
-      surname: data.surname,
+    onSubmit: (data) => axios.post('http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/usuario', {
+      nombre: data.name,
+      // apellido: data.surname,
       email: data.email,
       password: data.confirm
     }).then(res => {
       setIsSubmit(prev => !prev)
       setUsers(preUsers => [...preUsers, {
-        name: data.name,
-        surname: data.surname,
+        nombre: data.name,
+        // apellido: data.surname,
         email: data.email,
         password: data.confirm
       }])
