@@ -1,7 +1,10 @@
-import { Grid, TextField } from '@mui/material'
+import { Grid, TextField, useMediaQuery } from '@mui/material'
 import React from 'react'
 
 const ReservationForm = ({ loggedUser }) => {
+
+  const isMobile = useMediaQuery('(max-width:640px)');
+
   return (
     < >
       <h1>Completá tus datos</h1>
@@ -15,7 +18,7 @@ const ReservationForm = ({ loggedUser }) => {
         width: '100%'
 
       }} container spacing={2}>
-        <Grid item xs={6}>
+        <Grid item xs={isMobile ? 12 : 6}>
           <TextField
             label='Nombre'
             name={loggedUser.nombre}
@@ -24,7 +27,7 @@ const ReservationForm = ({ loggedUser }) => {
             fullWidth
           />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={isMobile ? 12 : 6}>
           <TextField
             label='Apellido'
             name={loggedUser.userName}
@@ -32,7 +35,7 @@ const ReservationForm = ({ loggedUser }) => {
             value={loggedUser.userName}
             fullWidth />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={isMobile ? 12 : 6}>
           <TextField
             label='Email'
             name={loggedUser.email}
@@ -40,7 +43,7 @@ const ReservationForm = ({ loggedUser }) => {
             value={loggedUser.email}
             fullWidth />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={isMobile ? 12 : 6}>
           <TextField
             label='Ciudad'
             name='ciudad'
