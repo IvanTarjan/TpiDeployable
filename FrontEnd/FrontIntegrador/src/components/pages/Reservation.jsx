@@ -35,7 +35,7 @@ const Reservation = () => {
   }, [])
 
   const handleConfirm = async () => {
-    if (dateRange.length != 2) {
+    if (dateRange.length != 2 || dateRange[0] == null) {
       return Swal.fire({
         title: 'Error!',
         text: 'Debe ingresar un rango de fechas',
@@ -61,6 +61,7 @@ const Reservation = () => {
     })
     if (result.isConfirmed) {
       navigate('/')
+      console.log(dateRange[0])
       axios.post(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/usuario/${loggedUserId}`, {
         reserva: {
           horario_llegada: arrivalTime.value,
