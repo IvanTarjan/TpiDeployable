@@ -8,7 +8,7 @@ import { Box } from '@mui/system';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import TodayIcon from '@mui/icons-material/Today';
 import { BodyContext } from '../contexts/BodyContext';
-import { Button } from '@mui/material';
+import { Button, useMediaQuery } from '@mui/material';
 
 const VehicleCardBooking = ({ car, handleConfirm, dateRange }) => {
 
@@ -16,13 +16,7 @@ const VehicleCardBooking = ({ car, handleConfirm, dateRange }) => {
     <>
       <h1>Detalle de la reserva</h1>
 
-      <Card data-testid="car-card" sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-around',
-        height: '90.7%',
-        borderRadius: '8px'
-      }}>
+      <Card data-testid="car-card" className={styles.carCardBooking}>
         <Box className={styles.imageContainer}>
           <CardMedia className={styles.carImages}
             image={car.imagen[0].url_img}
