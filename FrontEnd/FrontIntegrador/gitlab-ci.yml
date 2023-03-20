@@ -20,7 +20,7 @@ build project:
     paths:
       - dist/
 
-.deploy to s3:
+deploy to s3:
   stage: deploy
   image: 
     name: amazon/aws-cli:2.11.3
