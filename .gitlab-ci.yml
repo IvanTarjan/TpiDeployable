@@ -2,6 +2,10 @@ stages:
   - test
   - build
   - deploy
+  - post deploy
+
+variables:
+  APP_URL: http://bucket-grupo2-frontend.s3-website.us-east-2.amazonaws.com/  
 
 test project:
   stage: test
@@ -32,3 +36,9 @@ deploy to s3:
   script:
     - aws --version
     - aws s3 sync FrontEnd/FrontIntegrador/dist s3://$AWS_S3_BUCKET --delete
+
+production test:
+  stage: post deploy
+  image: curlimages/curl
+  script:
+    - curl $APP_URL | grep "Viaja como quieras"
