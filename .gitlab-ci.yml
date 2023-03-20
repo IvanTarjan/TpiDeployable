@@ -22,7 +22,7 @@ build project:
     - npm run build
   artifacts:
     paths:
-      - dist/
+      - FrontEnd/FrontIntegrador/dist
 
 deploy to s3:
   stage: deploy
