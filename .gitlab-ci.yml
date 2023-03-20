@@ -5,7 +5,7 @@ stages:
 
 test project:
   stage: test
-  image: node:15
+  image: node:16.5.0
   script:
     - cd FrontEnd/
     - cd FrontIntegrador/
@@ -14,8 +14,10 @@ test project:
 
 build project:
   stage: build
-  image: node:15
+  image: node:16.5.0
   script:
+    - cd FrontEnd/
+    - cd FrontIntegrador/
     - npm install
     - npm run build
   artifacts:
