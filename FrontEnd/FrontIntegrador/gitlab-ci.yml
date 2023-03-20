@@ -1,0 +1,30 @@
+stages:
+  - test
+  - build
+  - deploy
+
+test project:
+  stage: test
+  image: node:15
+  script:
+    - npm install
+    - npm run test
+
+build project:
+  stage: build
+  image: node:15
+  script:
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+
+.deploy to s3:
+  stage: deploy
+  image: 
+    name: amazon/aws-cli:2.11.3
+    entrypoint: ['']
+  script:
+    - aws --version
+    - aws s3 sync dist s3://$AWS_S3_BUCKET --delete
