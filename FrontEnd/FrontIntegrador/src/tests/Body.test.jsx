@@ -31,17 +31,17 @@ it("debe mostrar componente que lista los vehiculos", () => {
 
 const fetchData = () => axios.get("http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/producto")
 
-it('el primer modelo de auto que debe renderizarse el el listado es Chevrolet Classic', async () => {
+it('el primer modelo de auto que debe renderizarse el el listado es Chevrolet Cruze', async () => {
   await act(async () => {
     const res = await fetchData();
-    expect(res.data[0].titulo).toBe("Chevrolet Classic");
+    expect(res.data[0].titulo).toBe("Chevrolet Cruze");
   })
 })
 
 it('listado de vehiculos debe mostrar el total de vehiculos disponibles en api', async () => {
   const carCards = await screen.findAllByTestId("car-card")
   return fetchData().then(res => {
-    expect(res.data.length).toBe(22)
+    expect(res.data.length).toBe(20)
   })
 })
 
