@@ -7,6 +7,8 @@ test project:
   stage: test
   image: node:15
   script:
+    - cd FrontEnd/
+    - cd FrontIntegrador/
     - npm install
     - npm run test
 
