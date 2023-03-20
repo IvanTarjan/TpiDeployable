@@ -31,4 +31,4 @@ deploy to s3:
     entrypoint: ['']
   script:
     - aws --version
-    - aws s3 sync cd FrontEnd/FrontIntegrador/dist s3://$AWS_S3_BUCKET --delete
+    - aws s3 sync dist s3://$AWS_S3_BUCKET --delete
