@@ -22,6 +22,7 @@ const Reservation = () => {
   const { dateRange } = React.useContext(BodyContext)
   const arrivalTime = document.querySelector('#app-time')
 
+  let arrivalHour = document.querySelector('#app-time')
   let loggedUser = users.find(user => user.email === currentUser);
   let loggedUserId = loggedUser.id
 
@@ -61,16 +62,12 @@ const Reservation = () => {
     })
     if (result.isConfirmed) {
       navigate('/')
-      console.log(dateRange[0])
-      axios.post(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/usuario/${loggedUserId}`, {
-        reserva: {
-          horario_llegada: arrivalTime.value,
-          fecha_inicio: dateRange[0].format(),
-          fecha_fin: dateRange[1].format(),
-          producto: {
-            id: id
-          }
-        }
+      axios.post('http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/reserva', {
+        horario_llegada: arrivalHour.value + ':00',
+        fecha_inicio: dateRange[0].format("YYYY-M-D"),
+        fecha_fin: dateRange[1].format("YYYY-M-D"),
+        producto: { id: parseInt(id) },
+        usuario: { id: loggedUserId }
       }).then(data => console.log(data))
         .catch(err => console.log(err))
     }
