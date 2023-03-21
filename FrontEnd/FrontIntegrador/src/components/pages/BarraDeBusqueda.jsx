@@ -12,11 +12,10 @@ const BarraDeBusqueda = () => {
     const isMobile = useMediaQuery('(max-width:600px)');
     const isTablet = useMediaQuery('(max-width:800px)');
     const [location, setLocation] = useState({});
-    const [dateRange, setDateRange] = useState([null, null]);
     const calendarRef = useRef();
     const navigate = useNavigate()
 
-    const { localizaciones, setSelectedCity, setAllDates } = useContext(BodyContext)
+    const { localizaciones, setSelectedCity, setAllDates , dateRange, setDateRange } = useContext(BodyContext)
 
     const handleChange = (event) => {
         setLocation(localizaciones[event.target.value]);

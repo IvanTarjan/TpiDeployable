@@ -19,7 +19,7 @@ const VehicleCardBooking = ({ car, handleConfirm, dateRange }) => {
       <Card data-testid="car-card" className={styles.carCardBooking}>
         <Box className={styles.imageContainer}>
           <CardMedia className={styles.carImages}
-            image={car.imagen[0].url_img}
+            image={car.imagen.find(img=> img.titulo == "Main").url_img}
             title={car.titulo}
           />
         </Box>

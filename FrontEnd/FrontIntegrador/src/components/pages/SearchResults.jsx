@@ -47,7 +47,7 @@ const SearchResults = () => {
         <div>
           <h1 style={{ paddingTop: '0' }}>Vehiculos disponibles {selectedCity? `en ${selectedCity.nombre}`:""} {fechaFin?`desde el ${fechaInicio} al ${fechaFin}`:""}</h1>
         </div>
-        <IconButton sx={{ width: 75 }} onClick={handleClick}>
+        <IconButton disableRipple={true} sx={{ width: 175 }} onClick={handleClick}>
           <ArrowBackIosNewIcon fontSize='large' color='action' />
         </IconButton>
       </div>
