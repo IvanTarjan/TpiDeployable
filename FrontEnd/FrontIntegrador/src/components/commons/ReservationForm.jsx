@@ -24,6 +24,7 @@ const ReservationForm = ({ loggedUser }) => {
             name={loggedUser.nombre}
             type={'text'}
             value={loggedUser.nombre}
+            disabled
             fullWidth
           />
         </Grid>
@@ -33,6 +34,7 @@ const ReservationForm = ({ loggedUser }) => {
             name={loggedUser.userName}
             type={'text'}
             value={loggedUser.userName}
+            disabled
             fullWidth />
         </Grid>
         <Grid item xs={isMobile ? 12 : 6}>
@@ -41,6 +43,7 @@ const ReservationForm = ({ loggedUser }) => {
             name={loggedUser.email}
             type={'email'}
             value={loggedUser.email}
+            disabled
             fullWidth />
         </Grid>
         <Grid item xs={isMobile ? 12 : 6}>
@@ -52,7 +55,6 @@ const ReservationForm = ({ loggedUser }) => {
         </Grid>
       </Grid>
     </>
-
   )
 }
 
