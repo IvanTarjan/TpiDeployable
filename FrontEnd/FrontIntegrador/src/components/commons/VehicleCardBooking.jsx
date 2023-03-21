@@ -8,28 +8,15 @@ import { Box } from '@mui/system';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import TodayIcon from '@mui/icons-material/Today';
 import { BodyContext } from '../contexts/BodyContext';
-import { Button } from '@mui/material';
+import { Button, useMediaQuery } from '@mui/material';
 
-const VehicleCardBooking = ({ car }) => {
-
-  const { dateRange } = React.useContext(BodyContext)
-
-  const handleClick = () => {
-    console.log('reservado!')
-    // navigate(`/category/${car.categoria.titulo}/car/${car.id}`)
-  }
+const VehicleCardBooking = ({ car, handleConfirm, dateRange }) => {
 
   return (
     <>
       <h1>Detalle de la reserva</h1>
 
-      <Card data-testid="car-card" sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-around',
-        height: '90.7%',
-        borderRadius: '8px'
-      }}>
+      <Card data-testid="car-card" className={styles.carCardBooking}>
         <Box className={styles.imageContainer}>
           <CardMedia className={styles.carImages}
             image={car.imagen[0].url_img}
@@ -51,7 +38,7 @@ const VehicleCardBooking = ({ car }) => {
           <br />
 
           <Typography gutterBottom variant="h6" component="div" sx={{ display: 'flex', alignItems: 'center' }} >
-            <TodayIcon sx={{ paddingRight: '5px', fontSize: 30 }} />  Retiro: {dateRange[0]? dateRange[0].format(): ""}
+            <TodayIcon sx={{ paddingRight: '5px', fontSize: 30 }} />  Retiro: {dateRange[0] ? dateRange[0].format() : ""}
           </Typography>
 
           <br />
@@ -59,10 +46,10 @@ const VehicleCardBooking = ({ car }) => {
           <br />
 
           <Typography gutterBottom variant="h6" component="div" sx={{ display: 'flex', alignItems: 'center' }} >
-            <TodayIcon sx={{ paddingRight: '5px', fontSize: 30 }} />  Devolucion: {dateRange[1]? dateRange[1].format(): ""}
+            <TodayIcon sx={{ paddingRight: '5px', fontSize: 30 }} />  Devolucion: {dateRange[1] ? dateRange[1].format() : ""}
           </Typography>
 
-          <Button onClick={handleClick} variant='contained' size="large" sx={{ justifySelf: "center", marginTop: '30px' }} fullWidth >Confirmar reserva</Button>
+          <Button onClick={handleConfirm} variant='contained' size="large" sx={{ justifySelf: "center", marginTop: '30px' }} fullWidth >Confirmar reserva</Button>
 
         </CardContent>
       </Card>

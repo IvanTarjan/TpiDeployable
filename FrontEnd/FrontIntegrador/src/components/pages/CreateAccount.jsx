@@ -30,6 +30,7 @@ const CreateAccount = () => {
       password: '',
       confirm: '',
     },
+    validateOnChange: false,
     validationSchema: Yup.object({
       name: Yup.string().min(3, "El nombre debe contener al menos 3 letras").required('Campo obligatorio'),
       surname: Yup.string().min(3, "El apellido debe tener al menos 3 letras").required('Campo obligatorio'),
@@ -37,16 +38,16 @@ const CreateAccount = () => {
       password: Yup.string().min(7, 'La contrasena debe tener mas de 6 caracteres').notOneOf(passwordsList, "La contrasena ingresada ya se encuentra registrada").required('Campo obligatorio'),
       confirm: Yup.string().label('Confirmar el password ingresado').oneOf([Yup.ref('password')], 'Las contrasenas deben ser iguales').required('Campo obligatorio')
     }),
-    onSubmit: (data) => axios.post('http://localhost:5000/users', {
-      name: data.name,
-      surname: data.surname,
+    onSubmit: (data) => axios.post('http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/usuario', {
+      nombre: data.name,
+      // apellido: data.surname,
       email: data.email,
       password: data.confirm
     }).then(res => {
       setIsSubmit(prev => !prev)
       setUsers(preUsers => [...preUsers, {
-        name: data.name,
-        surname: data.surname,
+        nombre: data.name,
+        // apellido: data.surname,
         email: data.email,
         password: data.confirm
       }])
@@ -73,7 +74,7 @@ const CreateAccount = () => {
               type={"text"}
               label="Nombre"
               variant="outlined"
-              error={errors.name}
+              error={errors.name ? true : false}
               helperText={errors.name}
               fullWidth
             />
@@ -88,7 +89,7 @@ const CreateAccount = () => {
               type={"text"}
               label="Apellido"
               variant="outlined"
-              error={errors.surname}
+              error={errors.surname ? true : false}
               helperText={errors.surname}
               fullWidth
             />
@@ -103,7 +104,7 @@ const CreateAccount = () => {
               type={"email"}
               label="Correo electronico"
               variant="outlined"
-              error={errors.email}
+              error={errors.email ? true : false}
               helperText={errors.email}
               fullWidth
             />
@@ -124,7 +125,7 @@ const CreateAccount = () => {
               type={showPassword ? "text" : "password"}
               label="Contrasena"
               variant="outlined"
-              error={errors.password}
+              error={errors.password ? true : false}
               helperText={errors.password}
               fullWidth
             />
@@ -139,7 +140,7 @@ const CreateAccount = () => {
               type={"password"}
               label="Confirmar contrasena"
               variant="outlined"
-              error={errors.confirm}
+              error={errors.confirm ? true : false}
               helperText={errors.confirm}
               fullWidth
             />
