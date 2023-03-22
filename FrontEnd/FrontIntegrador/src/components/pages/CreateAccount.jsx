@@ -9,6 +9,8 @@ import { Link, useNavigate } from "react-router-dom";
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import axios from "axios";
+import Swal from 'sweetalert2'
+
 
 const CreateAccount = () => {
   const { users, setUsers, setHeaderType } = useContext(HeaderContext)
@@ -51,8 +53,23 @@ const CreateAccount = () => {
         email: data.email,
         password: data.confirm
       }])
+      Swal.fire({
+        title: 'Registro exitoso!',
+        text: 'Ahora podes loguearte y navegar nuestra pagina',
+        icon: 'success',
+        confirmButtonColor: '#1DBEB4',
+        timer: 3000
+      })
       nagivate('/login')
-    }).catch(err => console.log(err))
+    }).catch(err => {
+      console.log(err)
+      Swal.fire({
+        title: 'Error!',
+        text: 'Lamentablemente no ha podido registrarse. Por favor intente más tarde',
+        icon: 'error',
+        confirmButtonColor: '#1DBEB4',
+      })
+    })
   })
 
   return (
