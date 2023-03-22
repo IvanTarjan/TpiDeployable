@@ -55,9 +55,9 @@ const Reservation = () => {
     }
 
     const result = await Swal.fire({
-      title: 'Muchas gracias!',
-      text: 'Su reserva se ha realizado con exito',
-      icon: 'success',
+      title: 'Por favor espere un instante',
+      text: 'Estamos procesando su reserva...',
+      icon: 'info',
       confirmButtonColor: '#1DBEB4',
     })
     if (result.isConfirmed) {
@@ -68,8 +68,23 @@ const Reservation = () => {
         fecha_fin: dateRange[1].format("YYYY-M-D"),
         producto: { id: parseInt(id) },
         usuario: { id: loggedUserId }
-      }).then(data => console.log(data))
-        .catch(err => console.log(err))
+      }).then(data => {
+        Swal.fire({
+          title: 'Muchas gracias!',
+          text: 'Su reserva se ha realizado con exito',
+          icon: 'success',
+          confirmButtonColor: '#1DBEB4',
+        })
+      })
+        .catch(err => {
+          console.log(err)
+          Swal.fire({
+            title: 'Error!',
+            text: 'Lamentablemente la reserva no ha podido realizarse”. Por favor, intente más tarde',
+            icon: 'error',
+            confirmButtonColor: '#1DBEB4',
+          })
+        })
     }
   }
 
