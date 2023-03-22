@@ -9,14 +9,15 @@ import { Link } from 'react-router-dom';
 
 const CategoryCard = ({ categoria, carImgs }) => {
 
-    const randomImg = Math.floor(carImgs.length * Math.random())
+    const randomImgIndex = Math.floor(carImgs.length * Math.random())
+    const randomImg = carImgs[randomImgIndex].imagen.find(img=> img.titulo == "Main").url_img;
 
     return (
         <Card className={styles.categoryImagesContainer} sx={{ height: 320, width: 350 }}>
             <CardMedia
                 component="img"
-                sx={{ height: "220px", width: '300px' }}
-                image={carImgs[randomImg].imagen[0].url_img}
+                sx={{ height: "220px"}}
+                image={randomImg}
                 alt={categoria.titulo}
             />
             <CardContent>

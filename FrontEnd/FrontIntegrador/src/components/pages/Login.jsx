@@ -18,7 +18,9 @@ const Login = () => {
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
   const emailsList = users.map(user => user.email);
+  console.log(emailsList);
   const passwordsList = users.map(user => user.password);
+  console.log(passwordsList);
 
   useEffect(() => {
     if (location.state === 'fromDetails') {
