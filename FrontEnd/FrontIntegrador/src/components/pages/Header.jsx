@@ -50,10 +50,10 @@ const Header = () => {
 
       {isLog ? <div className={styles.avatarContainer}>
         <Stack direction="row" spacing={2}>
-          <Avatar sx={{ bgcolor: deepPurple[500], fontWeight: 700, height: { xs: 38, md: 48, lg: 48 }, width: { xs: 38, md: 48, lg: 48 } }}>{loggedUser.nombre[0]} </Avatar>
+          <Avatar sx={{ bgcolor: deepPurple[500], fontWeight: 700, height: { xs: 38, md: 48, lg: 48 }, width: { xs: 38, md: 48, lg: 48 } }}>{loggedUser.nombre[0].toUpperCase()} </Avatar>
         </Stack>
         <div>
-          <p>Hola, {loggedUser.nombre}</p>
+          <p>Hola, {loggedUser.nombre[0].toUpperCase() + loggedUser.nombre.slice(1)}</p>
           <span>{isMobile ? loggedUser.name : loggedUser.name}</span>
         </div>
         <IconButton sx={{ width: '48px' }} disableRipple={false} onClick={handleSignOut} >
