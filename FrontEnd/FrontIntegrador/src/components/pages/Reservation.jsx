@@ -58,34 +58,39 @@ const Reservation = () => {
       title: 'Por favor espere un instante',
       text: 'Estamos procesando su reserva...',
       icon: 'info',
-      confirmButtonColor: '#1DBEB4',
-    })
-    if (result.isConfirmed) {
-      navigate('/')
-      axios.post('http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/reserva', {
-        horario_llegada: arrivalHour.value + ':00',
-        fecha_inicio: dateRange[0].format("YYYY-M-D"),
-        fecha_fin: dateRange[1].format("YYYY-M-D"),
-        producto: { id: parseInt(id) },
-        usuario: { id: loggedUserId }
-      }).then(data => {
-        Swal.fire({
-          title: 'Muchas gracias!',
-          text: 'Su reserva se ha realizado con exito',
-          icon: 'success',
-          confirmButtonColor: '#1DBEB4',
-        })
-      })
-        .catch(err => {
-          console.log(err)
+      showConfirmButton: false,
+      timer: 3000,
+      didOpen: () => {
+        Swal.showLoading()
+      }
+    }).then(res => {
+      {
+        navigate('/')
+        axios.post('http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/reserva', {
+          horario_llegada: arrivalHour.value + ':00',
+          fecha_inicio: dateRange[0].format("YYYY-M-D"),
+          fecha_fin: dateRange[1].format("YYYY-M-D"),
+          producto: { id: parseInt(id) },
+          usuario: { id: loggedUserId }
+        }).then(data => {
           Swal.fire({
-            title: 'Error!',
-            text: 'Lamentablemente la reserva no ha podido realizarse”. Por favor, intente más tarde',
-            icon: 'error',
+            title: 'Muchas gracias!',
+            text: 'Su reserva se ha realizado con exito',
+            icon: 'success',
             confirmButtonColor: '#1DBEB4',
           })
         })
-    }
+          .catch(err => {
+            console.log(err)
+            Swal.fire({
+              title: 'Error!',
+              text: 'Lamentablemente la reserva no ha podido realizarse”. Por favor, intente más tarde',
+              icon: 'error',
+              confirmButtonColor: '#1DBEB4',
+            })
+          })
+      }
+    })
   }
 
   const handleClick = () => {
