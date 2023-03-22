@@ -7,8 +7,7 @@ import styles from '../styles/Body.module.css'
 import { Box } from '@mui/system';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import TodayIcon from '@mui/icons-material/Today';
-import { BodyContext } from '../contexts/BodyContext';
-import { Button, useMediaQuery } from '@mui/material';
+import { Button } from '@mui/material';
 
 const VehicleCardBooking = ({ car, handleConfirm, dateRange }) => {
 
@@ -19,7 +18,7 @@ const VehicleCardBooking = ({ car, handleConfirm, dateRange }) => {
       <Card data-testid="car-card" className={styles.carCardBooking}>
         <Box className={styles.imageContainer}>
           <CardMedia className={styles.carImages}
-            image={car.imagen.find(img=> img.titulo == "Main").url_img}
+            image={car.imagen.find(img => img.titulo == "Main").url_img}
             title={car.titulo}
           />
         </Box>
