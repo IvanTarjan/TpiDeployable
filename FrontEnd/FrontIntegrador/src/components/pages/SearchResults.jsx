@@ -45,7 +45,7 @@ const SearchResults = () => {
     <>
       <div className={styles.headerCategory}>
         <div>
-          <h1 style={{ paddingTop: '0' }}>Vehiculos disponibles {selectedCity? `en ${selectedCity.nombre}`:""} {fechaFin?`desde el ${fechaInicio} al ${fechaFin}`:""}</h1>
+          <h1 style={{ paddingTop: '0' }}>Vehiculos disponibles {ubicacionId != "n"? `en ${selectedCity.nombre}`:""} {fechaFin != "n"?`desde el ${fechaInicio} al ${fechaFin}`:""}</h1>
         </div>
         <IconButton disableRipple={true} sx={{ width: 175 }} onClick={handleClick}>
           <ArrowBackIosNewIcon fontSize='large' color='action' />
