@@ -23,7 +23,7 @@ const ReservationForm = ({ loggedUser }) => {
             label='Nombre'
             name={loggedUser.nombre}
             type={'text'}
-            value={loggedUser.nombre}
+            value={loggedUser.nombre[0].toUpperCase() + loggedUser.nombre.slice(1)}
             disabled
             fullWidth
           />
@@ -33,7 +33,7 @@ const ReservationForm = ({ loggedUser }) => {
             label='Apellido'
             name={loggedUser.userName}
             type={'text'}
-            value={loggedUser.userName}
+            value={loggedUser.userName[0].toUpperCase() + loggedUser.userName.slice(1)}
             disabled
             fullWidth />
         </Grid>
