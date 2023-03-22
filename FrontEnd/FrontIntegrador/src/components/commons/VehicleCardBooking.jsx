@@ -24,6 +24,7 @@ const VehicleCardBooking = ({ car, handleConfirm, dateRange }) => {
         </Box>
 
         <CardContent sx={{ width: '100%' }} className={styles.cardContent}>
+          <h1 style={{ fontSize: '2rem' }}>${car.precio}</h1>
           <p>{car.categoria.titulo}</p>
           <Typography gutterBottom variant="h5" component="div">
             {car.titulo}
