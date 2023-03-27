@@ -1,11 +1,10 @@
 import { Box, IconButton, Link, Typography } from '@mui/material'
 import React, { useContext, useEffect, useState } from 'react'
-import { useLocation, useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import VehicleCard from '../commons/VehicleCard'
 import { BodyContext } from '../contexts/BodyContext'
 import styles from '../styles/Body.module.css'
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import { getDaysArray, hasOverlappingDays } from '../commons/datePickerHelpers'
 import axios from 'axios'
 
 
