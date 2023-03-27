@@ -74,4 +74,9 @@ public class ReservaService {
         return reservaRepository.findById(id);
     }
 
+    public List<Reserva> buscarReservaPorUsuario(Long usuarioId) {
+        LOGGER.info("Se inició una busqueda de todas las reservas con usuario id=" + usuarioId);
+        return reservaRepository.findByUsuarioId(usuarioId);
+    }
+
 }

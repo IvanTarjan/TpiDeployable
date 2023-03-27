@@ -43,14 +43,6 @@ public class WebSecurityConfig {
                 .requestMatchers(request -> "PUT".equals(request.getMethod())).authenticated()
                 .requestMatchers(request -> "DELETE".equals(request.getMethod())).authenticated()
                 .requestMatchers(request -> "GET".equals(request.getMethod())).permitAll()
-//                .requestMatchers("/caracteristicas/**/").permitAll()
-//                .requestMatchers("/categorias/**/").permitAll()
-//                .requestMatchers("/ciudades/**/").permitAll()
-//                .requestMatchers("/imagenes/**/").permitAll()
-//                .requestMatchers("/politicas/**/").permitAll()
-//                .requestMatchers("/productos/**/").permitAll()
-//                .requestMatchers("/puntuaciones/**/").permitAll()
-//                .requestMatchers(request -> "POST".equals(request.getMethod()) && "/reservas/**/".equals(request.getRequestURI())).authenticated()
 
 
                 .anyRequest().authenticated()
