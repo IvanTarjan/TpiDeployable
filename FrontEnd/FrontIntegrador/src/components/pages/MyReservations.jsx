@@ -2,11 +2,11 @@ import { Box, IconButton, Link, Typography } from '@mui/material'
 import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import VehicleCard from '../commons/VehicleCard'
-
 import styles from '../styles/Body.module.css'
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import axios from 'axios'
+import loadingGif from '../../assets/Loading1.gif'
 
 const MyReservations = () => {
     const [reserves, setReserves] = useState([])
@@ -38,7 +38,7 @@ const MyReservations = () => {
       </div>
 
       {loading? <Box display={"flex"} flexDirection="column" justifyContent={"center"} alignItems={"center"} width={"100vw"} height={"375px"} padding="20px" borderRadius={"10px"}>
-        <Typography variant='h5'>Buscando...</Typography>
+        <img src={loadingGif} alt="Loading..." style={{height: "200px", width: "auto"}}/>
       </Box>:
 
       
@@ -57,8 +57,10 @@ const MyReservations = () => {
         ))
         :
         <Box display={"flex"} flexDirection="column" justifyContent={"center"} alignItems={"flex-start"} width={"375px"} height={"375px"} boxShadow={"0px 0px 10px gray"} padding="20px" borderRadius={"10px"} gap="10px">
-          <Typography variant='h6'>No se pudo encontrar ningun vehiculo con los filtros aplicados</Typography>
-          <Link variant="subtitle1" href='/'>Proba cambiando los filtros</Link>
+          <Typography variant='h6'>Aún no has efectuado ninguna reserva</Typography>
+          <IconButton onClick={navigate('/')}>
+          <HomeOutlinedIcon fontSize='large'/>
+          </IconButton>
         </Box>
         }
       </div>}
