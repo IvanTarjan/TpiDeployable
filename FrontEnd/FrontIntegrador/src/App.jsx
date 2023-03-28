@@ -12,6 +12,7 @@ import BodyContextProvider from './components/contexts/BodyContext'
 import CarsCategory from './components/pages/CarsCategory'
 import SearchResults from './components/pages/SearchResults'
 import Reservation from './components/pages/Reservation'
+import Administration from './components/pages/Administration'
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
                 <Route path='/category/:name' element={<CarsCategory />} />
                 <Route path='/results/:fechaInicio/:fechaFin/:ubicacionId' element={<SearchResults />} />
                 <Route path='/cars/:id/reservation' element={<Reservation />} />
+                <Route path='/administration' element={<Administration />} />
               </Routes>
               <Footer />
             </BrowserRouter>
