@@ -20,7 +20,7 @@ const CarDetails = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  const [selectedCar, setSelectedCar] = useState({reserva:[]})
+  const [selectedCar, setSelectedCar] = useState({ reserva: [] })
   const [isLoading, setIsLoading] = useState(true)
   const currentPageUrl = window.location.href;
 
@@ -29,20 +29,18 @@ const CarDetails = () => {
 
   useEffect(() => {
     axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/producto/${id}`)
-      .then(res => {setSelectedCar(res.data)
+      .then(res => {
+        setSelectedCar(res.data)
         setIsLoading(false)
       })
       .catch(err => console.log(err))
   }, [])
-  
-  
 
   const coordinates = [selectedCar.latitud, selectedCar.longitud]
 
   const handleClick = () => {
     setIsLike(prev => !prev)
   }
-
 
   const isTablet = useMediaQuery('(max-width:1000px)');
   const isMobile = useMediaQuery('(max-width:600px)');
