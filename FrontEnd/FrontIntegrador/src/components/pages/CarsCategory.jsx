@@ -12,7 +12,7 @@ const CarsCategory = () => {
   const [neededCars, setNeededCars] = useState([])
 
   useEffect(() => {
-    axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/producto/c/${name}`)
+    axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/producto/c/${name}`)
       .then(res => setNeededCars(res.data))
       .catch(err => console.log(err))
   }, [])

@@ -59,4 +59,9 @@ public class UsuarioService {
         LOGGER.info("Se inicio la busqueda de un usuario con id= "+ id);
         return usuarioRepository.findById(id);
     }
+
+    public Optional<Usuario> buscarByuserNameOrEmail(String usernameOrEmail){
+        LOGGER.info("Se inicio la busqueda de un usuario con username o email = "+ usernameOrEmail );
+        return usuarioRepository.findByuserNameOrEmail(usernameOrEmail, usernameOrEmail);
+    }
 }

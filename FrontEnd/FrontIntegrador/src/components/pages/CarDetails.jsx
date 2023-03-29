@@ -28,7 +28,7 @@ const CarDetails = () => {
   const { isLike, setIsLike } = useContext(BodyContext)
 
   useEffect(() => {
-    axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/producto/${id}`)
+    axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/producto/${id}`)
       .then(res => {
         setSelectedCar(res.data)
         setIsLoading(false)

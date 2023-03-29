@@ -21,19 +21,19 @@ const SearchResults = () => {
 
   useEffect(() => {
     if (fechaInicio=="n"& fechaFin=="n") {
-      axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/producto/u/${ubicacionId}`)
+      axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/producto/u/${ubicacionId}`)
       .then(res => {setAvailableCars(res.data)
       setLoading(false)
       })
       .catch(err => console.log(err))
     } else if (ubicacionId=="n"){
-      axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/producto/dates/${fechaInicio}/${fechaFin}`)
+      axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/producto/dates/${fechaInicio}/${fechaFin}`)
       .then(res => {setAvailableCars(res.data)
         setLoading(false)
       })
       .catch(err => console.log(err))
     } else{
-      axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/producto/datesAndUbi/${fechaInicio}/${fechaFin}/${selectedCity.id}`)
+      axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/producto/datesAndUbi/${fechaInicio}/${fechaFin}/${selectedCity.id}`)
       .then(res => {setAvailableCars(res.data)
         setLoading(false)
       })
