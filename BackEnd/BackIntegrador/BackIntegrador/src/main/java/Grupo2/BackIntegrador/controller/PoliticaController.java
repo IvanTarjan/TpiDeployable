@@ -5,6 +5,7 @@ import Grupo2.BackIntegrador.model.Politica;
 import Grupo2.BackIntegrador.service.PoliticaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -32,18 +33,18 @@ public class PoliticaController {
     public ResponseEntity<List<Politica>> buscarPolitica() {
         return ResponseEntity.ok(politicaService.listarPoliticas());
     }
-
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping
     public ResponseEntity<Politica> registrarPolitica(@RequestBody Politica politica) {
         return ResponseEntity.ok(politicaService.guardarPolitica(politica));
     }
-
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/{id}")
     public ResponseEntity<String> eliminarPolitica(@PathVariable Long id) throws ResourceNotFoundException {
         politicaService.eliminarPolitica(id);
         return ResponseEntity.ok("Se eliminó la politica con id= " + id);
     }
-
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping
     public ResponseEntity<String> actualizarPolitica(@RequestBody Politica politica){
         try {

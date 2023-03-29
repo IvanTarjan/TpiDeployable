@@ -5,6 +5,7 @@ import Grupo2.BackIntegrador.model.Categoria;
 import Grupo2.BackIntegrador.service.CategoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -33,18 +34,18 @@ public class CategoriaController {
     public ResponseEntity<List<Categoria>> buscarCategoria(){
         return ResponseEntity.ok(categoriaService.listarCategorias());
     }
-
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping
     public ResponseEntity<Categoria> registrarCategoria(@RequestBody Categoria categoria){
         return ResponseEntity.ok(categoriaService.guardarCategoria(categoria));
     }
-
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/{id}")
     public ResponseEntity<String> eliminarCategoria(@PathVariable Long id) throws ResourceNotFoundException {
         categoriaService.eliminarCategoria(id);
         return ResponseEntity.ok("Se eliminó la categoria con id= "+id);
     }
-
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping
     public ResponseEntity<String> actualizarCategoria(@RequestBody Categoria categoria){
         Optional<Categoria> categoriaBuscada;

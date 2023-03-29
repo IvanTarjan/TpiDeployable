@@ -5,6 +5,7 @@ import Grupo2.BackIntegrador.model.Usuario;
 import Grupo2.BackIntegrador.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -37,7 +38,7 @@ public class UsuarioController {
     public ResponseEntity<Usuario> registrarUsuario(@RequestBody Usuario usuario){
         return ResponseEntity.ok(usuarioService.guardarUsuario(usuario));
     }
-
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/{id}")
     public ResponseEntity<String> eliminarUsuario(@PathVariable Long id) throws ResourceNotFoundException {
         usuarioService.eliminarUsuario(id);

@@ -5,6 +5,7 @@ import Grupo2.BackIntegrador.model.Producto;
 import Grupo2.BackIntegrador.service.ProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.sql.Date;
@@ -34,12 +35,12 @@ public class ProductoController {
     public ResponseEntity<List<Producto>> buscarProductos(){
         return ResponseEntity.ok(productoService.listarProducto());
     }
-
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping
     public ResponseEntity<Producto> registrarProducto(@RequestBody Producto producto){
         return ResponseEntity.ok(productoService.guardarProducto(producto));
     }
-
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/{id}")
     public ResponseEntity<String> eliminarProducto(@PathVariable Long id){
         try {
@@ -49,7 +50,7 @@ public class ProductoController {
             return ResponseEntity.notFound().build();
         }
     }
-
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping
     public ResponseEntity<String> actualizarProducto(@RequestBody Producto producto){
         try {
