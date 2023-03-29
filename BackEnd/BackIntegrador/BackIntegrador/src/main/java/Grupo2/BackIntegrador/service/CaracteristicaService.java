@@ -1,6 +1,6 @@
 package Grupo2.BackIntegrador.service;
 
-import Grupo2.BackIntegrador.Exception.ResourceNotFoundException;
+import Grupo2.BackIntegrador.exception.ResourceNotFoundException;
 import Grupo2.BackIntegrador.model.Caracteristica;
 import Grupo2.BackIntegrador.repository.CaracteristicaRepository;
 import org.apache.log4j.Logger;

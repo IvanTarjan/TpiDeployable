@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -23,13 +23,22 @@ public class Usuario {
     @Column
     private String nombre;
     @Column
+    private String apellido;
+    @Column(nullable = false, unique = true)
     private String userName;
-    @Column
+    @Column(nullable = false, unique = true)
     private String email;
-    @Column
+    @Column(nullable = false)
     private String password;
     @Column
-    private UsuarioRole usuarioRole;
+    private String ciudad;
+
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(name = "usuario_roles",
+                joinColumns = @JoinColumn(name = "usuario_id", referencedColumnName = "id"),
+                inverseJoinColumns = @JoinColumn(name = "roles_id", referencedColumnName = "id")
+    )
+    private Set<Roles> roles;
 
     @OneToMany(mappedBy = "usuario", cascade = {CascadeType.MERGE, CascadeType.DETACH, CascadeType.REMOVE} , fetch = FetchType.EAGER)
     @JsonIgnoreProperties("usuario")
@@ -49,11 +58,10 @@ public class Usuario {
         puntuacion.setUsuario(null);
     }
 
-    public Usuario(String nombre, String userName, String email, String password, UsuarioRole usuarioRole) {
+    public Usuario(String nombre, String userName, String email, String password) {
         this.nombre = nombre;
         this.userName = userName;
         this.email = email;
         this.password = password;
-        this.usuarioRole = usuarioRole;
     }
 }

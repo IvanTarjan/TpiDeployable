@@ -1,17 +1,18 @@
 package Grupo2.BackIntegrador.controller;
 
-import Grupo2.BackIntegrador.Exception.ResourceNotFoundException;
+import Grupo2.BackIntegrador.exception.ResourceNotFoundException;
 import Grupo2.BackIntegrador.model.Puntuacion;
 import Grupo2.BackIntegrador.service.PuntuacionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/puntuacion")
+@RequestMapping("/api/puntuacion")
 @CrossOrigin("*")
 public class PuntuacionController {
 
@@ -41,6 +42,7 @@ public class PuntuacionController {
             return ResponseEntity.notFound().build();
         }
     }
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/{id}")
     public ResponseEntity<String> eliminarPuntuacionXId(@PathVariable Long id){
         try {
@@ -50,7 +52,7 @@ public class PuntuacionController {
             return ResponseEntity.notFound().build();
         }
     }
-
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping
     public ResponseEntity<String> actualizarPuntuacion(@RequestBody Puntuacion puntuacion){
         try {

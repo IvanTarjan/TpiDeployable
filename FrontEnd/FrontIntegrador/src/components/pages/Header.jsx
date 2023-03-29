@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import styles from '../styles/Header.module.css'
 import logo from '../../assets/logo.svg'
 import { HeaderContext } from '../contexts/HeaderContext'
@@ -10,12 +10,9 @@ import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
 import { IconButton, useMediaQuery } from '@mui/material'
 import Hamburguer from '../commons/Hamburguer'
 
-
 const Header = () => {
 
-  const { headerType, setHeaderType, users, isLog, setIsLog, currentUser } = useContext(HeaderContext);
-
-  let loggedUser = users.find(user => user.email === currentUser);
+  const { headerType, setHeaderType, isLog, setIsLog, currentUser, setCurrentUser } = useContext(HeaderContext);
 
   const nagivate = useNavigate()
 
@@ -37,6 +34,8 @@ const Header = () => {
   const handleSignOut = () => {
     setIsLog(prev => !prev)
     setHeaderType('initial')
+    nagivate('/')
+    setCurrentUser(undefined)
   }
 
   const isMobile = useMediaQuery('(max-width:600px)');
@@ -49,12 +48,13 @@ const Header = () => {
       </div>
 
       {isLog ? <div className={styles.avatarContainer}>
+        {currentUser.email == 'emi@gmail.com' && <span style={{ color: '#545776', fontSize: '16px' }}>Administracion <span style={{ fontSize: '40px', padding: '0px 40px' }}>|</span></span>}
         <Stack direction="row" spacing={2}>
-          <Avatar sx={{ bgcolor: deepPurple[500], fontWeight: 700, height: { xs: 38, md: 48, lg: 48 }, width: { xs: 38, md: 48, lg: 48 } }}>{loggedUser.nombre[0]} </Avatar>
+          <Avatar sx={{ bgcolor: deepPurple[500], fontWeight: 700, height: { xs: 38, md: 48, lg: 48 }, width: { xs: 38, md: 48, lg: 48 } }}>{currentUser.nombre[0].toUpperCase()} </Avatar>
         </Stack>
         <div>
-          <p>Hola, {loggedUser.nombre}</p>
-          <span>{isMobile ? loggedUser.name : loggedUser.name}</span>
+          <p>Hola, {currentUser.nombre[0].toUpperCase() + currentUser.nombre.slice(1)}</p>
+          <span>{isMobile ? currentUser.name : currentUser.name}</span>
         </div>
         <IconButton sx={{ width: '48px' }} disableRipple={false} onClick={handleSignOut} >
           <PowerSettingsNewIcon fontSize='large' />

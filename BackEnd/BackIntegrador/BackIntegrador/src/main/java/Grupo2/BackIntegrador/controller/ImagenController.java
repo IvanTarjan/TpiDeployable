@@ -1,24 +1,24 @@
 package Grupo2.BackIntegrador.controller;
 
-import Grupo2.BackIntegrador.Exception.ResourceNotFoundException;
+import Grupo2.BackIntegrador.exception.ResourceNotFoundException;
 import Grupo2.BackIntegrador.model.Imagen;
-import Grupo2.BackIntegrador.model.Producto;
 import Grupo2.BackIntegrador.service.ImagenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/imagen")
+@RequestMapping("/api/imagen")
 @CrossOrigin("*")
 public class ImagenController {
 
     @Autowired
     private ImagenService imagenService;
-
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping
     public ResponseEntity<Imagen> registrarImagen(@RequestBody Imagen imagen){
         return ResponseEntity.ok(imagenService.guardarImagen(imagen));
@@ -28,6 +28,7 @@ public class ImagenController {
     public ResponseEntity<List<Imagen>> buscarImagenes(){
         return ResponseEntity.ok(imagenService.listarimagenes());
     }
+
     @GetMapping("/{id}")
     public ResponseEntity<Imagen> buscarImagenesPorId(@PathVariable long id){
         Optional<Imagen> imagenBuscada= imagenService.buscarImagenXId(id);
@@ -37,7 +38,7 @@ public class ImagenController {
             return ResponseEntity.notFound().build();
         }
     }
-
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/{id}")
     public ResponseEntity<String> borrarImagenPorId(@PathVariable Long id){
         try {
@@ -47,7 +48,7 @@ public class ImagenController {
             return ResponseEntity.notFound().build();
         }
     }
-
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping
     public ResponseEntity<String> actualizarImagen(@RequestBody Imagen imagen){
         Optional<Imagen> imagenAActualizar= imagenService.buscarImagenXId(imagen.getId());

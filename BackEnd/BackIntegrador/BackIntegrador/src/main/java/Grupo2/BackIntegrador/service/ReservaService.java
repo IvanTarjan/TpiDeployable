@@ -1,8 +1,6 @@
 package Grupo2.BackIntegrador.service;
 
-import Grupo2.BackIntegrador.Exception.ResourceNotFoundException;
-import Grupo2.BackIntegrador.model.Producto;
-import Grupo2.BackIntegrador.model.Puntuacion;
+import Grupo2.BackIntegrador.exception.ResourceNotFoundException;
 import Grupo2.BackIntegrador.model.Reserva;
 import Grupo2.BackIntegrador.repository.ReservaRepository;
 import org.apache.log4j.Logger;
@@ -11,7 +9,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 
 @Service
 public class ReservaService {
@@ -72,6 +69,11 @@ public class ReservaService {
     public Optional<Reserva> buscarReservaXId(Long id){
         LOGGER.info("Se inició una operación de búsqueda de la reserva con id="+id);
         return reservaRepository.findById(id);
+    }
+
+    public List<Reserva> buscarReservaPorUsuario(Long usuarioId) {
+        LOGGER.info("Se inició una busqueda de todas las reservas con usuario id=" + usuarioId);
+        return reservaRepository.findByUsuarioId(usuarioId);
     }
 
 }

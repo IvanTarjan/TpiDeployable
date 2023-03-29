@@ -1,31 +1,32 @@
 stages:
+  - test
   - build
   - deploy
 
-test:
-  stage: build
+trial:
   script:
-    - echo just say hi
+    - echo 'just sau hello'  
 
-.build:
+.test project:
+  stage: test
+  image: node:16.5.0
+  script:
+    - cd FrontEnd/
+    - cd FrontIntegrador/
+    - npm install
+    - npm run test
+
+.build project:
   stage: build
   image: node:16.5.0
-  cache:
-    key:
-      files:
-        - package-lock.json
-      prefix: yarn
-    paths:
-      - node_modules/
   script:
-    - yarn install
-    - yarn run build
-    - cp -a dist/. public/
+    - cd FrontEnd/
+    - cd FrontIntegrador/
+    - npm install
+    - npm run build
   artifacts:
     paths:
-      - public
-  rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      - FrontEnd/FrontIntegrador/dist
 
 .deploy to s3:
   stage: deploy
@@ -34,4 +35,4 @@ test:
     entrypoint: ['']
   script:
     - aws --version
-    - aws s3 sync public s3://$AWS_S3_BUCKET --delete
+    - aws s3 sync FrontEnd/FrontIntegrador/dist s3://$AWS_S3_BUCKET --delete

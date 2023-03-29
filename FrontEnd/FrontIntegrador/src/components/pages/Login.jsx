@@ -11,16 +11,14 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import Swal from 'sweetalert2'
 
 const Login = () => {
-  const { users, setHeaderType, setIsLog, setCurrentUser } = useContext(HeaderContext)
+  const { users, setHeaderType, setIsLog, currentUser, setCurrentUser } = useContext(HeaderContext)
   const [showPassword, setShowPassword] = useState(false);
   const location = useLocation()
   const navigate = useNavigate()
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
   const emailsList = users.map(user => user.email);
-  console.log(emailsList);
   const passwordsList = users.map(user => user.password);
-  console.log(passwordsList);
 
   useEffect(() => {
     if (location.state === 'fromDetails') {
@@ -48,8 +46,13 @@ const Login = () => {
     }),
     onSubmit: (data) => {
       setIsLog(prev => !prev)
-      setCurrentUser(data.email)
-      navigate('/')
+      const loggedUser = users.find(user => user.email === data.email);
+      setCurrentUser(loggedUser)
+      if (loggedUser.email === 'emi@gmail.com') {
+        navigate('/administration')
+      } else {
+        navigate('/')
+      }
     }
   })
 

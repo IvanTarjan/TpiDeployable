@@ -8,7 +8,7 @@ const HeaderContextProvider = ({ children }) => {
   const [headerType, setHeaderType] = useState('initial');
   const [users, setUsers] = useState([])
   const [isLog, setIsLog] = useState(false)
-  const [currentUser, setCurrentUser] = useState('')
+  const [currentUser, setCurrentUser] = useState(undefined)
 
   useEffect(() => {
     axios.get("http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/usuario")

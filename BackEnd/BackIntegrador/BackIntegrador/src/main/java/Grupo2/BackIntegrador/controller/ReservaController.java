@@ -1,6 +1,6 @@
 package Grupo2.BackIntegrador.controller;
 
-import Grupo2.BackIntegrador.Exception.ResourceNotFoundException;
+import Grupo2.BackIntegrador.exception.ResourceNotFoundException;
 import Grupo2.BackIntegrador.model.Reserva;
 import Grupo2.BackIntegrador.service.ReservaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/reserva")
+@RequestMapping("/api/reserva")
 @CrossOrigin("*")
 public class ReservaController {
 
@@ -57,6 +57,11 @@ public class ReservaController {
         } catch (ResourceNotFoundException e) {
             return ResponseEntity.badRequest().body("No se puede actualizar una reserva que no existe en la base de datos");
         }
+    }
+
+    @GetMapping("/usu/{usuarioId}")
+    public ResponseEntity<List<Reserva>> buscarReservaPorUsuario(@PathVariable Long usuarioId){
+        return ResponseEntity.ok(reservaService.buscarReservaPorUsuario(usuarioId));
     }
 
 
