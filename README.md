@@ -1,6 +1,6 @@
 Pongamos aca los links de los casos de prueba y de los tests que no son codigo. Tambien lo de infra
 
-# Digital Booking Website
+# Digital Booking Website - Viaja Como quieras
 Estamos emocionados de presentar nuestro sitio web de reserva de carros, Digital Booking, una plataforma innovadora que satisface las necesidades de usuarios con diferentes requerimientos. Nuestro sitio web ofrece una experiencia sin interrupciones para usuarios no registrados, registrados y administradores, siendo la única condición el registro y el inicio de sesión para hacer reservas. Durante el registro, se envía un correo electrónico para confirmar la inscripción.
 Nuestro sitio web cuenta con varios filtros que permiten a los usuarios buscar carros según la ubicación, la categoria y el rango de fechas. Nos enorgullece prestar atención a los detalles, y nuestras páginas de productos son un ejemplo de ello. Con un enfoque en la experiencia del usuario y la interfaz de usuario, nuestra galería de imágenes, el calendario de disponibilidad, los mapas de ubicación y los detalles de la política proporcionan a los usuarios toda la información necesaria para tomar decisiones informadas. El sitio web también incluye una sección de favoritos y una función de historial de reservas para usuarios recurrentes.
 Nuestro sitio web está construido con tecnologías modernas y utilizamos servicios de AWS para garantizar escalabilidad y confiabilidad. Dockerizamos tanto el front-end como el back-end y ejecutamos los contenedores en una instancia de EC2. Nuestros datos se almacenan en una instancia de RDS, y las imágenes se guardan en un bucket de S3.
@@ -10,3 +10,10 @@ Seguimos la metodología Agile bajo Scrum para garantizar una eficiente colabora
 - ?????
     - ????? 
 
+# Equipo de Desarrolladores:
+- Emilio Pino: Desarrollador  Frontend , Asistente de Infraestructura.
+- Ivan Tarjan: Desarrollador  Frontend y Asistente de Backend.
+- Larissa Januzi: Analista de Infraestructura y QA.
+- Miguel Zapata: Analista QA.
+- Pablo Vélez: Desarrollador  Backend.
+    - - [![Linkedin Badge](https://img.shields.io/badge/-Pablo_Velez-blue?style=flat&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/agustinferres/)](https://www.linkedin.com/in/Pablo-Velez-Lopera)
