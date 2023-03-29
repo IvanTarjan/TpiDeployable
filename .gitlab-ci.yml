@@ -3,11 +3,11 @@ stages:
   - build
   - deploy
 
-trial:
+.trial:
   script:
     - echo 'just sau hello'  
 
-.test project:
+test project:
   stage: test
   image: node:16.5.0
   script:
@@ -16,7 +16,7 @@ trial:
     - npm install
     - npm run test
 
-.build project:
+build project:
   stage: build
   image: node:16.5.0
   script:
@@ -28,7 +28,7 @@ trial:
     paths:
       - FrontEnd/FrontIntegrador/dist
 
-.deploy to s3:
+deploy to s3:
   stage: deploy
   image: 
     name: amazon/aws-cli:2.11.3
