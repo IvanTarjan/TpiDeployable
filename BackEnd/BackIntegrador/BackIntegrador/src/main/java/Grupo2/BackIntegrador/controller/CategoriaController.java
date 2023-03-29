@@ -1,6 +1,6 @@
 package Grupo2.BackIntegrador.controller;
 
-import Grupo2.BackIntegrador.Exception.ResourceNotFoundException;
+import Grupo2.BackIntegrador.exception.ResourceNotFoundException;
 import Grupo2.BackIntegrador.model.Categoria;
 import Grupo2.BackIntegrador.service.CategoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/categoria")
+@RequestMapping("/api/categoria")
 @CrossOrigin("*")
 public class CategoriaController {
 

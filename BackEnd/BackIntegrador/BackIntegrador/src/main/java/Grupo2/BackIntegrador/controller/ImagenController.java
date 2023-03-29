@@ -1,8 +1,7 @@
 package Grupo2.BackIntegrador.controller;
 
-import Grupo2.BackIntegrador.Exception.ResourceNotFoundException;
+import Grupo2.BackIntegrador.exception.ResourceNotFoundException;
 import Grupo2.BackIntegrador.model.Imagen;
-import Grupo2.BackIntegrador.model.Producto;
 import Grupo2.BackIntegrador.service.ImagenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -12,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/imagen")
+@RequestMapping("/api/imagen")
 @CrossOrigin("*")
 public class ImagenController {
 

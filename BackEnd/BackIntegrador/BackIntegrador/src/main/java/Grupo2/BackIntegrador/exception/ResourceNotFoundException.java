@@ -1,4 +1,4 @@
-package Grupo2.BackIntegrador.Exception;
+package Grupo2.BackIntegrador.exception;
 
 public class ResourceNotFoundException extends Exception{
 

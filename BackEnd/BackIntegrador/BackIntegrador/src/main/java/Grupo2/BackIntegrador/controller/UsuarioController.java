@@ -1,6 +1,6 @@
 package Grupo2.BackIntegrador.controller;
 
-import Grupo2.BackIntegrador.Exception.ResourceNotFoundException;
+import Grupo2.BackIntegrador.exception.ResourceNotFoundException;
 import Grupo2.BackIntegrador.model.Usuario;
 import Grupo2.BackIntegrador.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/usuario")
+@RequestMapping("/api/usuario")
 @CrossOrigin("*")
 public class UsuarioController {
 

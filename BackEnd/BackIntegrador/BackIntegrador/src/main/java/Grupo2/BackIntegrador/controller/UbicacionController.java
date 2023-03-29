@@ -1,7 +1,6 @@
 package Grupo2.BackIntegrador.controller;
 
-import Grupo2.BackIntegrador.Exception.ResourceNotFoundException;
-import Grupo2.BackIntegrador.model.Caracteristica;
+import Grupo2.BackIntegrador.exception.ResourceNotFoundException;
 import Grupo2.BackIntegrador.model.Ubicacion;
 import Grupo2.BackIntegrador.service.UbicacionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/ubicacion")
+@RequestMapping("/api/ubicacion")
 @CrossOrigin("*")
 public class UbicacionController {
 

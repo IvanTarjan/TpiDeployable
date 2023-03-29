@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -22,12 +22,16 @@ public class Usuario {
     private Long id;
     @Column
     private String nombre;
+    @Column
+    private String apellido;
     @Column(nullable = false, unique = true)
     private String userName;
     @Column(nullable = false, unique = true)
     private String email;
     @Column(nullable = false)
     private String password;
+    @Column
+    private String ciudad;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(name = "usuario_roles",

@@ -1,6 +1,6 @@
 package Grupo2.BackIntegrador.controller;
 
-import Grupo2.BackIntegrador.Exception.ResourceNotFoundException;
+import Grupo2.BackIntegrador.exception.ResourceNotFoundException;
 import Grupo2.BackIntegrador.model.Producto;
 import Grupo2.BackIntegrador.service.ProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/producto")
+@RequestMapping("/api/producto")
 @CrossOrigin("*")
 public class ProductoController {
 

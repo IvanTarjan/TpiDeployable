@@ -1,9 +1,7 @@
 package Grupo2.BackIntegrador.controller;
 
-import Grupo2.BackIntegrador.Exception.ResourceNotFoundException;
-import Grupo2.BackIntegrador.model.Caracteristica;
+import Grupo2.BackIntegrador.exception.ResourceNotFoundException;
 import Grupo2.BackIntegrador.model.Politica;
-import Grupo2.BackIntegrador.model.Reserva;
 import Grupo2.BackIntegrador.service.PoliticaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/politica")
+@RequestMapping("/api/politica")
 @CrossOrigin("*")
 public class PoliticaController {
 
