@@ -1,6 +1,7 @@
 package Grupo2.BackIntegrador.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -55,6 +56,7 @@ public class Producto {
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "categoria_id")
     @JsonIgnoreProperties("productos")
+    @NotNull
     private Categoria categoria;
 
     @ManyToOne(cascade = CascadeType.MERGE)
@@ -69,6 +71,19 @@ public class Producto {
             joinColumns = { @JoinColumn(name = "producto_id") },
             inverseJoinColumns = { @JoinColumn(name = "caracteristica_id") })
     private Set<Caracteristica> caracteristica = new HashSet<>();
+
+    @Transient
+    private double puntuacionAvg;
+
+    @PostLoad
+    private void calcularPuntuacionAvg(){
+        if (puntuacion.size()>0){
+            Integer puntuacionSum = puntuacion.stream().reduce(0, (totalSum, punt)-> totalSum + punt.getPuntuacion(), Integer::sum);
+            this.puntuacionAvg = (float) (puntuacionSum / puntuacion.size());
+        } else {
+            this.puntuacionAvg = 0.0;
+        }
+    }
 
 
     public void addCaracteristica (Caracteristica caracteristica){

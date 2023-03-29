@@ -67,7 +67,7 @@ const DateAvailability = ({ dateRangeArr, id }) => {
             navigator('/login', { state: 'fromDetails' })
           }
             variant="contained"
-            sx={{ textTransform: "none", bgcolor: "#f0572d", color: colors.background, width: '100%' }}>Iniciar reserva</Button>
+            sx={{ textTransform: "none", color: colors.background, width: '100%' }}>Iniciar reserva</Button>
         </Box>
       </Box>
     </Box>
