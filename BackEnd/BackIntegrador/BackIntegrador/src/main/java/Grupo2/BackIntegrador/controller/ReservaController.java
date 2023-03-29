@@ -5,6 +5,7 @@ import Grupo2.BackIntegrador.model.Reserva;
 import Grupo2.BackIntegrador.service.ReservaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -49,6 +50,7 @@ public class ReservaController {
         return ResponseEntity.ok("Se eliminó la reserva con id= "+id);
     }
 
+
     @PutMapping
     public ResponseEntity<String> actualizarReserva(@RequestBody Reserva reserva){
         try {
@@ -59,6 +61,7 @@ public class ReservaController {
         }
     }
 
+    @PreAuthorize("hasRole('USER')")
     @GetMapping("/usu/{usuarioId}")
     public ResponseEntity<List<Reserva>> buscarReservaPorUsuario(@PathVariable Long usuarioId){
         return ResponseEntity.ok(reservaService.buscarReservaPorUsuario(usuarioId));

@@ -42,7 +42,7 @@ public class PuntuacionController {
             return ResponseEntity.notFound().build();
         }
     }
-    @PreAuthorize("hasRole('ADMIN')")
+
     @DeleteMapping("/{id}")
     public ResponseEntity<String> eliminarPuntuacionXId(@PathVariable Long id){
         try {
@@ -52,7 +52,7 @@ public class PuntuacionController {
             return ResponseEntity.notFound().build();
         }
     }
-    @PreAuthorize("hasRole('ADMIN')")
+
     @PutMapping
     public ResponseEntity<String> actualizarPuntuacion(@RequestBody Puntuacion puntuacion){
         try {

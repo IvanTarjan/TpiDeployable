@@ -70,12 +70,44 @@ public class AuthServiceImpl implements AuthService {
 
         Usuario usuario = new Usuario();
         usuario.setNombre(registerDto.getNombre());
+        usuario.setApellido(registerDto.getApellido());
         usuario.setUserName(registerDto.getUserName());
         usuario.setEmail(registerDto.getEmail());
         usuario.setPassword(passwordEncoder.encode(registerDto.getPassword()));
+        usuario.setCiudad(registerDto.getCiudad());
 
         Set<Roles> roles = new HashSet<>();
         Roles userRole = rolesRepository.findByName("ROLE_USER").get();
+        roles.add(userRole);
+        usuario.setRoles(roles);
+
+        usuarioRepository.save(usuario);
+
+        return "El Usuario ha sido registrado exitosamente!.";
+    }
+    @Override
+    public String registerAdmin(RegisterDto registerDto) {
+
+        // chequear si el username esta en la base de datos
+        if (usuarioRepository.existsByuserName(registerDto.getUserName())) {
+            throw new APIException(HttpStatus.BAD_REQUEST, "El Username ya existe!.");
+        }
+
+        // achequeasi si el email esta en la base de datos
+        if (usuarioRepository.existsByEmail(registerDto.getEmail())) {
+            throw new APIException(HttpStatus.BAD_REQUEST, "El Email ya existe!.");
+        }
+
+        Usuario usuario = new Usuario();
+        usuario.setNombre(registerDto.getNombre());
+        usuario.setApellido(registerDto.getApellido());
+        usuario.setUserName(registerDto.getUserName());
+        usuario.setEmail(registerDto.getEmail());
+        usuario.setPassword(passwordEncoder.encode(registerDto.getPassword()));
+        usuario.setCiudad(registerDto.getCiudad());
+
+        Set<Roles> roles = new HashSet<>();
+        Roles userRole = rolesRepository.findByName("ROLE_ADMIN").get();
         roles.add(userRole);
         usuario.setRoles(roles);
 

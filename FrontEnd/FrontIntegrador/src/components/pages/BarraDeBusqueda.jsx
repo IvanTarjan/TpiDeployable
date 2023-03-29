@@ -35,7 +35,7 @@ const BarraDeBusqueda = () => {
     const months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
 
     return (
-        <Box display='flex' flexDirection={'column'} justifyContent='center' alignItems='center' width='100vw' marginTop={'60px'} backgroundColor={colors.c3} padding={"30px 0px"}>
+        <Box display='flex' flexDirection={'column'} justifyContent='center' alignItems='center' width='100%' marginTop={'60px'} backgroundColor={colors.c3} padding={"30px 0px"}>
             <Typography variant='h1' fontSize={{ xs: '30px', md: '36px' }} fontWeight="bold" color={colors.c4} textAlign="center" padding={'20px'} >Encontra el vehiculo ideal para tu proximo viaje</Typography>
 
             <FormControl sx={{ m: 1, width: { xs: '90%', md: '70%' }, mt: 3, display: 'flex', justifyContent: 'center', alignItems: "center", flexDirection: { xs: 'column', sm: 'row' }, gap: '10px' }}>

@@ -37,7 +37,7 @@ public class Reserva {
     private Date fecha_fin;
 
     @ManyToOne
-    @JsonIncludeProperties("id")
+    @JsonIgnoreProperties(value = {"reserva", "puntuacion"})
     private Producto producto;
 
     @ManyToOne

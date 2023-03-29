@@ -19,6 +19,7 @@ public class UbicacionController {
     @Autowired
     private UbicacionService ubicacionService;
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping
     public ResponseEntity<Ubicacion> registrarUbicacion(@RequestBody Ubicacion ubicacion){
         return ResponseEntity.ok(ubicacionService.guardarUbicacion(ubicacion));

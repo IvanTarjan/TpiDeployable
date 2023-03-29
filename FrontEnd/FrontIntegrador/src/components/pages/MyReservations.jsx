@@ -17,10 +17,10 @@ const MyReservations = () => {
       navigate('/')
     }
     useEffect(() => {
-        axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/usuario/${userId}`).then(
+        axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/reserva/usu/${userId}`).then(
             res => {
                 console.log(res.data);
-                setReserves(res.data.reserva);
+                setReserves(res.data);
                 setLoading(false)
             }
         )
