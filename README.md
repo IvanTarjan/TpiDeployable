@@ -11,8 +11,8 @@ Seguimos la metodología Agile bajo Scrum para garantizar una eficiente colabora
     - ????? 
 
 # Equipo de Desarrolladores:
-- Emilio Pino: Desarrollador  Frontend , Asistente de Infraestructura. [![Linkedin Badge](https://img.shields.io/badge/-Emilio_Pino-blue?style=flat&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/agustinferres/)](https://www.linkedin.com/in/emiliopino/)
-- Ivan Tarjan: Desarrollador  Frontend y Asistente de Backend. [![Linkedin Badge](https://img.shields.io/badge/-Ivan_Tarjan-blue?style=flat&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/agustinferres/)](https://www.linkedin.com/in/ivan-dimitri-tarjan-caldarini-383117260/)
-- Larissa Januzi: Analista de Infraestructura y QA. [![Linkedin Badge](https://img.shields.io/badge/-Larissa_Januzi-blue?style=flat&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/agustinferres/)](https://www.linkedin.com/in/larissa-januzi-3aa25124//)
+- [![Linkedin Badge](https://img.shields.io/badge/-Emilio_Pino-blue?style=flat&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/agustinferres/)](https://www.linkedin.com/in/emiliopino/): Desarrollador  Frontend , Asistente de Infraestructura.
+- [![Linkedin Badge](https://img.shields.io/badge/-Ivan_Tarjan-blue?style=flat&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/agustinferres/)](https://www.linkedin.com/in/ivan-dimitri-tarjan-caldarini-383117260/): Desarrollador  Frontend y Asistente de Backend. 
+- [![Linkedin Badge](https://img.shields.io/badge/-Larissa_Januzi-blue?style=flat&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/agustinferres/)](https://www.linkedin.com/in/larissa-januzi-3aa25124//): Analista de Infraestructura y QA.
 - Miguel Zapata: Analista QA.
-- Pablo Vélez: Desarrollador  Backend. [![Linkedin Badge](https://img.shields.io/badge/-Pablo_Velez-blue?style=flat&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/agustinferres/)](https://www.linkedin.com/in/Pablo-Velez-Lopera)
+- [![Linkedin Badge](https://img.shields.io/badge/-Pablo_Velez-blue?style=flat&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/agustinferres/)](https://www.linkedin.com/in/Pablo-Velez-Lopera): Desarrollador  Backend.
