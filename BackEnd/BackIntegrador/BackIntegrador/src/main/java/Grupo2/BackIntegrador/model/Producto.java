@@ -1,7 +1,6 @@
 package Grupo2.BackIntegrador.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -56,7 +55,7 @@ public class Producto {
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "categoria_id")
     @JsonIgnoreProperties("productos")
-    @NotNull
+
     private Categoria categoria;
 
     @ManyToOne(cascade = CascadeType.MERGE)
