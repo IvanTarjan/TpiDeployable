@@ -8,4 +8,6 @@ public interface AuthService {
 
         String register(RegisterDto registerDto);
 
+        String registerAdmin(RegisterDto registerDto);
+
 }

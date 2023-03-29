@@ -1003,3 +1003,31 @@
 [2023-03-21 15:38:05] [ INFO ] [ProductoService:36] Se inició el listado de todas las productos
 [2023-03-27 15:13:54] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
 [2023-03-27 15:16:08] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
+[2023-03-29 14:53:58] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
+[2023-03-29 14:57:50] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
+[2023-03-29 14:59:02] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
+[2023-03-29 15:08:23] [ INFO ] [ProductoService:32] Se inició el listado de todas las productos
+[2023-03-29 15:09:44] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=54
+[2023-03-29 15:09:50] [ WARN ] [ProductoService:68] Se realizo una operación de eliminación del producto con id=54
+[2023-03-29 15:10:04] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=55
+[2023-03-29 15:10:10] [ WARN ] [ProductoService:68] Se realizo una operación de eliminación del producto con id=55
+[2023-03-29 15:10:15] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=56
+[2023-03-29 15:10:21] [ WARN ] [ProductoService:68] Se realizo una operación de eliminación del producto con id=56
+[2023-03-29 15:10:27] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=57
+[2023-03-29 15:10:33] [ WARN ] [ProductoService:68] Se realizo una operación de eliminación del producto con id=57
+[2023-03-29 15:10:38] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=58
+[2023-03-29 15:10:44] [ WARN ] [ProductoService:68] Se realizo una operación de eliminación del producto con id=58
+[2023-03-29 15:10:48] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=59
+[2023-03-29 15:10:54] [ WARN ] [ProductoService:68] Se realizo una operación de eliminación del producto con id=59
+[2023-03-29 15:10:59] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=60
+[2023-03-29 15:16:50] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
+[2023-03-29 15:18:09] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
+[2023-03-29 15:19:23] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
+[2023-03-29 15:20:23] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 4
+[2023-03-29 15:20:24] [ WARN ] [UsuarioService:50] Se realizo una operación de eliminación de los Usuarios con id= 4
+[2023-03-29 15:23:53] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 4
+[2023-03-29 15:23:54] [ WARN ] [UsuarioService:50] Se realizo una operación de eliminación de los Usuarios con id= 4
+[2023-03-29 15:24:00] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 5
+[2023-03-29 15:24:01] [ WARN ] [UsuarioService:50] Se realizo una operación de eliminación de los Usuarios con id= 5
+[2023-03-29 15:24:07] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
+[2023-03-29 15:24:23] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios

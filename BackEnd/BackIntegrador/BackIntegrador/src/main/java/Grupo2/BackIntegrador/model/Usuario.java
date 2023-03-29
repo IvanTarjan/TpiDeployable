@@ -33,7 +33,7 @@ public class Usuario {
     @Column
     private String ciudad;
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "usuario_roles",
                 joinColumns = @JoinColumn(name = "usuario_id", referencedColumnName = "id"),
                 inverseJoinColumns = @JoinColumn(name = "roles_id", referencedColumnName = "id")
@@ -56,12 +56,5 @@ public class Usuario {
     public void removePuntuacion(Puntuacion puntuacion){
         this.puntuacion.remove(puntuacion);
         puntuacion.setUsuario(null);
-    }
-
-    public Usuario(String nombre, String userName, String email, String password) {
-        this.nombre = nombre;
-        this.userName = userName;
-        this.email = email;
-        this.password = password;
     }
 }

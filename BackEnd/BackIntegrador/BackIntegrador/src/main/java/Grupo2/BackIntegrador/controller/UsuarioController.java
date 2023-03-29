@@ -19,6 +19,7 @@ public class UsuarioController {
     @Autowired
     private UsuarioService usuarioService;
 
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/{id}")
     public ResponseEntity<Usuario> buscarUsuarioPorID(@PathVariable Long id){
         Optional<Usuario> usuarioBuscado= usuarioService.buscarUsuarioXId(id);
@@ -29,11 +30,13 @@ public class UsuarioController {
         }
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping
     public ResponseEntity<List<Usuario>> buscarUsuario(){
         return ResponseEntity.ok(usuarioService.listarUsuarios());
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping
     public ResponseEntity<Usuario> registrarUsuario(@RequestBody Usuario usuario){
         return ResponseEntity.ok(usuarioService.guardarUsuario(usuario));
@@ -45,6 +48,7 @@ public class UsuarioController {
         return ResponseEntity.ok("Se eliminó el usuario con id= "+id);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping
     public ResponseEntity<String> actualizarUsuario(@RequestBody Usuario usuario){
         try {
