@@ -14,10 +14,6 @@ const Header = () => {
 
   const { headerType, setHeaderType, isLog, setIsLog, currentUser, setCurrentUser } = useContext(HeaderContext);
 
-  useEffect(() => {
-    setCurrentUser(JSON.parse(localStorage.getItem('currentUser')))
-  }, [])
-
   console.log(currentUser)
 
   const nagivate = useNavigate()
@@ -38,10 +34,12 @@ const Header = () => {
   }
 
   const handleSignOut = () => {
-    setIsLog(prev => !prev)
+    setIsLog(false)
     setHeaderType('initial')
     nagivate('/')
+    localStorage.removeItem('currentUser');
     setCurrentUser(undefined)
+    
   }
 
   const isMobile = useMediaQuery('(max-width:600px)');

@@ -14,6 +14,7 @@ import java.util.HashSet;
 public class JWTAuthResponse {
     private String accessToken;
     private String tokenType = "Bearer";
+    private Long user_id;
     private String nombre;
     private String apellido;
     private String userName;

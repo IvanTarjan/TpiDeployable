@@ -61,7 +61,7 @@ public class ReservaController {
         }
     }
 
-    @PreAuthorize("hasRole('USER')")
+    @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     @GetMapping("/usu/{usuarioId}")
     public ResponseEntity<List<Reserva>> buscarReservaPorUsuario(@PathVariable Long usuarioId){
         return ResponseEntity.ok(reservaService.buscarReservaPorUsuario(usuarioId));
