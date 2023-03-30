@@ -1045,3 +1045,13 @@
 [2023-03-29 21:34:24] [ INFO ] [ProductoService:89] Se buscaron 8 productos random
 [2023-03-29 21:34:38] [ INFO ] [ProductoService:94] Se inició una busqueda de todos los productos disponibles desde el 2023-03-24 al 2023-03-19
 [2023-03-29 21:34:48] [ INFO ] [ProductoService:98] Se inició una busqueda de todos los productos disponibles desde el 2023-03-23 al 2023-03-19 en la ubicacion con id = 1
+[2023-03-30 18:00:25] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
+[2023-03-30 18:00:34] [ INFO ] [ReservaService:75] Se inició una busqueda de todas las reservas con usuario id=3
+[2023-03-30 18:00:53] [ INFO ] [ReservaService:75] Se inició una busqueda de todas las reservas con usuario id=2
+[2023-03-30 18:01:16] [ INFO ] [ReservaService:34] Se inició una operación de guardado de la reserva con id=: null
+[2023-03-30 18:01:16] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=11
+[2023-03-30 18:01:20] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 2
+[2023-03-30 18:01:38] [ INFO ] [ReservaService:29] Se inició el listado de todas las reservas
+[2023-03-30 18:02:03] [ INFO ] [ReservaService:75] Se inició una busqueda de todas las reservas con usuario id=2
+[2023-03-30 18:11:29] [ INFO ] [ReservaService:75] Se inició una busqueda de todas las reservas con usuario id=2
+[2023-03-30 18:11:33] [ INFO ] [ReservaService:75] Se inició una busqueda de todas las reservas con usuario id=2

@@ -9,15 +9,13 @@ import Grupo2.BackIntegrador.service.UsuarioService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashSet;
 
 @RestController
 @RequestMapping("/api/auth")
+@CrossOrigin("*")
 public class AutenticacionController {
 
     private AuthService authService;
@@ -35,6 +33,7 @@ public class AutenticacionController {
         Usuario usuario = usuarioService.buscarByuserNameOrEmail(loginDto.getUserNameOrEmail()).get();
         JWTAuthResponse jwtAuthResponse = new JWTAuthResponse();
         jwtAuthResponse.setAccessToken(token);
+        jwtAuthResponse.setUser_id(usuario.getId());
         jwtAuthResponse.setNombre(usuario.getNombre());
         jwtAuthResponse.setApellido(usuario.getApellido());
         jwtAuthResponse.setUserName(usuario.getUserName());

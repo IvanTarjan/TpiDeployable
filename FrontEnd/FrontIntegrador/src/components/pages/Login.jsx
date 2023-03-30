@@ -44,12 +44,20 @@ const Login = () => {
       password: Yup.string().required('Campo obligatorio'),
     }),
     onSubmit: (data) => {
-      setIsLog(prev => !prev)
       axios.post('http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/auth/login', {
         userNameOrEmail: data.email,
         password: data.password
       }).then(res => {
+        setCurrentUser(res.data)
+        setIsLog(true)
         localStorage.setItem('currentUser', JSON.stringify(res.data))
+        navigate("/")
+      }).catch(()=>{
+        Swal.fire({
+          icon: 'error',
+          title: 'Usuario o contraseña invalida',
+          text: 'Pruebe nuevamente',
+        })
       })
     }
   })
