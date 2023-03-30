@@ -14,19 +14,19 @@ const BodyContextProvider = ({ children }) => {
 
 
   useEffect(() => {
-    axios.get("http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/producto")
+    axios.get("http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/producto")
       .then(res => setCars(res.data))
       .catch(err => console.log(err))
   }, [])
 
   useEffect(() => {
-    axios.get("http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/ubicacion")
+    axios.get("http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/ubicacion")
       .then(res => setLocalizaciones(res.data))
       .catch(err => console.log(err))
   }, [])
 
   useEffect(() => {
-    axios.get("http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/categoria")
+    axios.get("http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/categoria")
       .then(res => setCategorias(res.data))
       .catch(err => console.log(err))
   }, [])
