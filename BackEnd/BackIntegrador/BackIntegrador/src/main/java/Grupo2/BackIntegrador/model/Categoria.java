@@ -1,6 +1,4 @@
 package Grupo2.BackIntegrador.model;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonIncludeProperties;
 import lombok.AllArgsConstructor;
@@ -15,6 +13,7 @@ import java.util.Set;
 @Entity
 @Getter @Setter @AllArgsConstructor @NoArgsConstructor
 @Table(name="categoria")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Categoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -14,6 +14,7 @@ import java.util.Set;
 
 @Entity
 @Getter @Setter @AllArgsConstructor @NoArgsConstructor
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Table(name="ubicacion")
 public class Ubicacion {
     @Id
