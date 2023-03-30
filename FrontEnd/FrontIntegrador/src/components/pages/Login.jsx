@@ -9,16 +9,15 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import Swal from 'sweetalert2'
+import axios from "axios";
 
 const Login = () => {
-  const { users, setHeaderType, setIsLog, currentUser, setCurrentUser } = useContext(HeaderContext)
+  const { setHeaderType, setIsLog, currentUser, setCurrentUser } = useContext(HeaderContext)
   const [showPassword, setShowPassword] = useState(false);
   const location = useLocation()
   const navigate = useNavigate()
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
-  const emailsList = users.map(user => user.email);
-  const passwordsList = users.map(user => user.password);
 
   useEffect(() => {
     if (location.state === 'fromDetails') {
@@ -41,18 +40,17 @@ const Login = () => {
     },
     validateOnChange: false,
     validationSchema: Yup.object({
-      email: Yup.string().email("Ingresar una direccion de email valida").oneOf(emailsList, "El email ingresado no es valido").required('Campo obligatorio'),
-      password: Yup.string().oneOf(passwordsList, "El password ingresado no es valido").required('Campo obligatorio'),
+      email: Yup.string().required('Campo obligatorio'),
+      password: Yup.string().required('Campo obligatorio'),
     }),
     onSubmit: (data) => {
       setIsLog(prev => !prev)
-      const loggedUser = users.find(user => user.email === data.email);
-      setCurrentUser(loggedUser)
-      if (loggedUser.email === 'emi@gmail.com') {
-        navigate('/administration')
-      } else {
-        navigate('/')
-      }
+      axios.post('http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/auth/login', {
+        userNameOrEmail: data.email,
+        password: data.password
+      }).then(res => {
+        localStorage.setItem('currentUser', JSON.stringify(res.data))
+      })
     }
   })
 
@@ -72,7 +70,7 @@ const Login = () => {
               value={values.email}
               onChange={handleChange}
               name='email'
-              type={"email"}
+              type={"text"}
               label="Correo electronico"
               variant="outlined"
               error={errors.email ? true : false}
