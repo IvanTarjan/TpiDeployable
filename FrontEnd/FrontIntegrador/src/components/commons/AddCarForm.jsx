@@ -27,7 +27,7 @@ const AddCarForm = () => {
         borderRadius: '8px',
         padding: '0px 10px',
         width: '100%',
-        height: '42vh'
+        height: isMobile ? '500px' : '42vh'
       }} container spacing={2}>
         <Grid item xs={isMobile ? 12 : 6}>
           <TextField
@@ -95,7 +95,7 @@ const AddCarForm = () => {
         borderRadius: '8px',
         padding: '0px 10px',
         width: '100%',
-        height: '12vh'
+        height: isMobile ? "155px" : '12vh'
       }}
         container spacing={2} >
         <Grid item xs={isMobile ? 12 : 6}>
@@ -127,7 +127,7 @@ const AddCarForm = () => {
         borderRadius: '8px',
         padding: '0px 10px',
         width: '100%',
-        height: '32vh'
+        height: isMobile ? '710px' : '32vh'
       }}
         container spacing={2} >
         <Grid item xs={isMobile ? 12 : 4}>
