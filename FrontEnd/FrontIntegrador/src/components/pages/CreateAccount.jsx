@@ -11,16 +11,12 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import axios from "axios";
 import Swal from 'sweetalert2'
 
-
 const CreateAccount = () => {
-  const { users, setUsers, setHeaderType } = useContext(HeaderContext)
+  const { setHeaderType } = useContext(HeaderContext)
   const [isSubmit, setIsSubmit] = useState(false)
   const [showPassword, setShowPassword] = useState(false);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
-
-  const emailsList = users.map(user => user.email);
-  const passwordsList = users.map(user => user.password);
 
   const nagivate = useNavigate()
 
@@ -28,6 +24,7 @@ const CreateAccount = () => {
     initialValues: {
       name: '',
       surname: '',
+      username: '',
       email: '',
       password: '',
       confirm: '',
@@ -36,23 +33,19 @@ const CreateAccount = () => {
     validationSchema: Yup.object({
       name: Yup.string().min(3, "El nombre debe contener al menos 3 letras").required('Campo obligatorio'),
       surname: Yup.string().min(3, "El apellido debe tener al menos 3 letras").required('Campo obligatorio'),
-      email: Yup.string().lowercase().email("Ingresar una direccion de email valida").notOneOf(emailsList, "El email ingresado se ya encuentra registrado").required('Campo obligatorio'),
-      password: Yup.string().min(7, 'La contrasena debe tener mas de 6 caracteres').notOneOf(passwordsList, "La contrasena ingresada ya se encuentra registrada").required('Campo obligatorio'),
+      email: Yup.string().lowercase().email("Ingresar una direccion de email valida").required('Campo obligatorio'),
+      password: Yup.string().min(7, 'La contrasena debe tener mas de 6 caracteres').required('Campo obligatorio'),
       confirm: Yup.string().label('Confirmar el password ingresado').oneOf([Yup.ref('password')], 'Las contrasenas deben ser iguales').required('Campo obligatorio')
     }),
-    onSubmit: (data) => axios.post('http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/usuario', {
+    onSubmit: (data) => axios.post('http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/auth/register', {
       nombre: data.name,
-      // apellido: data.surname,
+      apellido: data.surname,
+      userName: data.username,
       email: data.email,
       password: data.confirm
     }).then(res => {
       setIsSubmit(prev => !prev)
-      setUsers(preUsers => [...preUsers, {
-        nombre: data.name,
-        // apellido: data.surname,
-        email: data.email,
-        password: data.confirm
-      }])
+
       Swal.fire({
         title: 'Registro exitoso!',
         text: 'Ahora podes loguearte y navegar nuestra pagina',
@@ -108,6 +101,21 @@ const CreateAccount = () => {
               variant="outlined"
               error={errors.surname ? true : false}
               helperText={errors.surname}
+              fullWidth
+            />
+
+          </Grid>
+
+          <Grid item xs={12} md={8}>
+            <TextField
+              value={values.username}
+              onChange={handleChange}
+              name='username'
+              type={"text"}
+              label="Username"
+              variant="outlined"
+              error={errors.username ? true : false}
+              helperText={errors.username}
               fullWidth
             />
 
