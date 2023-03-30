@@ -4,6 +4,7 @@ import AddBoxIcon from '@mui/icons-material/AddBox';
 import styles from '../styles/Body.module.css'
 import SendIcon from '@mui/icons-material/Send';
 import { BodyContext } from '../contexts/BodyContext';
+import AttributesSelector from './AttributesSelector';
 
 const AddCarForm = () => {
 
@@ -25,9 +26,9 @@ const AddCarForm = () => {
         backgroundColor: 'white',
         boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
         borderRadius: '8px',
-        padding: '0px 10px',
+        padding: '10px 10px',
         width: '100%',
-        height: isMobile ? '500px' : '42vh'
+        height: 'auto'
       }} container spacing={2}>
         <Grid item xs={isMobile ? 12 : 6}>
           <TextField
@@ -41,7 +42,6 @@ const AddCarForm = () => {
             defaultValue={''}
             fullWidth
             id='categoria'
-
           >
             <MenuItem value="">
               <em style={{ color: '#383B58', fontWeight: '700' }}>Categoria</em>
@@ -93,30 +93,13 @@ const AddCarForm = () => {
         backgroundColor: '#f9f9f9',
         boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
         borderRadius: '8px',
-        padding: '0px 10px',
+        padding: '10px 10px',
         width: '100%',
-        height: isMobile ? "155px" : '12vh'
+        height: 'auto'
       }}
         container spacing={2} >
-        <Grid item xs={isMobile ? 12 : 6}>
-          <TextField
-            label='Nombre'
-            type={'text'}
-            fullWidth
-          />
-        </Grid>
-        <Grid item xs={isMobile ? 12 : 6}>
-          <TextField
-            InputProps={{
-              endAdornment: (
-                <IconButton color='primary' disableRipple={true} onClick={handleAddIcon}>
-                  <AddBoxIcon style={{ fontSize: '40px' }} />
-                </IconButton>
-              ),
-            }}
-            label='Icono'
-            type={'text'}
-            fullWidth />
+        <Grid item xs={isMobile ? 12 : 12}>
+          <AttributesSelector />
         </Grid>
       </Grid >
 
@@ -125,9 +108,9 @@ const AddCarForm = () => {
         backgroundColor: '#fff',
         boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
         borderRadius: '8px',
-        padding: '0px 10px',
+        padding: '10px 10px',
         width: '100%',
-        height: isMobile ? '710px' : '32vh'
+        height: 'auto'
       }}
         container spacing={2} >
         <Grid item xs={isMobile ? 12 : 4}>
@@ -165,9 +148,9 @@ const AddCarForm = () => {
           backgroundColor: '#f9f9f9',
           boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
           borderRadius: '8px',
-          padding: '0px 20px',
+          padding: '10px 10px',
           width: '100vw',
-          height: '12vh'
+          height: 'auto'
         }}
           container spacing={2} >
 
