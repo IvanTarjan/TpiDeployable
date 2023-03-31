@@ -113,6 +113,6 @@ public class AuthServiceImpl implements AuthService {
 
         usuarioRepository.save(usuario);
 
-        return "El Usuario ha sido registrado exitosamente!.";
+        return "El Usuario Admin ha sido registrado exitosamente!.";
     }
 }
