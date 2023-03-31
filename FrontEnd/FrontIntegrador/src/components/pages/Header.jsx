@@ -37,7 +37,6 @@ const Header = () => {
     nagivate('/')
     localStorage.removeItem('currentUser');
     setCurrentUser(undefined)
-    localStorage.removeItem('currentUser')
   }
 
   const isMobile = useMediaQuery('(max-width:600px)');
