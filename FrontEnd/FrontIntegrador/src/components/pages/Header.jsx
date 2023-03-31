@@ -14,8 +14,6 @@ const Header = () => {
 
   const { headerType, setHeaderType, isLog, setIsLog, currentUser, setCurrentUser } = useContext(HeaderContext);
 
-  console.log(currentUser)
-
   const nagivate = useNavigate()
 
   const handleCreateAccount = () => {
@@ -39,7 +37,7 @@ const Header = () => {
     nagivate('/')
     localStorage.removeItem('currentUser');
     setCurrentUser(undefined)
-    
+    localStorage.removeItem('currentUser')
   }
 
   const isMobile = useMediaQuery('(max-width:600px)');
