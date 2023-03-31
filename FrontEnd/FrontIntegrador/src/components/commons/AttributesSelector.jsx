@@ -19,7 +19,7 @@ const MenuProps = {
   },
 };
 
-const names = [
+const attributes = [
   'Nafta',
   'Diesel',
   'Diesel premium',
@@ -31,10 +31,10 @@ const names = [
   '2 Airbags',
 ];
 
-function getStyles(name, personName, theme) {
+function getStyles(attribute, attributeName, theme) {
   return {
     fontWeight:
-      personName.indexOf(name) === -1
+      attributeName.indexOf(attribute) === -1
         ? theme.typography.fontWeightRegular
         : theme.typography.fontWeightMedium,
   };
@@ -42,13 +42,14 @@ function getStyles(name, personName, theme) {
 
 export default function AttributesSelector() {
   const theme = useTheme();
-  const [personName, setPersonName] = React.useState([]);
+  const [attributeName, setAttributeName] = React.useState([]);
+  console.log(attributeName)
 
   const handleChange = (event) => {
     const {
       target: { value },
     } = event;
-    setPersonName(
+    setAttributeName(
       // On autofill we get a stringified value.
       typeof value === 'string' ? value.split(',') : value,
     );
@@ -62,7 +63,8 @@ export default function AttributesSelector() {
           labelId="demo-multiple-chip-label"
           id="demo-multiple-chip"
           multiple
-          value={personName}
+          value={attributeName}
+          name='allAttributes'
           onChange={handleChange}
           input={<OutlinedInput id="select-multiple-chip" label="Atributos" />}
           renderValue={(selected) => (
@@ -74,13 +76,13 @@ export default function AttributesSelector() {
           )}
           MenuProps={MenuProps}
         >
-          {names.map((name) => (
+          {attributes.map((attribute) => (
             <MenuItem
-              key={name}
-              value={name}
-              style={getStyles(name, personName, theme)}
+              key={attribute}
+              value={attribute}
+              style={getStyles(attribute, attributeName, theme)}
             >
-              {name}
+              {attribute}
             </MenuItem>
           ))}
         </Select>
