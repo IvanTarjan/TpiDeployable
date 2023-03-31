@@ -52,7 +52,7 @@ const Login = () => {
         setIsLog(true)
         localStorage.setItem('currentUser', JSON.stringify(res.data))
         navigate("/")
-      }).catch(()=>{
+      }).catch(() => {
         Swal.fire({
           icon: 'error',
           title: 'Usuario o contraseña invalida',
@@ -79,7 +79,7 @@ const Login = () => {
               onChange={handleChange}
               name='email'
               type={"text"}
-              label="Correo electronico"
+              label="Ingrese email o username"
               variant="outlined"
               error={errors.email ? true : false}
               helperText={errors.email}
@@ -100,7 +100,7 @@ const Login = () => {
               onChange={handleChange}
               name='password'
               type={showPassword ? "text" : "password"}
-              label="Contrasena"
+              label="Ingrese contrasena"
               variant="outlined"
               error={errors.password ? true : false}
               helperText={errors.password}
