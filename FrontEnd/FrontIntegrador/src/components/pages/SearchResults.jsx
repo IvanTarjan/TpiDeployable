@@ -10,7 +10,7 @@ import loadingGif from '../../assets/Loading1.gif'
 
 
 const SearchResults = () => {
-  const {  selectedCity} = useContext(BodyContext)
+  const { setSelectedCity, selectedCity} = useContext(BodyContext)
   const [availableCars, setAvailableCars] = useState([])
   const [loading, setLoading] = useState(true)
   const navigate = useNavigate()
@@ -22,8 +22,12 @@ const SearchResults = () => {
   useEffect(() => {
     if (fechaInicio=="n"& fechaFin=="n") {
       axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/producto/u/${ubicacionId}`)
-      .then(res => {setAvailableCars(res.data)
-      setLoading(false)
+      .then(res => {
+      setAvailableCars(res.data)
+      axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/ubicacion/${ubicacionId}`).then(ubi=>{
+        setSelectedCity(ubi.data)
+        setLoading(false)
+      })
       })
       .catch(err => console.log(err))
     } else if (ubicacionId=="n"){
@@ -35,7 +39,10 @@ const SearchResults = () => {
     } else{
       axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/producto/datesAndUbi/${fechaInicio}/${fechaFin}/${selectedCity.id}`)
       .then(res => {setAvailableCars(res.data)
+        axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/ubicacion/${ubicacionId}`).then(ubi=>{
+        setSelectedCity(ubi.data)
         setLoading(false)
+      })
       })
       .catch(err => console.log(err))
     }
@@ -45,7 +52,7 @@ const SearchResults = () => {
     <>
       <div className={styles.headerCategory}>
         <div>
-          <h1 style={{ paddingTop: '0' }}>Vehiculos disponibles {ubicacionId != "n"? `en ${selectedCity.nombre}`:""} {fechaFin != "n"?`desde el ${fechaInicio} al ${fechaFin}`:""}</h1>
+          <h1 style={{ paddingTop: '0' }}>Vehiculos disponibles {ubicacionId != "n"? `en ${selectedCity.nombre?? "..." }`:""} {fechaFin != "n"?`desde el ${fechaInicio} al ${fechaFin}`:""}</h1>
         </div>
         <IconButton disableRipple={true} sx={{ width: 175 }} onClick={handleClick}>
           <ArrowBackIosNewIcon fontSize='large' color='action' />

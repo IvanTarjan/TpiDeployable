@@ -10,7 +10,7 @@ const BodyContextProvider = ({ children }) => {
   const [dateRange, setDateRange] = useState([null, null]);
   const [allDates, setAllDates] = useState([])
   const [categorias, setCategorias] = useState([])
-  const [selectedCity, setSelectedCity] = useState(null)
+  const [selectedCity, setSelectedCity] = useState({})
 
   useEffect(() => {
     axios.get("http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/ubicacion")
