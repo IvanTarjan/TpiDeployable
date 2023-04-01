@@ -12,7 +12,7 @@ import Swal from 'sweetalert2'
 import axios from "axios";
 
 const Login = () => {
-  const { setHeaderType, setIsLog, currentUser, setCurrentUser } = useContext(HeaderContext)
+  const { setHeaderType, setIsLog, setCurrentUser } = useContext(HeaderContext)
   const [showPassword, setShowPassword] = useState(false);
   const location = useLocation()
   const navigate = useNavigate()
@@ -20,7 +20,8 @@ const Login = () => {
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
   useEffect(() => {
-    if (location.state === 'fromDetails') {
+    if (location.state !== null) {
+      setHeaderType('login')
       Swal.fire({
         text: 'Para realizar una reserva necesitas estar logueado',
         icon: 'warning',
@@ -51,7 +52,7 @@ const Login = () => {
         setCurrentUser(res.data)
         setIsLog(true)
         localStorage.setItem('currentUser', JSON.stringify(res.data))
-        navigate("/")
+        location.state !== null ? navigate(location.state) : navigate("/")
       }).catch(() => {
         Swal.fire({
           icon: 'error',
@@ -108,7 +109,6 @@ const Login = () => {
             />
 
           </Grid>
-
         </Grid>
         <Button size='large' color="primary" type='submit' variant='contained' endIcon={<SendIcon />}>Ingresar</Button>
         <p className={styles.paragraph}>Aun no tenes cuenta? <Link to={'/register'} onClick={() => setHeaderType("createAccount")} >Registrate</Link></p>
