@@ -7,34 +7,34 @@ import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import { deepPurple } from '@mui/material/colors';
 import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
-import { IconButton, useMediaQuery } from '@mui/material'
+import { Button, IconButton, useMediaQuery } from '@mui/material'
 import Hamburguer from '../commons/Hamburguer'
 
 const Header = () => {
 
   const { headerType, setHeaderType, isLog, setIsLog, currentUser, setCurrentUser } = useContext(HeaderContext);
 
-  const nagivate = useNavigate()
+  const navigate = useNavigate()
 
   const handleCreateAccount = () => {
     setHeaderType('createAccount')
-    nagivate('/register')
+    navigate('/register')
   }
 
   const handleLogin = () => {
     setHeaderType('login')
-    nagivate('/login')
+    navigate('/login')
   }
 
   const handleLogoClick = () => {
-    nagivate('/')
+    navigate('/')
     setHeaderType('initial')
   }
 
   const handleSignOut = () => {
     setIsLog(false)
     setHeaderType('initial')
-    nagivate('/')
+    navigate('/')
     localStorage.removeItem('currentUser');
     setCurrentUser(undefined)
   }
