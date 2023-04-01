@@ -4,7 +4,7 @@ import Body from './components/pages/Body'
 import Footer from './components/pages/Footer'
 import HeaderContextProvider from './components/contexts/HeaderContext'
 import CreateAccount from './components/pages/CreateAccount'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Login from './components/pages/Login'
 import Palette from './components/contexts/ThemeContext'
 import CarDetails from './components/pages/CarDetails'
@@ -38,6 +38,7 @@ function App() {
                   <Route path='/administration/' element={<AdminHome />}/>
                   <Route path='/administration/newcar' element={<AddCarForm />}/>
                 </Route>
+                <Route path='*' element={<Navigate to={'/'} />} />
               </Routes>
               <Footer />
             </BrowserRouter>

@@ -19,11 +19,11 @@ const Reservation = () => {
   const navigate = useNavigate()
   const [selectedCar, setSelectedCar] = useState({})
   const [isLoading, setIsLoading] = useState(true)
-  const { users, currentUser } = useContext(HeaderContext)
+  const { currentUser } = useContext(HeaderContext)
   const { dateRange } = React.useContext(BodyContext)
   const arrivalTime = document.querySelector('#app-time')
-
   let arrivalHour = document.querySelector('#app-time')
+  console.log(currentUser)
 
   useEffect(() => {
     axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/producto/${id}`)
@@ -65,12 +65,16 @@ const Reservation = () => {
     }).then(res => {
       {
         navigate('/')
-        axios.post('http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/reserva', {
+        axios.post('http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/reserva', {
           horario_llegada: arrivalHour.value + ':00',
           fecha_inicio: dateRange[0].format("YYYY-M-D"),
           fecha_fin: dateRange[1].format("YYYY-M-D"),
           producto: { id: parseInt(id) },
-          usuario: { id: currentUser.id }
+          usuario: { id: currentUser.user_id }
+        }, {
+          headers: {
+            'Authorization': `${currentUser.tokenType} ${currentUser.accessToken}`
+          }
         }).then(data => {
           Swal.fire({
             title: 'Muchas gracias!',
