@@ -4,8 +4,7 @@ import { Calendar, DateObject, getAllDatesInRange } from "react-multi-date-picke
 import { BodyContext } from '../contexts/BodyContext';
 import { Box, Button, Typography, useMediaQuery } from '@mui/material';
 import { getDaysArray, hasOverlappingDays } from './datePickerHelpers';
-import { useNavigate } from 'react-router-dom';
-import Swal from 'sweetalert2'
+import { useLocation, useNavigate } from 'react-router-dom';
 import { HeaderContext } from '../contexts/HeaderContext';
 
 const DateAvailability = ({ dateRangeArr, id }) => {
@@ -15,6 +14,7 @@ const DateAvailability = ({ dateRangeArr, id }) => {
   const [disabledDays, setDisabledDays] = useState([])
   const navigator = useNavigate()
   const isMobile = useMediaQuery('(max-width:600px)');
+  const location = useLocation()
 
   const weekDays = ["S", "M", "T", "W", "T", "F", "S"];
   const months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
@@ -64,7 +64,7 @@ const DateAvailability = ({ dateRangeArr, id }) => {
           <Typography variant='subtitle2' fontWeight={600}>Agregá tus fechas de alquiler para obtener precios exactos</Typography>
           <Button onClick={() => isLog ?
             navigator(`/cars/${id}/reservation`) :
-            navigator('/login', { state: 'fromDetails' })
+            navigator('/login', { state: location.pathname })
           }
             variant="contained"
             sx={{ textTransform: "none", color: colors.background, width: '100%' }}>Iniciar reserva</Button>
