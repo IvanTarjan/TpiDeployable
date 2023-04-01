@@ -49,7 +49,7 @@ const Header = () => {
       </div>
 
       {isLog ? <div className={styles.avatarContainer}>
-        {currentUser.role.includes('ROLE_ADMIN') && <span style={{ color: '#545776', fontSize: '16px' }}>Administracion <span style={{ fontSize: '40px', padding: '0px 40px' }}>|</span></span>}
+        {currentUser.role.includes('ROLE_ADMIN') && <span onClick={() => nagivate('/administration')} style={{ color: '#545776', fontSize: '16px' }}>Administracion <span style={{ fontSize: '40px', padding: '0px 40px' }}>|</span></span>}
         <Stack direction="row" spacing={2}>
           <Avatar sx={{ bgcolor: deepPurple[500], fontWeight: 700, height: { xs: 38, md: 48, lg: 48 }, width: { xs: 38, md: 48, lg: 48 } }}>{currentUser.nombre[0].toUpperCase()} </Avatar>
         </Stack>
