@@ -70,6 +70,10 @@ const Reservation = () => {
           fecha_fin: dateRange[1].format("YYYY-M-D"),
           producto: { id: parseInt(id) },
           usuario: { id: currentUser.user_id }
+        }, {
+          headers: {
+            'Authorization': `${currentUser.tokenType} ${currentUser.accessToken}`
+          }
         }).then(data => {
           Swal.fire({
             title: 'Muchas gracias!',
