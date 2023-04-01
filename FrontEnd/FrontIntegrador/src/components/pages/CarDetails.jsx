@@ -15,6 +15,7 @@ import Gallery from '../commons/Gallery'
 import MapView from '../commons/MapView'
 import SharePage from '../commons/SharePage'
 import axios from 'axios'
+import loadingGif from '../../assets/Loading1.gif'
 
 const CarDetails = () => {
   const [open, setOpen] = useState(false);
@@ -47,7 +48,7 @@ const CarDetails = () => {
   if (isLoading) {
     return (
       <Box display={"flex"} flexDirection="column" justifyContent={"center"} alignItems={"center"} width={"100vw"} height={"375px"} padding="20px" borderRadius={"10px"}>
-        <Typography variant='h5'>Cargando...</Typography>
+        <img src={loadingGif} alt="Loading..." style={{height: "200px", width: "auto"}}/>
       </Box>
     )
   }

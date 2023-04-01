@@ -1055,3 +1055,28 @@
 [2023-03-30 18:02:03] [ INFO ] [ReservaService:75] Se inició una busqueda de todas las reservas con usuario id=2
 [2023-03-30 18:11:29] [ INFO ] [ReservaService:75] Se inició una busqueda de todas las reservas con usuario id=2
 [2023-03-30 18:11:33] [ INFO ] [ReservaService:75] Se inició una busqueda de todas las reservas con usuario id=2
+[2023-03-31 14:54:26] [ INFO ] [ProductoService:32] Se inició el listado de todas las productos
+[2023-03-31 14:55:14] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=25
+[2023-03-31 14:55:34] [ INFO ] [ProductoService:89] Se buscaron 8 productos random
+[2023-03-31 14:55:43] [ INFO ] [ProductoService:89] Se buscaron 8 productos random
+[2023-03-31 14:55:53] [ INFO ] [ProductoService:89] Se buscaron 8 productos random
+[2023-03-31 14:56:00] [ INFO ] [ProductoService:89] Se buscaron 8 productos random
+[2023-03-31 14:56:07] [ INFO ] [ProductoService:89] Se buscaron 8 productos random
+[2023-03-31 14:56:15] [ INFO ] [ProductoService:89] Se buscaron 8 productos random
+[2023-03-31 14:56:33] [ INFO ] [ProductoService:89] Se buscaron 8 productos random
+[2023-03-31 14:56:44] [ INFO ] [ProductoService:89] Se buscaron 8 productos random
+[2023-03-31 14:56:53] [ INFO ] [ProductoService:89] Se buscaron 8 productos random
+[2023-03-31 14:57:19] [ INFO ] [ProductoService:89] Se buscaron 8 productos random
+[2023-03-31 14:57:32] [ INFO ] [ProductoService:32] Se inició el listado de todas las productos
+[2023-03-31 15:00:13] [ INFO ] [UsuarioService:64] Se inicio la busqueda de un usuario con username o email = Admin
+[2023-03-31 15:02:35] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=11
+[2023-03-31 15:05:25] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=11
+[2023-03-31 15:05:32] [ WARN ] [ProductoService:68] Se realizo una operación de eliminación del producto con id=11
+[2023-03-31 15:05:37] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=11
+[2023-03-31 15:06:27] [ INFO ] [ProductoService:44] Se inició una operación de guardado de la producto con titulo: Chevrolet Cruze
+[2023-03-31 15:06:49] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=24
+[2023-03-31 15:08:27] [ INFO ] [ProductoService:75] Se inició una operación de búsqueda de la producto con id=24
+[2023-03-31 15:08:33] [ WARN ] [ProductoService:68] Se realizo una operación de eliminación del producto con id=24
+[2023-03-31 15:09:15] [ INFO ] [ProductoService:44] Se inició una operación de guardado de la producto con titulo: Toyota Corolla
+[2023-03-31 15:09:24] [ INFO ] [ProductoService:32] Se inició el listado de todas las productos
+[2023-03-31 15:09:40] [ INFO ] [ProductoService:79] Se inició una busqueda de todos los productos con categoria categoriaTitulo = Premium

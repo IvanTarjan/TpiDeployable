@@ -14,6 +14,8 @@ import SearchResults from './components/pages/SearchResults'
 import Reservation from './components/pages/Reservation'
 import MyReservations from './components/pages/MyReservations'
 import Administration from './components/pages/Administration'
+import AddCarForm from './components/commons/AddCarForm'
+import AdminHome from './components/pages/AdminHome'
 
 function App() {
   return (
@@ -27,12 +29,15 @@ function App() {
                 <Route path='/register' element={<CreateAccount />} />
                 <Route path='/login' element={<Login />} />
                 <Route path='/' element={<Body />} />
-                <Route path='/category/:name/car/:id' element={<CarDetails />} />
+                <Route path='/car/:id' element={<CarDetails />} />
                 <Route path='/category/:name' element={<CarsCategory />} />
                 <Route path='/results/:fechaInicio/:fechaFin/:ubicacionId' element={<SearchResults />} />
                 <Route path='/cars/:id/reservation' element={<Reservation />} />
                 <Route path='/:userId/reservations' element={<MyReservations />} />
-                <Route path='/administration' element={<Administration />} />
+                <Route path='/administration' element={<Administration />} >
+                  <Route path='/administration/' element={<AdminHome />}/>
+                  <Route path='/administration/newcar' element={<AddCarForm />}/>
+                </Route>
               </Routes>
               <Footer />
             </BrowserRouter>

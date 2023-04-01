@@ -33,7 +33,12 @@ const HeaderDetails = ({ car }) => {
 
   const navigate = useNavigate()
   const handleClick = () => {
-    navigate('/')
+    console.log(document.referrer);
+    if (document.referrer.includes("/administration")) {
+      navigate(-1);
+  } else {
+      navigate('/');
+  }
   }
   return (
     <>

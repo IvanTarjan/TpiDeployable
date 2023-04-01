@@ -7,34 +7,34 @@ import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import { deepPurple } from '@mui/material/colors';
 import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
-import { IconButton, useMediaQuery } from '@mui/material'
+import { Button, IconButton, useMediaQuery } from '@mui/material'
 import Hamburguer from '../commons/Hamburguer'
 
 const Header = () => {
 
   const { headerType, setHeaderType, isLog, setIsLog, currentUser, setCurrentUser } = useContext(HeaderContext);
 
-  const nagivate = useNavigate()
+  const navigate = useNavigate()
 
   const handleCreateAccount = () => {
     setHeaderType('createAccount')
-    nagivate('/register')
+    navigate('/register')
   }
 
   const handleLogin = () => {
     setHeaderType('login')
-    nagivate('/login')
+    navigate('/login')
   }
 
   const handleLogoClick = () => {
-    nagivate('/')
+    navigate('/')
     setHeaderType('initial')
   }
 
   const handleSignOut = () => {
     setIsLog(false)
     setHeaderType('initial')
-    nagivate('/')
+    navigate('/')
     localStorage.removeItem('currentUser');
     setCurrentUser(undefined)
   }
@@ -49,7 +49,7 @@ const Header = () => {
       </div>
 
       {isLog ? <div className={styles.avatarContainer}>
-        {currentUser.role.includes('ROLE_ADMIN') && <span style={{ color: '#545776', fontSize: '16px' }}>Administracion <span style={{ fontSize: '40px', padding: '0px 40px' }}>|</span></span>}
+        {currentUser.role.includes('ROLE_ADMIN') && <Button variant="outlined" onClick={()=> navigate("/administration")}sx={{marginLeft: "10%"}}>Administracion</Button>}
         <Stack direction="row" spacing={2}>
           <Avatar sx={{ bgcolor: deepPurple[500], fontWeight: 700, height: { xs: 38, md: 48, lg: 48 }, width: { xs: 38, md: 48, lg: 48 } }}>{currentUser.nombre[0].toUpperCase()} </Avatar>
         </Stack>

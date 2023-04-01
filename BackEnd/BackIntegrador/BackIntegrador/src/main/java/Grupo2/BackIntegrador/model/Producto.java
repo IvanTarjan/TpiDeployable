@@ -80,7 +80,7 @@ public class Producto {
             Integer puntuacionSum = puntuacion.stream().reduce(0, (totalSum, punt)-> totalSum + punt.getPuntuacion(), Integer::sum);
             this.puntuacionAvg = (float) (puntuacionSum / puntuacion.size());
         } else {
-            this.puntuacionAvg = 0.0;
+            this.puntuacionAvg = 1.0;
         }
     }
 
