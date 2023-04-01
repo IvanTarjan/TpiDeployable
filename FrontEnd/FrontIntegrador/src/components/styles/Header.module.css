@@ -84,6 +84,11 @@ align-items: flex-end;
 color: #545776;
 }
 
+.avatarContainer span:hover{
+  cursor: pointer;
+  transform: scale(1.01);
+}
+
 .avatarContainer span{
   color: #1DBEB4;
   font-style: normal;
