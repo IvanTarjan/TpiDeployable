@@ -12,6 +12,7 @@ import ArrivalTime from '../commons/ArrivalTime'
 import axios from 'axios'
 import { HeaderContext } from '../contexts/HeaderContext'
 import Swal from 'sweetalert2'
+import emailjs from '@emailjs/browser';
 
 const Reservation = () => {
   const { id } = useParams()
@@ -23,8 +24,6 @@ const Reservation = () => {
   const arrivalTime = document.querySelector('#app-time')
 
   let arrivalHour = document.querySelector('#app-time')
-  let loggedUser = users.find(user => user.email === currentUser);
-  let loggedUserId = loggedUser.id
 
   useEffect(() => {
     axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/producto/${id}`)
@@ -71,7 +70,7 @@ const Reservation = () => {
           fecha_inicio: dateRange[0].format("YYYY-M-D"),
           fecha_fin: dateRange[1].format("YYYY-M-D"),
           producto: { id: parseInt(id) },
-          usuario: { id: loggedUserId }
+          usuario: { id: currentUser.id }
         }).then(data => {
           Swal.fire({
             title: 'Muchas gracias!',
@@ -79,6 +78,12 @@ const Reservation = () => {
             icon: 'success',
             confirmButtonColor: '#1DBEB4',
           })
+          emailjs.send("service_v1b8o5l","template_ps8m368",{
+            from_name: "DigitalBooking",
+            to_name: currentUser.nombre,
+            message: `Tu reserva del ${selectedCar.titulo} se registro exitosamente`,
+            recipientEmail: currentUser.email,
+            });
         })
           .catch(err => {
             console.log(err)
@@ -118,7 +123,7 @@ const Reservation = () => {
         <>
           <div className={styles.bookingContainer}>
             <div className={styles.bookingForm} >
-              <ReservationForm loggedUser={loggedUser} />
+              <ReservationForm loggedUser={currentUser} />
             </div>
 
             <div className={styles.bookingCalendar} >
