@@ -87,7 +87,14 @@ const Reservation = () => {
             to_name: currentUser.nombre,
             message: `Tu reserva del ${selectedCar.titulo} se registro exitosamente`,
             recipientEmail: currentUser.email,
-            });
+            },"-ySqEDR_MnfGZnEMc").catch(mailErr =>{
+              Swal.fire({
+                title: 'Nos quedamos sin sobres!',
+                text: 'Su reserva se ha realizado con exito, pero no te podemos mandar un mail',
+                icon: 'success',
+                confirmButtonColor: '#1DBEB4',
+              })
+            })
         })
           .catch(err => {
             console.log(err)
