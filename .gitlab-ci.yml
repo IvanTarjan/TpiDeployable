@@ -5,9 +5,9 @@ stages:
 
 .trial:
   script:
-    - echo 'just sau hello'  
+    - echo 'just say hello'  
 
-.test project:
+test project:
   stage: test
   image: node:16.5.0
   script:
