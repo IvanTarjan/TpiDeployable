@@ -33,12 +33,15 @@ public class Usuario {
     @Column
     private String ciudad;
 
+    @Column
+    private boolean verificado;
+
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "usuario_roles",
                 joinColumns = @JoinColumn(name = "usuario_id", referencedColumnName = "id"),
                 inverseJoinColumns = @JoinColumn(name = "roles_id", referencedColumnName = "id")
     )
-    private Set<Roles> roles;
+    private Set<Roles> roles = new HashSet<>();
 
     @OneToMany(mappedBy = "usuario", cascade = {CascadeType.MERGE, CascadeType.DETACH, CascadeType.REMOVE} , fetch = FetchType.EAGER)
     @JsonIgnoreProperties("usuario")

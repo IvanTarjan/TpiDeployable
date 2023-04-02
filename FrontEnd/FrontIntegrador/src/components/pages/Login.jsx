@@ -53,7 +53,8 @@ const Login = () => {
         setIsLog(true)
         localStorage.setItem('currentUser', JSON.stringify(res.data))
         location.state !== null ? navigate(location.state) : navigate("/")
-      }).catch(() => {
+      }).catch((e) => {
+        console.log(e);
         Swal.fire({
           icon: 'error',
           title: 'Usuario o contraseña invalida',

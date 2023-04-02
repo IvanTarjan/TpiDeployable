@@ -16,6 +16,7 @@ import MyReservations from './components/pages/MyReservations'
 import Administration from './components/pages/Administration'
 import AddCarForm from './components/commons/AddCarForm'
 import AdminHome from './components/pages/AdminHome'
+import EmailVerification from './components/pages/EmailVerification'
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <BrowserRouter>
               <Header />
               <Routes>
+                <Route path='/emailverification/:username' element={<EmailVerification/>}/>
                 <Route path='/register' element={<CreateAccount />} />
                 <Route path='/login' element={<Login />} />
                 <Route path='/' element={<Body />} />

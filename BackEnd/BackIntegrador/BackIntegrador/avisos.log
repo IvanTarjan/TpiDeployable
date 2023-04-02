@@ -1080,3 +1080,25 @@
 [2023-03-31 15:09:15] [ INFO ] [ProductoService:44] Se inició una operación de guardado de la producto con titulo: Toyota Corolla
 [2023-03-31 15:09:24] [ INFO ] [ProductoService:32] Se inició el listado de todas las productos
 [2023-03-31 15:09:40] [ INFO ] [ProductoService:79] Se inició una busqueda de todos los productos con categoria categoriaTitulo = Premium
+[2023-04-01 18:38:56] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
+[2023-04-01 18:43:29] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 2
+[2023-04-01 18:48:06] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 2
+[2023-04-01 18:51:42] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 2
+[2023-04-01 18:53:12] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 2
+[2023-04-01 18:53:31] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
+[2023-04-01 18:55:58] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 2
+[2023-04-01 18:56:00] [ INFO ] [UsuarioService:71] Se verifico el usuario con id= 2
+[2023-04-01 18:56:05] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
+[2023-04-01 18:57:04] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 2
+[2023-04-01 18:57:05] [ INFO ] [UsuarioService:71] Se verifico el usuario con id= 2
+[2023-04-01 18:57:10] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
+[2023-04-01 19:21:58] [ INFO ] [UsuarioService:64] Se inicio la busqueda de un usuario con username o email = ivantarjan2003@gmail.com
+[2023-04-01 19:22:35] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 11
+[2023-04-01 19:22:40] [ INFO ] [UsuarioService:71] Se verifico el usuario con id= 11
+[2023-04-01 19:22:58] [ INFO ] [UsuarioService:64] Se inicio la busqueda de un usuario con username o email = ivantarjan2003@gmail.com
+[2023-04-01 20:58:14] [ INFO ] [UsuarioService:71] Se verifico el usuario con username= Usuario2
+[2023-04-01 20:58:19] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
+[2023-04-01 21:10:59] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 11
+[2023-04-01 21:11:05] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 11
+[2023-04-01 21:11:06] [ WARN ] [UsuarioService:50] Se realizo una operación de eliminación de los Usuarios con id= 11
+[2023-04-01 21:11:10] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 11
