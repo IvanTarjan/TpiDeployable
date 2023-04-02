@@ -54,11 +54,20 @@ const CreateAccount = () => {
         confirmButtonColor: '#1DBEB4',
         timer: 3000
       })
-      emailjs.send("service_v1b8o5l","template_0dj2e4x",{
+      emailjs.send("service_v1b8o5l", "template_0dj2e4x", {
         to_name: data.name,
         email: data.email,
         username: data.username,
-        },"-ySqEDR_MnfGZnEMc")
+      }, "-ySqEDR_MnfGZnEMc").catch(() => {
+        axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/auth/verificarUsuario/${data.username}`)
+        Swal.fire({
+          title: 'Nos quedamos sin cartas (presupuesto de la api)',
+          text: 'Pero no te preocupes, te habilitamos tu cuenta igual',
+          icon: 'success',
+          confirmButtonColor: '#1DBEB4',
+          timer: 3000
+        })
+      })
       navigate("/login")
     }).catch(err => {
       console.log(err)

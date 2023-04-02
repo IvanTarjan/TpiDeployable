@@ -1102,3 +1102,6 @@
 [2023-04-01 21:11:05] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 11
 [2023-04-01 21:11:06] [ WARN ] [UsuarioService:50] Se realizo una operación de eliminación de los Usuarios con id= 11
 [2023-04-01 21:11:10] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 11
+[2023-04-01 21:13:28] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
+[2023-04-01 21:15:24] [ INFO ] [UsuarioService:64] Se inicio la busqueda de un usuario con username o email = Admin
+[2023-04-01 21:15:32] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
