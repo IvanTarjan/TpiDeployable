@@ -10,6 +10,7 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import axios from "axios";
 import Swal from 'sweetalert2'
+import emailjs from '@emailjs/browser';
 
 const CreateAccount = () => {
   const { setHeaderType } = useContext(HeaderContext)
@@ -18,7 +19,7 @@ const CreateAccount = () => {
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
-  const nagivate = useNavigate()
+  const navigate = useNavigate()
 
   const { handleSubmit, handleChange, values, errors } = useFormik({
     initialValues: {
@@ -48,12 +49,26 @@ const CreateAccount = () => {
 
       Swal.fire({
         title: 'Registro exitoso!',
-        text: 'Ahora podes loguearte y navegar nuestra pagina',
+        text: 'Solo falta que verifiques tu mail.',
         icon: 'success',
         confirmButtonColor: '#1DBEB4',
         timer: 3000
       })
-      nagivate('/login')
+      emailjs.send("service_v1b8o5l", "template_0dj2e4x", {
+        to_name: data.name,
+        email: data.email,
+        username: data.username,
+      }, "-ySqEDR_MnfGZnEMc").catch(() => {
+        axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/auth/verificarUsuario/${data.username}`)
+        Swal.fire({
+          title: 'Nos quedamos sin cartas (presupuesto de la api)',
+          text: 'Pero no te preocupes, te habilitamos tu cuenta igual',
+          icon: 'success',
+          confirmButtonColor: '#1DBEB4',
+          timer: 3000
+        })
+      })
+      navigate("/login")
     }).catch(err => {
       console.log(err)
       Swal.fire({

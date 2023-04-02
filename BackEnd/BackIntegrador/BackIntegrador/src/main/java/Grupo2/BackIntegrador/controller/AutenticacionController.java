@@ -1,5 +1,6 @@
 package Grupo2.BackIntegrador.controller;
 
+import Grupo2.BackIntegrador.exception.ResourceNotFoundException;
 import Grupo2.BackIntegrador.model.Usuario;
 import Grupo2.BackIntegrador.payload.JWTAuthResponse;
 import Grupo2.BackIntegrador.payload.LoginDto;
@@ -31,6 +32,7 @@ public class AutenticacionController {
     public ResponseEntity<JWTAuthResponse> login(@RequestBody LoginDto loginDto){
         String token = authService.login(loginDto);
         Usuario usuario = usuarioService.buscarByuserNameOrEmail(loginDto.getUserNameOrEmail()).get();
+        if (!usuario.isVerificado()) return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
         JWTAuthResponse jwtAuthResponse = new JWTAuthResponse();
         jwtAuthResponse.setAccessToken(token);
         jwtAuthResponse.setUser_id(usuario.getId());
@@ -57,5 +59,14 @@ public class AutenticacionController {
     public ResponseEntity<String> registroAdmin(@RequestBody RegisterDto registerDto){
         String response = authService.registerAdmin(registerDto);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
+    }
+
+    @GetMapping("/verificarUsuario/{username}")
+    public ResponseEntity<String> verificarUsuario(@PathVariable String username){
+        try {
+            return new ResponseEntity<>(usuarioService.verificarUsuarioXid(username), HttpStatus.ACCEPTED);
+        } catch (ResourceNotFoundException e) {
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
+        }
     }
 }

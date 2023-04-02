@@ -12,6 +12,7 @@ import ArrivalTime from '../commons/ArrivalTime'
 import axios from 'axios'
 import { HeaderContext } from '../contexts/HeaderContext'
 import Swal from 'sweetalert2'
+import emailjs from '@emailjs/browser';
 
 const Reservation = () => {
   const { id } = useParams()
@@ -81,6 +82,19 @@ const Reservation = () => {
             icon: 'success',
             confirmButtonColor: '#1DBEB4',
           })
+          emailjs.send("service_v1b8o5l","template_ps8m368",{
+            from_name: "DigitalBooking",
+            to_name: currentUser.nombre,
+            message: `Tu reserva del ${selectedCar.titulo} se registro exitosamente`,
+            recipientEmail: currentUser.email,
+            },"-ySqEDR_MnfGZnEMc").catch(mailErr =>{
+              Swal.fire({
+                title: 'Nos quedamos sin sobres!',
+                text: 'Su reserva se ha realizado con exito, pero no te podemos mandar un mail',
+                icon: 'success',
+                confirmButtonColor: '#1DBEB4',
+              })
+            })
         })
           .catch(err => {
             console.log(err)
