@@ -1105,3 +1105,6 @@
 [2023-04-01 21:13:28] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
 [2023-04-01 21:15:24] [ INFO ] [UsuarioService:64] Se inicio la busqueda de un usuario con username o email = Admin
 [2023-04-01 21:15:32] [ INFO ] [UsuarioService:25] Se inició el listado de todos los usuarios
+[2023-04-03 18:57:21] [ INFO ] [ProductoService:34] Se inició el listado de todas las productos
+[2023-04-03 18:57:55] [ INFO ] [ProductoService:81] Se inició una busqueda de todos los productos con categoria categoriaTitulo = Economico
+[2023-04-03 19:04:08] [ INFO ] [ProductoService:34] Se inició el listado de todas las productos
