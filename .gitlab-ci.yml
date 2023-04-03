@@ -56,10 +56,10 @@ build back:
     expire_in: 1 hour
     paths:
       - BackEnd/BackIntegrador/BackIntegrador/target/*.jar
-  rules:
-    - if: '$CI_COMMIT_BRANCH == "main"'
-      changes:
-        - BackEnd/**/*
+  # rules:
+  #   - if: '$CI_COMMIT_BRANCH == "main"'
+  #     changes:
+  #       - BackEnd/**/*
 
 # automated-api-tests:
 #   stage: automated-api-tests
@@ -80,7 +80,7 @@ deploy back:
   stage: deploy
   image: amazonlinux:latest
   before_script:
-    - yum update && yum install -y openssh-client bash
+    - yum update && yum install bash
     - mkdir -p ~/.ssh
     - eval $(ssh-agent -s)
     # - echo $SSH_PRIVATE_KEY | tr -d '\r' | ssh-add - > /dev/null
@@ -95,7 +95,7 @@ deploy back:
     - ssh -i "$SSH_PRIVATE_KEY" ec2-user@"$DEPLOY_SERVER_IP" "sudo systemctl start backIntegrador.service"
     - ssh -i "$SSH_PRIVATE_KEY" ec2-user@"$DEPLOY_SERVER_IP" "sudo systemctl status backIntegrador.service"
     - echo "Finished deploying the app."
-  rules:
-    - if: '$CI_COMMIT_BRANCH == "main"'
-      changes:
-        - BackEnd/**/*
+  # rules:
+  #   - if: '$CI_COMMIT_BRANCH == "main"'
+  #     changes:
+  #       - BackEnd/**/*
