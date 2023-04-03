@@ -44,7 +44,7 @@ deploy to s3:
 
 
 
-.build back:
+build back:
   stage: build
   image: maven:latest
   script:
@@ -76,7 +76,7 @@ deploy to s3:
 #     changes:
 #       - back-end/**/*
 
-.deploy back:
+deploy back:
   stage: deploy
   image: amazonlinux:latest
   before_script:
