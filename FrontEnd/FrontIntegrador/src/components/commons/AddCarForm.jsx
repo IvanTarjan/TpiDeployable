@@ -393,7 +393,7 @@ const AddCarForm = () => {
             boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
             borderRadius: '8px',
             padding: '10px 20px',
-            width: '100vw',
+            width: '100%',
             height: 'auto'
           }}
             container spacing={2} >
