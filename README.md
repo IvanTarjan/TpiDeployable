@@ -37,13 +37,6 @@ Completar esta sección respondiendo las siguientes consignas:
 
 > #### Emilio Pino
 >
-Me desempeñe laboralmente alrededor de 15 años como supervisor ​​de seguridad en las industrias de la construcción, petróleo y gas.
-En 2021, decidí seguir una carrera en tecnología, temática que desde siempre llamó mi atención, pero que por diversos factores nunca antes había tenido la oportunidad de aprender de manera sistemática. 
-Al iniciar la carrera tenía conocimientos muy básicos de HTML, CSS y Javascript.
-
-Durante el 1mer y 2do sprint me enfoque 100% en el front end de nuestra app y en el desarrollo de tests unitarios. 
-En el 3cer sprint preste soporte en el área de infraestructura principalmente en la configuración del pipeline que integrará los tests, el build de la app y posterior deployment al bucket alojado en servidor de AWS. 
-Finalmente, durante 4to y último spring estuve abocado a detalles finales del front end, como la organización de los archivos, buenas practicas, ajuste de  tests según modificación en nuestra api y test automatizados con la herramienta Selenium. 
 
 Tabla que indica las mis fortalezas actuales en las principales áreas de tecnología de la carrera.
 
