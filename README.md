@@ -141,32 +141,33 @@ Completar esta sección respondiendo a las siguientes consignas:
 
 A modo de ejemplo podemos mencionar algunas de las decisiones / reflexiones que hicimos en algunas de las ceremonias de retrospectiva:
 
-Retrospective Spring 1:
-Cosas a mejorar: 
-mejorar el nivel de conocimiento sobre lo que está haciendo cada uno en su respectiva área. 
- mejorar la asignación de tareas y revisar bien el alcance de cada requisito. Por ejemplo asignamos todo pero olvidamos los casos de tests en base a las historias de usuario.
- mejorar la calidad de la presentación del review y durante la misma dar preponderancia al producto / app desarrollada.
+# Retrospective Spring 1:
+## Cosas a mejorar: 
+- mejorar el nivel de conocimiento sobre lo que está haciendo cada uno en su respectiva área. 
+- mejorar la asignación de tareas y revisar bien el alcance de cada requisito. Por ejemplo asignamos todo pero olvidamos los casos de tests en base a las historias de usuario.
+- mejorar la calidad de la presentación del review y durante la misma dar preponderancia al producto / app desarrollada.
                          
-Cosas buenas:
-nos pusimos de acuerdo rápidamente en los roles que cada uno iba a cumplir.
-durante la primera semana cumplimos con buena parte de los requisitos (75% aprox).
+## Cosas buenas:
+- nos pusimos de acuerdo rápidamente en los roles que cada uno iba a cumplir.
+- durante la primera semana cumplimos con buena parte de los requisitos (75% aprox).
 
 
-Retrospective Spring 2
-Start
-Realizar daily diariamente, independentemente se está no scrum master. 
-Planificación del json antes de avanzar desde front end / backend para evitar incompatibilidad posteriormente.
-Usar grupo de whatsapp para coordinación de reuniones.
-Usar únicamente el canal de discord para recursos / links relacionados al proyecto.
-Stop
-Preparar presentación a último momento. 
-Continue
-Ajustándose a los 10 minutos para el review. 
-Actualizando progreso en cada disciplina en el canal de discord.
-Mantener un buen nivel de comunicación.
-Buen manejo del git.
-Mostrar el progreso del back relacionándolo con el funcionamiento del front end.
+# Retrospective Spring 2 / Start - Stop - Continue Template
+## Start
+- Realizar daily diariamente, independentemente se está no scrum master. 
+- Planificación del json antes de avanzar desde front end / backend para evitar incompatibilidad posteriormente.
+- Usar grupo de whatsapp para coordinación de reuniones.
+- Usar únicamente el canal de discord para recursos / links relacionados al proyecto.
 
+## Stop
+- Preparar presentación a último momento. 
+
+## Continue
+- Ajustándose a los 10 minutos para el review. 
+- Actualizando progreso en cada disciplina en el canal de discord.
+- Mantener un buen nivel de comunicación.
+- Buen manejo del git.
+- Mostrar el progreso del back relacionándolo con el funcionamiento del front end.
 
 ## Tecnologías utilizadas
 
