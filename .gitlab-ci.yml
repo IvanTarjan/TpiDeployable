@@ -34,6 +34,8 @@ trial:
   image: 
     name: amazon/aws-cli:2.11.3
     entrypoint: ['']
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH  
   script:
     - aws --version
     - aws s3 sync FrontEnd/FrontIntegrador/dist s3://$AWS_S3_BUCKET --delete
