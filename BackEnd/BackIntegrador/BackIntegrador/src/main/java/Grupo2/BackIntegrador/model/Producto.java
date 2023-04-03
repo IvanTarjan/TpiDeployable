@@ -35,19 +35,19 @@ public class Producto {
     private Float longitud;
 
     // One to many
-    @OneToMany(mappedBy = "producto",cascade = CascadeType.ALL , fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "producto",cascade = CascadeType.ALL)
     @JsonIgnoreProperties("producto")
     private Set<Imagen> imagen= new HashSet<>();
 
-    @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL , fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL )
     @JsonIgnoreProperties("producto")
     private Set<Politica> politica= new HashSet<>();
 
-    @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL , fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL )
     @JsonIgnoreProperties("producto")
     private Set<Reserva> reserva= new HashSet<>();
 
-    @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL , fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL )
     @JsonIgnoreProperties("producto")
     private Set<Puntuacion> puntuacion= new HashSet<>();
 
@@ -64,7 +64,7 @@ public class Producto {
     private Ubicacion ubicacion;
 
     //Many to Many
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany()
     @JsonIgnoreProperties("producto")
     @JoinTable(name = "producto_caracteristica",
             joinColumns = { @JoinColumn(name = "producto_id") },
