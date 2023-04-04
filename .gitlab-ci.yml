@@ -8,7 +8,7 @@ stages:
   script:
     - echo 'just say hello'  
 
-test project:
+.test project:
   stage: test
   image: node:16.5.0
   script:
