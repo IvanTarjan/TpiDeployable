@@ -91,7 +91,7 @@ deploy back:
     - echo "Deploying started..."
     - chmod 400 "$SSH_PRIVATE_KEY"
     - ssh -i "$SSH_PRIVATE_KEY" ec2-user@"$DEPLOY_SERVER_IP" "sudo systemctl stop backIntegrador.service"
-    - scp -i "$SSH_PRIVATE_KEY" BackEnd/BackIntegrador/BackIntegrador/target/*.jarec2-user@"$DEPLOY_SERVER_IP":~/BackIntegrador/
+    - scp -i "$SSH_PRIVATE_KEY" BackEnd/BackIntegrador/BackIntegrador/target/BackIntegrador-0.0.1-SNAPSHOT.jar ec2-user@"$DEPLOY_SERVER_IP":~/BackIntegrador/
     - ssh -i "$SSH_PRIVATE_KEY" ec2-user@"$DEPLOY_SERVER_IP" "sudo systemctl start backIntegrador.service"
     - ssh -i "$SSH_PRIVATE_KEY" ec2-user@"$DEPLOY_SERVER_IP" "sudo systemctl status backIntegrador.service"
     - echo "Finished deploying the app."
