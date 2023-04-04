@@ -66,16 +66,31 @@ Tabla que indica las mis fortalezas actuales en las principales áreas de tecnol
 >
 
 > #### Larissa Januzi
->
-> Una breve descripción o biografía del integrante comentando qué conocimientos tenía al iniciar la carrera.
->
-> Una breve descripción de los roles desempeñados y las tareas realizadas durante los diferentes sprints.
->
-> Una tabla indicando las fortalezas actuales en las principales áreas de tecnología de la carrera.
+>Mi nombre es Larissa Rodrigues Januzi, soy estudiante del último cuatrimestre del primer track de Digital House. 
+Entré en DH sin conocer nada de programación y con mucha vergüenza de hablar con mis compañeros, porque soy muy tímida. Pero con el pasar de los cuatrimestres pude desarrollar habilidades que no tenía, como hablar en público, dar opiniones e imponer mi opinión también. En la parte técnica lo que más aprendí fue CSS, HTML, REACT, INFRAESTRUCTURA (utilizar AWS Amazon), y en la parte de QA hacer los casos de pruebas. Estas dos últimas fueron parte de mis tareas en el trabajo integrador.
+Sprint 1: 
+Hice el diagrama de como podría quedar la estructura de infraestructura.
+Hice la planilla de casos de prueba y fue haciendo los tests de acuerdo a los users storys del primer sprint.
+
+Sprint 2:
+En AWS fue creada la VPC,  instancia EC2, los buckets S3 para el frontend e imágenes.
+Hice los casos de prueba manuales (Tabla de Defectos de Casos de Prueba) para el segundo sprint.
+Hice la presentación para la review.
+
+Sprint 3:
+Con ayuda externa de DH y con ayuda de mi compañero de equipo Emilio logramos hacer el pipeline de frontend.
+Hice los casos de prueba manuales para el tercer sprint.
+Hice la presentación para la review.
+
+Sprint 4:
+Hice los casos de prueba manuales para el cuarto sprint.
+Hice la presentación para la review.
+
+
 > | Tecnología | Fortaleza |
 > |------------|-----------|
 > | Front end | :large_blue_circle: :large_blue_circle: :large_blue_circle: |
-> | Back end | :large_blue_circle: :large_blue_circle: :white_circle: |
+> | Back end | :large_blue_circle: :white_circle: :white_circle: |
 > | Infraestructura | :large_blue_circle: :large_blue_circle: :white_circle: |
 > | Testing / QA | :large_blue_circle: :white_circle: :white_circle: |
 > | Bases de datos | :large_blue_circle: :white_circle: :white_circle: |
@@ -168,6 +183,16 @@ Algunas sugerencias:
   * APIs disponibles y su documentación (pueden linkear a un sitio externo)
 * Infraestructura
   * Estructura y diagramas
+
+  - Fue creada una puerta de enlace de Internet y asociada a la VPC
+  - Agregamos una ruta a la tabla de enrutamiento de la subred que dirija el tráfico vinculado a Internet a la puerta de enlace de Internet.
+  - Las instancias de su subred tienen una dirección IPv4 pública.
+  - Las reglas de los grupos de seguridad y las listas de control de acceso a la red permiten el envío de tráfico de Internet deseado desde o hacia la instancia.
+
+  - ![Diagrama Infraestructura](https://ercanermis.com/wp-content/webpc-passthru.php?src=https://ercanermis.com/wp-content/uploads/aws_internet_gateway-1024x806.png&nocache=1)
+
+
+
 * Testing y calidad
   * Incluir el informe requerido para el cuarto sprint y cualquier otra información referente a cómo buscaron asegurar la calidad del software producido
 
