@@ -66,25 +66,7 @@ Tabla que indica las mis fortalezas actuales en las principales áreas de tecnol
 >
 
 > #### Larissa Januzi
->Mi nombre es Larissa Rodrigues Januzi, soy estudiante del último cuatrimestre del primer track de Digital House. 
-Entré en DH sin conocer nada de programación y con mucha vergüenza de hablar con mis compañeros, porque soy muy tímida. Pero con el pasar de los cuatrimestres pude desarrollar habilidades que no tenía, como hablar en público, dar opiniones e imponer mi opinión también. En la parte técnica lo que más aprendí fue CSS, HTML, REACT, INFRAESTRUCTURA (utilizar AWS Amazon), y en la parte de QA hacer los casos de pruebas. Estas dos últimas fueron parte de mis tareas en el trabajo integrador.
-Sprint 1: 
-Hice el diagrama de como podría quedar la estructura de infraestructura.
-Hice la planilla de casos de prueba y fue haciendo los tests de acuerdo a los users storys del primer sprint.
 
-Sprint 2:
-En AWS fue creada la VPC,  instancia EC2, los buckets S3 para el frontend e imágenes.
-Hice los casos de prueba manuales (Tabla de Defectos de Casos de Prueba) para el segundo sprint.
-Hice la presentación para la review.
-
-Sprint 3:
-Con ayuda externa de DH y con ayuda de mi compañero de equipo Emilio logramos hacer el pipeline de frontend.
-Hice los casos de prueba manuales para el tercer sprint.
-Hice la presentación para la review.
-
-Sprint 4:
-Hice los casos de prueba manuales para el cuarto sprint.
-Hice la presentación para la review.
 
 
 > | Tecnología | Fortaleza |
