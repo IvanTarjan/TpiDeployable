@@ -1108,3 +1108,6 @@
 [2023-04-03 18:57:21] [ INFO ] [ProductoService:34] Se inició el listado de todas las productos
 [2023-04-03 18:57:55] [ INFO ] [ProductoService:81] Se inició una busqueda de todos los productos con categoria categoriaTitulo = Economico
 [2023-04-03 19:04:08] [ INFO ] [ProductoService:34] Se inició el listado de todas las productos
+[2023-04-03 19:09:20] [ INFO ] [ProductoService:34] Se inició el listado de todas las productos
+[2023-04-03 19:12:06] [ INFO ] [ProductoService:81] Se inició una busqueda de todos los productos con categoria categoriaTitulo = Economico
+[2023-04-03 21:13:03] [ INFO ] [ProductoService:34] Se inició el listado de todas las productos
