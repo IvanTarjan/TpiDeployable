@@ -78,9 +78,9 @@ build back:
 
 deploy back:
   stage: deploy
-  image: amazonlinux:latest
+  image: ubuntu:latest
   before_script:
-    - yum update && yum install bash
+    - apt-get update && apt-get install -y openssh-client bash
     - mkdir -p ~/.ssh
     - eval $(ssh-agent -s)
     # - echo $SSH_PRIVATE_KEY | tr -d '\r' | ssh-add - > /dev/null
