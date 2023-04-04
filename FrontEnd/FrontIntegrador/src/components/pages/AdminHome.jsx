@@ -35,11 +35,11 @@ const AdminHome = () => {
     useEffect(() => {
         axios.get("http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/producto").then(res => {
             setCars(res.data)
-                ;
+            ;
         })
     }, [])
 
-    const rows = cars.map(car => ({ id: car.id, nombre: car.titulo, precio: car.precio, categoria: car.categoria.titulo, ciudad: car.ubicacion.nombre, pais: car.ubicacion.pais, puntuacion: cars.puntuacionAvg }));
+    const rows = cars.map(car => ({ id: car.id, nombre: car.titulo, precio: car.precio, categoria: car.categoria.titulo, ciudad: car.ubicacion.nombre, pais: car.ubicacion.pais, puntuacion: Number(car.puntuacionAvg)}));
 
     return (
         <div style={{ width: '100%', display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", marginBottom: "100px" , gap: "10px" }}>
