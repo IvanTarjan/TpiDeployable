@@ -81,7 +81,7 @@ public class Producto {
             this.puntuacionAvg = (float) (puntuacionSum / puntuacion.size());
         } else {
 //          Para que no queden todos con 0 le ponemos esto temporal
-            this.puntuacionAvg = Math.round(5 + Math.random() * (10 - 4));
+            this.puntuacionAvg = Math.round(5 + Math.random() * (10 - 5));
         }
     }
 
