@@ -8,7 +8,7 @@ const Policies = ({ selectedCar }) => {
 
       {selectedCar.politica.map(item => (
         <div key={item.id}>
-          <h4>{item.titulo}</h4>
+          <h4 style={{ paddingBottom: '8px' }}>{item.titulo}</h4>
           <p>{item.descripcion}</p>
         </div>
       ))}
