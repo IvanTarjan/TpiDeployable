@@ -185,7 +185,7 @@ const AddCarForm = () => {
       console.log(err)
       Swal.fire({
         title: 'Error!',
-        text: 'Lamentablemente no ha crear el vehiculo. Por favor intente más tarde',
+        text: 'Lamentablemente hubo un problema en el proceso. Por favor intente más tarde',
         icon: 'error',
         confirmButtonColor: '#1DBEB4',
       })
