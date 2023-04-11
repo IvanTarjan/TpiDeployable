@@ -32,12 +32,18 @@ Completar esta sección respondiendo las siguientes consignas:
 
 > #### Emilio Pino
 >
+<<<<<<< HEAD
 > Una breve descripción o biografía del integrante comentando qué conocimientos tenía al iniciar la carrera.
 >
 - Rol:  Desarrollador  Frontend , Asistente de Infraestructura.
 > Una breve descripción de los roles desempeñados y las tareas realizadas durante los diferentes sprints.
 >
 > Una tabla indicando las fortalezas actuales en las principales áreas de tecnología de la carrera.
+=======
+
+Tabla que indica las mis fortalezas actuales en las principales áreas de tecnología de la carrera.
+
+>>>>>>> c58ee7556e4bf61880d5c782afc8b71d7c90d449
 > | Tecnología | Fortaleza |
 > |------------|-----------|
 > | Front end | :large_blue_circle: :large_blue_circle: :large_blue_circle: |
@@ -65,6 +71,7 @@ Completar esta sección respondiendo las siguientes consignas:
 >
 
 > #### Larissa Januzi
+<<<<<<< HEAD
 >
 > Una breve descripción o biografía del integrante comentando qué conocimientos tenía al iniciar la carrera.
 >
@@ -75,6 +82,14 @@ Completar esta sección respondiendo las siguientes consignas:
 > | Tecnología | Fortaleza |
 > |------------|-----------|
 > | Front end | :large_blue_circle: :large_blue_circle: :white_circle: |
+=======
+
+
+
+> | Tecnología | Fortaleza |
+> |------------|-----------|
+> | Front end | :large_blue_circle: :large_blue_circle: :large_blue_circle: |
+>>>>>>> c58ee7556e4bf61880d5c782afc8b71d7c90d449
 > | Back end | :large_blue_circle: :white_circle: :white_circle: |
 > | Infraestructura | :large_blue_circle: :large_blue_circle: :white_circle: |
 > | Testing / QA | :large_blue_circle: :white_circle: :white_circle: |
@@ -175,6 +190,16 @@ Algunas sugerencias:
   * APIs disponibles y su documentación (pueden linkear a un sitio externo)
 * Infraestructura
   * Estructura y diagramas
+
+  - Fue creada una puerta de enlace de Internet y asociada a la VPC
+  - Agregamos una ruta a la tabla de enrutamiento de la subred que dirija el tráfico vinculado a Internet a la puerta de enlace de Internet.
+  - Las instancias de su subred tienen una dirección IPv4 pública.
+  - Las reglas de los grupos de seguridad y las listas de control de acceso a la red permiten el envío de tráfico de Internet deseado desde o hacia la instancia.
+
+  - ![Diagrama Infraestructura](https://ercanermis.com/wp-content/webpc-passthru.php?src=https://ercanermis.com/wp-content/uploads/aws_internet_gateway-1024x806.png&nocache=1)
+
+
+
 * Testing y calidad
   * Incluir el informe requerido para el cuarto sprint y cualquier otra información referente a cómo buscaron asegurar la calidad del software producido
 

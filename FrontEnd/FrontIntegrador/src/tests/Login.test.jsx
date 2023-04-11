@@ -13,25 +13,25 @@ beforeEach(() => {
 
 describe('Deben estar los 2 campos del formulario de login', () => {
   it('debe renderizar input email', () => {
-    const inputEmail = screen.getByLabelText("Correo electronico")
+    const inputEmail = screen.getByLabelText("Ingrese email o username")
     expect(inputEmail).toBeInTheDocument()
   })
 
   it('debe renderizar input password', () => {
-    const inputPassword = screen.getByLabelText('Contrasena')
+    const inputPassword = screen.getByLabelText('Ingrese contrasena')
     expect(inputPassword).toBeInTheDocument()
   })
 })
 
 describe('Cada campo debe mostrar lo que el usuario tipea', () => {
   it('tipeo en campo email', () => {
-    const inputEmail = screen.getByLabelText("Correo electronico")
+    const inputEmail = screen.getByLabelText("Ingrese email o username")
     fireEvent.change(inputEmail, { target: { value: "pinoe@gmail.com" } })
     expect(inputEmail.value).toBe("pinoe@gmail.com")
   })
 
   it('tipeo en campo password', () => {
-    const inputPassword = screen.getByLabelText('Contrasena')
+    const inputPassword = screen.getByLabelText('Ingrese contrasena')
     fireEvent.change(inputPassword, { target: { value: "pinoe23" } })
     expect(inputPassword.value).toBe("pinoe23")
   })

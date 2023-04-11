@@ -1,13 +1,14 @@
 stages:
   - test
   - build
+  #- automated-api-tests
   - deploy
 
 .trial:
   script:
-    - echo 'just sau hello'  
+    - echo 'just say hello'  
 
-.test project:
+test project:
   stage: test
   image: node:16.5.0
   script:
@@ -33,6 +34,68 @@ deploy to s3:
   image: 
     name: amazon/aws-cli:2.11.3
     entrypoint: ['']
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH  
   script:
     - aws --version
     - aws s3 sync FrontEnd/FrontIntegrador/dist s3://$AWS_S3_BUCKET --delete
+
+
+
+
+
+build back:
+  stage: build
+  image: maven:latest
+  script:
+    - echo "Building app..."
+    - cd BackEnd/BackIntegrador/BackIntegrador/
+    - mvn clean install
+    - echo "Finished building app."
+  artifacts:
+    expire_in: 1 hour
+    paths:
+      - BackEnd/BackIntegrador/BackIntegrador/target/*.jar
+  # rules:
+  #   - if: '$CI_COMMIT_BRANCH == "main"'
+  #     changes:
+  #       - BackEnd/**/*
+
+# automated-api-tests:
+#   stage: automated-api-tests
+#   image: cimg/base:2021.04
+#   before_script:
+#     # Installing Postman CLI
+#     - curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
+#   script:
+#     # Login using your Postman API keys
+#     - postman login --with-api-key $POSTMAN_API_KEY
+#     - postman collection run "23352616-97f36139-a037-4e64-b813-0208a3cc418f" -e "23352616-58ccde2f-670f-400d-93c0-d4f1ec59f1c0"
+#   rules:
+#   - if: '$CI_COMMIT_BRANCH == "desarrollo"'
+#     changes:
+#       - back-end/**/*
+
+deploy back:
+  stage: deploy
+  image: ubuntu:latest
+  before_script:
+    - apt-get update && apt-get install -y openssh-client bash
+    - mkdir -p ~/.ssh
+    - eval $(ssh-agent -s)
+    # - echo $SSH_PRIVATE_KEY | tr -d '\r' | ssh-add - > /dev/null
+    - touch ~/.ssh/config
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    - ssh-keyscan $DEPLOY_SERVER_IP >> ~/.ssh/known_hosts
+  script:
+    - echo "Deploying started..."
+    - chmod 400 "$SSH_PRIVATE_KEY"
+    - ssh -i "$SSH_PRIVATE_KEY" ec2-user@"$DEPLOY_SERVER_IP" "sudo systemctl stop backIntegrador.service"
+    - scp -i "$SSH_PRIVATE_KEY" BackEnd/BackIntegrador/BackIntegrador/target/BackIntegrador-0.0.1-SNAPSHOT.jar ec2-user@"$DEPLOY_SERVER_IP":~/BackIntegrador/
+    - ssh -i "$SSH_PRIVATE_KEY" ec2-user@"$DEPLOY_SERVER_IP" "sudo systemctl start backIntegrador.service"
+    - ssh -i "$SSH_PRIVATE_KEY" ec2-user@"$DEPLOY_SERVER_IP" "sudo systemctl status backIntegrador.service"
+    - echo "Finished deploying the app."
+  # rules:
+  #   - if: '$CI_COMMIT_BRANCH == "main"'
+  #     changes:
+  #       - BackEnd/**/*

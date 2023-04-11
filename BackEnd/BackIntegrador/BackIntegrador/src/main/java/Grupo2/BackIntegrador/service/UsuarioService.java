@@ -64,4 +64,15 @@ public class UsuarioService {
         LOGGER.info("Se inicio la busqueda de un usuario con username o email = "+ usernameOrEmail );
         return usuarioRepository.findByuserNameOrEmail(usernameOrEmail, usernameOrEmail);
     }
+
+    public String verificarUsuarioXid(String username) throws ResourceNotFoundException{
+        if (usuarioRepository.existsByuserName(username)){
+            usuarioRepository.verifyUser(username);
+            LOGGER.info("Se verifico el usuario con username= "+ username);
+            return "Se verifico el usuario con username = "+ username;
+        } else {
+            throw new ResourceNotFoundException("No se encontro el usuario para verificar");
+        }
+
+    }
 }

@@ -31,9 +31,9 @@ const ReservationForm = ({ loggedUser }) => {
         <Grid item xs={isMobile ? 12 : 6}>
           <TextField
             label='Apellido'
-            name={loggedUser.userName}
+            name={loggedUser.apellido}
             type={'text'}
-            value={loggedUser.userName[0].toUpperCase() + loggedUser.userName.slice(1)}
+            value={loggedUser.apellido[0].toUpperCase() + loggedUser.apellido.slice(1)}
             disabled
             fullWidth />
         </Grid>

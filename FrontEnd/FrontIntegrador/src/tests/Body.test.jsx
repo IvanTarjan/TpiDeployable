@@ -32,10 +32,10 @@ it('el primer modelo de auto que debe renderizarse el el listado es random', asy
   })
 })
 
-it('listado de vehiculos debe mostrar el total de vehiculos que devuelve la api que es igaul a 8', async () => {
+it('listado de vehiculos debe mostrar el total de vehiculos que devuelve la api que es igual a 8', async () => {
   const carCards = await screen.findAllByTestId("car-card")
   return fetchData().then(res => {
-    expect(res.data.length).toBe(8)
+    expect(res.data.length).toBe(carCards.length)
   })
 })
 

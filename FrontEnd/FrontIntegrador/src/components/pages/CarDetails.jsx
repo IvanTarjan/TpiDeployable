@@ -15,6 +15,7 @@ import Gallery from '../commons/Gallery'
 import MapView from '../commons/MapView'
 import SharePage from '../commons/SharePage'
 import axios from 'axios'
+import loadingGif from '../../assets/Loading1.gif'
 
 const CarDetails = () => {
   const [open, setOpen] = useState(false);
@@ -24,8 +25,8 @@ const CarDetails = () => {
   const [isLoading, setIsLoading] = useState(true)
   const currentPageUrl = window.location.href;
 
-  const { id } = useParams()
-  const { isLike, setIsLike } = useContext(BodyContext)
+  const { id } = useParams();
+  const { isLike, setIsLike } = useContext(BodyContext);
 
   useEffect(() => {
     axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/producto/${id}`)
@@ -47,7 +48,7 @@ const CarDetails = () => {
   if (isLoading) {
     return (
       <Box display={"flex"} flexDirection="column" justifyContent={"center"} alignItems={"center"} width={"100vw"} height={"375px"} padding="20px" borderRadius={"10px"}>
-        <Typography variant='h5'>Cargando...</Typography>
+        <img src={loadingGif} alt="Loading..." style={{height: "200px", width: "auto"}}/>
       </Box>
     )
   }

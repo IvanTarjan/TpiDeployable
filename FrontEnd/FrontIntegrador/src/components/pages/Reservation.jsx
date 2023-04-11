@@ -12,19 +12,18 @@ import ArrivalTime from '../commons/ArrivalTime'
 import axios from 'axios'
 import { HeaderContext } from '../contexts/HeaderContext'
 import Swal from 'sweetalert2'
+import emailjs from '@emailjs/browser';
 
 const Reservation = () => {
   const { id } = useParams()
   const navigate = useNavigate()
   const [selectedCar, setSelectedCar] = useState({})
   const [isLoading, setIsLoading] = useState(true)
-  const { users, currentUser } = useContext(HeaderContext)
+  const { currentUser } = useContext(HeaderContext)
   const { dateRange } = React.useContext(BodyContext)
   const arrivalTime = document.querySelector('#app-time')
-
   let arrivalHour = document.querySelector('#app-time')
-  let loggedUser = users.find(user => user.email === currentUser);
-  let loggedUserId = loggedUser.id
+  console.log(currentUser)
 
   useEffect(() => {
     axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/producto/${id}`)
@@ -66,12 +65,16 @@ const Reservation = () => {
     }).then(res => {
       {
         navigate('/')
-        axios.post('http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/reserva', {
+        axios.post('http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/reserva', {
           horario_llegada: arrivalHour.value + ':00',
           fecha_inicio: dateRange[0].format("YYYY-M-D"),
           fecha_fin: dateRange[1].format("YYYY-M-D"),
           producto: { id: parseInt(id) },
-          usuario: { id: loggedUserId }
+          usuario: { id: currentUser.user_id }
+        }, {
+          headers: {
+            'Authorization': `${currentUser.tokenType} ${currentUser.accessToken}`
+          }
         }).then(data => {
           Swal.fire({
             title: 'Muchas gracias!',
@@ -79,6 +82,19 @@ const Reservation = () => {
             icon: 'success',
             confirmButtonColor: '#1DBEB4',
           })
+          emailjs.send("service_v1b8o5l","template_ps8m368",{
+            from_name: "DigitalBooking",
+            to_name: currentUser.nombre,
+            message: `Tu reserva del ${selectedCar.titulo} se registro exitosamente`,
+            recipientEmail: currentUser.email,
+            },"-ySqEDR_MnfGZnEMc").catch(mailErr =>{
+              Swal.fire({
+                title: 'Nos quedamos sin sobres!',
+                text: 'Su reserva se ha realizado con exito, pero no te podemos mandar un mail',
+                icon: 'success',
+                confirmButtonColor: '#1DBEB4',
+              })
+            })
         })
           .catch(err => {
             console.log(err)
@@ -118,7 +134,7 @@ const Reservation = () => {
         <>
           <div className={styles.bookingContainer}>
             <div className={styles.bookingForm} >
-              <ReservationForm loggedUser={loggedUser} />
+              <ReservationForm loggedUser={currentUser} />
             </div>
 
             <div className={styles.bookingCalendar} >

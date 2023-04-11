@@ -8,11 +8,17 @@ import styles from '../styles/Body.module.css'
 import { Box } from '@mui/system';
 import { useNavigate } from 'react-router-dom';
 import { useMediaQuery } from '@mui/material';
+import { useContext } from 'react';
+import { HeaderContext } from '../contexts/HeaderContext';
+import { AdminTableDeleteButton } from './AdminHomeTableHelpers';
 
-export default function VehicleCard({ car }) {
+export default function VehicleCard({ car, setCars }) {
   const navigate = useNavigate()
+
+  const { currentUser} = useContext(HeaderContext);
+
   const handleClick = () => {
-    navigate(`/category/${car.categoria.titulo}/car/${car.id}`)
+    navigate(`/car/${car.id}`)
   }
 
   const isMobile = useMediaQuery('(max-width:640px)');
@@ -22,7 +28,8 @@ export default function VehicleCard({ car }) {
       display: 'flex',
       flexDirection: isMobile ? 'column' : 'row',
       alignItems: 'center',
-      justifyContent: 'space-between'
+      justifyContent: 'space-between',
+      position: "relative"
     }}>
       <Box className={styles.imageContainer}>
         <CardMedia className={styles.carImages}
@@ -31,7 +38,7 @@ export default function VehicleCard({ car }) {
           title={car.titulo}
         />
       </Box>
-
+      {currentUser && currentUser.role.includes("ROLE_ADMIN")&& <Box position={"absolute"} left={"0px"} top={"10px"}><AdminTableDeleteButton endpoint={"http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/producto"} id={car.id} arrayToFilter={setCars}/></Box>}
       <CardContent className={styles.cardContent}>
         <p>{car.categoria.titulo}</p>
         <Typography gutterBottom variant="h6" component="div">
