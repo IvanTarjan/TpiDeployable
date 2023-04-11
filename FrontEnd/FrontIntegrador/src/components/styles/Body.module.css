@@ -169,9 +169,7 @@
 
 .iconsContainerDetail{
   display: flex;
-  flex-wrap: wrap;
-  gap: 220px;
-  flex-wrap: wrap;
+  gap: 100px;
 }
 
 .shareLikeBtnContainer{

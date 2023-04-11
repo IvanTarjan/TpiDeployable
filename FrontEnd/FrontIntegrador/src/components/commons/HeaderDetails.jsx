@@ -8,29 +8,6 @@ import { BodyContext } from '../contexts/BodyContext';
 
 const HeaderDetails = ({ car }) => {
 
-  const { localizaciones, selectedCity, randomLocation } = useContext(BodyContext)
-
-  const selectedCityData = localizaciones.find(location => location.nombre == selectedCity);
-
-
-  const [score, setScore] = useState(0);
-
-  const getAvg = (car) => {
-    let avg = 0;
-    if (car.puntuacion.length > 0) {
-      car.puntuacion.forEach(c => {
-        avg += c.puntuacion;
-      });
-      avg = avg / car.puntuacion.length;
-    }
-    return avg;
-  }
-
-  useEffect(() => {
-    setScore(getAvg(car));
-  }, [])
-
-
   const navigate = useNavigate()
   const handleClick = () => {
     console.log(document.referrer);
@@ -63,8 +40,8 @@ const HeaderDetails = ({ car }) => {
         </div>
 
         <div className={styles.locationDataValue}>
-          <p>{score > 9 ? "Excelente" : score > 7 ? "Muy bueno" : score > 5 ? "Bueno" : "Terrible"}</p>
-          <div className={styles.locationDataValueNumber}>{score}</div>
+          <p>{car.puntuacionAvg > 9 ? "Excelente" : car.puntuacionAvg > 7 ? "Muy bueno" : car.puntuacionAvg > 5 ? "Bueno" : "Terrible"}</p>
+          <div className={styles.locationDataValueNumber}>{car.puntuacionAvg}</div>
         </div>
       </div>
     </>

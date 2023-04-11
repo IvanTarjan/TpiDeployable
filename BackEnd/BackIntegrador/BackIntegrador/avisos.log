@@ -1111,3 +1111,48 @@
 [2023-04-03 19:09:20] [ INFO ] [ProductoService:34] Se inició el listado de todas las productos
 [2023-04-03 19:12:06] [ INFO ] [ProductoService:81] Se inició una busqueda de todos los productos con categoria categoriaTitulo = Economico
 [2023-04-03 21:13:03] [ INFO ] [ProductoService:34] Se inició el listado de todas las productos
+[2023-04-04 18:53:21] [ INFO ] [ProductoService:34] Se inició el listado de todas las productos
+[2023-04-04 18:58:13] [ INFO ] [UsuarioService:71] Se verifico el usuario con username= usuarioTest
+[2023-04-04 18:58:15] [ INFO ] [UsuarioService:64] Se inicio la busqueda de un usuario con username o email = usuarioTest
+[2023-04-04 18:58:19] [ INFO ] [UsuarioService:71] Se verifico el usuario con username= ElAdminTest
+[2023-04-04 18:58:20] [ INFO ] [UsuarioService:64] Se inicio la busqueda de un usuario con username o email = ElAdminTest
+[2023-04-04 18:58:21] [ INFO ] [UbicacionService:31] Se inició una operación de guardado de la ciudad con id=: null
+[2023-04-04 18:58:23] [ INFO ] [CategoriaService:32] Se inició una operación de guardado de la categoria con titulo: Pickup
+[2023-04-04 18:58:24] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: Baul
+[2023-04-04 18:58:27] [ INFO ] [ProductoService:46] Se inició una operación de guardado de la producto con titulo: Chevrolet Classic
+[2023-04-04 18:58:29] [ INFO ] [PuntuacionService:30] Se inició una operación de guardado de la r eserva con id=: null
+[2023-04-04 18:58:29] [ INFO ] [ProductoService:77] Se inició una operación de búsqueda de la producto con id=78
+[2023-04-04 18:58:30] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 38
+[2023-04-04 18:58:33] [ INFO ] [ReservaService:34] Se inició una operación de guardado de la reserva con id=: null
+[2023-04-04 18:58:33] [ INFO ] [ProductoService:77] Se inició una operación de búsqueda de la producto con id=78
+[2023-04-04 18:58:34] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 38
+[2023-04-04 18:58:37] [ INFO ] [UbicacionService:63] Se inició una operación de búsqueda de la ubicacion con id=38
+[2023-04-04 18:58:40] [ INFO ] [UbicacionService:40] Se inició una operación de actualización de la ciudad con id=38
+[2023-04-04 18:58:42] [ INFO ] [CategoriaService:55] Se inició una operación de búsqueda de la categoria con id=33
+[2023-04-04 18:58:43] [ INFO ] [CategoriaService:55] Se inició una operación de búsqueda de la categoria con id=33
+[2023-04-04 18:58:43] [ INFO ] [CategoriaService:39] Se inició una operación de actualización de la categoria con id=33
+[2023-04-04 18:58:46] [ INFO ] [CaracteristicaService:56] Se inició una operación de búsqueda de la Caracteristica con id=36
+[2023-04-04 18:58:47] [ INFO ] [CaracteristicaService:36] Se inició una operación de actualización de la Caracteristica con id=36
+[2023-04-04 18:58:49] [ INFO ] [ProductoService:77] Se inició una operación de búsqueda de la producto con id=78
+[2023-04-04 18:58:56] [ INFO ] [ProductoService:56] Se inició una operación de actualización de la producto con id=78
+[2023-04-04 18:58:58] [ INFO ] [ProductoService:77] Se inició una operación de búsqueda de la producto con id=78
+[2023-04-04 18:58:59] [ WARN ] [ProductoService:70] Se realizo una operación de eliminación del producto con id=78
+[2023-04-04 18:59:04] [ INFO ] [UbicacionService:63] Se inició una operación de búsqueda de la ubicacion con id=38
+[2023-04-04 18:59:06] [ WARN ] [UbicacionService:52] Se realizo una operación de eliminación de la ubicacion conid=38
+[2023-04-04 18:59:08] [ INFO ] [CategoriaService:55] Se inició una operación de búsqueda de la categoria con id=33
+[2023-04-04 18:59:08] [ WARN ] [CategoriaService:49] Se realizo una operación de eliminación de la categoria con id= 33
+[2023-04-04 18:59:09] [ INFO ] [CaracteristicaService:56] Se inició una operación de búsqueda de la Caracteristica con id=36
+[2023-04-04 18:59:11] [ WARN ] [CaracteristicaService:45] Se realizo una operación de eliminación de la Caracteristica conid=36
+[2023-04-04 18:59:12] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 38
+[2023-04-04 18:59:13] [ WARN ] [UsuarioService:50] Se realizo una operación de eliminación de los Usuarios con id= 38
+[2023-04-04 18:59:14] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 39
+[2023-04-04 18:59:15] [ WARN ] [UsuarioService:50] Se realizo una operación de eliminación de los Usuarios con id= 39
+[2023-04-04 18:59:17] [ INFO ] [ProductoService:91] Se buscaron 8 productos random
+[2023-04-04 18:59:30] [ INFO ] [ProductoService:81] Se inició una busqueda de todos los productos con categoria categoriaTitulo = Economico
+[2023-04-04 18:59:42] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 38
+[2023-04-04 18:59:44] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 39
+[2023-04-04 18:59:45] [ INFO ] [UbicacionService:63] Se inició una operación de búsqueda de la ubicacion con id=38
+[2023-04-04 18:59:49] [ INFO ] [CaracteristicaService:56] Se inició una operación de búsqueda de la Caracteristica con id=36
+[2023-04-04 18:59:51] [ INFO ] [ProductoService:77] Se inició una operación de búsqueda de la producto con id=78
+[2023-04-04 18:59:52] [ INFO ] [ReservaService:70] Se inició una operación de búsqueda de la reserva con id=17
+[2023-04-04 18:59:54] [ INFO ] [PuntuacionService:45] Se inicio la busqueda de una puntuacion con id= 9

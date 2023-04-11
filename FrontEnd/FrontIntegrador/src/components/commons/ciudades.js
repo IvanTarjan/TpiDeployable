@@ -1,15 +1,15 @@
 const ciudades = [
   {
     id: 1,
-    ciudad: "San Carlos de Bariloche",
-    lat: -41.1335,
-    lon: -71.3103
+    ciudad: "Buenos Aires",
+    lat: -34.6037,
+    lon: -58.3816
   },
   {
     id: 2,
-    ciudad: "Ciudad Autonoma de Buenos Aires",
-    lat: -34.6037,
-    lon: -58.3816
+    ciudad: "Martinez",
+    lat: -34.4958,
+    lon: -58.5165
   },
   {
     id: 3,
