@@ -56,8 +56,8 @@ build back:
     expire_in: 1 hour
     paths:
       - BackEnd/BackIntegrador/BackIntegrador/target/*.jar
-  # rules:
-  #   - if: '$CI_COMMIT_BRANCH == "main"'
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
   #     changes:
   #       - BackEnd/**/*
 
@@ -95,7 +95,7 @@ deploy back:
     - ssh -i "$SSH_PRIVATE_KEY" ec2-user@"$DEPLOY_SERVER_IP" "sudo systemctl start backIntegrador.service"
     - ssh -i "$SSH_PRIVATE_KEY" ec2-user@"$DEPLOY_SERVER_IP" "sudo systemctl status backIntegrador.service"
     - echo "Finished deploying the app."
-  # rules:
-  #   - if: '$CI_COMMIT_BRANCH == "main"'
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
   #     changes:
   #       - BackEnd/**/*
