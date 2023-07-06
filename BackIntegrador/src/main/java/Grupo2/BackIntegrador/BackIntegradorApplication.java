@@ -74,6 +74,21 @@ public class BackIntegradorApplication {
 
 				Caracteristica automatico = caracteristicaService.guardarCaracteristica(Caracteristica.builder().titulo("Automatico").icono("https://www.svgrepo.com/show/232199/gearshift-shift.svg").build());
 
+				Caracteristica aireAcondicionado = caracteristicaService.guardarCaracteristica(Caracteristica.builder().titulo("Aire Acondicionado").icono("https://www.svgrepo.com/show/454855/cold-snowflake.svg").build());
+
+				Caracteristica cuatroPuertas = caracteristicaService.guardarCaracteristica(Caracteristica.builder().titulo("4 puertas").icono("https://www.svgrepo.com/show/459195/car-door-left-1.svg").build());
+
+				Caracteristica dosPuertas = caracteristicaService.guardarCaracteristica(Caracteristica.builder().titulo("2 puertas").icono("https://www.svgrepo.com/show/459195/car-door-left-1.svg").build());
+
+				Caracteristica traccionSimple = caracteristicaService.guardarCaracteristica(Caracteristica.builder().titulo("Tracción Simple").icono("https://www.svgrepo.com/show/477522/tire.svg").build());
+
+				Caracteristica dobleTraccion = caracteristicaService.guardarCaracteristica(Caracteristica.builder().titulo("Doble Tracción").icono("https://www.svgrepo.com/show/17093/truck-wheel.svg").build());
+
+				Caracteristica baulGrande = caracteristicaService.guardarCaracteristica(Caracteristica.builder().titulo("Baúl Grande").icono("https://www.svgrepo.com/show/425263/suitcase.svg").build());
+
+				Caracteristica baulChico = caracteristicaService.guardarCaracteristica(Caracteristica.builder().titulo("Baúl Chico").icono("https://www.svgrepo.com/show/425106/suitcase-briefcase-bag.svg").build());
+
+
 
 
 
