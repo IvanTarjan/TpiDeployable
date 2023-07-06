@@ -10,8 +10,8 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 350,
-  height: 200,
+  width: '280px',
+  height: 'auto',
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
@@ -27,11 +27,12 @@ const SharePage = ({ open, handleClose, currentPageUrl }) => {
       aria-describedby="modal-modal-description"
     >
       <Box sx={style}>
-        <div className={styles.closeBtnContainer}>
+        <p>Comparti este producto en tu red social favorita!</p>
+        {/* <div className={styles.closeBtnContainer}>
           <IconButton sx={{ display: 'flex', justifyContent: 'flex-end' }} disableRipple={true} onClick={handleClose}>
             <CloseIcon />
           </IconButton>
-        </div>
+        </div> */}
         <div className={styles.shareContainer}>
           <FacebookShareButton url={currentPageUrl}>
             <FacebookIcon />

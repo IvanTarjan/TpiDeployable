@@ -126,15 +126,15 @@ const AddCarForm = () => {
         }],
       politica: [
         {
-          titulo: 'Devolucion',
+          titulo: 'Normas de la casa',
           descripcion: data.house
         },
         {
-          titulo: 'Entrega',
+          titulo: 'Salud y Seguridad',
           descripcion: data.safety
         },
         {
-          titulo: 'Uso',
+          titulo: 'Politica de cancelacion',
           descripcion: data.cancel
         }
       ],
@@ -151,13 +151,13 @@ const AddCarForm = () => {
           id: 1
         },
         {
-          id: data.allAttributes.includes("Nafta") ? 3 : 8,
+          id: data.allAttributes.includes("Diesel premium") ? 2 : 8,
         },
         {
           id: 6,
         },
         {
-          id: data.allAttributes.includes("Caja Manual") ? 5 : 4,
+          id: data.allAttributes.includes("Caja Automatica") ? 5 : 4,
         },
         {
           id: 7
@@ -178,11 +178,14 @@ const AddCarForm = () => {
         timer: 3000
       })
       nagivate('/')
+      setTimeout(() => {
+        window.location.reload()
+      }, 2000)
     }).catch(err => {
       console.log(err)
       Swal.fire({
         title: 'Error!',
-        text: 'Lamentablemente no ha crear el vehiculo. Por favor intente más tarde',
+        text: 'Lamentablemente hubo un problema en el proceso. Por favor intente más tarde',
         icon: 'error',
         confirmButtonColor: '#1DBEB4',
       })
