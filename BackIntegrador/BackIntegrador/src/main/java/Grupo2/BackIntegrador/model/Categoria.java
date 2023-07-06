@@ -18,7 +18,7 @@ public class Categoria {
     private Long id;
     @Column
     private String titulo;
-    @Column
+    @Column(length = 4000)
     private String descripcion;
     @Column
     private String url_imagen;

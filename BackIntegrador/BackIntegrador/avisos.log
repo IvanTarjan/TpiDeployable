@@ -1248,3 +1248,6 @@
 [2023-07-04 21:53:39] [ INFO ] [ProductoService:77] Se inició una operación de búsqueda de la producto con id=3
 [2023-07-04 21:53:39] [ WARN ] [ProductoService:70] Se realizo una operación de eliminación del producto con id=3
 [2023-07-04 21:53:43] [ INFO ] [ProductoService:34] Se inició el listado de todas las productos
+[2023-07-06 16:09:29] [ INFO ] [ProductoService:34] Se inició el listado de todas las productos
+[2023-07-06 16:09:29] [ INFO ] [CategoriaService:32] Se inició una operación de guardado de la categoria con titulo: Economico
+[2023-07-06 16:09:29] [ INFO ] [CategoriaService:32] Se inició una operación de guardado de la categoria con titulo: Gama-media
