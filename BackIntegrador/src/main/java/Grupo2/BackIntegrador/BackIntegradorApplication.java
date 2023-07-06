@@ -1,7 +1,9 @@
 package Grupo2.BackIntegrador;
 
+import Grupo2.BackIntegrador.model.Caracteristica;
 import Grupo2.BackIntegrador.model.Categoria;
 import Grupo2.BackIntegrador.model.Roles;
+import Grupo2.BackIntegrador.model.Ubicacion;
 import Grupo2.BackIntegrador.repository.CategoriaRepository;
 import Grupo2.BackIntegrador.repository.RolesRepository;
 import Grupo2.BackIntegrador.repository.UsuarioRepository;
@@ -40,17 +42,41 @@ public class BackIntegradorApplication {
 	public CommandLineRunner loadInitialData(CaracteristicaService caracteristicaService, CategoriaService categoriaService, ProductoService productoService, UbicacionService ubicacionService){
 		return args -> {
 			if (productoService.listarProducto().isEmpty()){
-				categoriaService.guardarCategoria(Categoria.builder().titulo("Economico").url_imagen("https://www.lavoz.com.ar/resizer/SOb5uC25IO5HJwNTWsBZT6Qk3Qs=/1023x682/smart/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/OILWIHG4GFHDDKY73BOUVXDOU4.jpg")
+				Categoria economico = categoriaService.guardarCategoria(Categoria.builder().titulo("Economico").url_imagen("https://www.lavoz.com.ar/resizer/SOb5uC25IO5HJwNTWsBZT6Qk3Qs=/1023x682/smart/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/OILWIHG4GFHDDKY73BOUVXDOU4.jpg")
 						.descripcion("Disfrutarás de la libertad de movilidad sin comprometerte financieramente. Al optar por un auto económico, podrás ahorrar dinero en combustible y gastos de mantenimiento, permitiéndote destinar esos recursos a otras actividades durante tu viaje.").build());
 
-				categoriaService.guardarCategoria(Categoria.builder().titulo("Gama-media").url_imagen("https://autoxarg.com.ar/wp-content/uploads/2022/06/Ventas-0km-Argentina-04.jpg")
+				Categoria gamaMedia = categoriaService.guardarCategoria(Categoria.builder().titulo("Gama-media").url_imagen("https://autoxarg.com.ar/wp-content/uploads/2022/06/Ventas-0km-Argentina-04.jpg")
 						.descripcion("Nuestro servicio de alquiler de autos de gama media te ofrece una experiencia de conducción excepcional a un precio asequible. Con nuestra amplia selección de autos de calidad y rendimiento superior, podrás disfrutar de todas las comodidades y prestaciones que deseas en un vehículo, sin comprometer tu presupuesto.").build());
 
-				categoriaService.guardarCategoria(Categoria.builder().titulo("").url_imagen("")
-						.descripcion("").build());
+				Categoria premium = categoriaService.guardarCategoria(Categoria.builder().titulo("Premium").url_imagen("https://fotos.perfil.com/2022/02/02/los-10-autos-mas-caros-1307728.jpg")
+						.descripcion("Nuestro exclusivo servicio de alquiler de autos de categoría premium te sumergirá en un mundo de lujo y refinamiento. Disponemos de una selecta flota de vehículos de prestigio que combina diseño elegante, tecnología de vanguardia y un rendimiento excepcional.").build());
 
-				categoriaService.guardarCategoria(Categoria.builder().titulo("Premium").url_imagen("")
-						.descripcion("").build());
+				Categoria pickUp = categoriaService.guardarCategoria(Categoria.builder().titulo("PickUp").url_imagen("https://dossierweb.com.ar/wp-content/uploads/2023/04/pickup.png")
+						.descripcion("Nuestro apasionante servicio de alquiler de camionetas pick-up te invita a vivir la aventura al máximo. Con nuestras robustas y versátiles camionetas, estarás preparado para conquistar cualquier terreno y emprender emocionantes travesías.").build());
+
+				Ubicacion bariloche = ubicacionService.guardarUbicacion(Ubicacion.builder().pais("Argentina").nombre("San Carlos De Bariloche").build());
+
+				Ubicacion caba = ubicacionService.guardarUbicacion(Ubicacion.builder().pais("Argentina").nombre("Ciudad Autonoma de Buenos Aires").build());
+
+				Ubicacion mendoza = ubicacionService.guardarUbicacion(Ubicacion.builder().pais("Argentina").nombre("Mendoza").build());
+
+				Ubicacion cordoba = ubicacionService.guardarUbicacion(Ubicacion.builder().pais("Argentina").nombre("Cordoba").build());
+
+				Ubicacion salta = ubicacionService.guardarUbicacion(Ubicacion.builder().pais("Argentina").nombre("Salta").build());
+
+				Ubicacion ushaia = ubicacionService.guardarUbicacion(Ubicacion.builder().pais("Argentina").nombre("Ushuaia").build());
+
+				Ubicacion puertoMadrin = ubicacionService.guardarUbicacion(Ubicacion.builder().pais("Argentina").nombre("Puerto Madrin").build());
+
+				Ubicacion losAndes = ubicacionService.guardarUbicacion(Ubicacion.builder().pais("Argentina").nombre("San Martin de los Andes").build());
+
+				Caracteristica manual = caracteristicaService.guardarCaracteristica(Caracteristica.builder().titulo("Manual").icono("https://www.svgrepo.com/show/237062/gearshift.svg").build());
+
+				Caracteristica automatico = caracteristicaService.guardarCaracteristica(Caracteristica.builder().titulo("Automatico").icono("https://www.svgrepo.com/show/232199/gearshift-shift.svg").build());
+
+
+
+
 
 			}
 		};

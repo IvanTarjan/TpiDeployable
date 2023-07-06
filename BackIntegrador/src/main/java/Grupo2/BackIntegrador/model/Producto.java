@@ -20,7 +20,7 @@ public class Producto {
     @Column
     private String titulo;
 
-    @Column
+    @Column(length = 4000)
     private String descripcion;
 
     @Column
