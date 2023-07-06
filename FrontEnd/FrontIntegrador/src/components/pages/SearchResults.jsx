@@ -10,7 +10,7 @@ import loadingGif from '../../assets/Loading1.gif'
 
 
 const SearchResults = () => {
-  const { setSelectedCity, selectedCity} = useContext(BodyContext)
+  const { setSelectedCity, selectedCity, apiUrl} = useContext(BodyContext)
   const [availableCars, setAvailableCars] = useState([])
   const [loading, setLoading] = useState(true)
   const navigate = useNavigate()
@@ -21,25 +21,25 @@ const SearchResults = () => {
 
   useEffect(() => {
     if (fechaInicio=="n"& fechaFin=="n") {
-      axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/producto/u/${ubicacionId}`)
+      axios.get(`${apiUrl}/api/producto/u/${ubicacionId}`)
       .then(res => {
       setAvailableCars(res.data)
-      axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/ubicacion/${ubicacionId}`).then(ubi=>{
+      axios.get(`${apiUrl}/api/ubicacion/${ubicacionId}`).then(ubi=>{
         setSelectedCity(ubi.data)
         setLoading(false)
       })
       })
       .catch(err => console.log(err))
     } else if (ubicacionId=="n"){
-      axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/producto/dates/${fechaInicio}/${fechaFin}`)
+      axios.get(`${apiUrl}/api/producto/dates/${fechaInicio}/${fechaFin}`)
       .then(res => {setAvailableCars(res.data)
         setLoading(false)
       })
       .catch(err => console.log(err))
     } else{
-      axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/producto/datesAndUbi/${fechaInicio}/${fechaFin}/${selectedCity.id}`)
+      axios.get(`${apiUrl}/api/producto/datesAndUbi/${fechaInicio}/${fechaFin}/${selectedCity.id}`)
       .then(res => {setAvailableCars(res.data)
-        axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/ubicacion/${ubicacionId}`).then(ubi=>{
+        axios.get(`${apiUrl}/api/ubicacion/${ubicacionId}`).then(ubi=>{
         setSelectedCity(ubi.data)
         setLoading(false)
       })

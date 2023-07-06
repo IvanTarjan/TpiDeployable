@@ -4,7 +4,6 @@ import styles from '../styles/Body.module.css'
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { Box, IconButton } from '@mui/material';
 import { Outlet, useNavigate } from 'react-router-dom';
-import AddCarForm from '../commons/AddCarForm';
 
 const Administration = () => {
 

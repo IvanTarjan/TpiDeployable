@@ -11,11 +11,13 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import axios from "axios";
 import Swal from 'sweetalert2'
 import emailjs from '@emailjs/browser';
+import { BodyContext } from "../contexts/BodyContext";
 
 const CreateAccount = () => {
   const { setHeaderType } = useContext(HeaderContext)
   const [isSubmit, setIsSubmit] = useState(false)
   const [showPassword, setShowPassword] = useState(false);
+  const { apiUrl } = useContext(BodyContext);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -38,7 +40,7 @@ const CreateAccount = () => {
       password: Yup.string().min(7, 'La contrasena debe tener mas de 6 caracteres').required('Campo obligatorio'),
       confirm: Yup.string().label('Confirmar el password ingresado').oneOf([Yup.ref('password')], 'Las contrasenas deben ser iguales').required('Campo obligatorio')
     }),
-    onSubmit: (data) => axios.post('http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/auth/register', {
+    onSubmit: (data) => axios.post(`${apiUrl}/api/auth/register`, {
       nombre: data.name,
       apellido: data.surname,
       userName: data.username,
@@ -59,7 +61,7 @@ const CreateAccount = () => {
         email: data.email,
         username: data.username,
       }, "-ySqEDR_MnfGZnEMc").catch(() => {
-        axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/auth/verificarUsuario/${data.username}`)
+        axios.get(`${apiUrl}/api/auth/verificarUsuario/${data.username}`)
         Swal.fire({
           title: 'Nos quedamos sin cartas (presupuesto de la api)',
           text: 'Pero no te preocupes, te habilitamos tu cuenta igual',

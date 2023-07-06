@@ -10,9 +10,11 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import Swal from 'sweetalert2'
 import axios from "axios";
+import { BodyContext } from "../contexts/BodyContext";
 
 const Login = () => {
-  const { setHeaderType, setIsLog, setCurrentUser } = useContext(HeaderContext)
+  const { setHeaderType, setIsLog, setCurrentUser } = useContext(HeaderContext);
+  const { apiUrl } = useContext(BodyContext);
   const [showPassword, setShowPassword] = useState(false);
   const location = useLocation()
   const navigate = useNavigate()
@@ -45,7 +47,7 @@ const Login = () => {
       password: Yup.string().required('Campo obligatorio'),
     }),
     onSubmit: (data) => {
-      axios.post('http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/auth/login', {
+      axios.post(`${apiUrl}/api/auth/login`, {
         userNameOrEmail: data.email,
         password: data.password
       }).then(res => {

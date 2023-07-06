@@ -20,13 +20,13 @@ const Reservation = () => {
   const [selectedCar, setSelectedCar] = useState({})
   const [isLoading, setIsLoading] = useState(true)
   const { currentUser } = useContext(HeaderContext)
-  const { dateRange } = React.useContext(BodyContext)
+  const { dateRange, apiUrl } = React.useContext(BodyContext)
   const arrivalTime = document.querySelector('#app-time')
   let arrivalHour = document.querySelector('#app-time')
   console.log(currentUser)
 
   useEffect(() => {
-    axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/producto/${id}`)
+    axios.get(`${apiUrl}/api/producto/${id}`)
       .then(res => {
         setSelectedCar(res.data)
         setIsLoading(false)
@@ -58,14 +58,14 @@ const Reservation = () => {
       text: 'Estamos procesando su reserva...',
       icon: 'info',
       showConfirmButton: false,
-      timer: 3000,
+      timer: 2000,
       didOpen: () => {
         Swal.showLoading()
       }
     }).then(res => {
       {
         navigate('/')
-        axios.post('http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/reserva', {
+        axios.post(`${apiUrl}/api/reserva`, {
           horario_llegada: arrivalHour.value + ':00',
           fecha_inicio: dateRange[0].format("YYYY-M-D"),
           fecha_fin: dateRange[1].format("YYYY-M-D"),

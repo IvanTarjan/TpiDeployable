@@ -9,6 +9,7 @@ import jakarta.persistence.*;
 @Entity
 @Getter @Setter @AllArgsConstructor @NoArgsConstructor @ToString
 @Table(name="politica")
+@Builder
 public class Politica {
 
     @Id

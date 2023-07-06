@@ -3,15 +3,16 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import loadingGif from '../../assets/Loading1.gif'
+import { BodyContext } from '../contexts/BodyContext';
 
 const EmailVerification = () => {
 
     const {username} = useParams();
-
+    const { apiUrl } = useContext(BodyContext);
     const [verificado, setVerificado] = useState(false);
 
     useEffect(() => {
-     axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/auth/verificarUsuario/${username}`).then(res=> {
+     axios.get(`${apiUrl}/api/auth/verificarUsuario/${username}`).then(res=> {
         setVerificado(true);
      }).catch(e=> {
 

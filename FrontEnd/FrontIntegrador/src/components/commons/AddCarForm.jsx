@@ -37,7 +37,7 @@ function getStyles(attribute, attributeName, theme) {
 }
 const AddCarForm = () => {
 
-  const { categorias, localizaciones } = useContext(BodyContext)
+  const { categorias, localizaciones, apiUrl } = useContext(BodyContext)
   const { currentUser } = useContext(HeaderContext)
   const [attributeName, setAttributeName] = useState([]);
   const [attributes, setAttributes] = useState([])
@@ -53,7 +53,7 @@ const AddCarForm = () => {
   }
 
   useEffect(() => {
-    axios.get('http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/caracteristica')
+    axios.get(`${apiUrl}/api/caracteristica`)
       .then(res => setAttributes(res.data.map(item => item.titulo)))
       .catch(err => console.log(err))
   }, [])
@@ -97,7 +97,7 @@ const AddCarForm = () => {
       mainPhoto: Yup.string().url('Debe incluirse url valida').required('Debe cargar foto principal'),
       sidePhoto: Yup.string().url('Debe incluirse url valida').required('Debe cargar foto lateral'),
     }),
-    onSubmit: (data) => axios.post('http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/producto', {
+    onSubmit: (data) => axios.post(`${apiUrl}/api/producto`, {
       titulo: data.name,
       latitud: getLatAndLon(data.city)[0],
       longitud: getLatAndLon(data.city)[1],

@@ -11,15 +11,16 @@ const BodyContextProvider = ({ children }) => {
   const [allDates, setAllDates] = useState([])
   const [categorias, setCategorias] = useState([])
   const [selectedCity, setSelectedCity] = useState({})
+  const apiUrl = "http://181.25.70.63:6780";
 
   useEffect(() => {
-    axios.get("http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/ubicacion")
+    axios.get(`${apiUrl}/api/ubicacion`)
       .then(res => setLocalizaciones(res.data))
       .catch(err => console.log(err))
   }, [])
 
   useEffect(() => {
-    axios.get("http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/categoria")
+    axios.get(`${apiUrl}/api/categoria`)
       .then(res => setCategorias(res.data))
       .catch(err => console.log(err))
   }, [])
@@ -40,7 +41,8 @@ const BodyContextProvider = ({ children }) => {
     categorias,
     setCategorias,
     selectedCity,
-    setSelectedCity
+    setSelectedCity,
+    apiUrl
   }
 
   return (

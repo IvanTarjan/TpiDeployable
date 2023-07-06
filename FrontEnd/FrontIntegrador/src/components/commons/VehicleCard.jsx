@@ -11,9 +11,11 @@ import { useMediaQuery } from '@mui/material';
 import { useContext } from 'react';
 import { HeaderContext } from '../contexts/HeaderContext';
 import { AdminTableDeleteButton } from './AdminHomeTableHelpers';
+import { BodyContext } from '../contexts/BodyContext';
 
 export default function VehicleCard({ car, setCars }) {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const { apiUrl } = useContext(BodyContext);
 
   const { currentUser} = useContext(HeaderContext);
 
@@ -38,7 +40,7 @@ export default function VehicleCard({ car, setCars }) {
           title={car.titulo}
         />
       </Box>
-      {currentUser && currentUser.role.includes("ROLE_ADMIN")&& <Box position={"absolute"} left={"0px"} top={"10px"}><AdminTableDeleteButton endpoint={"http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/producto"} id={car.id} arrayToFilter={setCars}/></Box>}
+      {currentUser && currentUser.role.includes("ROLE_ADMIN")&& <Box position={"absolute"} left={"0px"} top={"10px"}><AdminTableDeleteButton endpoint={`${apiUrl}/api/producto`} id={car.id} arrayToFilter={setCars}/></Box>}
       <CardContent className={styles.cardContent}>
         <p>{car.categoria.titulo}</p>
         <Typography gutterBottom variant="h6" component="div">

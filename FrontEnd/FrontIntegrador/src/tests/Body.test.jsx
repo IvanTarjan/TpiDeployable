@@ -23,7 +23,7 @@ it("debe mostrar componente que lista los vehiculos", () => {
   expect(motto).toBeInTheDocument();
 })
 
-const fetchData = () => axios.get("http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/producto/q/8")
+const fetchData = () => axios.get(`http://181.25.70.63:6780/api/producto/q/8`)
 
 it('el primer modelo de auto que debe renderizarse el el listado es random', async () => {
   await act(async () => {

@@ -9,6 +9,7 @@ import jakarta.persistence.*;
 @Entity
 @Getter @Setter @AllArgsConstructor @NoArgsConstructor @ToString
 @Table(name="imagen")
+@Builder
 public class Imagen {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

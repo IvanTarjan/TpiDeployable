@@ -1156,3 +1156,95 @@
 [2023-04-04 18:59:51] [ INFO ] [ProductoService:77] Se inició una operación de búsqueda de la producto con id=78
 [2023-04-04 18:59:52] [ INFO ] [ReservaService:70] Se inició una operación de búsqueda de la reserva con id=17
 [2023-04-04 18:59:54] [ INFO ] [PuntuacionService:45] Se inicio la busqueda de una puntuacion con id= 9
+[2023-04-13 17:55:53] [ INFO ] [ProductoService:34] Se inició el listado de todas las productos
+[2023-07-04 20:21:05] [ INFO ] [ProductoService:34] Se inició el listado de todas las productos
+[2023-07-04 21:44:29] [ INFO ] [UsuarioService:64] Se inicio la busqueda de un usuario con username o email = Admn
+[2023-07-04 21:45:05] [ INFO ] [UsuarioService:64] Se inicio la busqueda de un usuario con username o email = Admn
+[2023-07-04 21:45:15] [ INFO ] [UsuarioService:64] Se inicio la busqueda de un usuario con username o email = Admn
+[2023-07-04 21:48:13] [ INFO ] [UsuarioService:71] Se verifico el usuario con username= admn
+[2023-07-04 21:48:18] [ INFO ] [UsuarioService:64] Se inicio la busqueda de un usuario con username o email = Admn
+[2023-07-04 21:49:33] [ INFO ] [UbicacionService:31] Se inició una operación de guardado de la ciudad con id=: null
+[2023-07-04 21:49:33] [ INFO ] [CategoriaService:32] Se inició una operación de guardado de la categoria con titulo: Pickup
+[2023-07-04 21:49:33] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: Baul
+[2023-07-04 21:49:33] [ INFO ] [ProductoService:46] Se inició una operación de guardado de la producto con titulo: Chevrolet Classic
+[2023-07-04 21:49:33] [ INFO ] [UsuarioService:30] Se inició una operación de guardado de los usuarios con nombre=: ivan
+[2023-07-04 21:49:33] [ INFO ] [PuntuacionService:30] Se inició una operación de guardado de la r eserva con id=: null
+[2023-07-04 21:49:33] [ INFO ] [ProductoService:77] Se inició una operación de búsqueda de la producto con id=1
+[2023-07-04 21:49:33] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 2
+[2023-07-04 21:49:33] [ INFO ] [ReservaService:34] Se inició una operación de guardado de la reserva con id=: null
+[2023-07-04 21:49:33] [ INFO ] [ProductoService:77] Se inició una operación de búsqueda de la producto con id=1
+[2023-07-04 21:49:33] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 2
+[2023-07-04 21:49:34] [ INFO ] [UbicacionService:63] Se inició una operación de búsqueda de la ubicacion con id=1
+[2023-07-04 21:49:34] [ INFO ] [UbicacionService:40] Se inició una operación de actualización de la ciudad con id=1
+[2023-07-04 21:49:34] [ INFO ] [CategoriaService:55] Se inició una operación de búsqueda de la categoria con id=1
+[2023-07-04 21:49:34] [ INFO ] [CategoriaService:55] Se inició una operación de búsqueda de la categoria con id=1
+[2023-07-04 21:49:34] [ INFO ] [CategoriaService:39] Se inició una operación de actualización de la categoria con id=1
+[2023-07-04 21:49:34] [ INFO ] [CaracteristicaService:56] Se inició una operación de búsqueda de la Caracteristica con id=1
+[2023-07-04 21:49:34] [ INFO ] [CaracteristicaService:36] Se inició una operación de actualización de la Caracteristica con id=1
+[2023-07-04 21:49:34] [ INFO ] [ProductoService:77] Se inició una operación de búsqueda de la producto con id=1
+[2023-07-04 21:49:34] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 2
+[2023-07-04 21:49:34] [ INFO ] [UsuarioService:38] Se inició una operación de actualización de un usuario con id=2
+[2023-07-04 21:49:34] [ INFO ] [ProductoService:77] Se inició una operación de búsqueda de la producto con id=1
+[2023-07-04 21:49:34] [ INFO ] [UbicacionService:63] Se inició una operación de búsqueda de la ubicacion con id=1
+[2023-07-04 21:49:34] [ WARN ] [UbicacionService:52] Se realizo una operación de eliminación de la ubicacion conid=1
+[2023-07-04 21:49:34] [ INFO ] [CategoriaService:55] Se inició una operación de búsqueda de la categoria con id=1
+[2023-07-04 21:49:35] [ WARN ] [CategoriaService:49] Se realizo una operación de eliminación de la categoria con id= 1
+[2023-07-04 21:49:35] [ INFO ] [CaracteristicaService:56] Se inició una operación de búsqueda de la Caracteristica con id=1
+[2023-07-04 21:49:35] [ WARN ] [CaracteristicaService:45] Se realizo una operación de eliminación de la Caracteristica conid=1
+[2023-07-04 21:49:35] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 2
+[2023-07-04 21:49:35] [ WARN ] [UsuarioService:50] Se realizo una operación de eliminación de los Usuarios con id= 2
+[2023-07-04 21:49:35] [ INFO ] [UbicacionService:63] Se inició una operación de búsqueda de la ubicacion con id=1
+[2023-07-04 21:49:35] [ INFO ] [CaracteristicaService:56] Se inició una operación de búsqueda de la Caracteristica con id=1
+[2023-07-04 21:49:35] [ INFO ] [ProductoService:77] Se inició una operación de búsqueda de la producto con id=1
+[2023-07-04 21:49:35] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 2
+[2023-07-04 21:49:35] [ INFO ] [ReservaService:70] Se inició una operación de búsqueda de la reserva con id=1
+[2023-07-04 21:49:35] [ INFO ] [PuntuacionService:45] Se inicio la busqueda de una puntuacion con id= 1
+[2023-07-04 21:50:21] [ INFO ] [ProductoService:34] Se inició el listado de todas las productos
+[2023-07-04 21:51:21] [ INFO ] [UbicacionService:31] Se inició una operación de guardado de la ciudad con id=: null
+[2023-07-04 21:51:22] [ INFO ] [CategoriaService:32] Se inició una operación de guardado de la categoria con titulo: Pickup
+[2023-07-04 21:51:22] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: Baul
+[2023-07-04 21:51:22] [ INFO ] [ProductoService:46] Se inició una operación de guardado de la producto con titulo: Chevrolet Classic
+[2023-07-04 21:51:22] [ INFO ] [UsuarioService:30] Se inició una operación de guardado de los usuarios con nombre=: ivan
+[2023-07-04 21:51:22] [ INFO ] [PuntuacionService:30] Se inició una operación de guardado de la r eserva con id=: null
+[2023-07-04 21:51:22] [ INFO ] [ProductoService:77] Se inició una operación de búsqueda de la producto con id=2
+[2023-07-04 21:51:22] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 3
+[2023-07-04 21:51:22] [ INFO ] [ReservaService:34] Se inició una operación de guardado de la reserva con id=: null
+[2023-07-04 21:51:22] [ INFO ] [ProductoService:77] Se inició una operación de búsqueda de la producto con id=2
+[2023-07-04 21:51:22] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 3
+[2023-07-04 21:51:22] [ INFO ] [UbicacionService:63] Se inició una operación de búsqueda de la ubicacion con id=2
+[2023-07-04 21:51:22] [ INFO ] [UbicacionService:40] Se inició una operación de actualización de la ciudad con id=2
+[2023-07-04 21:51:22] [ INFO ] [CategoriaService:55] Se inició una operación de búsqueda de la categoria con id=2
+[2023-07-04 21:51:22] [ INFO ] [CategoriaService:55] Se inició una operación de búsqueda de la categoria con id=2
+[2023-07-04 21:51:22] [ INFO ] [CategoriaService:39] Se inició una operación de actualización de la categoria con id=2
+[2023-07-04 21:51:22] [ INFO ] [CaracteristicaService:56] Se inició una operación de búsqueda de la Caracteristica con id=2
+[2023-07-04 21:51:22] [ INFO ] [CaracteristicaService:36] Se inició una operación de actualización de la Caracteristica con id=2
+[2023-07-04 21:51:22] [ INFO ] [ProductoService:77] Se inició una operación de búsqueda de la producto con id=2
+[2023-07-04 21:51:23] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 3
+[2023-07-04 21:51:23] [ INFO ] [UsuarioService:38] Se inició una operación de actualización de un usuario con id=3
+[2023-07-04 21:51:23] [ INFO ] [ProductoService:77] Se inició una operación de búsqueda de la producto con id=2
+[2023-07-04 21:51:23] [ INFO ] [UbicacionService:63] Se inició una operación de búsqueda de la ubicacion con id=2
+[2023-07-04 21:51:23] [ WARN ] [UbicacionService:52] Se realizo una operación de eliminación de la ubicacion conid=2
+[2023-07-04 21:51:23] [ INFO ] [CategoriaService:55] Se inició una operación de búsqueda de la categoria con id=2
+[2023-07-04 21:51:23] [ WARN ] [CategoriaService:49] Se realizo una operación de eliminación de la categoria con id= 2
+[2023-07-04 21:51:23] [ INFO ] [CaracteristicaService:56] Se inició una operación de búsqueda de la Caracteristica con id=2
+[2023-07-04 21:51:23] [ WARN ] [CaracteristicaService:45] Se realizo una operación de eliminación de la Caracteristica conid=2
+[2023-07-04 21:51:23] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 3
+[2023-07-04 21:51:23] [ WARN ] [UsuarioService:50] Se realizo una operación de eliminación de los Usuarios con id= 3
+[2023-07-04 21:51:23] [ INFO ] [UbicacionService:63] Se inició una operación de búsqueda de la ubicacion con id=2
+[2023-07-04 21:51:23] [ INFO ] [CaracteristicaService:56] Se inició una operación de búsqueda de la Caracteristica con id=2
+[2023-07-04 21:51:23] [ INFO ] [ProductoService:77] Se inició una operación de búsqueda de la producto con id=2
+[2023-07-04 21:51:23] [ INFO ] [UsuarioService:59] Se inicio la busqueda de un usuario con id= 3
+[2023-07-04 21:51:24] [ INFO ] [ReservaService:70] Se inició una operación de búsqueda de la reserva con id=2
+[2023-07-04 21:51:24] [ INFO ] [PuntuacionService:45] Se inicio la busqueda de una puntuacion con id= 2
+[2023-07-04 21:52:26] [ INFO ] [CategoriaService:32] Se inició una operación de guardado de la categoria con titulo: Pickup
+[2023-07-04 21:52:40] [ INFO ] [UbicacionService:31] Se inició una operación de guardado de la ciudad con id=: null
+[2023-07-04 21:53:06] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: Baul
+[2023-07-04 21:53:08] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: Baul
+[2023-07-04 21:53:09] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: Baul
+[2023-07-04 21:53:12] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: Baul
+[2023-07-04 21:53:13] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: Baul
+[2023-07-04 21:53:25] [ INFO ] [ProductoService:46] Se inició una operación de guardado de la producto con titulo: Chevrolet Classic
+[2023-07-04 21:53:29] [ INFO ] [ProductoService:34] Se inició el listado de todas las productos
+[2023-07-04 21:53:39] [ INFO ] [ProductoService:77] Se inició una operación de búsqueda de la producto con id=3
+[2023-07-04 21:53:39] [ WARN ] [ProductoService:70] Se realizo una operación de eliminación del producto con id=3
+[2023-07-04 21:53:43] [ INFO ] [ProductoService:34] Se inició el listado de todas las productos

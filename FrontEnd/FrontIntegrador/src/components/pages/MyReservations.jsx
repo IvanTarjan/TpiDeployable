@@ -9,11 +9,13 @@ import axios from 'axios'
 import loadingGif from '../../assets/Loading1.gif'
 import { HeaderContext } from '../contexts/HeaderContext'
 import Swal from 'sweetalert2'
+import { BodyContext } from '../contexts/BodyContext'
 
 const MyReservations = () => {
   const [reserves, setReserves] = useState([])
   const [loading, setLoading] = useState(true)
   const { isLog, currentUser } = useContext(HeaderContext);
+  const { apiUrl } = useContext(BodyContext);
   const { userId } = useParams()
   const navigate = useNavigate()
   const handleClick = () => {
@@ -28,7 +30,7 @@ const MyReservations = () => {
     if (isLog) {
       !currentUser.role.includes("USER_ADMIN") && idMustBeMine();
 
-      axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/reserva/usu/${currentUser.user_id}`, {
+      axios.get(`${apiUrl}/api/reserva/usu/${currentUser.user_id}`, {
         headers: {
           'Authorization': `${currentUser.tokenType} ${currentUser.accessToken}`
         }

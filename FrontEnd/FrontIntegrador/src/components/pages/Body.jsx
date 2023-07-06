@@ -9,13 +9,12 @@ import axios from 'axios';
 
 
 const Body = () => {
-  const { categorias } = useContext(BodyContext)
-
-  const [cars, setCars] = useState([])
+  const { categorias, apiUrl } = useContext(BodyContext);
+  const [cars, setCars] = useState([]);
 
   
   useEffect(() => {
-    axios.get("http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/producto/q/8")
+    axios.get(`${apiUrl}/api/producto/q/8`)
       .then(res => setCars(res.data))
       .catch(err => console.log(err))
   }, [])

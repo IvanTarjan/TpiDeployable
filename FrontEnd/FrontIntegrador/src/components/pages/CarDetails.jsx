@@ -19,6 +19,7 @@ import loadingGif from '../../assets/Loading1.gif'
 
 const CarDetails = () => {
   const [open, setOpen] = useState(false);
+  const { apiUrl } = useContext(BodyContext);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const [selectedCar, setSelectedCar] = useState({ reserva: [] })
@@ -29,7 +30,7 @@ const CarDetails = () => {
   const { isLike, setIsLike } = useContext(BodyContext);
 
   useEffect(() => {
-    axios.get(`http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/producto/${id}`)
+    axios.get(`${apiUrl}/api/producto/${id}`)
       .then(res => {
         setSelectedCar(res.data)
         setIsLoading(false)

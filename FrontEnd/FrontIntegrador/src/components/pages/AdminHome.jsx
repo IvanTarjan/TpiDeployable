@@ -6,9 +6,11 @@ import axios from 'axios';
 import VehicleCard from '../commons/VehicleCard';
 import styles from '../styles/Body.module.css'
 import { useNavigate } from 'react-router-dom';
+import { BodyContext } from '../contexts/BodyContext';
 
 const AdminHome = () => {
     const navigate = useNavigate()
+    const { apiUrl } = useContext(BodyContext);
     const [cars, setCars] = useState([])
     const isTabletOrMore = useMediaQuery('(min-width:900px)')
 
@@ -23,7 +25,7 @@ const AdminHome = () => {
         , {
             field: "delete",
             headerName: "Delete",
-            renderCell: (params) => <AdminTableDeleteButton endpoint={"http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/producto"} id={params.id} arrayToFilter={setCars} />
+            renderCell: (params) => <AdminTableDeleteButton endpoint={`${apiUrl}/api/producto`} id={params.id} arrayToFilter={setCars} />
         }
         , {
             field: "verMas",
@@ -33,7 +35,7 @@ const AdminHome = () => {
     ];
 
     useEffect(() => {
-        axios.get("http://ec2-3-138-67-153.us-east-2.compute.amazonaws.com:8080/api/producto").then(res => {
+        axios.get(`${apiUrl}/api/producto`).then(res => {
             setCars(res.data)
             ;
         })
