@@ -88,6 +88,18 @@ public class BackIntegradorApplication {
 
 				Caracteristica baulChico = caracteristicaService.guardarCaracteristica(Caracteristica.builder().titulo("Baúl Chico").icono("https://www.svgrepo.com/show/425106/suitcase-briefcase-bag.svg").build());
 
+				Caracteristica frenosAbs = caracteristicaService.guardarCaracteristica(Caracteristica.builder().titulo("Frenos con ABS").icono("https://www.svgrepo.com/show/198281/breaks-car.svg").build());
+
+				Caracteristica nafta = caracteristicaService.guardarCaracteristica(Caracteristica.builder().titulo("Nafta").icono("https://www.svgrepo.com/show/339221/fuel.svg").build());
+
+				Caracteristica diesel = caracteristicaService.guardarCaracteristica(Caracteristica.builder().titulo("Diésel").icono("https://www.svgrepo.com/show/339221/fuel.svg").build());
+
+				Caracteristica dosAirbags = caracteristicaService.guardarCaracteristica(Caracteristica.builder().titulo("2 Airbags").icono("https://www.svgrepo.com/show/2349/airbag.svg").build());
+
+				Caracteristica cuatroAirbags = caracteristicaService.guardarCaracteristica(Caracteristica.builder().titulo("4 Airbags").icono("https://www.svgrepo.com/show/2349/airbag.svg").build());
+
+
+
 
 
 
