@@ -1,9 +1,6 @@
 package Grupo2.BackIntegrador;
 
-import Grupo2.BackIntegrador.model.Caracteristica;
-import Grupo2.BackIntegrador.model.Categoria;
-import Grupo2.BackIntegrador.model.Roles;
-import Grupo2.BackIntegrador.model.Ubicacion;
+import Grupo2.BackIntegrador.model.*;
 import Grupo2.BackIntegrador.repository.CategoriaRepository;
 import Grupo2.BackIntegrador.repository.RolesRepository;
 import Grupo2.BackIntegrador.repository.UsuarioRepository;
@@ -16,6 +13,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+
+import java.util.Set;
 
 
 @SpringBootApplication
@@ -98,13 +97,30 @@ public class BackIntegradorApplication {
 
 				Caracteristica cuatroAirbags = caracteristicaService.guardarCaracteristica(Caracteristica.builder().titulo("4 Airbags").icono("https://www.svgrepo.com/show/2349/airbag.svg").build());
 
+				Politica devolucion = Politica.builder().titulo("Devolución").descripcion("Con combustible \n Limpio \n Antes de las 12.").build();
+
+				Politica entrega = Politica.builder().titulo("Entrega").descripcion("Llegar 30 minutos antes para verificar documentacion. \n Con combustible.").build();
+
+				Politica uso = Politica.builder().titulo("Uso").descripcion("No comer en el auto. \n Maximo 300km por dia.").build();
+
+				Set<Politica> politicas = Set.of(devolucion, entrega, uso);
 
 
 
-
-
-
-
+				Producto chevroletClassic = productoService.guardarProducto(Producto.builder().titulo("Chevrolet Corsa Classic").categoria(economico).precio(15000L)
+						.ubicacion(bariloche).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulGrande, nafta, dosAirbags, manual))
+						.politica(politicas).latitud(-41.137340F).longitud(-71.307615F).imagen(
+								Set.of(Imagen.builder().titulo("Vista General").url_img("https://upload.wikimedia.org/wikipedia/commons/3/3f/Classic_LT2.jpg").build(),
+										Imagen.builder().titulo("Vista Interior").url_img("https://autotest.com.ar/wp-content/uploads/2022/05/Chevrolet-Classic-Interior-Nuevo.jpg").build(),
+										Imagen.builder().titulo("Vista desde Atras").url_img("https://2.bp.blogspot.com/_RjqSXG-IQ6M/TBZQ6U60FuI/AAAAAAAAPcM/7OtIB99fk68/s1600/CLASSIC2.JPG").build(),
+										Imagen.builder().titulo("Vista del Baúl").url_img("https://farm4.staticflickr.com/3909/14577234496_c3c47a0875_k.jpg").build(),
+										Imagen.builder().titulo("Vista del Baúl").url_img("https://www.compraensanjuan.com/fotos_vehiculos/1751362_1.jpg").build()
+										))
+						.descripcion("El Chevrolet Corsa Classic es un automóvil compacto diseñado para adaptarse a todas tus necesidades de transporte. Con un estilo clásico y elegante, este vehículo es perfecto tanto para viajes de negocios como para escapadas de fin de semana.\n" +
+								"\n" +
+								"El interior del Corsa Classic está cuidadosamente diseñado para ofrecerte comodidad y practicidad. Con asientos ergonómicos y ajustables, disfrutarás de un viaje suave y relajante, incluso en trayectos largos. Además, cuenta con un amplio espacio de carga, lo que lo convierte en la elección ideal para aquellos que necesitan transportar equipaje o realizar compras durante su viaje.\n" +
+								"\n" +
+								"En cuanto a su rendimiento, el Corsa Classic está equipado con un motor eficiente y económico, que te permitirá recorrer largas distancias sin preocuparte por el consumo de combustible. Además, su dirección precisa y su suspensión equilibrada garantizan un manejo ágil y estable en todo momento.").build());
 			}
 		};
 	}
