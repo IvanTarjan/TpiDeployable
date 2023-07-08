@@ -91,6 +91,9 @@ public class BackIntegradorApplication {
 
 				Caracteristica nafta = caracteristicaService.guardarCaracteristica(Caracteristica.builder().titulo("Nafta").icono("https://www.svgrepo.com/show/339221/fuel.svg").build());
 
+				Caracteristica bluetooth = caracteristicaService.guardarCaracteristica(Caracteristica.builder().titulo("Bluetooth").icono("https://www.svgrepo.com/show/523194/bluetooth.svg").build());
+
+
 				Caracteristica diesel = caracteristicaService.guardarCaracteristica(Caracteristica.builder().titulo("Diésel").icono("https://www.svgrepo.com/show/339221/fuel.svg").build());
 
 				Caracteristica dosAirbags = caracteristicaService.guardarCaracteristica(Caracteristica.builder().titulo("2 Airbags").icono("https://www.svgrepo.com/show/2349/airbag.svg").build());
@@ -108,20 +111,78 @@ public class BackIntegradorApplication {
 
 
 				Producto chevroletClassic = productoService.guardarProducto(Producto.builder().titulo("Chevrolet Corsa Classic").categoria(economico).precio(15000L)
-						.ubicacion(bariloche).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulGrande, nafta, dosAirbags, manual))
+						.ubicacion(cordoba).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulGrande, nafta, dosAirbags, manual))
 						.politica(politicas).latitud(-41.137340F).longitud(-71.307615F).imagen(
 								Set.of(Imagen.builder().titulo("Vista General").url_img("https://upload.wikimedia.org/wikipedia/commons/3/3f/Classic_LT2.jpg").build(),
 										Imagen.builder().titulo("Vista Interior").url_img("https://autotest.com.ar/wp-content/uploads/2022/05/Chevrolet-Classic-Interior-Nuevo.jpg").build(),
 										Imagen.builder().titulo("Vista desde Atras").url_img("https://2.bp.blogspot.com/_RjqSXG-IQ6M/TBZQ6U60FuI/AAAAAAAAPcM/7OtIB99fk68/s1600/CLASSIC2.JPG").build(),
 										Imagen.builder().titulo("Vista del Baúl").url_img("https://farm4.staticflickr.com/3909/14577234496_c3c47a0875_k.jpg").build(),
-										Imagen.builder().titulo("Vista del Baúl").url_img("https://www.compraensanjuan.com/fotos_vehiculos/1751362_1.jpg").build()
+										Imagen.builder().titulo("Vista lateral").url_img("https://www.compraensanjuan.com/fotos_vehiculos/1751362_1.jpg").build()
 										))
 						.descripcion("El Chevrolet Corsa Classic es un automóvil compacto diseñado para adaptarse a todas tus necesidades de transporte. Con un estilo clásico y elegante, este vehículo es perfecto tanto para viajes de negocios como para escapadas de fin de semana.\n" +
 								"\n" +
 								"El interior del Corsa Classic está cuidadosamente diseñado para ofrecerte comodidad y practicidad. Con asientos ergonómicos y ajustables, disfrutarás de un viaje suave y relajante, incluso en trayectos largos. Además, cuenta con un amplio espacio de carga, lo que lo convierte en la elección ideal para aquellos que necesitan transportar equipaje o realizar compras durante su viaje.\n" +
 								"\n" +
 								"En cuanto a su rendimiento, el Corsa Classic está equipado con un motor eficiente y económico, que te permitirá recorrer largas distancias sin preocuparte por el consumo de combustible. Además, su dirección precisa y su suspensión equilibrada garantizan un manejo ágil y estable en todo momento.").build());
+
+
+				Producto fordKa = productoService.guardarProducto(Producto.builder().titulo("Ford Ka").categoria(economico).precio(14000L)
+						.ubicacion(mendoza).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulChico, nafta, dosAirbags, manual))
+						.politica(politicas).latitud(-32.885342F).longitud(-68.843472F).imagen(
+								Set.of(Imagen.builder().titulo("Vista General").url_img("https://upload.wikimedia.org/wikipedia/commons/0/00/2018_Ford_KA%2B_Zetec_1.0_Front.jpg").build(),
+										Imagen.builder().titulo("Vista Interior").url_img("https://www.megautos.com/wp-content/uploads/2018/05/Ford-Ka-Freestyle-interior.jpg").build(),
+										Imagen.builder().titulo("Vista desde Atras").url_img("https://d171xgro1r36rb.cloudfront.net/1YbYhcVS_w1VZNOIAapcbBLQgjLluwZyP.jpg").build(),
+										Imagen.builder().titulo("Vista del Baúl").url_img("https://www.megautos.com/wp-content/uploads/2017/02/Ford-Ka-mas-baul-1024x768.jpg").build(),
+										Imagen.builder().titulo("Vista lateral").url_img("https://www.megautos.com/wp-content/uploads/2017/03/Ford-Ka-Trail-lateral-1024x669.jpg").build()
+								))
+						.descripcion("El Ford Ka es perfecto para aquellos que buscan un automóvil ágil y fácil de maniobrar en entornos urbanos. Su diseño moderno y aerodinámico no solo le otorga una apariencia elegante, sino que también mejora su eficiencia en el consumo de combustible.\n" +
+								"\n" +
+								"Con su tamaño compacto, el Ford Ka es ideal para desplazarte por las calles estrechas de la ciudad y encontrar fácilmente estacionamiento. A pesar de su tamaño, el interior del Ka ofrece un espacio sorprendentemente amplio, brindando comodidad tanto para el conductor como para los pasajeros.\n" +
+								"\n" +
+								"El Ford Ka cuenta con tecnología y características innovadoras para hacer que cada viaje sea cómodo y agradable. Desde su sistema de infoentretenimiento con pantalla táctil y conectividad Bluetooth hasta su sistema de control de crucero, el Ka está equipado para satisfacer tus necesidades tecnológicas mientras conduces.").build());
+
+				Producto volkswagenFox = productoService.guardarProducto(Producto.builder().titulo("Volkswagen Crossfox").categoria(economico).precio(14000L)
+						.ubicacion(salta).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulChico, nafta, dosAirbags, manual, frenosAbs))
+						.politica(politicas).latitud(-24.794860F).longitud(-65.428259F).imagen(
+								Set.of(Imagen.builder().titulo("Vista General").url_img("https://acnews.blob.core.windows.net/imgnews/large/NAZ_a1b641a28e37452887bfd645eefd9a27.jpg").build(),
+										Imagen.builder().titulo("Vista Interior").url_img("https://www.megautos.com/wp-content/uploads/2016/09/VW-Fox-highline-interior-1024x575.jpg").build(),
+										Imagen.builder().titulo("Vista desde Atras").url_img("https://www.megautos.com/wp-content/uploads/2016/09/VW-Fox-Pepper-trasera.jpg").build(),
+										Imagen.builder().titulo("Vista del Baúl").url_img("https://farm9.staticflickr.com/8568/16345265425_d09b258432_k.jpg").build(),
+										Imagen.builder().titulo("Vista lateral").url_img("https://i.ytimg.com/vi/apqrg8yNyhE/maxresdefault.jpg").build()
+								))
+						.descripcion("El Volkswagen Crossfox es un automóvil compacto que combina la practicidad de un hatchback con la robustez de un crossover. Su diseño distintivo y deportivo, con líneas audaces y detalles resistentes, le brinda una apariencia única que se destaca en la carretera.\n" +
+								"\n" +
+								"Este vehículo está diseñado para enfrentar diversos terrenos y condiciones de manejo. Con una altura elevada y un sistema de tracción integral, el Crossfox te permite aventurarte fuera de la ciudad y disfrutar de experiencias todo terreno con confianza. Ya sea en caminos irregulares o en condiciones climáticas desafiantes, este vehículo te brinda estabilidad y seguridad en cada trayecto.").build());
+
+				Producto peugeot207 = productoService.guardarProducto(Producto.builder().titulo("Peugeot 207").categoria(economico).precio(12000L)
+						.ubicacion(caba).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulChico, nafta, dosAirbags, manual, bluetooth))
+						.politica(politicas).latitud(-34.589347F).longitud(-58.426827F).imagen(
+								Set.of(Imagen.builder().titulo("Vista General").url_img("https://cdn.motor1.com/images/mgl/my4w4/s1/4x3/adios-al-peugeot-207-compact.webp").build(),
+										Imagen.builder().titulo("Vista Interior").url_img("https://www.megautos.com/wp-content/uploads/2016/07/Peugeot-207-Compact-interior-1024x669.jpg").build(),
+										Imagen.builder().titulo("Vista desde Atras").url_img("https://www.megautos.com/wp-content/uploads/2016/07/Peugeot-207-Compact-5p-trasera-1024x669.jpg").build(),
+										Imagen.builder().titulo("Vista del Baúl").url_img("https://www.carsmagazine.com.ar/wp-content/uploads/2009/11/peugeot-207-compact-sedan-31.jpg").build(),
+										Imagen.builder().titulo("Vista lateral").url_img("https://autotest.com.ar/wp-content/uploads/2021/07/CHEVROLET-207-PERFIL.jpg").build()
+								))
+						.descripcion("El Peugeot 207 es un automóvil versátil que se adapta tanto a tus necesidades urbanas como a tus aventuras en carretera. Con su diseño aerodinámico y líneas suaves, este vehículo destaca por su apariencia moderna y sofisticada.\n" +
+								"\n" +
+								"El interior del Peugeot 207 ha sido diseñado para brindarte una experiencia de conducción cómoda y agradable. Con asientos ergonómicos y espaciosos, disfrutarás de un viaje placentero tanto para el conductor como para los pasajeros. Además, cuenta con una variedad de características convenientes, como un sistema de infoentretenimiento con pantalla táctil, conectividad Bluetooth y volante multifunción, que te permiten controlar tus dispositivos y acceder a la información que necesitas mientras estás en movimiento.").build());
+
+				Producto nissanMarch = productoService.guardarProducto(Producto.builder().titulo("Nissan March").categoria(economico).precio(13500L)
+						.ubicacion(ushaia).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulGrande, nafta, dosAirbags, manual, frenosAbs,bluetooth))
+						.politica(politicas).latitud(-54.819789F).longitud(-68.327874F).imagen(
+								Set.of(Imagen.builder().titulo("Vista General").url_img("https://cdn.motor1.com/images/mgl/0M9y9/s1/adios-al-nissan-march.jpg").build(),
+										Imagen.builder().titulo("Vista Interior").url_img("https://i0.wp.com/www.mundoautomotor.com.ar/web/wp-content/uploads/2014/03/Nissan-March-2014-3.jpg").build(),
+										Imagen.builder().titulo("Vista desde Atras").url_img("https://fotos.perfil.com/2012/05/01/nissan-march-atras.jpg").build(),
+										Imagen.builder().titulo("Vista del Baúl").url_img("https://cdn.motor1.com/images/mgl/WVMnr/s3/critica-nissan-march-active.webp").build(),
+										Imagen.builder().titulo("Vista lateral").url_img("https://hiramnoriega.com/wp-content/uploads/2020/12/324324432432423.jpg").build()
+								))
+						.descripcion("El Nissan March es un automóvil urbano diseñado para adaptarse a la vida en la ciudad. Con su tamaño compacto y su capacidad de maniobra, es perfecto para desplazarte fácilmente por calles congestionadas y encontrar estacionamiento sin problemas.\n" +
+								"\n" +
+								"A pesar de su tamaño, el Nissan March ofrece un interior sorprendentemente espacioso y cómodo. Con asientos bien diseñados y ajustables, disfrutarás de una experiencia de conducción placentera tanto para el conductor como para los pasajeros. Además, cuenta con suficiente espacio de carga para tus pertenencias o compras durante el viaje.").build());
+
 			}
+
+
 		};
 	}
 
