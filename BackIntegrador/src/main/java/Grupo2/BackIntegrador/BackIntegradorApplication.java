@@ -180,6 +180,32 @@ public class BackIntegradorApplication {
 								"\n" +
 								"A pesar de su tamaño, el Nissan March ofrece un interior sorprendentemente espacioso y cómodo. Con asientos bien diseñados y ajustables, disfrutarás de una experiencia de conducción placentera tanto para el conductor como para los pasajeros. Además, cuenta con suficiente espacio de carga para tus pertenencias o compras durante el viaje.").build());
 
+				Producto fiatPalio = productoService.guardarProducto(Producto.builder().titulo("Fiat Palio").categoria(economico).precio(10500L)
+						.ubicacion(bariloche).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulChico, nafta, dosAirbags, manual, frenosAbs))
+						.politica(politicas).latitud(-41.136397F).longitud(-71.308539F).imagen(
+								Set.of(Imagen.builder().titulo("Vista General").url_img("https://upload.wikimedia.org/wikipedia/commons/7/7e/Fiat_Palio_white_5door.jpg").build(),
+										Imagen.builder().titulo("Vista Interior").url_img("https://autotest.com.ar/wp-content/uploads/2022/12/Fiat-Palio-interior.jpg").build(),
+										Imagen.builder().titulo("Vista desde Atras").url_img("https://imagenes.cordobavende.com/6863483bbc922b780ddbc84c5b2fcae9.jpg").build(),
+										Imagen.builder().titulo("Vista del Baúl").url_img("https://www.compraensanjuan.com/fotos_vehiculos/2034445_8.jpg").build(),
+										Imagen.builder().titulo("Vista lateral").url_img("https://w0.peakpx.com/wallpaper/540/19/HD-wallpaper-2012-fiat-palio-side-car.jpg").build()
+								))
+						.descripcion("El Fiat Palio es un automóvil compacto diseñado para adaptarse a diferentes necesidades de conducción. Con su diseño aerodinámico y líneas elegantes, este vehículo destaca por su estilo moderno y atractivo.\n" +
+								"\n" +
+								"En el interior, el Fiat Palio ofrece un espacio amplio y cómodo para todos los ocupantes. Sus asientos ergonómicos brindan un apoyo adecuado durante los viajes, mientras que su diseño inteligente maximiza el espacio disponible. Además, cuenta con un sistema de climatización eficiente, lo que garantiza una temperatura agradable en el habitáculo en todo momento").build());
+
+				Producto relaultLogan = productoService.guardarProducto(Producto.builder().titulo("Fiat Palio").categoria(gamaMedia).precio(16800L)
+						.ubicacion(puertoMadrin).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulGrande, nafta, dosAirbags, manual, frenosAbs))
+						.politica(politicas).latitud(-42.763615F).longitud(-65.043935F).imagen(
+								Set.of(Imagen.builder().titulo("Vista General").url_img("https://cdn.motor1.com/images/mgl/e2jKK/s3/critica-renault-logan-cvt.jpg").build(),
+										Imagen.builder().titulo("Vista Interior").url_img("https://www.megautos.com/wp-content/uploads/2019/11/nuevo-renault-logan-interior-1024x669.jpg").build(),
+										Imagen.builder().titulo("Vista desde Atras").url_img("https://www.elcarrocolombiano.com/wp-content/uploads/2020/02/20200309-RENAULT-LOGAN-INTENS-CVT-PRUEBA-DE-MANEJO-COLOMBIA-VIDEO-03.jpg").build(),
+										Imagen.builder().titulo("Vista del Baúl").url_img("https://www.megautos.com/wp-content/uploads/2020/09/Nuevo-Logan-2020-baul-1024x669.jpg").build(),
+										Imagen.builder().titulo("Vista lateral").url_img("https://tuautoencasa.com/img/galeria/1619215248.jpg").build()
+								))
+						.descripcion("El Renault Logan es un automóvil sedán diseñado para brindarte un espacio generoso y cómodo tanto para los pasajeros como para el equipaje. Con su diseño aerodinámico y líneas elegantes, el Logan destaca por su aspecto moderno y atractivo.\n" +
+								"\n" +
+								"En el interior, el Renault Logan ofrece un amplio espacio para que todos los ocupantes se sientan cómodos durante el viaje. Sus asientos ergonómicos brindan un soporte adecuado y su diseño inteligente optimiza el espacio disponible. Además, cuenta con un maletero espacioso, lo que lo convierte en una opción ideal para aquellos que necesitan transportar equipaje o realizar compras durante su viaje.").build());
+
 			}
 
 
