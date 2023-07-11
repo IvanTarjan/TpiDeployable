@@ -206,6 +206,55 @@ public class BackIntegradorApplication {
 								"\n" +
 								"En el interior, el Renault Logan ofrece un amplio espacio para que todos los ocupantes se sientan cómodos durante el viaje. Sus asientos ergonómicos brindan un soporte adecuado y su diseño inteligente optimiza el espacio disponible. Además, cuenta con un maletero espacioso, lo que lo convierte en una opción ideal para aquellos que necesitan transportar equipaje o realizar compras durante su viaje.").build());
 
+				Producto fiatCronos = productoService.guardarProducto(Producto.builder().titulo("Fiat Cronos").categoria(gamaMedia).precio(17000L)
+						.ubicacion(losAndes).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulGrande, nafta, dosAirbags, manual, frenosAbs))
+						.politica(politicas).latitud(-40.136765F).longitud(-71.293497F).imagen(
+								Set.of(Imagen.builder().titulo("Vista General").url_img("https://autotest.com.ar/wp-content/uploads/2021/07/FIAT-CRONOS-SDESIGN-2022.jpg").build(),
+										Imagen.builder().titulo("Vista Interior").url_img("https://cdn.motor1.com/images/mgl/GLXVE/s1/4x3/fiat-mostro-el-interior-del-cronos-argentino-todas-las-fotos.webp").build(),
+										Imagen.builder().titulo("Vista desde Atras").url_img("https://www.megautos.com/wp-content/uploads/2019/05/Fiat-Cronos-Centenario-atras-1024x669.jpg").build(),
+										Imagen.builder().titulo("Vista del Baúl").url_img("https://www.megautos.com/wp-content/uploads/2020/11/Fiat-Cronos-2021-baul-1024x669.jpg").build(),
+										Imagen.builder().titulo("Vista lateral").url_img("https://www.megautos.com/wp-content/uploads/2019/05/Fiat-Cronos-Centenario-lateral-1024x669.jpg").build()
+								))
+						.descripcion("El Fiat Cronos es un sedán compacto diseñado con líneas elegantes y modernas que destacan su personalidad distintiva en la carretera. Su diseño aerodinámico y deportivo no solo agrega atractivo visual, sino que también contribuye a la eficiencia en el consumo de combustible.\n" +
+								"\n" +
+								"Al entrar al Fiat Cronos, descubrirás un interior espacioso y confortable, diseñado pensando en tus necesidades y comodidad. Los asientos ergonómicos ofrecen un excelente soporte, incluso en viajes largos, y los materiales de alta calidad y los acabados cuidadosamente seleccionados realzan la sensación de lujo.").build());
+
+				Producto ecosport = productoService.guardarProducto(Producto.builder().titulo("Ford Ecosport").categoria(gamaMedia).precio(15000L)
+						.ubicacion(bariloche).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulGrande, nafta, dosAirbags, manual, frenosAbs))
+						.politica(politicas).latitud(-41.136397F).longitud(-71.308539F).imagen(
+								Set.of(Imagen.builder().titulo("Vista General").url_img("https://cdn.motor1.com/images/mgl/MB2En/s3/la-carta-que-envio-ford-argentina-a-quienes-recibiran-la-ecosport-importada-de-india.jpg").build(),
+										Imagen.builder().titulo("Vista Interior").url_img("https://cdn.autobild.es/sites/navi.axelspringer.es/public/media/image/2017/09/ford-ecosport-2018_4.jpg").build(),
+										Imagen.builder().titulo("Vista desde Atras").url_img("https://carnovo.com/wp-content/uploads/2018/08/Trasera-del-Ford-EcoSport-2018.jpg").build(),
+										Imagen.builder().titulo("Vista del Baúl").url_img("https://fotos.perfil.com/2019/05/03/test-comparativo-citroen-c4-cactus-ford-ecosport-storm-prueba-de-manejo-687050.jpg").build(),
+										Imagen.builder().titulo("Vista lateral").url_img("https://fotos.perfil.com/2012/10/01/trim/1280/720/nueva-ecosport-lateral.jpg").build()
+								))
+						.descripcion("El Ford Ecosport es el compañero perfecto para tus aventuras en la ciudad y más allá. Con un diseño moderno y robusto, este SUV compacto ofrece una apariencia atractiva y deportiva que seguramente llamará la atención en cualquier lugar al que vayas.\n" +
+								"\n" +
+								"Este vehículo está equipado con un potente motor que ofrece un rendimiento excepcional y una conducción suave. Ya sea que estés conduciendo por calles urbanas o explorando carreteras sinuosas, el Ford Ecosport te brindará una experiencia de conducción ágil y emocionante.\n" +
+								"\n" +
+								"El interior del Ford Ecosport es espacioso y cómodo, lo que lo convierte en una excelente opción para familias, amigos o cualquier persona que desee disfrutar de un viaje relajante. El amplio espacio para las piernas y los asientos ajustables garantizan que todos los ocupantes tengan un viaje confortable, sin importar la duración del trayecto.").build());
+
+				Producto renaultStepway = productoService.guardarProducto(Producto.builder().titulo("Renault Sandero Stepway").categoria(gamaMedia).precio(15300L)
+						.ubicacion(mendoza).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulGrande, nafta, dosAirbags, manual, frenosAbs, bluetooth))
+						.politica(politicas).latitud(-32.885342F).longitud(-68.843472F).imagen(
+								Set.of(Imagen.builder().titulo("Vista General").url_img("https://autotest.com.ar/wp-content/uploads/2022/05/Renault-Sandero-Stepway-render-frente.jpg").build(),
+										Imagen.builder().titulo("Vista Interior").url_img("https://www.autoweb.com.ar/wp-content/uploads/2019/11/Plancha-BAJA.jpg").build(),
+										Imagen.builder().titulo("Vista desde Atras").url_img("https://www.megautos.com/wp-content/uploads/2022/10/renault-stepway-zen-1-atras.jpg").build(),
+										Imagen.builder().titulo("Vista del Baúl").url_img("https://www.megautos.com/wp-content/uploads/2020/09/Nuevo-Sandero-Stepway-2020-baul.jpg").build(),
+										Imagen.builder().titulo("Vista lateral").url_img("https://www.megautos.com/wp-content/uploads/2018/09/renault-sandero-stepway-volcom-lateral.jpg").build()
+								))
+						.descripcion("").build());
+
+//				Producto placeHolder = productoService.guardarProducto(Producto.builder().titulo("").categoria(gamaMedia).precio(15000L)
+//						.ubicacion(bariloche).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulGrande, nafta, dosAirbags, manual, frenosAbs))
+//						.politica(politicas).latitud(-41.136397F).longitud(-71.308539F).imagen(
+//								Set.of(Imagen.builder().titulo("Vista General").url_img("").build(),
+//										Imagen.builder().titulo("Vista Interior").url_img("").build(),
+//										Imagen.builder().titulo("Vista desde Atras").url_img("").build(),
+//										Imagen.builder().titulo("Vista del Baúl").url_img("").build(),
+//										Imagen.builder().titulo("Vista lateral").url_img("").build()
+//								))
+//						.descripcion("").build());
 			}
 
 
