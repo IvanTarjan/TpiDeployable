@@ -18,7 +18,7 @@ const Administration = () => {
         <div>
           <h1 style={{ paddingTop: '0' }}>Administracion</h1>
         </div>
-        <IconButton disableRipple={true} sx={{ width: 175 }} onClick={handleClick} >
+        <IconButton disableRipple={true} onClick={handleClick} >
           <ArrowBackIosNewIcon fontSize='large' color='action' />
         </IconButton>
       </div>

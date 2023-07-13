@@ -44,7 +44,7 @@ const CarDetails = () => {
     setIsLike(prev => !prev)
   }
 
-  const isTablet = useMediaQuery('(max-width:1000px)');
+  const isTablet = useMediaQuery('(max-width:1400px)');
   const isMobile = useMediaQuery('(max-width:600px)');
   if (isLoading) {
     return (

@@ -11,7 +11,7 @@ const BodyContextProvider = ({ children }) => {
   const [allDates, setAllDates] = useState([])
   const [categorias, setCategorias] = useState([])
   const [selectedCity, setSelectedCity] = useState({})
-  const apiUrl = "http://181.25.70.63:6780";
+  const apiUrl = "http://demeters.sytes.net:6780";
 
   useEffect(() => {
     axios.get(`${apiUrl}/api/ubicacion`)

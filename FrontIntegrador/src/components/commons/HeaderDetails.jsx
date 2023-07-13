@@ -24,7 +24,7 @@ const HeaderDetails = ({ car }) => {
           <p>{car.categoria.titulo}</p>
           <h1 style={{ paddingTop: '0' }}>{car.titulo}</h1>
         </div>
-        <IconButton disableRipple={true} sx={{ width: 175 }} onClick={handleClick}>
+        <IconButton disableRipple={true}  onClick={handleClick}>
           <ArrowBackIosNewIcon fontSize='large' color='action' />
         </IconButton>
       </div>
@@ -35,7 +35,6 @@ const HeaderDetails = ({ car }) => {
           <div className={styles.locationDataTitleCity}>
 
             <span>{car.ubicacion.nombre}, {car.ubicacion.pais}</span>
-            <p>A 4 m del centro</p>
           </div>
         </div>
 

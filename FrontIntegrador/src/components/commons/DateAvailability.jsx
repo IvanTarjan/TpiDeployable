@@ -33,7 +33,7 @@ const DateAvailability = ({ dateRangeArr, id }) => {
   }, [allDates])
 
   return (
-    <Box display={"flex"} flexDirection="column" justifyContent={"center"} alignItems="flex-start" width={"100vw"} bgcolor={"#ececef"} marginLeft="-40px" padding={"0px 40px 40px"}>
+    <Box display={"flex"} flexDirection="column" justifyContent={"center"} alignItems="flex-start" width={"107%"} bgcolor={"#ececef"} marginLeft="-3.5%" padding={"3.5%"}>
       <h1>Fechas Disponibles</h1>
       <Box display={"flex"} justifyContent="center" gap={{ xs: '10px', md: '50px', lg: '150px' }} width="100%" alignItems={"center"} flexDirection={{ xs: 'column', md: "row" }}>
         <Calendar

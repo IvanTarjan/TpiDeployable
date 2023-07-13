@@ -100,11 +100,11 @@ public class BackIntegradorApplication {
 
 				Caracteristica cuatroAirbags = caracteristicaService.guardarCaracteristica(Caracteristica.builder().titulo("4 Airbags").icono("https://www.svgrepo.com/show/2349/airbag.svg").build());
 
-				Politica devolucion = Politica.builder().titulo("Devolución").descripcion("Con combustible \n Limpio \n Antes de las 12.").build();
+				Politica devolucion = Politica.builder().titulo("Devolución").descripcion("Con combustible \n\n Limpio \n\n Antes de las 12.").build();
 
-				Politica entrega = Politica.builder().titulo("Entrega").descripcion("Llegar 30 minutos antes para verificar documentacion. \n Con combustible.").build();
+				Politica entrega = Politica.builder().titulo("Entrega").descripcion("Llegar 30 minutos antes para verificar documentacion. \n\n Con combustible.").build();
 
-				Politica uso = Politica.builder().titulo("Uso").descripcion("No comer en el auto. \n Maximo 300km por dia.").build();
+				Politica uso = Politica.builder().titulo("Uso").descripcion("No comer en el auto. \n\n Maximo 300km por dia.").build();
 
 				Set<Politica> politicas = Set.of(devolucion, entrega, uso);
 

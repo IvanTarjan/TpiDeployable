@@ -1312,3 +1312,41 @@
 [2023-07-13 15:46:54] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: 2 Airbags
 [2023-07-13 15:46:54] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: 4 Airbags
 [2023-07-13 15:46:54] [ INFO ] [ProductoService:46] Se inició una operación de guardado de la producto con titulo: Chevrolet Corsa Classic
+[2023-07-13 16:03:55] [ INFO ] [ProductoService:34] Se inició el listado de todas las productos
+[2023-07-13 16:03:55] [ INFO ] [CategoriaService:32] Se inició una operación de guardado de la categoria con titulo: Economico
+[2023-07-13 16:03:55] [ INFO ] [CategoriaService:32] Se inició una operación de guardado de la categoria con titulo: Gama-media
+[2023-07-13 16:03:55] [ INFO ] [CategoriaService:32] Se inició una operación de guardado de la categoria con titulo: Premium
+[2023-07-13 16:03:55] [ INFO ] [CategoriaService:32] Se inició una operación de guardado de la categoria con titulo: PickUp
+[2023-07-13 16:03:55] [ INFO ] [UbicacionService:31] Se inició una operación de guardado de la ciudad con id=: null
+[2023-07-13 16:03:55] [ INFO ] [UbicacionService:31] Se inició una operación de guardado de la ciudad con id=: null
+[2023-07-13 16:03:55] [ INFO ] [UbicacionService:31] Se inició una operación de guardado de la ciudad con id=: null
+[2023-07-13 16:03:55] [ INFO ] [UbicacionService:31] Se inició una operación de guardado de la ciudad con id=: null
+[2023-07-13 16:03:55] [ INFO ] [UbicacionService:31] Se inició una operación de guardado de la ciudad con id=: null
+[2023-07-13 16:03:55] [ INFO ] [UbicacionService:31] Se inició una operación de guardado de la ciudad con id=: null
+[2023-07-13 16:03:55] [ INFO ] [UbicacionService:31] Se inició una operación de guardado de la ciudad con id=: null
+[2023-07-13 16:03:55] [ INFO ] [UbicacionService:31] Se inició una operación de guardado de la ciudad con id=: null
+[2023-07-13 16:03:55] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: Manual
+[2023-07-13 16:03:55] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: Automatico
+[2023-07-13 16:03:55] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: Aire Acondicionado
+[2023-07-13 16:03:55] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: 4 puertas
+[2023-07-13 16:03:55] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: 2 puertas
+[2023-07-13 16:03:55] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: Tracción Simple
+[2023-07-13 16:03:55] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: Doble Tracción
+[2023-07-13 16:03:55] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: Baúl Grande
+[2023-07-13 16:03:55] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: Baúl Chico
+[2023-07-13 16:03:55] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: Frenos con ABS
+[2023-07-13 16:03:55] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: Nafta
+[2023-07-13 16:03:55] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: Bluetooth
+[2023-07-13 16:03:55] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: Diésel
+[2023-07-13 16:03:55] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: 2 Airbags
+[2023-07-13 16:03:55] [ INFO ] [CaracteristicaService:30] Se inició una operación de guardado de la Caracteristicas con titulo: 4 Airbags
+[2023-07-13 16:03:55] [ INFO ] [ProductoService:46] Se inició una operación de guardado de la producto con titulo: Chevrolet Corsa Classic
+[2023-07-13 16:03:55] [ INFO ] [ProductoService:46] Se inició una operación de guardado de la producto con titulo: Ford Ka
+[2023-07-13 16:03:55] [ INFO ] [ProductoService:46] Se inició una operación de guardado de la producto con titulo: Volkswagen Crossfox
+[2023-07-13 16:03:55] [ INFO ] [ProductoService:46] Se inició una operación de guardado de la producto con titulo: Peugeot 207
+[2023-07-13 16:03:55] [ INFO ] [ProductoService:46] Se inició una operación de guardado de la producto con titulo: Nissan March
+[2023-07-13 16:03:55] [ INFO ] [ProductoService:46] Se inició una operación de guardado de la producto con titulo: Fiat Palio
+[2023-07-13 16:03:55] [ INFO ] [ProductoService:46] Se inició una operación de guardado de la producto con titulo: Fiat Palio
+[2023-07-13 16:03:55] [ INFO ] [ProductoService:46] Se inició una operación de guardado de la producto con titulo: Fiat Cronos
+[2023-07-13 16:03:55] [ INFO ] [ProductoService:46] Se inició una operación de guardado de la producto con titulo: Ford Ecosport
+[2023-07-13 16:03:55] [ INFO ] [ProductoService:46] Se inició una operación de guardado de la producto con titulo: Renault Sandero Stepway
