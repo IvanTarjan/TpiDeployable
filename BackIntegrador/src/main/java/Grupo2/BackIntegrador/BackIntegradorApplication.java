@@ -245,7 +245,119 @@ public class BackIntegradorApplication {
 								))
 						.descripcion("").build());
 
-//				Producto placeHolder = productoService.guardarProducto(Producto.builder().titulo("").categoria(gamaMedia).precio(15000L)
+				Producto ChevroletJoyPlus = productoService.guardarProducto(Producto.builder().titulo("Chevrolet Joy Plus").categoria(gamaMedia).precio(18000L)
+						.ubicacion(salta).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulGrande, nafta, dosAirbags, manual, frenosAbs))
+						.politica(Politica.politicaSetCloner(politicas)).latitud(-24.794860F).longitud(-65.428259F).imagen(
+								Set.of(Imagen.builder().titulo("Vista General").url_img("https://www.megautos.com/wp-content/uploads/2019/10/Chevrolet-Joy-Plus-2020-dinamica.jpg").build(),
+										Imagen.builder().titulo("Vista Interior").url_img("https://www.megautos.com/wp-content/uploads/2019/10/Chevrolet-Joy-Plus-2020-interior.jpg").build(),
+										Imagen.builder().titulo("Vista desde Atras").url_img("https://www.megautos.com/wp-content/uploads/2019/10/Chevrolet-Joy-Plus-2020-dinamica-trasera.jpg").build(),
+										Imagen.builder().titulo("Vista del Baúl").url_img("https://www.megautos.com/wp-content/uploads/2019/10/Chevrolet-Joy-Plus-2020-dinamica-trasera.jpg").build(),
+										Imagen.builder().titulo("Vista lateral").url_img("https://www.megautos.com/wp-content/uploads/2019/10/Chevrolet-Joy-Plus-2020-delantera.jpg").build()
+								))
+						.descripcion("").build());
+
+				Producto FiatStrada = productoService.guardarProducto(Producto.builder().titulo("Fiat Strada Volcano").categoria(pickUp).precio(20000L)
+						.ubicacion(caba).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulGrande, nafta, dosAirbags, manual, frenosAbs))
+						.politica(Politica.politicaSetCloner(politicas)).latitud(-34.589347F).longitud(-58.426827F).imagen(
+								Set.of(Imagen.builder().titulo("Vista General").url_img("https://www.megautos.com/wp-content/uploads/2022/07/fiat-strada-volcano-2023-delantera.jpg").build(),
+										Imagen.builder().titulo("Vista Interior").url_img("https://www.megautos.com/wp-content/uploads/2023/07/FIat-Strada-Volcano-2023-interior-1.jpg").build(),
+										Imagen.builder().titulo("Vista desde Atras").url_img("https://autotest.com.ar/wp-content/uploads/2022/01/Fiat-Strada-carga.jpg").build(),
+										Imagen.builder().titulo("Vista del Baúl").url_img("https://autotest.com.ar/wp-content/uploads/2022/01/Fiat-Strada-carga.jpg").build(),
+										Imagen.builder().titulo("Vista lateral").url_img("https://www.megautos.com/wp-content/uploads/2022/07/fiat-strada-volcano-2023-lateral.jpg").build()
+								))
+						.descripcion("").build());
+
+				Producto CitroënCactus = productoService.guardarProducto(Producto.builder().titulo("Citroën C4 Cactus").categoria(gamaMedia).precio(15500L)
+						.ubicacion(puertoMadrin).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulGrande, nafta, dosAirbags, manual, frenosAbs))
+						.politica(Politica.politicaSetCloner(politicas)).latitud(-42.763615F).longitud(-65.043935F).imagen(
+								Set.of(Imagen.builder().titulo("Vista General").url_img("https://www.megautos.com/wp-content/uploads/2023/07/Citroen-C4-Cactus-2023-dinamica.jpg").build(),
+										Imagen.builder().titulo("Vista Interior").url_img("https://www.megautos.com/wp-content/uploads/2023/07/Citroen-C4-Cactus-2023-interior-1.jpg").build(),
+										Imagen.builder().titulo("Vista desde Atras").url_img("https://www.megautos.com/wp-content/uploads/2023/07/Citroen-C4-Cactus-2023-dinamica-1.jpg").build(),
+										Imagen.builder().titulo("Vista del Baúl").url_img("https://www.megautos.com/wp-content/uploads/2023/07/Citroen-C4-Cactus-2023-dinamica-1.jpg").build(),
+										Imagen.builder().titulo("Vista lateral").url_img("https://www.megautos.com/wp-content/uploads/2023/07/Citroen-C4-Cactus-2023-delantera-1.jpg").build()
+								))
+						.descripcion("").build());
+
+				Producto FordRanger = productoService.guardarProducto(Producto.builder().titulo("Ford Ranger").categoria(pickUp).precio(19000L)
+						.ubicacion(losAndes).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulGrande, nafta, dosAirbags, manual, frenosAbs))
+						.politica(Politica.politicaSetCloner(politicas)).latitud(-40.136765F).longitud(-71.293497F).imagen(
+								Set.of(Imagen.builder().titulo("Vista General").url_img("https://www.megautos.com/wp-content/uploads/2023/06/Nueva-Ford-Ranger-2023-8.jpg").build(),
+										Imagen.builder().titulo("Vista Interior").url_img("https://www.megautos.com/wp-content/uploads/2023/06/Nueva-Ranger-Argentina-interior-Limited.jpg").build(),
+										Imagen.builder().titulo("Vista desde Atras").url_img("https://www.megautos.com/wp-content/uploads/2023/06/Nueva-Ford-Ranger-2023-11.jpg").build(),
+										Imagen.builder().titulo("Vista del Baúl").url_img("https://www.megautos.com/wp-content/uploads/2023/06/Nueva-Ford-Ranger-2023-11.jpg").build(),
+										Imagen.builder().titulo("Vista lateral").url_img("https://www.megautos.com/wp-content/uploads/2023/06/Nueva-Ford-Ranger-2023-5.jpg").build()
+								))
+						.descripcion("").build());
+
+				Producto VolkswagenPolo = productoService.guardarProducto(Producto.builder().titulo("Volkswagen Polo Track").categoria(premium).precio(16500L)
+						.ubicacion(salta).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulGrande, nafta, dosAirbags, manual, frenosAbs))
+						.politica(Politica.politicaSetCloner(politicas)).latitud(-24.794860F).longitud(-65.428259F).imagen(
+								Set.of(Imagen.builder().titulo("Vista General").url_img("https://www.megautos.com/wp-content/uploads/2022/11/Volkswagen-Polo-Track-delantera.jpg").build(),
+										Imagen.builder().titulo("Vista Interior").url_img("https://www.megautos.com/wp-content/uploads/2022/11/Volkswagen-Polo-Track-interior.jpg").build(),
+										Imagen.builder().titulo("Vista desde Atras").url_img("https://www.megautos.com/wp-content/uploads/2022/11/Volkswagen-Polo-Track-atras.jpg").build(),
+										Imagen.builder().titulo("Vista del Baúl").url_img("https://www.megautos.com/wp-content/uploads/2022/11/Volkswagen-Polo-Track-atras.jpg").build(),
+										Imagen.builder().titulo("Vista lateral").url_img("https://www.megautos.com/wp-content/uploads/2022/11/Volkswagen-Polo-Track-perfil.jpg").build()
+								))
+						.descripcion("").build());
+
+				Producto MercedesBenzGLC = productoService.guardarProducto(Producto.builder().titulo("Mercedes-Benz GLC").categoria(premium).precio(25000L)
+						.ubicacion(cordoba).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulGrande, nafta, dosAirbags, manual, frenosAbs))
+						.politica(Politica.politicaSetCloner(politicas)).latitud(-41.137340F).longitud(-68.843472F).imagen(
+								Set.of(Imagen.builder().titulo("Vista General").url_img("https://www.megautos.com/wp-content/uploads/2023/05/Mercedes-Benz-GLC-2023-adelante.jpg").build(),
+										Imagen.builder().titulo("Vista Interior").url_img("https://www.megautos.com/wp-content/uploads/2023/05/Mercedes-Benz-GLC-2023-interior.jpg").build(),
+										Imagen.builder().titulo("Vista desde Atras").url_img("https://www.megautos.com/wp-content/uploads/2023/05/Mercedes-Benz-GLC-2023-dinamica-trasera.jpg").build(),
+										Imagen.builder().titulo("Vista del Baúl").url_img("https://www.megautos.com/wp-content/uploads/2023/05/Mercedes-Benz-GLC-2023-baul.jpg").build(),
+										Imagen.builder().titulo("Vista lateral").url_img("https://www.megautos.com/wp-content/uploads/2023/05/Mercedes-Benz-GLC-2023-trasera.jpg").build()
+								))
+						.descripcion("").build());
+
+				Producto RenaultAlaskan = productoService.guardarProducto(Producto.builder().titulo("Renault Alaskan").categoria(pickUp).precio(22000L)
+						.ubicacion(bariloche).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulGrande, nafta, dosAirbags, manual, frenosAbs))
+						.politica(Politica.politicaSetCloner(politicas)).latitud(-41.136397F).longitud(-71.308539F).imagen(
+								Set.of(Imagen.builder().titulo("Vista General").url_img("https://www.megautos.com/wp-content/uploads/2023/04/Renault-Alaskan-Intens-delantera.jpg").build(),
+										Imagen.builder().titulo("Vista Interior").url_img("https://www.megautos.com/wp-content/uploads/2023/04/Renault-Alaskan-Intens-interior.jpg").build(),
+										Imagen.builder().titulo("Vista desde Atras").url_img("https://www.megautos.com/wp-content/uploads/2023/04/Renault-Alaskan-Intens-trasera.jpg").build(),
+										Imagen.builder().titulo("Vista del Baúl").url_img("https://www.megautos.com/wp-content/uploads/2023/04/Renault-Alaskan-Intens-trasera.jpg").build(),
+										Imagen.builder().titulo("Vista lateral").url_img("https://www.megautos.com/wp-content/uploads/2023/04/Renault-Alaskan-Intens-barrido-1.jpg").build()
+								))
+						.descripcion("").build());
+
+				Producto ToyotaHiluxGR = productoService.guardarProducto(Producto.builder().titulo("Toyota Hilux GR-Sport").categoria(pickUp).precio(25000L)
+						.ubicacion(puertoMadrin).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulGrande, nafta, dosAirbags, manual, frenosAbs))
+						.politica(Politica.politicaSetCloner(politicas)).latitud(-42.763615F).longitud(-65.043935F).imagen(
+								Set.of(Imagen.builder().titulo("Vista General").url_img("https://www.megautos.com/wp-content/uploads/2023/01/Nueva-Toyota-Hilux-GR-Sport-off-road.jpg").build(),
+										Imagen.builder().titulo("Vista Interior").url_img("https://www.megautos.com/wp-content/uploads/2023/01/Nueva-Toyota-Hilux-GR-Sport-interior.jpg").build(),
+										Imagen.builder().titulo("Vista desde Atras").url_img("https://www.megautos.com/wp-content/uploads/2023/04/Renault-Alaskan-Intens-trasera.jpg").build(),
+										Imagen.builder().titulo("Vista del Baúl").url_img("https://www.megautos.com/wp-content/uploads/2023/01/Nueva-Toyota-Hilux-GR-Sport-salto.jpg").build(),
+										Imagen.builder().titulo("Vista lateral").url_img("https://www.megautos.com/wp-content/uploads/2023/01/Nueva-Toyota-Hilux-GR-Sport-salto.jpg").build()
+								))
+						.descripcion("").build());
+
+				Producto HavalJoleon = productoService.guardarProducto(Producto.builder().titulo("Haval Jolion").categoria(premium).precio(18000L)
+						.ubicacion(caba).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulGrande, nafta, dosAirbags, manual, frenosAbs))
+						.politica(Politica.politicaSetCloner(politicas)).latitud(-34.589347F).longitud(-58.426827F).imagen(
+								Set.of(Imagen.builder().titulo("Vista General").url_img("https://www.megautos.com/wp-content/uploads/2023/04/Haval-Jolion-adelante.jpg").build(),
+										Imagen.builder().titulo("Vista Interior").url_img("https://www.megautos.com/wp-content/uploads/2023/04/Haval-Jolion-interior.jpg").build(),
+										Imagen.builder().titulo("Vista desde Atras").url_img("https://www.megautos.com/wp-content/uploads/2023/04/Haval-Jolion-trasera.jpg").build(),
+										Imagen.builder().titulo("Vista del Baúl").url_img("https://www.megautos.com/wp-content/uploads/2023/04/Haval-Jolion-atras.jpg").build(),
+										Imagen.builder().titulo("Vista lateral").url_img("https://www.megautos.com/wp-content/uploads/2023/04/Haval-Jolion-lateral.jpg").build()
+								))
+						.descripcion("").build());
+
+				Producto RenaultDuster = productoService.guardarProducto(Producto.builder().titulo("Renault Duster").categoria(economico).precio(14500L)
+						.ubicacion(ushaia).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulGrande, nafta, dosAirbags, manual, frenosAbs))
+						.politica(Politica.politicaSetCloner(politicas)).latitud(-54.819789F).longitud(-68.327874F).imagen(
+								Set.of(Imagen.builder().titulo("Vista General").url_img("https://www.megautos.com/wp-content/uploads/2021/07/Nueva-Renault-Duster-ar-frontal.jpg").build(),
+										Imagen.builder().titulo("Vista Interior").url_img("https://www.megautos.com/wp-content/uploads/2021/07/Nueva-Renault-Duster-ar-interior.jpg").build(),
+										Imagen.builder().titulo("Vista desde Atras").url_img("https://www.megautos.com/wp-content/uploads/2021/07/Nueva-Renault-Duster-ar-trasera.jpg").build(),
+										Imagen.builder().titulo("Vista del Baúl").url_img("https://www.megautos.com/wp-content/uploads/2021/07/Nueva-Renault-Duster-ar-trasera.jpg").build(),
+										Imagen.builder().titulo("Vista lateral").url_img("https://www.megautos.com/wp-content/uploads/2021/07/Nueva-Renault-Duster-ar-barrido.jpg").build()
+								))
+						.descripcion("").build());
+
+
+
+				//				Producto placeHolder = productoService.guardarProducto(Producto.builder().titulo("").categoria(gamaMedia).precio(15000L)
 //						.ubicacion(bariloche).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulGrande, nafta, dosAirbags, manual, frenosAbs))
 //						.politica(Politica.politicaSetCloner(politicas)).latitud(-41.136397F).longitud(-71.308539F).imagen(
 //								Set.of(Imagen.builder().titulo("Vista General").url_img("").build(),
