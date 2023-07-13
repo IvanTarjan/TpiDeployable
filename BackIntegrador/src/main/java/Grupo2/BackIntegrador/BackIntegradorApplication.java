@@ -112,7 +112,7 @@ public class BackIntegradorApplication {
 
 				Producto chevroletClassic = productoService.guardarProducto(Producto.builder().titulo("Chevrolet Corsa Classic").categoria(economico).precio(15000L)
 						.ubicacion(cordoba).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulGrande, nafta, dosAirbags, manual))
-						.politica(politicas).latitud(-41.137340F).longitud(-71.307615F).imagen(
+						.politica(Politica.politicaSetCloner(Politica.politicaSetCloner(politicas))).latitud(-41.137340F).longitud(-71.307615F).imagen(
 								Set.of(Imagen.builder().titulo("Vista General").url_img("https://upload.wikimedia.org/wikipedia/commons/3/3f/Classic_LT2.jpg").build(),
 										Imagen.builder().titulo("Vista Interior").url_img("https://autotest.com.ar/wp-content/uploads/2022/05/Chevrolet-Classic-Interior-Nuevo.jpg").build(),
 										Imagen.builder().titulo("Vista desde Atras").url_img("https://2.bp.blogspot.com/_RjqSXG-IQ6M/TBZQ6U60FuI/AAAAAAAAPcM/7OtIB99fk68/s1600/CLASSIC2.JPG").build(),
@@ -128,7 +128,7 @@ public class BackIntegradorApplication {
 
 				Producto fordKa = productoService.guardarProducto(Producto.builder().titulo("Ford Ka").categoria(economico).precio(14000L)
 						.ubicacion(mendoza).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulChico, nafta, dosAirbags, manual))
-						.politica(politicas).latitud(-32.885342F).longitud(-68.843472F).imagen(
+						.politica(Politica.politicaSetCloner(politicas)).latitud(-32.885342F).longitud(-68.843472F).imagen(
 								Set.of(Imagen.builder().titulo("Vista General").url_img("https://upload.wikimedia.org/wikipedia/commons/0/00/2018_Ford_KA%2B_Zetec_1.0_Front.jpg").build(),
 										Imagen.builder().titulo("Vista Interior").url_img("https://www.megautos.com/wp-content/uploads/2018/05/Ford-Ka-Freestyle-interior.jpg").build(),
 										Imagen.builder().titulo("Vista desde Atras").url_img("https://d171xgro1r36rb.cloudfront.net/1YbYhcVS_w1VZNOIAapcbBLQgjLluwZyP.jpg").build(),
@@ -143,7 +143,7 @@ public class BackIntegradorApplication {
 
 				Producto volkswagenFox = productoService.guardarProducto(Producto.builder().titulo("Volkswagen Crossfox").categoria(economico).precio(14000L)
 						.ubicacion(salta).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulChico, nafta, dosAirbags, manual, frenosAbs))
-						.politica(politicas).latitud(-24.794860F).longitud(-65.428259F).imagen(
+						.politica(Politica.politicaSetCloner(politicas)).latitud(-24.794860F).longitud(-65.428259F).imagen(
 								Set.of(Imagen.builder().titulo("Vista General").url_img("https://acnews.blob.core.windows.net/imgnews/large/NAZ_a1b641a28e37452887bfd645eefd9a27.jpg").build(),
 										Imagen.builder().titulo("Vista Interior").url_img("https://www.megautos.com/wp-content/uploads/2016/09/VW-Fox-highline-interior-1024x575.jpg").build(),
 										Imagen.builder().titulo("Vista desde Atras").url_img("https://www.megautos.com/wp-content/uploads/2016/09/VW-Fox-Pepper-trasera.jpg").build(),
@@ -156,7 +156,7 @@ public class BackIntegradorApplication {
 
 				Producto peugeot207 = productoService.guardarProducto(Producto.builder().titulo("Peugeot 207").categoria(economico).precio(12000L)
 						.ubicacion(caba).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulChico, nafta, dosAirbags, manual, bluetooth))
-						.politica(politicas).latitud(-34.589347F).longitud(-58.426827F).imagen(
+						.politica(Politica.politicaSetCloner(politicas)).latitud(-34.589347F).longitud(-58.426827F).imagen(
 								Set.of(Imagen.builder().titulo("Vista General").url_img("https://cdn.motor1.com/images/mgl/my4w4/s1/4x3/adios-al-peugeot-207-compact.webp").build(),
 										Imagen.builder().titulo("Vista Interior").url_img("https://www.megautos.com/wp-content/uploads/2016/07/Peugeot-207-Compact-interior-1024x669.jpg").build(),
 										Imagen.builder().titulo("Vista desde Atras").url_img("https://www.megautos.com/wp-content/uploads/2016/07/Peugeot-207-Compact-5p-trasera-1024x669.jpg").build(),
@@ -169,7 +169,7 @@ public class BackIntegradorApplication {
 
 				Producto nissanMarch = productoService.guardarProducto(Producto.builder().titulo("Nissan March").categoria(economico).precio(13500L)
 						.ubicacion(ushaia).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulGrande, nafta, dosAirbags, manual, frenosAbs,bluetooth))
-						.politica(politicas).latitud(-54.819789F).longitud(-68.327874F).imagen(
+						.politica(Politica.politicaSetCloner(politicas)).latitud(-54.819789F).longitud(-68.327874F).imagen(
 								Set.of(Imagen.builder().titulo("Vista General").url_img("https://cdn.motor1.com/images/mgl/0M9y9/s1/adios-al-nissan-march.jpg").build(),
 										Imagen.builder().titulo("Vista Interior").url_img("https://i0.wp.com/www.mundoautomotor.com.ar/web/wp-content/uploads/2014/03/Nissan-March-2014-3.jpg").build(),
 										Imagen.builder().titulo("Vista desde Atras").url_img("https://fotos.perfil.com/2012/05/01/nissan-march-atras.jpg").build(),
@@ -182,7 +182,7 @@ public class BackIntegradorApplication {
 
 				Producto fiatPalio = productoService.guardarProducto(Producto.builder().titulo("Fiat Palio").categoria(economico).precio(10500L)
 						.ubicacion(bariloche).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulChico, nafta, dosAirbags, manual, frenosAbs))
-						.politica(politicas).latitud(-41.136397F).longitud(-71.308539F).imagen(
+						.politica(Politica.politicaSetCloner(politicas)).latitud(-41.136397F).longitud(-71.308539F).imagen(
 								Set.of(Imagen.builder().titulo("Vista General").url_img("https://upload.wikimedia.org/wikipedia/commons/7/7e/Fiat_Palio_white_5door.jpg").build(),
 										Imagen.builder().titulo("Vista Interior").url_img("https://autotest.com.ar/wp-content/uploads/2022/12/Fiat-Palio-interior.jpg").build(),
 										Imagen.builder().titulo("Vista desde Atras").url_img("https://imagenes.cordobavende.com/6863483bbc922b780ddbc84c5b2fcae9.jpg").build(),
@@ -195,7 +195,7 @@ public class BackIntegradorApplication {
 
 				Producto relaultLogan = productoService.guardarProducto(Producto.builder().titulo("Fiat Palio").categoria(gamaMedia).precio(16800L)
 						.ubicacion(puertoMadrin).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulGrande, nafta, dosAirbags, manual, frenosAbs))
-						.politica(politicas).latitud(-42.763615F).longitud(-65.043935F).imagen(
+						.politica(Politica.politicaSetCloner(politicas)).latitud(-42.763615F).longitud(-65.043935F).imagen(
 								Set.of(Imagen.builder().titulo("Vista General").url_img("https://cdn.motor1.com/images/mgl/e2jKK/s3/critica-renault-logan-cvt.jpg").build(),
 										Imagen.builder().titulo("Vista Interior").url_img("https://www.megautos.com/wp-content/uploads/2019/11/nuevo-renault-logan-interior-1024x669.jpg").build(),
 										Imagen.builder().titulo("Vista desde Atras").url_img("https://www.elcarrocolombiano.com/wp-content/uploads/2020/02/20200309-RENAULT-LOGAN-INTENS-CVT-PRUEBA-DE-MANEJO-COLOMBIA-VIDEO-03.jpg").build(),
@@ -208,7 +208,7 @@ public class BackIntegradorApplication {
 
 				Producto fiatCronos = productoService.guardarProducto(Producto.builder().titulo("Fiat Cronos").categoria(gamaMedia).precio(17000L)
 						.ubicacion(losAndes).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulGrande, nafta, dosAirbags, manual, frenosAbs))
-						.politica(politicas).latitud(-40.136765F).longitud(-71.293497F).imagen(
+						.politica(Politica.politicaSetCloner(politicas)).latitud(-40.136765F).longitud(-71.293497F).imagen(
 								Set.of(Imagen.builder().titulo("Vista General").url_img("https://autotest.com.ar/wp-content/uploads/2021/07/FIAT-CRONOS-SDESIGN-2022.jpg").build(),
 										Imagen.builder().titulo("Vista Interior").url_img("https://cdn.motor1.com/images/mgl/GLXVE/s1/4x3/fiat-mostro-el-interior-del-cronos-argentino-todas-las-fotos.webp").build(),
 										Imagen.builder().titulo("Vista desde Atras").url_img("https://www.megautos.com/wp-content/uploads/2019/05/Fiat-Cronos-Centenario-atras-1024x669.jpg").build(),
@@ -221,7 +221,7 @@ public class BackIntegradorApplication {
 
 				Producto ecosport = productoService.guardarProducto(Producto.builder().titulo("Ford Ecosport").categoria(gamaMedia).precio(15000L)
 						.ubicacion(bariloche).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulGrande, nafta, dosAirbags, manual, frenosAbs))
-						.politica(politicas).latitud(-41.136397F).longitud(-71.308539F).imagen(
+						.politica(Politica.politicaSetCloner(politicas)).latitud(-41.136397F).longitud(-71.308539F).imagen(
 								Set.of(Imagen.builder().titulo("Vista General").url_img("https://cdn.motor1.com/images/mgl/MB2En/s3/la-carta-que-envio-ford-argentina-a-quienes-recibiran-la-ecosport-importada-de-india.jpg").build(),
 										Imagen.builder().titulo("Vista Interior").url_img("https://cdn.autobild.es/sites/navi.axelspringer.es/public/media/image/2017/09/ford-ecosport-2018_4.jpg").build(),
 										Imagen.builder().titulo("Vista desde Atras").url_img("https://carnovo.com/wp-content/uploads/2018/08/Trasera-del-Ford-EcoSport-2018.jpg").build(),
@@ -236,7 +236,7 @@ public class BackIntegradorApplication {
 
 				Producto renaultStepway = productoService.guardarProducto(Producto.builder().titulo("Renault Sandero Stepway").categoria(gamaMedia).precio(15300L)
 						.ubicacion(mendoza).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulGrande, nafta, dosAirbags, manual, frenosAbs, bluetooth))
-						.politica(politicas).latitud(-32.885342F).longitud(-68.843472F).imagen(
+						.politica(Politica.politicaSetCloner(politicas)).latitud(-32.885342F).longitud(-68.843472F).imagen(
 								Set.of(Imagen.builder().titulo("Vista General").url_img("https://autotest.com.ar/wp-content/uploads/2022/05/Renault-Sandero-Stepway-render-frente.jpg").build(),
 										Imagen.builder().titulo("Vista Interior").url_img("https://www.autoweb.com.ar/wp-content/uploads/2019/11/Plancha-BAJA.jpg").build(),
 										Imagen.builder().titulo("Vista desde Atras").url_img("https://www.megautos.com/wp-content/uploads/2022/10/renault-stepway-zen-1-atras.jpg").build(),
@@ -247,7 +247,7 @@ public class BackIntegradorApplication {
 
 //				Producto placeHolder = productoService.guardarProducto(Producto.builder().titulo("").categoria(gamaMedia).precio(15000L)
 //						.ubicacion(bariloche).caracteristica(Set.of(cuatroPuertas,traccionSimple, aireAcondicionado,baulGrande, nafta, dosAirbags, manual, frenosAbs))
-//						.politica(politicas).latitud(-41.136397F).longitud(-71.308539F).imagen(
+//						.politica(Politica.politicaSetCloner(politicas)).latitud(-41.136397F).longitud(-71.308539F).imagen(
 //								Set.of(Imagen.builder().titulo("Vista General").url_img("").build(),
 //										Imagen.builder().titulo("Vista Interior").url_img("").build(),
 //										Imagen.builder().titulo("Vista desde Atras").url_img("").build(),

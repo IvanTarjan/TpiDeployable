@@ -6,6 +6,9 @@ import lombok.*;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+import java.util.stream.Collectors;
+
 @Entity
 @Getter @Setter @AllArgsConstructor @NoArgsConstructor @ToString
 @Table(name="politica")
@@ -23,5 +26,16 @@ public class Politica {
     @ManyToOne
     @JsonIncludeProperties("id")
     private Producto producto;
+
+    public Politica(Politica politica){
+        this.id = politica.id;;
+        this.titulo = politica.titulo;
+        this.descripcion = politica.descripcion;;
+        this.producto = politica.producto;
+    }
+
+    public static Set<Politica> politicaSetCloner(Set<Politica> politicaSet){
+        return politicaSet.stream().map(politica -> new Politica(politica)).collect(Collectors.toSet());
+    }
 
 }
