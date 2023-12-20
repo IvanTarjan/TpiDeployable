@@ -18,6 +18,7 @@ AWS: The application is deployed on Amazon Web Services (AWS), taking advantage 
 CI/CD: Continuous Integration and Continuous Deployment practices are implemented using tools like Jenkins or GitHub Actions. This ensures automated testing, code quality checks, and seamless deployment to production environments.
 
 Features
+
 User Authentication: Secure user authentication and authorization using Spring Security.
 
 Car Listings: Browse and search for available rental cars with detailed information.
