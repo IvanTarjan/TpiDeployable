@@ -1,4 +1,5 @@
 Car Rental Website
+
 This is the final project for the Car Rental Website, a web application developed using Java, the Spring Framework, Spring Security, React, Material UI, and deployed on AWS. The project also incorporates Continuous Integration/Continuous Deployment (CI/CD) practices to ensure seamless development and deployment workflows.
 
 Technologies Used
